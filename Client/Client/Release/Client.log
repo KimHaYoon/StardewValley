@@ -1,28 +1,5 @@
-﻿  stdafx.cpp
-  BackTerrain.cpp
-  Client.cpp
-  Device.cpp
-  FrameMgr.cpp
-  KeyMgr.cpp
-  Logo.cpp
-  MainApp.cpp
-  MultiTexture.cpp
-  MyMap.cpp
-  Obj.cpp
-  ObjectMgr.cpp
-  Scene.cpp
-  SceneMgr.cpp
-  ScrollMgr.cpp
-  SingleTexture.cpp
-  Stage.cpp
-  Terrain.cpp
-  Texture.cpp
-  TextureMgr.cpp
-  TimerMgr.cpp
+﻿  DongKuTestScene.cpp
   코드를 생성하고 있습니다.
-  40 of 1060 functions ( 3.8%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
+  All 1007 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   코드를 생성했습니다.
-  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.exe
-  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.pdb (Full PDB)
+  Client.vcxproj -> D:\00.학교\2019 여름방학\StardewValley\Client\Release\Client.exe

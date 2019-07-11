@@ -184,6 +184,9 @@
     <Filter Include="97. Managers\10. PathMgr">
       <UniqueIdentifier>{416e587a-6f25-4184-9b32-99efcf17ce11}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01. Object\02. Player">
+      <UniqueIdentifier>{9eaa85ec-1048-4a27-8708-50b81c186c27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -273,6 +276,9 @@
     <ClInclude Include="PathMgr.h">
       <Filter>97. Managers\10. PathMgr</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>01. Object\02. Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -352,6 +358,9 @@
     </ClCompile>
     <ClCompile Include="PathMgr.cpp">
       <Filter>97. Managers\10. PathMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>01. Object\02. Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

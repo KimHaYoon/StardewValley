@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "DongKuTestScene.h"
+#include "Obj.h"
+#include "Player.h"
 
 
 CDongKuTestScene::CDongKuTestScene()
@@ -13,26 +15,35 @@ CDongKuTestScene::~CDongKuTestScene()
 
 HRESULT CDongKuTestScene::Init()
 {
-	if (FAILED(CTextureMgr::GetInstance()->ReadImgPath(L"../Data/ImgPathInfo.txt")))
+	if ( FAILED( CTextureMgr::GetInstance()->ReadImgPath( L"../Data/ImgPathInfo.txt" ) ) )
 	{
-		ERR_MSG(L"Image Load Failed");
+		ERR_MSG( L"Image Load Failed" );
 		return E_FAIL;
 	}
+
+
+	CObj* pObj = CAbstractFactory<CPlayer>::CreateObj();
+	if ( nullptr == pObj )
+		return E_FAIL;
+
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_PLAYER );
+
 	return S_OK;
 }
 
-void CDongKuTestScene::Update(const _float & fTimeDelta)
+void CDongKuTestScene::Update( const _float & fTimeDelta )
 {
-	CObjectMgr::GetInstance()->Update(fTimeDelta);
+	CObjectMgr::GetInstance()->Update( fTimeDelta );
 }
 
-void CDongKuTestScene::LateUpdate(const _float & fTimeDelta)
+void CDongKuTestScene::LateUpdate( const _float & fTimeDelta )
 {
-	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
+	CObjectMgr::GetInstance()->LateUpdate( fTimeDelta );
 }
 
 void CDongKuTestScene::Render()
 {
+	CObjectMgr::GetInstance()->Render();
 }
 
 void CDongKuTestScene::Release()
