@@ -108,7 +108,7 @@ void CPlayer::Render()
 	CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
 
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
-		L"Abigail", m_strStateKey, m_tFrame.fFrame);
+		L"Abigail", m_strStateKey, (_int)m_tFrame.fFrame);
 	NULL_CHECK_VOID(pTexInfo);
 
 	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture,

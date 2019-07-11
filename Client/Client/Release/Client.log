@@ -1,5 +1,37 @@
-﻿  DongKuTestScene.cpp
+﻿  stdafx.cpp
+  Abigail.cpp
+  BackTerrain.cpp
+  Client.cpp
+  Device.cpp
+  DongKuTestScene.cpp
+  FrameMgr.cpp
+  HaYoonTestScene.cpp
+  KeyMgr.cpp
+  Logo.cpp
+  MainApp.cpp
+  MultiTexture.cpp
+  MyMap.cpp
+  NPC.cpp
+  Obj.cpp
+  ObjectMgr.cpp
+  PathMgr.cpp
+PathMgr.cpp(18): warning C4101: 'ctmp' :참조되지 않은 지역 변수입니다.
+  Player.cpp
+Player.cpp(111): warning C4244: '인수': 'float'에서 'const int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Scene.cpp
+  SceneMgr.cpp
+  ScrollMgr.cpp
+  컴파일하고 있습니다...
+  SingleTexture.cpp
+  Stage.cpp
+  Terrain.cpp
+  Texture.cpp
+  TextureMgr.cpp
+  TimerMgr.cpp
   코드를 생성하고 있습니다.
-  All 1007 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  30 of 1123 functions ( 2.7%) were compiled, the rest were copied from previous compilation.
+    4 functions were new in current compilation
+    26 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
-  Client.vcxproj -> D:\00.학교\2019 여름방학\StardewValley\Client\Release\Client.exe
+  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.exe
+  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.pdb (Full PDB)

@@ -49,4 +49,5 @@ using namespace std;
 #include "Abstract_Factory.h"
 #include "TextureMgr.h"
 #include "KeyMgr.h"
+#include "PathMgr.h"
 

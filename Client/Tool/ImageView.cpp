@@ -69,7 +69,7 @@ void CImageView::OnInitialUpdate()
 	}
 
 
-	for (int i = 0; i < m_pTerrain->GetTile().size(); ++i)
+	for (size_t i = 0; i < m_pTerrain->GetTile().size(); ++i)
 		m_MapPos.insert({i, m_pTerrain->GetTile()[i]->vPos});
 
 }
@@ -123,11 +123,11 @@ void CImageView::OnLButtonDown(UINT nFlags, CPoint point)
 
 	_vec3 tempv = { (float)point.x, (float)point.y, 0.f };
 	_vec3   vecResult = {};
-	_int	least = 100;
+	_float	least = 100;
 	for (auto& iter : pTerrain->GetTile())
 	{
 		_vec3 v = iter->vPos - tempv;
-		float f = D3DXVec3Length(&v);
+		_float f = D3DXVec3Length(&v);
 
 		if (f > least)
 		{

@@ -20,6 +20,11 @@ HRESULT CLogo::Init()
 		ERR_MSG(L"Image Load Failed");
 		return E_FAIL;
 	}
+	if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Abigail/Abigail%d.dat", L"Abigail", 3)))
+	{
+		ERR_MSG(L"Path Load Failed");
+		return E_FAIL;
+	}
 // 	CObj* pObj = CAbstractFactory<CMyMap>::CreateObj();
 // 	if (nullptr == pObj)
 // 		return E_FAIL;

@@ -182,8 +182,8 @@ void CImageViewTool::OnBnClickedCapture()
 	for (auto& iter : pTerrain->GetTile())
 	{
 		result = iter->vPos;
-		POINT Start = { result.x - 8, result.y - 8 };
-		POINT End = { result.x + 8, result.y + 8 };
+		POINT Start = { (long)result.x - 8, (long)result.y - 8 };
+		POINT End = { (long)result.x + 8, (long)result.y + 8 };
 
 		int w = End.x - Start.x;
 		int h = End.y - Start.y;

@@ -20,7 +20,7 @@ HRESULT CMainApp::Initialize()
 	if (FAILED(m_pDevice->InitDevice()))
 		return E_FAIL;
 
-	if (FAILED(m_pSceneMgr->SceneChange(SCENE_ID_DONGKU)))
+	if (FAILED(m_pSceneMgr->SceneChange(SCENE_ID_LOGO)))
 	{
 		ERR_MSG(L"Scene change Failed!!");
 		return E_FAIL;
@@ -69,6 +69,7 @@ void CMainApp::Render()
 
 void CMainApp::Release()
 {
+	CPathMgr::GetInstance()->DestroyInstance();
 	CKeyMgr::GetInstance()->DestroyInstance();
 	CSceneMgr::GetInstance()->DestroyInstance();
 	CTextureMgr::GetInstance()->DestroyInstance();
