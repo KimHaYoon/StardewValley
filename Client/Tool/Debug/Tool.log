@@ -1,39 +1,6 @@
-﻿  stdafx.cpp
-  ToolView.cpp
+﻿  ToolView.cpp
 c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(413): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(545): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(582): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  ToolDoc.cpp
-  Tool.cpp
-  TileTool.cpp
-  TileImage.cpp
-  TextureMgr.cpp
-  Texture.cpp
-  Terrain.cpp
-  SingleTexture.cpp
-  PathFinder.cpp
-  ObjectTool.cpp
-  NPCTool.cpp
-  MyMap.cpp
-  MyImage.cpp
-  MyForm.cpp
-  MultiTexture.cpp
-  MiniView.cpp
-  MainFrm.cpp
-  ImageViewTool.cpp
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\imageviewtool.cpp(185): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\imageviewtool.cpp(185): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\imageviewtool.cpp(186): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\imageviewtool.cpp(186): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  ImageView.cpp
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\imageview.cpp(72): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\imageview.cpp(138): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  FileInfo.cpp
-  Device.cpp
-  Building.cpp
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\building.cpp(86): warning C4244: '인수': 'unsigned long'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
+c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(551): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(588): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Tool.exe
   Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Tool.pdb (Partial PDB)

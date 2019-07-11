@@ -157,12 +157,15 @@
     <ClInclude Include="BackTerrain.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Device.h" />
+    <ClInclude Include="DongKuTestScene.h" />
     <ClInclude Include="FrameMgr.h" />
+    <ClInclude Include="HaYoonTestScene.h" />
     <ClInclude Include="KeyMgr.h" />
     <ClInclude Include="Logo.h" />
     <ClInclude Include="MainApp.h" />
     <ClInclude Include="MultiTexture.h" />
     <ClInclude Include="MyMap.h" />
+    <ClInclude Include="NPC.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="ObjectMgr.h" />
     <ClInclude Include="Resource.h" />
@@ -181,11 +184,14 @@
   <ItemGroup>
     <ClCompile Include="BackTerrain.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="DongKuTestScene.cpp" />
+    <ClCompile Include="HaYoonTestScene.cpp" />
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="Logo.cpp" />
     <ClCompile Include="MainApp.cpp" />
     <ClCompile Include="MultiTexture.cpp" />
     <ClCompile Include="MyMap.cpp" />
+    <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="ObjectMgr.cpp" />
