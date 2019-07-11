@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="97. Managers">
+      <UniqueIdentifier>{7b83c2b6-fa10-4cac-8ed9-0f6e8b9d92f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\00. Device">
+      <UniqueIdentifier>{e152d560-3347-4a5a-84fd-e544bdbea18c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\01. TimerMgr">
+      <UniqueIdentifier>{468b8cd1-6f53-43a0-8125-361e8200ad77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\02. FrameMgr">
+      <UniqueIdentifier>{b8ded6b8-cca2-40d6-afbc-d8a899ad6322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\03. TextureMgr">
+      <UniqueIdentifier>{f8bca209-4d0e-4fe4-a38f-3abdf3b1cfa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\04. ShaderMgr">
+      <UniqueIdentifier>{f689fef4-67bb-4ea2-9ad9-ba13c7f0f3ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\05. ObjectMgr">
+      <UniqueIdentifier>{d98ea51d-0fe2-4840-80dd-1fedd701d830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\06. SceneMgr">
+      <UniqueIdentifier>{fca01fec-1e10-402f-9a02-deeb0880da01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\07. KeyMgr">
+      <UniqueIdentifier>{3f608e60-35cc-4c65-97ae-5c2a41c07d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\08. AbstractFactory">
+      <UniqueIdentifier>{fe00de1f-3c10-4834-9b7b-6d9905122f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\09. ScrollMgr">
+      <UniqueIdentifier>{1556fa7e-86b3-48d5-a060-8c2c9f26c150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\03. TextureMgr\00. Texture">
+      <UniqueIdentifier>{55f31ce5-8a4f-4da6-ac0e-4421a9949eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\03. TextureMgr\01. TextureMgr">
+      <UniqueIdentifier>{e16e9bd7-b588-44b7-ac9f-5fa1ce4c7107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\03. TextureMgr\00. Texture\00. SingleTexture">
+      <UniqueIdentifier>{b50f1953-98d6-4eea-be27-a094026384b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\03. TextureMgr\00. Texture\01. MultiTexture">
+      <UniqueIdentifier>{a3daf8fb-a8e0-42ad-b430-a971b29493f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object">
+      <UniqueIdentifier>{ecf5f487-7722-4207-b91f-023b3a4bd757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\99. Object">
+      <UniqueIdentifier>{23d17a3b-b229-414c-b211-f4cb33cb7e88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\00. Logo">
+      <UniqueIdentifier>{4b886aac-2a08-4495-a548-a22041957a43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage">
+      <UniqueIdentifier>{b9099d77-a8f1-4417-afa6-275860f01727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\98. public">
+      <UniqueIdentifier>{10637a2c-33f3-4d5d-aa9a-c20b12eca857}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene">
+      <UniqueIdentifier>{e64fbee3-3263-4fb9-b5be-a5b4104de947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene\00. Logo">
+      <UniqueIdentifier>{f710aa5f-b647-44f5-8745-d629fb14cdc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene\01. Stage">
+      <UniqueIdentifier>{d34a4800-21a3-4b5b-ac4a-1d4f7a7e50cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene\99. Scene">
+      <UniqueIdentifier>{9d5d240c-a939-4dc5-8079-b7f0ad141364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. MainApp">
+      <UniqueIdentifier>{1d0a9de6-4812-4d64-abfd-0d2a273ff397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99. Default">
+      <UniqueIdentifier>{b66dabf7-14ab-43a4-8b93-553dad024b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\98. public\00. MyMap">
+      <UniqueIdentifier>{1afa3dfb-e4d9-47fc-ad13-363c3876fa40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\98. public\01. Terrain">
+      <UniqueIdentifier>{6ea3e1b4-b937-429e-9463-784faf958e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\98. public\99. BackTerrain">
+      <UniqueIdentifier>{9878159b-f820-4012-86dd-be2300090ed1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Client.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>97. Managers\00. Device</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerMgr.h">
+      <Filter>97. Managers\01. TimerMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameMgr.h">
+      <Filter>97. Managers\02. FrameMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectMgr.h">
+      <Filter>97. Managers\05. ObjectMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj.h">
+      <Filter>01. Object\99. Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>02. Scene\99. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Logo.h">
+      <Filter>02. Scene\00. Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>02. Scene\01. Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMgr.h">
+      <Filter>97. Managers\06. SceneMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Abstract_Factory.h">
+      <Filter>97. Managers\08. AbstractFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyMgr.h">
+      <Filter>97. Managers\07. KeyMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollMgr.h">
+      <Filter>97. Managers\09. ScrollMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MainApp.h">
+      <Filter>00. MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMap.h">
+      <Filter>01. Object\98. public\00. MyMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>97. Managers\03. TextureMgr\00. Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTexture.h">
+      <Filter>97. Managers\03. TextureMgr\00. Texture\00. SingleTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiTexture.h">
+      <Filter>97. Managers\03. TextureMgr\00. Texture\01. MultiTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMgr.h">
+      <Filter>97. Managers\03. TextureMgr\01. TextureMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>01. Object\98. public\01. Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="BackTerrain.h">
+      <Filter>01. Object\98. public\99. BackTerrain</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Client.cpp">
+      <Filter>99. Default</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>99. Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>97. Managers\00. Device</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerMgr.cpp">
+      <Filter>97. Managers\01. TimerMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameMgr.cpp">
+      <Filter>97. Managers\02. FrameMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectMgr.cpp">
+      <Filter>97. Managers\05. ObjectMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj.cpp">
+      <Filter>01. Object\99. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>02. Scene\99. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Logo.cpp">
+      <Filter>02. Scene\00. Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>02. Scene\01. Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMgr.cpp">
+      <Filter>97. Managers\06. SceneMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyMgr.cpp">
+      <Filter>97. Managers\07. KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollMgr.cpp">
+      <Filter>97. Managers\09. ScrollMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MainApp.cpp">
+      <Filter>00. MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMap.cpp">
+      <Filter>01. Object\98. public\00. MyMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>97. Managers\03. TextureMgr\00. Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleTexture.cpp">
+      <Filter>97. Managers\03. TextureMgr\00. Texture\00. SingleTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiTexture.cpp">
+      <Filter>97. Managers\03. TextureMgr\00. Texture\01. MultiTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMgr.cpp">
+      <Filter>97. Managers\03. TextureMgr\01. TextureMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>01. Object\98. public\01. Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="BackTerrain.cpp">
+      <Filter>01. Object\98. public\99. BackTerrain</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Client.ico">
+      <Filter>99. Default</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>99. Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc">
+      <Filter>99. Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

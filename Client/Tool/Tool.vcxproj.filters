@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="04. Dialog">
+      <UniqueIdentifier>{4a1188af-1774-4020-b1df-92193acfc0bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. MainApp">
+      <UniqueIdentifier>{1a8d7936-a572-4aa6-aeec-ffb70fa7331e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Document">
+      <UniqueIdentifier>{f945b7b7-cc91-4de6-9b14-760d5a1ba281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. FrameWnd">
+      <UniqueIdentifier>{4e9c999a-19bd-4d45-9007-f43e45da9f1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. ViewWnd">
+      <UniqueIdentifier>{fe5608ca-0d19-4fba-a17d-9082adbbc145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Managers">
+      <UniqueIdentifier>{cea05982-bc66-407f-a608-362936709cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Managers\00. Device">
+      <UniqueIdentifier>{0e103e7a-c121-4518-b903-7e9413f612d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Managers\01. TextureMgr">
+      <UniqueIdentifier>{c31a63f6-9c21-45bc-9703-20e3ed1504c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Managers\01. TextureMgr\00. Texture">
+      <UniqueIdentifier>{fe42c9fa-65a4-4a57-b317-c0c9fb63c207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Managers\01. TextureMgr\00. Texture\00. SingleTexture">
+      <UniqueIdentifier>{adfafcd6-2ec1-450b-b4d1-891fe674733d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Managers\01. TextureMgr\00. Texture\01. MultiTexture">
+      <UniqueIdentifier>{356e9f57-333f-4f5e-ba50-1058a7ebab0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. ViewWnd\00. FormView">
+      <UniqueIdentifier>{43f8f04f-6764-4304-ab6e-c46f74b72630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. ViewWnd\01. MiniView">
+      <UniqueIdentifier>{93601560-48d7-4282-acb8-eb8df2c74942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Object">
+      <UniqueIdentifier>{3a5e77bf-7f30-4546-8bdd-d5e2d9a80498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Object\00. Terrain">
+      <UniqueIdentifier>{df57e43d-baae-413f-ac23-06d85a077fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Object\01. Map">
+      <UniqueIdentifier>{59b3097e-2581-4dcc-a653-d39079c328e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. ViewWnd\02. ImageView">
+      <UniqueIdentifier>{c2a40c86-cd57-40c8-a767-5e54e7476e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Dialog\01. ImageViewTool">
+      <UniqueIdentifier>{2517a88f-2612-4353-9106-33e0f131e414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. FileInfo">
+      <UniqueIdentifier>{4439408e-d204-4364-819d-12f01767793e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Object\02. MyImage">
+      <UniqueIdentifier>{b9a75d1b-62ed-4518-8ab6-904e9fa65405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Dialog\02. TIleTool">
+      <UniqueIdentifier>{16b53dca-1cea-4ee2-be70-deaed1105b05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Object\03. TileImage">
+      <UniqueIdentifier>{18c5e205-ba35-42fc-9493-50db94f0873d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Object\04. Building">
+      <UniqueIdentifier>{ae5bf793-e37a-4226-a858-de85928430e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99. Default">
+      <UniqueIdentifier>{a83aec7a-42a9-4915-a510-c2e868328651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Dialog\03. PathFinder">
+      <UniqueIdentifier>{df58ca69-3c6b-41da-b5b4-b550e3194737}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Dialog\04. NPCTool">
+      <UniqueIdentifier>{795b67ed-8f10-4696-80a0-cb2844c5eb20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Dialog\00. ObjectTool">
+      <UniqueIdentifier>{0ba8ad8d-5846-4b95-8464-65a6eeb1fc96}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tool.h">
+      <Filter>00. MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolDoc.h">
+      <Filter>01. Document</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>02. FrameWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolView.h">
+      <Filter>03. ViewWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>98. Managers\00. Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>98. Managers\01. TextureMgr\00. Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTexture.h">
+      <Filter>98. Managers\01. TextureMgr\00. Texture\00. SingleTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiTexture.h">
+      <Filter>98. Managers\01. TextureMgr\00. Texture\01. MultiTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMgr.h">
+      <Filter>98. Managers\01. TextureMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>05. Object\00. Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <Filter>03. ViewWnd\00. FormView</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniView.h">
+      <Filter>03. ViewWnd\01. MiniView</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMap.h">
+      <Filter>05. Object\01. Map</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageView.h">
+      <Filter>03. ViewWnd\02. ImageView</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageViewTool.h">
+      <Filter>04. Dialog\01. ImageViewTool</Filter>
+    </ClInclude>
+    <ClInclude Include="FileInfo.h">
+      <Filter>06. FileInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="MyImage.h">
+      <Filter>05. Object\02. MyImage</Filter>
+    </ClInclude>
+    <ClInclude Include="TileTool.h">
+      <Filter>04. Dialog\02. TIleTool</Filter>
+    </ClInclude>
+    <ClInclude Include="TileImage.h">
+      <Filter>05. Object\03. TileImage</Filter>
+    </ClInclude>
+    <ClInclude Include="Building.h">
+      <Filter>05. Object\04. Building</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectTool.h">
+      <Filter>04. Dialog\00. ObjectTool</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFinder.h">
+      <Filter>04. Dialog\03. PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCTool.h">
+      <Filter>04. Dialog\04. NPCTool</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tool.cpp">
+      <Filter>00. MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolDoc.cpp">
+      <Filter>01. Document</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>02. FrameWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolView.cpp">
+      <Filter>03. ViewWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>99. Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>98. Managers\00. Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>98. Managers\01. TextureMgr\00. Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleTexture.cpp">
+      <Filter>98. Managers\01. TextureMgr\00. Texture\00. SingleTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiTexture.cpp">
+      <Filter>98. Managers\01. TextureMgr\00. Texture\01. MultiTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMgr.cpp">
+      <Filter>98. Managers\01. TextureMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>05. Object\00. Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>03. ViewWnd\00. FormView</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniView.cpp">
+      <Filter>03. ViewWnd\01. MiniView</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMap.cpp">
+      <Filter>05. Object\01. Map</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageView.cpp">
+      <Filter>03. ViewWnd\02. ImageView</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageViewTool.cpp">
+      <Filter>04. Dialog\01. ImageViewTool</Filter>
+    </ClCompile>
+    <ClCompile Include="FileInfo.cpp">
+      <Filter>06. FileInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="MyImage.cpp">
+      <Filter>05. Object\02. MyImage</Filter>
+    </ClCompile>
+    <ClCompile Include="TileTool.cpp">
+      <Filter>04. Dialog\02. TIleTool</Filter>
+    </ClCompile>
+    <ClCompile Include="TileImage.cpp">
+      <Filter>05. Object\03. TileImage</Filter>
+    </ClCompile>
+    <ClCompile Include="Building.cpp">
+      <Filter>05. Object\04. Building</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectTool.cpp">
+      <Filter>04. Dialog\00. ObjectTool</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFinder.cpp">
+      <Filter>04. Dialog\03. PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCTool.cpp">
+      <Filter>04. Dialog\04. NPCTool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Tool.ico">
+      <Filter>99. Default</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>99. Default</Filter>
+    </Image>
+    <Image Include="res\ToolDoc.ico">
+      <Filter>99. Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Tool.rc">
+      <Filter>99. Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Tool.rc2">
+      <Filter>99. Default</Filter>
+    </None>
+  </ItemGroup>
+</Project>
