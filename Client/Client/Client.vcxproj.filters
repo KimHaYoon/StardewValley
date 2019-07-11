@@ -157,6 +157,33 @@
     <Filter Include="02. Scene\97. HaYoonTest">
       <UniqueIdentifier>{3e091b96-e0e3-42fa-a999-dc4f479c0ebe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\20. Morris">
+      <UniqueIdentifier>{aed29c9c-c773-402b-b519-43d1da9bf11f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\21. Penny">
+      <UniqueIdentifier>{418af61b-a12d-465a-b8b2-bd9f752a279b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\22. Pierre">
+      <UniqueIdentifier>{7a4b5497-262c-4a46-a771-67ea5710dc2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\23. Robin">
+      <UniqueIdentifier>{852b44a7-4ebc-4350-842f-8ec479d309da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\24. Sam">
+      <UniqueIdentifier>{a66f5af0-6b2c-48df-86ee-a8dd15815b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\25. Sandy">
+      <UniqueIdentifier>{329e7dfe-1d07-47f5-aedb-c03abc04760f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\26. Sebastian">
+      <UniqueIdentifier>{aaee53ff-455e-4123-8115-1350eb848aca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\00. NPC\27. Vincent">
+      <UniqueIdentifier>{69ffc130-c181-4fee-bb5b-cd78d686d396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\10. PathMgr">
+      <UniqueIdentifier>{416e587a-6f25-4184-9b32-99efcf17ce11}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -240,6 +267,12 @@
     <ClInclude Include="HaYoonTestScene.h">
       <Filter>02. Scene\97. HaYoonTest</Filter>
     </ClInclude>
+    <ClInclude Include="Abigail.h">
+      <Filter>01. Object\01. Stage\00. NPC\00. Abigail</Filter>
+    </ClInclude>
+    <ClInclude Include="PathMgr.h">
+      <Filter>97. Managers\10. PathMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -313,6 +346,12 @@
     </ClCompile>
     <ClCompile Include="HaYoonTestScene.cpp">
       <Filter>02. Scene\97. HaYoonTest</Filter>
+    </ClCompile>
+    <ClCompile Include="Abigail.cpp">
+      <Filter>01. Object\01. Stage\00. NPC\00. Abigail</Filter>
+    </ClCompile>
+    <ClCompile Include="PathMgr.cpp">
+      <Filter>97. Managers\10. PathMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

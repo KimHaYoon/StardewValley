@@ -18,7 +18,7 @@ HRESULT CDongKuTestScene::Init()
 		ERR_MSG(L"Image Load Failed");
 		return E_FAIL;
 	}
-	return E_NOTIMPL;
+	return S_OK;
 }
 
 void CDongKuTestScene::Update(const _float & fTimeDelta)
