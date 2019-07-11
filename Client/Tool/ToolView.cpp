@@ -530,43 +530,39 @@ void CToolView::OnMButtonDown(UINT nFlags, CPoint point)
 		_vec3   vecResult = {};
 		_int	least = 100;
 
-<<<<<<< HEAD
+
+
+		for (auto& iter : m_pTerrain->GetTile())
+		{
+			_vec3 v = iter->vPos - tempv;
+			float f = D3DXVec3Length(&v);
 
 			for (auto& iter : m_pTerrain->GetTile())
 			{
 				_vec3 v = iter->vPos - tempv;
 				float f = D3DXVec3Length(&v);
-=======
-		for (auto& iter : m_pTerrain->GetTile())
-		{
-			_vec3 v = iter->vPos - tempv;
-			float f = D3DXVec3Length(&v);
->>>>>>> ab4eec662c224ddd828e96ee0984b17bbb17c573
 
-			if (f > least)
-			{
-				continue;
+				if (f > least)
+				{
+					continue;
+				}
+				else
+				{
+					least = f;
+					vecResult = iter->vPos;
+				}
 			}
-			else
-			{
-				least = f;
-				vecResult = iter->vPos;
-			}
-<<<<<<< HEAD
 
-=======
+
+			for (auto& iter : m_pTerrain->GetTile())
+			{
+				if (iter->vPos == vecResult)
+				{
+					iter->byDrawID = 2100;
+				}
+			}
+
 		}
->>>>>>> ab4eec662c224ddd828e96ee0984b17bbb17c573
-
-		for (auto& iter : m_pTerrain->GetTile())
-		{
-			if (iter->vPos == vecResult)
-			{
-				iter->byDrawID = 2100;
-			}
-		}
-
-
 
 	}
 	else if (pView->m_Radio[1].GetCheck() == TRUE)
