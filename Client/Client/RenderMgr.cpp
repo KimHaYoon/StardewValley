@@ -10,6 +10,7 @@ CRenderMgr::CRenderMgr()
 
 CRenderMgr::~CRenderMgr()
 {
+	Release();
 }
 
 HRESULT CRenderMgr::AddRenderObect(CObj * pObj, LAYER_ID eID)
@@ -57,4 +58,13 @@ void CRenderMgr::Render_Layer_5()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_5])
 		iter->Render();
+}
+
+void CRenderMgr::Release()
+{
+	for (int i = 0; i < LAYER_ID_END; ++i)
+	{
+		for_each(m_RenderLst[i].begin(), m_RenderLst[i].end(), SafeDelete<CObj*>);
+		m_RenderLst[i].clear();	
+	}
 }

@@ -15,10 +15,13 @@ CAbigail::~CAbigail()
 HRESULT CAbigail::Init()
 {
 	m_tInfo.vPos = {400.f, 300.f,0.f};
-	m_tInfo.vSize = { 2.f,2.f,0.f};
+	m_tInfo.vSize = { 1.f,1.f,0.f};
 	m_strObjectKey = L"Abigail";
 	m_strStateKey = L"Abigail_Forward";
+	m_fSpeed = 5.f;
 	m_tFrame = {0.f, 4.f};
+	m_eCurDir = DIR_ID_FORWORD;
+	m_ePastDIr = m_ePastDIr;
 	if (FAILED(CNPC::LoadPath()))
 		return E_FAIL;
 
@@ -28,11 +31,17 @@ HRESULT CAbigail::Init()
 
 _int CAbigail::Update(const _float & fTimeDelta)
 {
+
+	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+	{
+		m_tInfo.vPos.y -= fTimeDelta*m_fSpeed;
+	}
 	_matrix matTrans, matScale;
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
 
 	m_tInfo.matWorld = matScale * matTrans;
+	
 
 	return NO_EVENT;
 }
@@ -40,7 +49,9 @@ _int CAbigail::Update(const _float & fTimeDelta)
 void CAbigail::LateUpdate(const _float & fTimeDelta)
 {
 	CObj::MoveFrame();
-	CNPC::TraceThePath(fTimeDelta);
+	CNPC::TraceThePath(0, fTimeDelta);
+	ChangeStateKey(m_eCurDir);
+
 }
 
 void CAbigail::Render()
@@ -65,6 +76,18 @@ void CAbigail::Release()
 		iter.second.shrink_to_fit();
 	}
 	m_mapPos.clear();
+}
+
+void CAbigail::ChangeStateKey(DIR_ID eID)
+{
+	if (eID == DIR_ID_FORWORD)
+		m_strStateKey = L"Abigail_Forward";
+	else if (eID == DIR_ID_BACK)
+		m_strStateKey = L"Abigail_Back";
+	else if (eID == DIR_ID_LEFT)
+		m_strStateKey = L"Abigail_Left";
+	else if (eID == DIR_ID_RIGHT)
+		m_strStateKey = L"Abigail_Right";
 }
 
 

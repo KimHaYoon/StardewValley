@@ -20,7 +20,7 @@ HRESULT CBackTerrain::Init()
 HRESULT CBackTerrain::Init(const _tchar * pFilePath)
 {
 	m_tInfo.vPos = { 400.f, 300.f,0.f };
-	m_tInfo.vSize = { 2.f, 2.f,0.f };
+	m_tInfo.vSize = { 1.f, 1.f,0.f };
 	if (FAILED(LoadData(pFilePath)))
 		return E_FAIL;
 	m_fSpeed = 10.f;
@@ -31,27 +31,27 @@ HRESULT CBackTerrain::Init(const _tchar * pFilePath)
 }
 _int CBackTerrain::Update(const _float & fTimeDelta)
 {
-	if (CKeyMgr::GetInstance()->KeyPressing(KEY_LEFT))
-	{
-		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed * -fTimeDelta, 0.f, 0.f });
-		m_tInfo.vPos.x -= fTimeDelta;
-	}
-	if (CKeyMgr::GetInstance()->KeyPressing(KEY_RIGHT))
-	{
-		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed * fTimeDelta, 0.f, 0.f });
-		m_tInfo.vPos.x += fTimeDelta;
-
-	}
-	if (CKeyMgr::GetInstance()->KeyPressing(KEY_UP))
-	{
-		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  -3 * m_fSpeed * fTimeDelta , 0.f });
-		m_tInfo.vPos.y -= fTimeDelta;
-	}
-	if (CKeyMgr::GetInstance()->KeyPressing(KEY_DOWN))
-	{
-		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  3 * m_fSpeed * fTimeDelta , 0.f });
-		m_tInfo.vPos.y += fTimeDelta;
-	}
+// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_LEFT))
+// 	{
+// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed * -fTimeDelta, 0.f, 0.f });
+// 		m_tInfo.vPos.x -= fTimeDelta;
+// 	}
+// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_RIGHT))
+// 	{
+// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed * fTimeDelta, 0.f, 0.f });
+// 		m_tInfo.vPos.x += fTimeDelta;
+// 
+// 	}
+// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_UP))
+// 	{
+// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  -3 * m_fSpeed * fTimeDelta , 0.f });
+// 		m_tInfo.vPos.y -= fTimeDelta;
+// 	}
+// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_DOWN))
+// 	{
+// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  3 * m_fSpeed * fTimeDelta , 0.f });
+// 		m_tInfo.vPos.y += fTimeDelta;
+// 	}
 
 
 	return NO_ERROR;
@@ -83,8 +83,8 @@ void CBackTerrain::Render()
 			D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, m_tInfo.vSize.z);
 			D3DXMatrixTranslation(
 				&matTrans,
-				m_vecTile[iIndex]->vPos.x - vScroll.x,
-				m_vecTile[iIndex]->vPos.y - vScroll.y,
+				m_vecTile[iIndex]->vPos.x,
+				m_vecTile[iIndex]->vPos.y,
 				0.f);
 
 			m_tInfo.matWorld = matScale * matTrans;

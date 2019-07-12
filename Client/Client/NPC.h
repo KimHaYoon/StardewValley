@@ -14,8 +14,12 @@ public:
 	virtual void Release() PURE;
 public:
 	HRESULT		  LoadPath();
-	void		  TraceThePath(const _float& fTimeDelta);
+	void		  TraceThePath(const _int& iIdx, const _float& fTimeDelta);
+	void		  Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta);
 protected:
 	map<_int, vector<_vec3>>		m_mapPos;	
+protected:
+	_int							m_iIdx = 0;
+	_bool							m_bTransCheck = false;
 };
 

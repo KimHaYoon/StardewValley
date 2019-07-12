@@ -27,11 +27,6 @@ HRESULT CLogo::Init()
 		ERR_MSG(L"Path Load Failed");
 		return E_FAIL;
 	}
-// 	CObj* pObj = CAbstractFactory<CMyMap>::CreateObj();
-// 	if (nullptr == pObj)
-// 		return E_FAIL;
-// 	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_LOGO);
-
 
 	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Vacant_Tile_Back.dat");
 	if (nullptr == pObj)

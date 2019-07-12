@@ -14,6 +14,8 @@ public:
 	void			Render_Layer_3();
 	void			Render_Layer_4();
 	void			Render_Layer_5();
+public:
+	void			Release();
 private:
 	list<CObj*>		m_RenderLst[LAYER_ID_END];
 };

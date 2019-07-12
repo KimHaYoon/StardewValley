@@ -19,6 +19,9 @@ protected:
 	TCHAR*			m_strObjectKey = L"";
 	TCHAR*			m_strStateKey = L"";
 protected:
+	DIR_ID			m_ePastDIr;
+	DIR_ID			m_eCurDir;
+protected:
 	void			MoveFrame();
 	void			MoveFrame(float num);
 	void			MoveFrameStop();
