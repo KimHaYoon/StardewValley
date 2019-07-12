@@ -52,9 +52,8 @@ void CMainApp::Render()
 
 	m_pDevice->Render_Begin();
 
-
-
-	m_pSceneMgr->Render();
+	//m_pSceneMgr->Render();
+	CRenderMgr::GetInstance()->RenderGroup();
 
 	m_pDevice->Render_End();
 
@@ -69,6 +68,7 @@ void CMainApp::Render()
 
 void CMainApp::Release()
 {
+	CRenderMgr::GetInstance()->DestroyInstance();
 	CPathMgr::GetInstance()->DestroyInstance();
 	CKeyMgr::GetInstance()->DestroyInstance();
 	CSceneMgr::GetInstance()->DestroyInstance();

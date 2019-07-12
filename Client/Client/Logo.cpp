@@ -4,6 +4,8 @@
 #include "MyMap.h"
 #include "Terrain.h"
 #include "BackTerrain.h"
+#include "NPC.h"
+#include "Abigail.h"
 CLogo::CLogo()
 {
 }
@@ -36,10 +38,15 @@ HRESULT CLogo::Init()
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
- 	pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Vacant_Tile_Front.dat");
- 	if (nullptr == pObj)
- 		return E_FAIL;
+	pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Vacant_Tile_Front.dat");
+	if (nullptr == pObj)
+		return E_FAIL;
  	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+
+	pObj = CAbstractFactory<CAbigail>::CreateObj();
+	if (nullptr == pObj)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
 	return S_OK;
 }
 

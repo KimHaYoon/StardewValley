@@ -49,6 +49,6 @@ typedef struct tagTile
 
 typedef struct tagNPCInfo
 {
-	TCHAR							szName[128];
+	TCHAR*							szName;
 	map<int, vector<D3DXVECTOR3>>	mapInfo;
 }NPCInfo;

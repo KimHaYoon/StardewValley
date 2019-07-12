@@ -16,6 +16,7 @@ protected:
 	UNITIFNO		m_tInfo;
 	_float			m_fSpeed=0.f;
 	FRAME			m_tFrame;
+	TCHAR*			m_strObjectKey = L"";
 	TCHAR*			m_strStateKey = L"";
 protected:
 	void			MoveFrame();

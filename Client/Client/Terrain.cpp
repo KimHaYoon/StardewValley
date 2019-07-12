@@ -22,12 +22,13 @@ HRESULT CTerrain::Init()
 HRESULT CTerrain::Init(const _tchar * pFilePath)
 {
 	m_tInfo.vPos = { 400.f, 300.f,0.f };
-	m_tInfo.vSize = { 1.f, 1.f,0.f };
+	m_tInfo.vSize = { 2.f, 2.f,0.f };
 	if (FAILED(LoadData(pFilePath)))
 		return E_FAIL;
 	m_fSpeed = 10.f;
 	for (auto& iter : m_vecTile)
 		wcscpy_s(iter->ObjKey, L"Fall");
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_1);
 		
 	return S_OK;
 }
@@ -66,11 +67,12 @@ void CTerrain::Render()
 	D3DXMATRIX matScale, matTrans;
 	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
 
-	int iCullX = (int)vScroll.x / TILECX;
-	int iCullY = (int)vScroll.y / TILECY;
 
-	int iCullEndX = iCullX + WINCX / TILECX;
-	int iCullEndY = iCullY + WINCY / TILECY;
+	int iCullX = (int)vScroll.x / TILECX ;
+	int iCullY = (int)vScroll.y / TILECY ;
+
+	int iCullEndX = iCullX + WINCX / TILECX+1;
+	int iCullEndY = iCullY + WINCY / TILECY+1;
 
 	for (int i = iCullY; i < iCullEndY; ++i)
 	{

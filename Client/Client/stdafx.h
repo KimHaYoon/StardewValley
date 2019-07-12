@@ -50,4 +50,5 @@ using namespace std;
 #include "TextureMgr.h"
 #include "KeyMgr.h"
 #include "PathMgr.h"
+#include "RenderMgr.h"
 

@@ -9,10 +9,20 @@ CAbigail::CAbigail()
 
 CAbigail::~CAbigail()
 {
+	Release();
 }
 
 HRESULT CAbigail::Init()
 {
+	m_tInfo.vPos = {400.f, 300.f,0.f};
+	m_tInfo.vSize = { 2.f,2.f,0.f};
+	m_strObjectKey = L"Abigail";
+	m_strStateKey = L"Abigail_Forward";
+	m_tFrame = {0.f, 4.f};
+	if (FAILED(CNPC::LoadPath()))
+		return E_FAIL;
+
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 	return S_OK;
 }
 
@@ -29,13 +39,14 @@ _int CAbigail::Update(const _float & fTimeDelta)
 
 void CAbigail::LateUpdate(const _float & fTimeDelta)
 {
-
+	CObj::MoveFrame();
+	CNPC::TraceThePath(fTimeDelta);
 }
 
 void CAbigail::Render()
 {
-	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(L"Abigail", m_strStateKey,
-		(int)m_tFrame.fFrame);
+	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+		m_strObjectKey, m_strStateKey,(int)m_tFrame.fFrame);
 	NULL_CHECK_VOID(pTexInfo);
 
 	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
@@ -48,4 +59,12 @@ void CAbigail::Render()
 
 void CAbigail::Release()
 {
+	for (auto& iter : m_mapPos)
+	{
+		iter.second.clear();
+		iter.second.shrink_to_fit();
+	}
+	m_mapPos.clear();
 }
+
+

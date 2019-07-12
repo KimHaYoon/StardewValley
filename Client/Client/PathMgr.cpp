@@ -4,19 +4,21 @@
 _IMPLEMENT_SINGLETON(CPathMgr)
 CPathMgr::CPathMgr()
 {
+	
 }
 
 
 CPathMgr::~CPathMgr()
 {
+	Release();
 }
 
-HRESULT CPathMgr::InsertPath(const _tchar * pFilePath, const _tchar* pNPCName, 
+HRESULT CPathMgr::InsertPath(const _tchar * pFilePath, TCHAR* pNPCName, 
 	const _int & iCount)
 {
 	TCHAR szFullPath[MAX_STR] = L"";
 	NPCInfo* pInfo = new NPCInfo;
-	wcscpy_s(pInfo->szName, pNPCName);
+	pInfo->szName = pNPCName;
 	vector<_vec3> v;
 	for (int i = 0; i < iCount; ++i)
 	{

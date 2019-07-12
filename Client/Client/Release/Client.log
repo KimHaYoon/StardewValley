@@ -15,13 +15,12 @@
   Obj.cpp
   ObjectMgr.cpp
   PathMgr.cpp
-PathMgr.cpp(18): warning C4101: 'ctmp' :참조되지 않은 지역 변수입니다.
   Player.cpp
-Player.cpp(111): warning C4244: '인수': 'float'에서 'const int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  RenderMgr.cpp
   Scene.cpp
   SceneMgr.cpp
-  ScrollMgr.cpp
   컴파일하고 있습니다...
+  ScrollMgr.cpp
   SingleTexture.cpp
   Stage.cpp
   Terrain.cpp
@@ -29,9 +28,9 @@ Player.cpp(111): warning C4244: '인수': 'float'에서 'const int'(으)로 변�
   TextureMgr.cpp
   TimerMgr.cpp
   코드를 생성하고 있습니다.
-  30 of 1123 functions ( 2.7%) were compiled, the rest were copied from previous compilation.
-    4 functions were new in current compilation
-    26 functions had inline decision re-evaluated but remain unchanged
+  2 of 1436 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.exe
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.pdb (Full PDB)

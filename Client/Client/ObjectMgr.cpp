@@ -52,11 +52,11 @@ void CObjectMgr::LateUpdate(const _float& fTimeDelta)
 
 void CObjectMgr::Render()
 {
-	for (int i = 0; i < OBJECT_ID_END; ++i)
-	{
-		for (auto& pObject : m_listObject[i])
-			pObject->Render();
-	}
+// 	for (int i = 0; i < OBJECT_ID_END; ++i)
+// 	{
+// 		for (auto& pObject : m_listObject[i])
+// 			pObject->Render();
+// 	}
 }
 
 void CObjectMgr::Release()

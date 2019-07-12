@@ -20,12 +20,13 @@ HRESULT CBackTerrain::Init()
 HRESULT CBackTerrain::Init(const _tchar * pFilePath)
 {
 	m_tInfo.vPos = { 400.f, 300.f,0.f };
-	m_tInfo.vSize = { 1.f, 1.f,0.f };
+	m_tInfo.vSize = { 2.f, 2.f,0.f };
 	if (FAILED(LoadData(pFilePath)))
 		return E_FAIL;
 	m_fSpeed = 10.f;
 	for (auto& iter : m_vecTile)
 		wcscpy_s(iter->ObjKey, L"Fall");
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_1);
 	return S_OK;
 }
 _int CBackTerrain::Update(const _float & fTimeDelta)
