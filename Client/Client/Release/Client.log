@@ -1,6 +1,35 @@
-﻿  NPC.cpp
+﻿  stdafx.cpp
+  Abigail.cpp
+  BackTerrain.cpp
+  Camera.cpp
+  Client.cpp
+  DongKuTestScene.cpp
+  HaYoonTestScene.cpp
+  KeyMgr.cpp
+  Logo.cpp
+  MainApp.cpp
+  MultiTexture.cpp
+  MyMap.cpp
+  NPC.cpp
+  PathMgr.cpp
+  Player.cpp
+  RenderMgr.cpp
+  Scene.cpp
+  Obj.cpp
+  ObjectMgr.cpp
+  SceneMgr.cpp
+  ScrollMgr.cpp
+  컴파일하고 있습니다...
+  SingleTexture.cpp
+  Stage.cpp
+  Device.cpp
+  FrameMgr.cpp
+  Terrain.cpp
+  Texture.cpp
+  TextureMgr.cpp
+  TimerMgr.cpp
   코드를 생성하고 있습니다.
-  0 of 1459 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  1459 of 1459 functions (100.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.

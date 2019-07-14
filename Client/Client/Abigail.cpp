@@ -14,7 +14,7 @@ CAbigail::~CAbigail()
 
 HRESULT CAbigail::Init()
 {
-	m_tInfo.vPos = {400.f, 300.f,0.f};
+	m_tInfo.vPos = {0.f, 0.f,0.f};
 	m_tInfo.vSize = { 1.f,1.f,0.f};
 	m_strObjectKey = L"Abigail";
 	m_strStateKey = L"Abigail_Forward";
@@ -51,7 +51,6 @@ void CAbigail::LateUpdate(const _float & fTimeDelta)
 	CObj::MoveFrame();
 	CNPC::TraceThePath(0, fTimeDelta);
 	ChangeStateKey(m_eCurDir);
-
 }
 
 void CAbigail::Render()
