@@ -20,6 +20,10 @@ protected:
 	map<_int, vector<_vec3>>		m_mapPos;	
 protected:
 	_int							m_iIdx = 0;
-	_bool							m_bTransCheck = false;
+	_int							m_iVecSize = 0;
+	_bool							m_bSizeCheck = false;
+	_bool							m_bForwardPath = false;
+	_bool							m_bBackPath = false;
+	_vec3							m_vTempPos;
 };
 

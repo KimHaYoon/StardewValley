@@ -14,11 +14,11 @@ CAbigail::~CAbigail()
 
 HRESULT CAbigail::Init()
 {
-	m_tInfo.vPos = {0.f, 0.f,0.f};
+	m_tInfo.vPos = {8.f, 8.f,0.f};
 	m_tInfo.vSize = { 1.f,1.f,0.f};
 	m_strObjectKey = L"Abigail";
 	m_strStateKey = L"Abigail_Forward";
-	m_fSpeed = 5.f;
+	m_fSpeed = 10.f;
 	m_tFrame = {0.f, 4.f};
 	m_eCurDir = DIR_ID_FORWORD;
 	m_ePastDIr = m_ePastDIr;
@@ -49,7 +49,7 @@ _int CAbigail::Update(const _float & fTimeDelta)
 void CAbigail::LateUpdate(const _float & fTimeDelta)
 {
 	CObj::MoveFrame();
-	CNPC::TraceThePath(0, fTimeDelta);
+	CNPC::TraceThePath(1, fTimeDelta);
 	ChangeStateKey(m_eCurDir);
 }
 
