@@ -14,7 +14,7 @@ CAbigail::~CAbigail()
 
 HRESULT CAbigail::Init()
 {
-	m_tInfo.vPos = {8.f, 8.f,0.f};
+	//m_tInfo.vPos = {8.f, 8.f,0.f};
 	m_tInfo.vSize = { 1.f,1.f,0.f};
 	m_strObjectKey = L"Abigail";
 	m_strStateKey = L"Abigail_Forward";
@@ -24,6 +24,12 @@ HRESULT CAbigail::Init()
 	m_ePastDIr = m_ePastDIr;
 	if (FAILED(CNPC::LoadPath()))
 		return E_FAIL;
+
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos=iter.second.front();
+		break;
+	}
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 	return S_OK;
@@ -45,7 +51,7 @@ _int CAbigail::Update(const _float & fTimeDelta)
 void CAbigail::LateUpdate(const _float & fTimeDelta)
 {
 	CObj::MoveFrame();
-	CNPC::TraceThePath(1, fTimeDelta);
+	CNPC::TraceThePath(m_iPathIdx, fTimeDelta);
 	ChangeStateKey(m_eCurDir);
 }
 

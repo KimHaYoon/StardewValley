@@ -51,6 +51,7 @@ void CNPC::Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta)
 
 	m_vTempPos = m_tInfo.vPos;
 	m_tInfo.vPos += vTrans*fTimeDelta*m_fSpeed;
+
 	if (m_iIdx > 0.f)
 	{
 		if (m_bBackPath)

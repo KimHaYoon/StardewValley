@@ -25,6 +25,12 @@ HRESULT CMaru::Init()
 	if (FAILED(CNPC::LoadPath()))
 		return E_FAIL;
 
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos = iter.second.front();
+		break;
+	}
+
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 
 	return S_OK;
@@ -45,7 +51,7 @@ _int CMaru::Update(const _float & fTimeDelta)
 void CMaru::LateUpdate(const _float & fTimeDelta)
 {
 	CObj::MoveFrame();
-	CNPC::TraceThePath(1, fTimeDelta);
+	CNPC::TraceThePath(m_iPathIdx, fTimeDelta);
 	ChangeStateKey(m_eCurDir);
 }
 

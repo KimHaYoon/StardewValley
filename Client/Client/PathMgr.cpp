@@ -13,8 +13,7 @@ CPathMgr::~CPathMgr()
 	Release();
 }
 
-HRESULT CPathMgr::InsertPath(const _tchar * pFilePath, TCHAR* pNPCName, 
-	const _int & iCount)
+HRESULT CPathMgr::InsertPath(const _tchar * pFilePath, TCHAR* pNPCName, const _int & iCount)
 {
 	TCHAR szFullPath[MAX_STR] = L"";
 	NPCInfo* pInfo = new NPCInfo;

@@ -24,6 +24,11 @@ HRESULT CSandy::Init()
 	m_ePastDIr = m_ePastDIr;
 	if (FAILED(CNPC::LoadPath()))
 		return E_FAIL;
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos = iter.second.front();
+		break;
+	}
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 
@@ -43,7 +48,7 @@ _int CSandy::Update(const _float & fTimeDelta)
 void CSandy::LateUpdate(const _float & fTimeDelta)
 {
 	CObj::MoveFrame();
-	CNPC::TraceThePath(1, fTimeDelta);
+	CNPC::TraceThePath(m_iPathIdx, fTimeDelta);
 	ChangeStateKey(m_eCurDir);
 }
 

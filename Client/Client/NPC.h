@@ -26,6 +26,9 @@ protected:
 	_bool							m_bSizeCheck = false;
 	_bool							m_bForwardPath = false;
 	_bool							m_bBackPath = false;
+	_int							m_iPathIdx = 0;
+protected:
 	_vec3							m_vTempPos;
+	
 };
 
