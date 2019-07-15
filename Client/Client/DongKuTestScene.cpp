@@ -2,6 +2,8 @@
 #include "DongKuTestScene.h"
 #include "Obj.h"
 #include "Player.h"
+#include "Terrain.h"
+#include "BackTerrain.h"
 
 
 CDongKuTestScene::CDongKuTestScene()
@@ -20,9 +22,17 @@ HRESULT CDongKuTestScene::Init()
 		ERR_MSG( L"Image Load Failed" );
 		return E_FAIL;
 	}
+	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Mountain_Tile_Back.dat");
+	if (nullptr == pObj)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
+	pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Mountain_Tile_Front.dat");
+	if (nullptr == pObj)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
-	CObj* pObj = CAbstractFactory<CPlayer>::CreateObj();
+	pObj = CAbstractFactory<CPlayer>::CreateObj();
 	if ( nullptr == pObj )
 		return E_FAIL;
 
