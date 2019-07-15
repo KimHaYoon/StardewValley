@@ -35,14 +35,14 @@ void CNPC::TraceThePath(const _int& iIdx, const _float& fTimeDelta)
 
 	Check_DIR(iter_find->second, fTimeDelta);
 
-	
+
 }
 
 void CNPC::Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta)
 {
 	if (!m_bSizeCheck)
 	{
-		m_iVecSize = vPos.size()-1;
+		m_iVecSize = vPos.size() - 1;
 		m_bSizeCheck = true;
 	}
 	_vec3 vTemp = vPos[m_iIdx];
@@ -54,36 +54,76 @@ void CNPC::Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta)
 	m_vTempPos = m_tInfo.vPos;
 	m_tInfo.vPos += vTrans*fTimeDelta*m_fSpeed;
 
-	if (m_tInfo.vPos.y < m_vTempPos.y)
-		m_eCurDir = DIR_ID_BACK;
-	else if (m_tInfo.vPos.y > m_vTempPos.y)
-		m_eCurDir = DIR_ID_FORWORD;
-	else if (m_tInfo.vPos.x < m_vTempPos.x)
-		m_eCurDir = DIR_ID_LEFT;
-	else if (m_tInfo.vPos.x > m_vTempPos.x)
-		m_eCurDir = DIR_ID_RIGHT;
+	// 	if (m_tInfo.vPos.y < m_vTempPos.y)
+	// 		m_eCurDir = DIR_ID_BACK;
+	// 	else if (m_tInfo.vPos.y > m_vTempPos.y)
+	// 		m_eCurDir = DIR_ID_FORWORD;
+	// 	else if (m_tInfo.vPos.x < m_vTempPos.x)
+	// 		m_eCurDir = DIR_ID_LEFT;
+	// 	else if (m_tInfo.vPos.x > m_vTempPos.x)
+	// 		m_eCurDir = DIR_ID_RIGHT;
 
 
-// 	if (m_bBackPath)
-// 	{
-// 		if (m_eCurDir == DIR_ID_FORWORD)
-// 			m_eCurDir = DIR_ID_LEFT;
-// 		else if (m_eCurDir == DIR_ID_RIGHT)
-// 			m_eCurDir = DIR_ID_BACK;
-// 		else if (m_eCurDir == DIR_ID_BACK)
-// 			m_eCurDir = DIR_ID_RIGHT;
-// 		else if (m_eCurDir == DIR_ID_LEFT)
-// 			m_eCurDir = DIR_ID_FORWORD;
-// 	}
+	if (m_iIdx > 0.f)
+	{
 
-	if (fLength<1.f)
+		if (m_bBackPath)
+		{
+
+			if (vPos[m_iIdx].x > vPos[m_iIdx + 1].x)
+				m_eCurDir = DIR_ID_RIGHT;
+			if (vPos[m_iIdx].x < vPos[m_iIdx + 1].x)
+				m_eCurDir = DIR_ID_LEFT;
+			if (vPos[m_iIdx].y > vPos[m_iIdx + 1].y)
+				m_eCurDir = DIR_ID_FORWORD;
+			if (vPos[m_iIdx].y < vPos[m_iIdx + 1].y)
+				m_eCurDir = DIR_ID_BACK;
+		}
+		else if (m_bForwardPath)
+		{
+			if (vPos[m_iIdx].x > vPos[m_iIdx - 1].x)
+				m_eCurDir = DIR_ID_RIGHT;
+			if (vPos[m_iIdx].x < vPos[m_iIdx - 1].x)
+				m_eCurDir = DIR_ID_LEFT;
+			if (vPos[m_iIdx].y > vPos[m_iIdx - 1].y)
+				m_eCurDir = DIR_ID_FORWORD;
+			if (vPos[m_iIdx].y < vPos[m_iIdx - 1].y)
+				m_eCurDir = DIR_ID_BACK;
+		}
+	}
+
+
+
+	// 	if (vTrans.x > 0.f)
+	// 		m_eCurDir = DIR_ID_RIGHT;
+	// 	else if (vTrans.x < 0.f)
+	// 		m_eCurDir = DIR_ID_LEFT;
+	// 	else if (vTrans.y > 0.f)
+	// 		m_eCurDir = DIR_ID_FORWORD;
+	// 	else if (vTrans.y < 0.f)
+	// 		m_eCurDir = DIR_ID_BACK;
+
+
+	// 	if (m_bBackPath)
+	// 	{
+	// 		if (m_eCurDir == DIR_ID_FORWORD)
+	// 			m_eCurDir = DIR_ID_LEFT;
+	// 		else if (m_eCurDir == DIR_ID_RIGHT)
+	// 			m_eCurDir = DIR_ID_BACK;
+	// 		else if (m_eCurDir == DIR_ID_BACK)
+	// 			m_eCurDir = DIR_ID_RIGHT;
+	// 		else if (m_eCurDir == DIR_ID_LEFT)
+	// 			m_eCurDir = DIR_ID_FORWORD;
+	// 	}
+
+	if (fLength < 1.f)
 	{
 		if (m_iIdx >= m_iVecSize)
 		{
 			m_bBackPath = true;
 			m_bForwardPath = false;
 		}
-		else if(m_iIdx<=0)
+		else if (m_iIdx <= 0)
 		{
 			m_bBackPath = false;
 			m_bForwardPath = true;
@@ -91,10 +131,12 @@ void CNPC::Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta)
 
 		if (m_bBackPath)
 		{
+
 			--m_iIdx;
 		}
 		else if (m_bForwardPath)
 		{
+
 			m_iIdx++;
 		}
 	}
