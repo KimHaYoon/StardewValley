@@ -1,9 +1,15 @@
 #pragma once
 #include "Obj.h"
+
+#define WALKSPEED 100.f
+#define RUNSPEED 150.f
+
 class CPlayer : public CObj
 {
 	_float m_fTime = 0.f;
 	_bool m_bIDLE;
+
+	_float m_fMoveFrame = 1.f;
 public:
 	CPlayer();
 	~CPlayer();
