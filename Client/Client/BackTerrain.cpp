@@ -83,8 +83,8 @@ void CBackTerrain::Render()
 			D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, m_tInfo.vSize.z);
 			D3DXMatrixTranslation(
 				&matTrans,
-				m_vecTile[iIndex]->vPos.x,
-				m_vecTile[iIndex]->vPos.y,
+				m_vecTile[iIndex]->vPos.x - vScroll.x,
+				m_vecTile[iIndex]->vPos.y - vScroll.y,
 				0.f);
 
 			m_tInfo.matWorld = matScale * matTrans;
