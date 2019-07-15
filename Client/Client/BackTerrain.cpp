@@ -68,8 +68,8 @@ void CBackTerrain::Render()
 	int iCullX = (int)vScroll.x / TILECX;
 	int iCullY = (int)vScroll.y / TILECY;
 
-	int iCullEndX = iCullX + WINCX / TILECX;
-	int iCullEndY = iCullY + WINCY / TILECY;
+	int iCullEndX = iCullX + WINCX / TILECX + 1;
+	int iCullEndY = iCullY + WINCY / TILECY + 1;
 
 	for (int i = iCullY; i < iCullEndY; ++i)
 	{
