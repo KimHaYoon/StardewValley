@@ -32,10 +32,6 @@ HRESULT CAbigail::Init()
 _int CAbigail::Update(const _float & fTimeDelta)
 {
 
-	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-	{
-		m_tInfo.vPos.y -= fTimeDelta*m_fSpeed;
-	}
 	_matrix matTrans, matScale;
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);

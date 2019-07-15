@@ -115,9 +115,6 @@
     <Filter Include="01. Object\01. Stage\01. NPC\02. Caroline">
       <UniqueIdentifier>{b7692f8b-8b48-489f-8667-9076e708921a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\01. Stage\01. NPC\03. Demetius">
-      <UniqueIdentifier>{c45c6f37-d1d1-444b-be3d-df64c898e29d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01. Object\01. Stage\01. NPC\04. Elliott">
       <UniqueIdentifier>{f7b51e93-445a-41ab-832f-d59a50761bea}</UniqueIdentifier>
     </Filter>
@@ -192,6 +189,9 @@
     </Filter>
     <Filter Include="01. Object\98. public\98. Camera">
       <UniqueIdentifier>{87c7796a-62b0-4c38-b2f5-6e63a34a6939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\01. NPC\03. Demetrius">
+      <UniqueIdentifier>{c45c6f37-d1d1-444b-be3d-df64c898e29d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +291,87 @@
     <ClInclude Include="Camera.h">
       <Filter>01. Object\98. public\98. Camera</Filter>
     </ClInclude>
+    <ClInclude Include="Alex.h">
+      <Filter>01. Object\01. Stage\01. NPC\01. Alex</Filter>
+    </ClInclude>
+    <ClInclude Include="Caroline.h">
+      <Filter>01. Object\01. Stage\01. NPC\02. Caroline</Filter>
+    </ClInclude>
+    <ClInclude Include="Elliott.h">
+      <Filter>01. Object\01. Stage\01. NPC\04. Elliott</Filter>
+    </ClInclude>
+    <ClInclude Include="Emily.h">
+      <Filter>01. Object\01. Stage\01. NPC\05. Emily</Filter>
+    </ClInclude>
+    <ClInclude Include="Evelyn.h">
+      <Filter>01. Object\01. Stage\01. NPC\06. Evelyn</Filter>
+    </ClInclude>
+    <ClInclude Include="George.h">
+      <Filter>01. Object\01. Stage\01. NPC\07. George</Filter>
+    </ClInclude>
+    <ClInclude Include="Haley.h">
+      <Filter>01. Object\01. Stage\01. NPC\08. Haley</Filter>
+    </ClInclude>
+    <ClInclude Include="Jas.h">
+      <Filter>01. Object\01. Stage\01. NPC\10. Jas</Filter>
+    </ClInclude>
+    <ClInclude Include="Harvey.h">
+      <Filter>01. Object\01. Stage\01. NPC\09. Harvey</Filter>
+    </ClInclude>
+    <ClInclude Include="Jodi.h">
+      <Filter>01. Object\01. Stage\01. NPC\11. Jodi</Filter>
+    </ClInclude>
+    <ClInclude Include="Kent.h">
+      <Filter>01. Object\01. Stage\01. NPC\12. Kent</Filter>
+    </ClInclude>
+    <ClInclude Include="Leah.h">
+      <Filter>01. Object\01. Stage\01. NPC\13. Leah</Filter>
+    </ClInclude>
+    <ClInclude Include="Lewis.h">
+      <Filter>01. Object\01. Stage\01. NPC\14. Lewis</Filter>
+    </ClInclude>
+    <ClInclude Include="Linus.h">
+      <Filter>01. Object\01. Stage\01. NPC\15. Linus</Filter>
+    </ClInclude>
+    <ClInclude Include="Marcello.h">
+      <Filter>01. Object\01. Stage\01. NPC\16. Marcello</Filter>
+    </ClInclude>
+    <ClInclude Include="Marlon.h">
+      <Filter>01. Object\01. Stage\01. NPC\17. Marlon</Filter>
+    </ClInclude>
+    <ClInclude Include="Marnie.h">
+      <Filter>01. Object\01. Stage\01. NPC\18. Marnie</Filter>
+    </ClInclude>
+    <ClInclude Include="Maru.h">
+      <Filter>01. Object\01. Stage\01. NPC\19. Maru</Filter>
+    </ClInclude>
+    <ClInclude Include="Morris.h">
+      <Filter>01. Object\01. Stage\01. NPC\20. Morris</Filter>
+    </ClInclude>
+    <ClInclude Include="Penny.h">
+      <Filter>01. Object\01. Stage\01. NPC\21. Penny</Filter>
+    </ClInclude>
+    <ClInclude Include="Robin.h">
+      <Filter>01. Object\01. Stage\01. NPC\23. Robin</Filter>
+    </ClInclude>
+    <ClInclude Include="Sam.h">
+      <Filter>01. Object\01. Stage\01. NPC\24. Sam</Filter>
+    </ClInclude>
+    <ClInclude Include="Sandy.h">
+      <Filter>01. Object\01. Stage\01. NPC\25. Sandy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sebastian.h">
+      <Filter>01. Object\01. Stage\01. NPC\26. Sebastian</Filter>
+    </ClInclude>
+    <ClInclude Include="Vincent.h">
+      <Filter>01. Object\01. Stage\01. NPC\27. Vincent</Filter>
+    </ClInclude>
+    <ClInclude Include="Demetrius.h">
+      <Filter>01. Object\01. Stage\01. NPC\03. Demetrius</Filter>
+    </ClInclude>
+    <ClInclude Include="Pierre.h">
+      <Filter>01. Object\01. Stage\01. NPC\22. Pierre</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -379,6 +460,87 @@
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>01. Object\98. public\98. Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Alex.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\01. Alex</Filter>
+    </ClCompile>
+    <ClCompile Include="Caroline.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\02. Caroline</Filter>
+    </ClCompile>
+    <ClCompile Include="Elliott.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\04. Elliott</Filter>
+    </ClCompile>
+    <ClCompile Include="Emily.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\05. Emily</Filter>
+    </ClCompile>
+    <ClCompile Include="Evelyn.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\06. Evelyn</Filter>
+    </ClCompile>
+    <ClCompile Include="George.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\07. George</Filter>
+    </ClCompile>
+    <ClCompile Include="Haley.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\08. Haley</Filter>
+    </ClCompile>
+    <ClCompile Include="Jas.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\10. Jas</Filter>
+    </ClCompile>
+    <ClCompile Include="Harvey.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\09. Harvey</Filter>
+    </ClCompile>
+    <ClCompile Include="Jodi.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\11. Jodi</Filter>
+    </ClCompile>
+    <ClCompile Include="Kent.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\12. Kent</Filter>
+    </ClCompile>
+    <ClCompile Include="Leah.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\13. Leah</Filter>
+    </ClCompile>
+    <ClCompile Include="Lewis.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\14. Lewis</Filter>
+    </ClCompile>
+    <ClCompile Include="Linus.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\15. Linus</Filter>
+    </ClCompile>
+    <ClCompile Include="Marcello.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\16. Marcello</Filter>
+    </ClCompile>
+    <ClCompile Include="Marlon.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\17. Marlon</Filter>
+    </ClCompile>
+    <ClCompile Include="Marnie.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\18. Marnie</Filter>
+    </ClCompile>
+    <ClCompile Include="Maru.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\19. Maru</Filter>
+    </ClCompile>
+    <ClCompile Include="Morris.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\20. Morris</Filter>
+    </ClCompile>
+    <ClCompile Include="Penny.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\21. Penny</Filter>
+    </ClCompile>
+    <ClCompile Include="Robin.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\23. Robin</Filter>
+    </ClCompile>
+    <ClCompile Include="Sam.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\24. Sam</Filter>
+    </ClCompile>
+    <ClCompile Include="Sandy.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\25. Sandy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sebastian.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\26. Sebastian</Filter>
+    </ClCompile>
+    <ClCompile Include="Vincent.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\27. Vincent</Filter>
+    </ClCompile>
+    <ClCompile Include="Demetrius.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\03. Demetrius</Filter>
+    </ClCompile>
+    <ClCompile Include="Pierre.cpp">
+      <Filter>01. Object\01. Stage\01. NPC\22. Pierre</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

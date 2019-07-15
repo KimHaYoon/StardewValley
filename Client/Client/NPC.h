@@ -13,6 +13,8 @@ public:
 	virtual void Render() PURE;
 	virtual void Release() PURE;
 public:
+	virtual void ChangeStateKey(DIR_ID eID)PURE;
+public:
 	HRESULT		  LoadPath();
 	void		  TraceThePath(const _int& iIdx, const _float& fTimeDelta);
 	void		  Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta);

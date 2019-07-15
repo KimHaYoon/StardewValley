@@ -12,7 +12,7 @@ public:
 	virtual void LateUpdate(const _float & fTimeDelta) override;
 	virtual void Render() override;
 	virtual void Release() override;
-private:
-	void		 ChangeStateKey(DIR_ID eID);
+	virtual void ChangeStateKey(DIR_ID eID);
+
 };
 
