@@ -1,3 +1,62 @@
-﻿  Logo.cpp
-  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.exe
-  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.pdb (Full PDB)
+﻿  stdafx.cpp
+  Abigail.cpp
+  Alex.cpp
+  BackTerrain.cpp
+  Camera.cpp
+  Caroline.cpp
+  Client.cpp
+  Demetrius.cpp
+  DongKuTestScene.cpp
+  Elliott.cpp
+  Emily.cpp
+  Evelyn.cpp
+  George.cpp
+  Haley.cpp
+  Harvey.cpp
+  HaYoonTestScene.cpp
+  Jas.cpp
+  Jodi.cpp
+  Kent.cpp
+  KeyMgr.cpp
+  Leah.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Lewis.cpp
+  Linus.cpp
+  Logo.cpp
+  MainApp.cpp
+  Marcello.cpp
+  Marlon.cpp
+  Marnie.cpp
+  Maru.cpp
+  Morris.cpp
+  MultiTexture.cpp
+  MyMap.cpp
+  NPC.cpp
+  PathMgr.cpp
+  Penny.cpp
+  Pierre.cpp
+  Player.cpp
+  RenderMgr.cpp
+  Robin.cpp
+  Sam.cpp
+  Sandy.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Scene.cpp
+  Obj.cpp
+  ObjectMgr.cpp
+  SceneMgr.cpp
+  ScrollMgr.cpp
+  Sebastian.cpp
+  SingleTexture.cpp
+  Stage.cpp
+  Device.cpp
+  FrameMgr.cpp
+  Terrain.cpp
+  Texture.cpp
+  TextureMgr.cpp
+  TimerMgr.cpp
+  Vincent.cpp
+  코드를 생성하고 있습니다...
+  Client.vcxproj -> D:\00.학교\2019 여름방학\StardewValley\Client\Debug\Client.exe
