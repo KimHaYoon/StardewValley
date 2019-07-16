@@ -20,7 +20,7 @@ HRESULT CMainApp::Initialize()
 	if (FAILED(m_pDevice->InitDevice()))
 		return E_FAIL;
 
-	if (FAILED(m_pSceneMgr->SceneChange(SCENE_ID_HAYOON)))
+	if (FAILED(m_pSceneMgr->SceneChange(SCENE_ID_LOGO)))
 	{
 		ERR_MSG(L"Scene change Failed!!");
 		return E_FAIL;

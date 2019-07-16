@@ -158,9 +158,7 @@ HRESULT CLogo::Init()
 void CLogo::Update(const _float& fTimeDelta)
 {
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_RETURN))
-	{
 		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_DONGKU);
-	}
 	CObjectMgr::GetInstance()->Update(fTimeDelta);
 }
 
@@ -176,6 +174,5 @@ void CLogo::Render()
 
 void CLogo::Release()
 {
-	CObjectMgr::GetInstance()->Release_Scene(OBJECT_ID_NPC);
-	CObjectMgr::GetInstance()->Release_Scene(OBJECT_ID_TERRAIN);
+	CObjectMgr::GetInstance()->Release();
 }

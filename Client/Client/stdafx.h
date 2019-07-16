@@ -52,3 +52,5 @@ using namespace std;
 #include "PathMgr.h"
 #include "RenderMgr.h"
 
+//Console
+#pragma comment(linker,"/entry:wWinMainCRTStartup /subsystem:console")

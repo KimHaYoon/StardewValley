@@ -25,8 +25,6 @@ const TEXINFO * CMultiTexture::GetTexInfo(const TCHAR * pStateKey,
 
 	return iter_find->second[iIndex];
 }
-
-// pFilePath: ..\Texture\Stage\TERRAIN\Tile\Tile%d.png
 HRESULT CMultiTexture::InsertTexture(const TCHAR* pFilePath, 
 	const TCHAR* pStateKey, const int & iCount)
 {

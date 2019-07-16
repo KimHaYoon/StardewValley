@@ -56,11 +56,12 @@ void CObjectMgr::Render()
 
 void CObjectMgr::Release()
 {
-// 	for (int i = 0; i < OBJECT_ID_END; ++i)
-// 	{
-// 		for_each(m_listObject[i].begin(), m_listObject[i].end(), SafeDelete<CObj*>);
-// 		m_listObject[i].clear();
-// 	}
+	for (int i = 0; i < OBJECT_ID_END; ++i)
+	{
+		CRenderMgr::GetInstance()->Release_RenderObj(OBJECT_ID(i));
+		for_each(m_listObject[i].begin(), m_listObject[i].end(), SafeDelete<CObj*>);
+		m_listObject[i].clear();
+	}
 }
 
 void CObjectMgr::Release_Scene(OBJECT_ID eID)
