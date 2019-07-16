@@ -28,7 +28,6 @@ typedef struct tagUNITINFO
 	D3DXMATRIX	matWorld;
 	D3DXVECTOR3 vPos;
 	D3DXVECTOR3 vSize;
-
 	LAYER_ID	eID;
 	int			iMapNum;
 	bool		Check=false;

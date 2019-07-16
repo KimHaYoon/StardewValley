@@ -13,5 +13,7 @@ public:
 	virtual void Render() override;
 	virtual void Release() override;
 	virtual void ChangeStateKey(DIR_ID eID);
+public:
+	virtual HRESULT Init(OBJECT_ID eID);
 };
 

@@ -68,3 +68,20 @@ void CRenderMgr::Release()
 		m_RenderLst[i].clear();	
 	}
 }
+
+void CRenderMgr::Release_RenderObj(OBJECT_ID eID)
+{
+	for (int i = 0; i < LAYER_ID_END; ++i)
+	{
+		auto& iter = m_RenderLst[i].begin();
+		for (; iter != m_RenderLst[i].end();)
+		{
+			if (iter[0]->GetObjectID() == eID)
+			{
+				iter = m_RenderLst[i].erase(iter);
+			}
+			else
+				++iter;
+		}
+	}
+}

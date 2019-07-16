@@ -13,7 +13,7 @@ public:
 	virtual void	Render();
 	virtual void	Release();
 public:
-	virtual HRESULT	Init(const _tchar* pFilePath);
+	virtual HRESULT	Init(const _tchar* pFilePath, OBJECT_ID eID = OBJECT_ID_TERRAIN);
 public:
 	HRESULT LoadData(const _tchar* pFilePath);
 private:

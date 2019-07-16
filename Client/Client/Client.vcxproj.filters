@@ -118,9 +118,6 @@
     <Filter Include="01. Object\01. Stage\01. NPC\04. Elliott">
       <UniqueIdentifier>{f7b51e93-445a-41ab-832f-d59a50761bea}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\01. Stage\01. NPC\05. Emily">
-      <UniqueIdentifier>{faa05b9e-6c95-4efc-886f-6d6d85bd3689}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01. Object\01. Stage\01. NPC\06. Evelyn">
       <UniqueIdentifier>{82ab24f0-7357-4f36-8a38-09751ce01e8d}</UniqueIdentifier>
     </Filter>
@@ -160,9 +157,6 @@
     <Filter Include="01. Object\01. Stage\01. NPC\18. Marnie">
       <UniqueIdentifier>{5d04b445-e60c-48b4-8309-baac9e8e5af7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\01. Stage\01. NPC\19. Maru">
-      <UniqueIdentifier>{a10e5957-e0f0-4a6e-9d1d-57f46a2b9956}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01. Object\01. Stage\01. NPC\20. Morris">
       <UniqueIdentifier>{aed29c9c-c773-402b-b519-43d1da9bf11f}</UniqueIdentifier>
     </Filter>
@@ -192,6 +186,12 @@
     </Filter>
     <Filter Include="01. Object\01. Stage\01. NPC\03. Demetrius">
       <UniqueIdentifier>{c45c6f37-d1d1-444b-be3d-df64c898e29d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\01. NPC\18. Marnie\19. Maru">
+      <UniqueIdentifier>{a10e5957-e0f0-4a6e-9d1d-57f46a2b9956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\01. NPC\04. Elliott\05. Emily">
+      <UniqueIdentifier>{faa05b9e-6c95-4efc-886f-6d6d85bd3689}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -301,7 +301,7 @@
       <Filter>01. Object\01. Stage\01. NPC\04. Elliott</Filter>
     </ClInclude>
     <ClInclude Include="Emily.h">
-      <Filter>01. Object\01. Stage\01. NPC\05. Emily</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\04. Elliott\05. Emily</Filter>
     </ClInclude>
     <ClInclude Include="Evelyn.h">
       <Filter>01. Object\01. Stage\01. NPC\06. Evelyn</Filter>
@@ -343,7 +343,7 @@
       <Filter>01. Object\01. Stage\01. NPC\18. Marnie</Filter>
     </ClInclude>
     <ClInclude Include="Maru.h">
-      <Filter>01. Object\01. Stage\01. NPC\19. Maru</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\18. Marnie\19. Maru</Filter>
     </ClInclude>
     <ClInclude Include="Morris.h">
       <Filter>01. Object\01. Stage\01. NPC\20. Morris</Filter>
@@ -471,7 +471,7 @@
       <Filter>01. Object\01. Stage\01. NPC\04. Elliott</Filter>
     </ClCompile>
     <ClCompile Include="Emily.cpp">
-      <Filter>01. Object\01. Stage\01. NPC\05. Emily</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\04. Elliott\05. Emily</Filter>
     </ClCompile>
     <ClCompile Include="Evelyn.cpp">
       <Filter>01. Object\01. Stage\01. NPC\06. Evelyn</Filter>
@@ -513,7 +513,7 @@
       <Filter>01. Object\01. Stage\01. NPC\18. Marnie</Filter>
     </ClCompile>
     <ClCompile Include="Maru.cpp">
-      <Filter>01. Object\01. Stage\01. NPC\19. Maru</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\18. Marnie\19. Maru</Filter>
     </ClCompile>
     <ClCompile Include="Morris.cpp">
       <Filter>01. Object\01. Stage\01. NPC\20. Morris</Filter>

@@ -11,7 +11,11 @@ public:
 	virtual void Render()PURE;
 	virtual void Release()PURE;
 public:
-	virtual	HRESULT Init(const _tchar* pFilePath);
+	virtual	HRESULT Init(const _tchar* pFilePath, OBJECT_ID eID=OBJECT_ID_TERRAIN);
+	virtual HRESULT Init(OBJECT_ID eID);
+public:
+	const UNITIFNO		GetInfo() const { return m_tInfo; }
+	OBJECT_ID			GetObjectID() { return m_eObjID; }
 protected:
 	UNITIFNO		m_tInfo;
 	_float			m_fSpeed=0.f;
@@ -21,6 +25,7 @@ protected:
 protected:
 	DIR_ID			m_ePastDIr;
 	DIR_ID			m_eCurDir;
+	OBJECT_ID		m_eObjID;
 protected:
 	void			MoveFrame();
 	void			MoveFrame(float num);

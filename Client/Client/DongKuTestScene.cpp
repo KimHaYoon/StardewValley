@@ -13,6 +13,7 @@ CDongKuTestScene::CDongKuTestScene()
 
 CDongKuTestScene::~CDongKuTestScene()
 {
+	Release();
 }
 
 HRESULT CDongKuTestScene::Init()
@@ -58,4 +59,6 @@ void CDongKuTestScene::Render()
 
 void CDongKuTestScene::Release()
 {
+	CObjectMgr::GetInstance()->Release_Scene(OBJECT_ID_PLAYER);
+	CObjectMgr::GetInstance()->Release_Scene(OBJECT_ID_TERRAIN);
 }

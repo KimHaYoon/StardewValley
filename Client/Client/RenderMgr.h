@@ -16,7 +16,8 @@ public:
 	void			Render_Layer_5();
 public:
 	void			Release();
+	void			Release_RenderObj(OBJECT_ID eID);
 private:
-	list<CObj*>		m_RenderLst[LAYER_ID_END];
+	vector<CObj*>		m_RenderLst[LAYER_ID_END];
 };
 

@@ -19,7 +19,7 @@ HRESULT CTerrain::Init()
 	m_fSpeed = 10.f;
 	return S_OK;
 }
-HRESULT CTerrain::Init(const _tchar * pFilePath)
+HRESULT CTerrain::Init(const _tchar * pFilePath, OBJECT_ID eID)
 {
 	m_tInfo.vPos = { 400.f, 300.f,0.f };
 	m_tInfo.vSize = { 1.f, 1.f,0.f };

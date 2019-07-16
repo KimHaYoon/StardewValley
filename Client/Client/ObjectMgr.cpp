@@ -52,11 +52,6 @@ void CObjectMgr::LateUpdate(const _float& fTimeDelta)
 
 void CObjectMgr::Render()
 {
-// 	for (int i = 0; i < OBJECT_ID_END; ++i)
-// 	{
-// 		for (auto& pObject : m_listObject[i])
-// 			pObject->Render();
-// 	}
 }
 
 void CObjectMgr::Release()
@@ -66,4 +61,11 @@ void CObjectMgr::Release()
 // 		for_each(m_listObject[i].begin(), m_listObject[i].end(), SafeDelete<CObj*>);
 // 		m_listObject[i].clear();
 // 	}
+}
+
+void CObjectMgr::Release_Scene(OBJECT_ID eID)
+{
+	CRenderMgr::GetInstance()->Release_RenderObj(eID);
+	for_each(m_listObject[eID].begin(), m_listObject[eID].end(), SafeDelete<CObj*>);
+	m_listObject[eID].clear();
 }
