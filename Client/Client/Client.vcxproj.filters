@@ -193,6 +193,9 @@
     <Filter Include="01. Object\01. Stage\01. NPC\04. Elliott\05. Emily">
       <UniqueIdentifier>{faa05b9e-6c95-4efc-886f-6d6d85bd3689}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01. Object\01. Stage\00. Player\00. Item">
+      <UniqueIdentifier>{9aeca0cf-a58b-4a83-ad4d-e8f046ff24fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -372,6 +375,9 @@
     <ClInclude Include="Pierre.h">
       <Filter>01. Object\01. Stage\01. NPC\22. Pierre</Filter>
     </ClInclude>
+    <ClInclude Include="Equipment.h">
+      <Filter>01. Object\01. Stage\00. Player\00. Item</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -541,6 +547,9 @@
     </ClCompile>
     <ClCompile Include="Pierre.cpp">
       <Filter>01. Object\01. Stage\01. NPC\22. Pierre</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipment.cpp">
+      <Filter>01. Object\01. Stage\00. Player\00. Item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

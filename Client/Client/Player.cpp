@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Player.h"
 #include "ScrollMgr.h"
-
+#include "Equipment.h"
 CPlayer::CPlayer()
 {
 }
@@ -22,6 +22,12 @@ HRESULT CPlayer::Init()
 	m_fMoveFrame = m_fSpeed / 100.f;
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
+
+	m_pEquip = CAbstractFactory<CEquipment>::CreateObj();
+	if (nullptr == m_pEquip)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pEquip, OBJECT_ID_NPC);
+
 	return S_OK;
 }
 
@@ -41,6 +47,11 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		m_fTime = 0.f;
 		m_tFrame.fMax = 1.f;
 		m_bIDLE = true;
+	}
+
+	if (CKeyMgr::GetInstance()->KeyDown(KEY_LBUTTON) && m_pEquip)
+	{
+		m_pEquip->Init(OBJECT_ID_END);
 	}
 
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_SHIFT))
@@ -95,6 +106,7 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		m_strStateKey = L"Abigail_Right";
 	}
 
+
 	if (m_bIDLE && m_fTime > 5.f && m_strStateKey == L"Abigail_Forward")
 	{
 		m_strStateKey = L"Abigail_IDLE";
@@ -138,4 +150,5 @@ void CPlayer::Render()
 
 void CPlayer::Release()
 {
+	SafeDelete(m_pEquip);
 }

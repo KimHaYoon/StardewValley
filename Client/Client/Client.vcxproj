@@ -167,6 +167,7 @@
     <ClInclude Include="DongKuTestScene.h" />
     <ClInclude Include="Elliott.h" />
     <ClInclude Include="Emily.h" />
+    <ClInclude Include="Equipment.h" />
     <ClInclude Include="Evelyn.h" />
     <ClInclude Include="FrameMgr.h" />
     <ClInclude Include="George.h" />
@@ -226,6 +227,7 @@
     <ClCompile Include="DongKuTestScene.cpp" />
     <ClCompile Include="Elliott.cpp" />
     <ClCompile Include="Emily.cpp" />
+    <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Evelyn.cpp" />
     <ClCompile Include="George.cpp" />
     <ClCompile Include="Haley.cpp" />
