@@ -22,6 +22,8 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
+#include <string>
+#include <locale>
 using namespace std;
 
 #include <d3d9.h>
@@ -51,6 +53,9 @@ using namespace std;
 #include "KeyMgr.h"
 #include "PathMgr.h"
 #include "RenderMgr.h"
+#include "FontMgr.h"
+
+
 
 //Console
 #pragma comment(linker,"/entry:wWinMainCRTStartup /subsystem:console")

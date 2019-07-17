@@ -319,3 +319,4 @@ PLAYER|Dash|11|..\Texture\Stage\PLAYER\Dash\AKIHA_AKI13_00%d.png
 PLAYER|Stand|12|..\Texture\Stage\PLAYER\Stand\AKIHA_AKI00_00%d.png
 PLAYER|Walk|13|..\Texture\Stage\PLAYER\Walk\AKIHA_AKI26_00%d.png
 TERRAIN|tile|9|..\Texture\Stage\TERRAIN\tile\tile%d.png
+TextBox|1|..\Texture\TextBox\TextBox%d.png

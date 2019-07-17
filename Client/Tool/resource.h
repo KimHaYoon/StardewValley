@@ -14,6 +14,7 @@
 #define IDD_OBJECTTOOL                  315
 #define IDD_PATHFINDER                  316
 #define IDD_NPCTOOL                     317
+#define IDD_FONTMGR                     318
 #define IDC_BUTTON1                     1000
 #define IDC_EDIT1                       1001
 #define IDC_BUTTON11                    1001
@@ -31,10 +32,10 @@
 #define IDC_BUTTON9                     1006
 #define IDC_EDIT5                       1007
 #define IDC_BUTTON7                     1007
-#define IDC_BUTTON15                    1007
 #define IDC_LIST1                       1008
 #define IDC_BUTTON14                    1008
 #define IDC_BUTTON2                     1009
+#define IDC_BUTTON15                    1009
 #define IDC_RADIO3                      1016
 #define IDC_RADIO4                      1017
 #define IDC_RADIO5                      1018
@@ -43,6 +44,7 @@
 #define IDC_RADIO15                     1021
 #define IDC_RADIO1                      1022
 #define IDC_RADIO2                      1023
+#define IDC_PIC                         1023
 #define IDC_RADIO7                      1024
 #define IDC_RADIO8                      1025
 #define IDC_RADIO9                      1026
@@ -56,9 +58,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        318
+#define _APS_NEXT_RESOURCE_VALUE        319
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1023
-#define _APS_NEXT_SYMED_VALUE           318
+#define _APS_NEXT_CONTROL_VALUE         1024
+#define _APS_NEXT_SYMED_VALUE           319
 #endif
 #endif

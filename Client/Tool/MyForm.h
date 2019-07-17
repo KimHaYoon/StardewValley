@@ -9,6 +9,7 @@
 #include "ObjectTool.h"
 #include "PathFinder.h"
 #include "NPCTool.h"
+
 #include "afxwin.h"
 class CMyForm : public CFormView
 {
@@ -42,11 +43,13 @@ public:
 	CObjectTool		m_ObjTool;
 	CPathFinder		m_PathFinder;
 	CNPCTool		m_NPCTool;
+
 	afx_msg void OnBnClickedTileTool();
 	afx_msg void OnBnClickedObjTool();
 	afx_msg void OnBnClickedPathFinder();
 	CButton m_Radio[2];
 	afx_msg void OnBnClickedNPCTool();
+
 };
 
 

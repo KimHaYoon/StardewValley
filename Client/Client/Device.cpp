@@ -60,13 +60,11 @@ HRESULT CDevice::InitDevice()
 	tFontInfo.Weight = FW_HEAVY;
 	tFontInfo.CharSet = HANGEUL_CHARSET;
 	lstrcpy(tFontInfo.FaceName, L"±Ã¼­");
-
 	if (FAILED(D3DXCreateFontIndirect(m_pDevice, &tFontInfo, &m_pFont)))
 	{
 		ERR_MSG(L"Create Font Failed!");
 		return E_FAIL;
 	}
-
 	if (FAILED(D3DXCreateLine(m_pDevice, &m_pLine)))
 	{
 		ERR_MSG(L"Create Line Failed!");

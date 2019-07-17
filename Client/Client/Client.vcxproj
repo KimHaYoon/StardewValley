@@ -168,6 +168,7 @@
     <ClInclude Include="Elliott.h" />
     <ClInclude Include="Emily.h" />
     <ClInclude Include="Evelyn.h" />
+    <ClInclude Include="FontMgr.h" />
     <ClInclude Include="FrameMgr.h" />
     <ClInclude Include="George.h" />
     <ClInclude Include="Haley.h" />
@@ -227,6 +228,7 @@
     <ClCompile Include="Elliott.cpp" />
     <ClCompile Include="Emily.cpp" />
     <ClCompile Include="Evelyn.cpp" />
+    <ClCompile Include="FontMgr.cpp" />
     <ClCompile Include="George.cpp" />
     <ClCompile Include="Haley.cpp" />
     <ClCompile Include="Harvey.cpp" />

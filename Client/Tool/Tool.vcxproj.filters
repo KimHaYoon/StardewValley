@@ -82,6 +82,9 @@
     <Filter Include="04. Dialog\00. ObjectTool">
       <UniqueIdentifier>{0ba8ad8d-5846-4b95-8464-65a6eeb1fc96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04. Dialog\05. FontTool">
+      <UniqueIdentifier>{c2d1af3e-0bfd-4665-acfa-99ec5c663932}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tool.h">

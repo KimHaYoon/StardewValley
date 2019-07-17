@@ -105,3 +105,4 @@ void CMyForm::OnBnClickedNPCTool()
 	}
 	m_NPCTool.ShowWindow(SW_SHOW);
 }
+
