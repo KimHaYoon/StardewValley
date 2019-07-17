@@ -51,3 +51,9 @@ typedef struct tagNPCInfo
 	TCHAR*							szName;
 	map<int, vector<D3DXVECTOR3>>	mapInfo;
 }NPCInfo;
+
+typedef struct tagTextInfo
+{
+	TCHAR*						szName;
+	map<int, vector<wstring>>	mapText;
+}TEXTINFO;

@@ -17,6 +17,7 @@ CMainApp::~CMainApp()
 
 HRESULT CMainApp::Initialize()
 {
+	locale::global(locale("kor"));
 	if (FAILED(m_pDevice->InitDevice()))
 		return E_FAIL;
 
@@ -68,6 +69,7 @@ void CMainApp::Render()
 
 void CMainApp::Release()
 {
+	CFontMgr::GetInstance()->DestroyInstance();
 	CRenderMgr::GetInstance()->DestroyInstance();
 	CPathMgr::GetInstance()->DestroyInstance();
 	CKeyMgr::GetInstance()->DestroyInstance();

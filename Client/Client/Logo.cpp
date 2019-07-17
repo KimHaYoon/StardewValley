@@ -52,7 +52,6 @@ HRESULT CLogo::Init()
 	}
 	{
 
-
 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Abigail/Abigail%d.dat", L"Abigail", 1)))
 			return E_FAIL;
 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Alex/Alex%d.dat", L"Alex", 1)))
@@ -83,74 +82,82 @@ HRESULT CLogo::Init()
 			return E_FAIL;
 	}
 
-	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Vacant_Tile_Back.dat");
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
-	pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Vacant_Tile_Front.dat");
-	if (nullptr == pObj)
-		return E_FAIL;
- 	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+	{
+		if (FAILED(CFontMgr::GetInstance()->LoadData(L"../Data/Text/Abigail/Abigail%d.txt", 1, L"Abigail")))
+		{
+			ERR_MSG(L"Abigail Text Load Failed");
+			return E_FAIL;
+		}
+	}
+	{
+		CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Vacant_Tile_Back.dat");
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
+		pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Vacant_Tile_Front.dat");
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+		pObj = CAbstractFactory<CAbigail>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CAlex>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CCaroline>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CDemetrius>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CElliott>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CEmily>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CEvelyn>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CGeorge>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CHaley>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CHarvey>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CJas>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CJodi>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CKent>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+		pObj = CAbstractFactory<CLeah>::CreateObj(OBJECT_ID_NPC);
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+	}
 
-
-	pObj = CAbstractFactory<CAbigail>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CAlex>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CCaroline>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CDemetrius>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CElliott>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CEmily>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CEvelyn>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CGeorge>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CHaley>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CHarvey>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CJas>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CJodi>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CKent>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
-	pObj = CAbstractFactory<CLeah>::CreateObj(OBJECT_ID_NPC);
-	if (nullptr == pObj)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
 
 	return S_OK;
 }

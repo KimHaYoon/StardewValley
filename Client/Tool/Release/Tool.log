@@ -148,7 +148,9 @@ ToolView.cpp(413): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면
 ToolView.cpp(551): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 ToolView.cpp(588): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다.
-  All 2220 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 2220 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    67 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Tool.exe
   Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Tool.pdb (Full PDB)
