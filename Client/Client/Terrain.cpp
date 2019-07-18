@@ -29,7 +29,7 @@ HRESULT CTerrain::Init(const _tchar * pFilePath, OBJECT_ID eID)
 	for (auto& iter : m_vecTile)
 		wcscpy_s(iter->ObjKey, L"Fall");
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_1);
-		
+	
 	return S_OK;
 }
 

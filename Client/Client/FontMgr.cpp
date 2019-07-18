@@ -13,8 +13,7 @@ CFontMgr::~CFontMgr()
 }
 
 HRESULT CFontMgr::LoadData(const _tchar* pFilePath, const _int& iIdx, _tchar* NPCName)
-{
-	
+{	
 	//wstring -> string
 	//str = CT2CA(wstr.c_str());
 

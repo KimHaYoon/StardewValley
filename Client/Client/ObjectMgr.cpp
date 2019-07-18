@@ -52,21 +52,49 @@ void CObjectMgr::LateUpdate(const _float& fTimeDelta)
 
 void CObjectMgr::Render()
 {
+	for (int i = 0; i < OBJECT_ID_END; ++i)
+	{
+		for (auto& pObject : m_listObject[i])
+			pObject->Render();
+	}
+
+// 	list<CObj*> vObj;
+// 	CObj* pTemp;
+// 	for (int i = 0; i < OBJECT_ID_END; ++i)
+// 		for (auto& iter : m_listObject[i])
+// 		{
+// 			pTemp = iter;
+// 			vObj.push_back(pTemp);
+// 		}
+// 
+// 	vObj.sort([](CObj* a, CObj* b)
+// 	{
+// 		return a->GetLayerID() < b->GetLayerID();
+// 	});
+// 
+// 	for (auto& iter : vObj)
+// 	{
+// 		iter->Render();
+// 		SafeDelete(iter);
+// 	}
 }
 
 void CObjectMgr::Release()
 {
 	for (int i = 0; i < OBJECT_ID_END; ++i)
 	{
-		CRenderMgr::GetInstance()->Release_RenderObj(OBJECT_ID(i));
-		for_each(m_listObject[i].begin(), m_listObject[i].end(), SafeDelete<CObj*>);
+		for (auto& iter : m_listObject[i])
+		{
+			SafeDelete(iter);
+		}
 		m_listObject[i].clear();
 	}
+	CRenderMgr::GetInstance()->Release();
 }
 
 void CObjectMgr::Release_Scene(OBJECT_ID eID)
 {
-	CRenderMgr::GetInstance()->Release_RenderObj(eID);
 	for_each(m_listObject[eID].begin(), m_listObject[eID].end(), SafeDelete<CObj*>);
 	m_listObject[eID].clear();
+	CRenderMgr::GetInstance()->Release();
 }

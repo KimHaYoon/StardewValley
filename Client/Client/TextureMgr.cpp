@@ -114,11 +114,14 @@ HRESULT CTextureMgr::InsertTexture(
 
 void CTextureMgr::Release()
 {
-	for_each(m_MapTexture.begin(), m_MapTexture.end(), 
-		[](auto& MyPair)
+// 	for_each(m_MapTexture.begin(), m_MapTexture.end(), 
+// 		[](auto& MyPair)
+// 	{
+// 		SafeDelete(MyPair.second);
+// 	});
+	for (auto& iter : m_MapTexture)
 	{
-		SafeDelete(MyPair.second);
-	});
-
+		SafeDelete(iter.second);
+	}
 	m_MapTexture.clear();
 }

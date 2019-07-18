@@ -51,7 +51,6 @@ HRESULT CLogo::Init()
 		return E_FAIL;
 	}
 	{
-
 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Abigail/Abigail%d.dat", L"Abigail", 1)))
 			return E_FAIL;
 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Alex/Alex%d.dat", L"Alex", 1)))
@@ -99,11 +98,13 @@ HRESULT CLogo::Init()
 		pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Vacant_Tile_Front.dat");
 		if (nullptr == pObj)
 			return E_FAIL;
-		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+ 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+
 		pObj = CAbstractFactory<CAbigail>::CreateObj(OBJECT_ID_NPC);
 		if (nullptr == pObj)
 			return E_FAIL;
 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
+
 		pObj = CAbstractFactory<CAlex>::CreateObj(OBJECT_ID_NPC);
 		if (nullptr == pObj)
 			return E_FAIL;
@@ -157,8 +158,6 @@ HRESULT CLogo::Init()
 			return E_FAIL;
 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
 	}
-
-
 	return S_OK;
 }
 
@@ -166,6 +165,7 @@ void CLogo::Update(const _float& fTimeDelta)
 {
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_RETURN))
 		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_DONGKU);
+
 	CObjectMgr::GetInstance()->Update(fTimeDelta);
 }
 
@@ -181,5 +181,5 @@ void CLogo::Render()
 
 void CLogo::Release()
 {
-	CObjectMgr::GetInstance()->Release();
+	//CObjectMgr::GetInstance()->Release();
 }

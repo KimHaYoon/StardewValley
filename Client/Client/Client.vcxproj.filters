@@ -187,17 +187,23 @@
     <Filter Include="01. Object\01. Stage\01. NPC\03. Demetrius">
       <UniqueIdentifier>{c45c6f37-d1d1-444b-be3d-df64c898e29d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\01. Stage\01. NPC\18. Marnie\19. Maru">
-      <UniqueIdentifier>{a10e5957-e0f0-4a6e-9d1d-57f46a2b9956}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. Stage\01. NPC\04. Elliott\05. Emily">
-      <UniqueIdentifier>{faa05b9e-6c95-4efc-886f-6d6d85bd3689}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01. Object\01. Stage\00. Player\00. Item">
       <UniqueIdentifier>{9aeca0cf-a58b-4a83-ad4d-e8f046ff24fc}</UniqueIdentifier>
     </Filter>
     <Filter Include="97. Managers\12. FontMgr">
       <UniqueIdentifier>{5f5fbd43-d772-4c74-b44f-8d552d5fbedf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. UI">
+      <UniqueIdentifier>{6808daf2-0c98-4446-b927-3ff2e05a59ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. UI\00. TextBox">
+      <UniqueIdentifier>{9d9f62b2-f8a5-42b0-a4bb-1879e7503069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\01. NPC\05. Emily">
+      <UniqueIdentifier>{faa05b9e-6c95-4efc-886f-6d6d85bd3689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\01. NPC\19. Maru">
+      <UniqueIdentifier>{a10e5957-e0f0-4a6e-9d1d-57f46a2b9956}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -307,7 +313,7 @@
       <Filter>01. Object\01. Stage\01. NPC\04. Elliott</Filter>
     </ClInclude>
     <ClInclude Include="Emily.h">
-      <Filter>01. Object\01. Stage\01. NPC\04. Elliott\05. Emily</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\05. Emily</Filter>
     </ClInclude>
     <ClInclude Include="Evelyn.h">
       <Filter>01. Object\01. Stage\01. NPC\06. Evelyn</Filter>
@@ -349,7 +355,7 @@
       <Filter>01. Object\01. Stage\01. NPC\18. Marnie</Filter>
     </ClInclude>
     <ClInclude Include="Maru.h">
-      <Filter>01. Object\01. Stage\01. NPC\18. Marnie\19. Maru</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\19. Maru</Filter>
     </ClInclude>
     <ClInclude Include="Morris.h">
       <Filter>01. Object\01. Stage\01. NPC\20. Morris</Filter>
@@ -383,6 +389,12 @@
     </ClInclude>
     <ClInclude Include="FontMgr.h">
       <Filter>97. Managers\12. FontMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>01. Object\02. UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>01. Object\02. UI\00. TextBox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -483,7 +495,7 @@
       <Filter>01. Object\01. Stage\01. NPC\04. Elliott</Filter>
     </ClCompile>
     <ClCompile Include="Emily.cpp">
-      <Filter>01. Object\01. Stage\01. NPC\04. Elliott\05. Emily</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\05. Emily</Filter>
     </ClCompile>
     <ClCompile Include="Evelyn.cpp">
       <Filter>01. Object\01. Stage\01. NPC\06. Evelyn</Filter>
@@ -525,7 +537,7 @@
       <Filter>01. Object\01. Stage\01. NPC\18. Marnie</Filter>
     </ClCompile>
     <ClCompile Include="Maru.cpp">
-      <Filter>01. Object\01. Stage\01. NPC\18. Marnie\19. Maru</Filter>
+      <Filter>01. Object\01. Stage\01. NPC\19. Maru</Filter>
     </ClCompile>
     <ClCompile Include="Morris.cpp">
       <Filter>01. Object\01. Stage\01. NPC\20. Morris</Filter>
@@ -559,6 +571,12 @@
     </ClCompile>
     <ClCompile Include="FontMgr.cpp">
       <Filter>97. Managers\12. FontMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>01. Object\02. UI</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>01. Object\02. UI\00. TextBox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

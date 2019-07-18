@@ -115,3 +115,25 @@ HRESULT CPierre::Init(OBJECT_ID eID)
 
 	return S_OK;
 }
+
+HRESULT CPierre::Init(LAYER_ID eID)
+{
+	m_tInfo.vPos = { 100.f, 100.f,0.f };
+	m_tInfo.vSize = { 1.f,1.f,0.f };
+	m_strObjectKey = L"Pierre";
+	m_strStateKey = L"Pierre_Forward";
+	m_fSpeed = 10.f;
+	m_tFrame = { 0.f, 4.f };
+	m_eCurDir = DIR_ID_FORWORD;
+	m_ePastDIr = m_ePastDIr;
+	m_eLayerID = eID;
+	if (FAILED(CNPC::LoadPath()))
+		return E_FAIL;
+
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos = iter.second.front();
+		break;
+	}
+	return S_OK;
+}

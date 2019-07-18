@@ -1,66 +1,6 @@
-﻿  stdafx.cpp
-  Vincent.cpp
-  TimerMgr.cpp
-  TextureMgr.cpp
-  Texture.cpp
-  Terrain.cpp
-  FrameMgr.cpp
-  Device.cpp
-  Stage.cpp
-  SingleTexture.cpp
-  Sebastian.cpp
-  ScrollMgr.cpp
-  SceneMgr.cpp
-  ObjectMgr.cpp
-  Obj.cpp
-  Scene.cpp
-  Sandy.cpp
-  Sam.cpp
-  Robin.cpp
-  RenderMgr.cpp
-  Player.cpp
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  Pierre.cpp
-  Penny.cpp
-  PathMgr.cpp
-  NPC.cpp
-  MyMap.cpp
-  MultiTexture.cpp
-  Morris.cpp
-  Maru.cpp
-  Marnie.cpp
-  Marlon.cpp
-  Marcello.cpp
-  MainApp.cpp
+﻿  MainApp.cpp
   Logo.cpp
-  Linus.cpp
-  Lewis.cpp
-  Leah.cpp
-  KeyMgr.cpp
-  Kent.cpp
-  Jodi.cpp
-  Jas.cpp
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  HaYoonTestScene.cpp
-  Harvey.cpp
-  Haley.cpp
-  George.cpp
-  FontMgr.cpp
-  Evelyn.cpp
-  Equipment.cpp
-  Emily.cpp
-  Elliott.cpp
-  DongKuTestScene.cpp
-  Demetrius.cpp
-  Client.cpp
-  Caroline.cpp
-  Camera.cpp
-  BackTerrain.cpp
-  Alex.cpp
   Abigail.cpp
   코드를 생성하고 있습니다...
-  LINK : C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.exe
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.pdb (Full PDB)

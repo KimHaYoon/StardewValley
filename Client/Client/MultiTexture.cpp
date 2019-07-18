@@ -77,19 +77,16 @@ HRESULT CMultiTexture::InsertTexture(const TCHAR* pFilePath,
 
 void CMultiTexture::Release()
 {
-	for_each(m_MapMulti.begin(), m_MapMulti.end(),
-		[](auto& MyPair)
+	for (auto& iter : m_MapMulti)
 	{
-		for_each(MyPair.second.begin(), MyPair.second.end(), 
-			[](auto& pTexInfo)
+		for (auto& iter1 : iter.second)
 		{
-			pTexInfo->pTexture->Release();
-			SafeDelete(pTexInfo);
-		});
-
-		MyPair.second.clear();
-		MyPair.second.shrink_to_fit();
-	});
+			iter1->pTexture->Release();
+			SafeDelete(iter1);
+		}
+		iter.second.clear();
+		iter.second.shrink_to_fit();
+	}
 
 	m_MapMulti.clear();
 }

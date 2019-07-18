@@ -42,4 +42,18 @@ public:
 
 		return pObject;
 	}
+
+
+	static CObj* CreateObj(LAYER_ID eID)
+	{
+		CObj* pObject = new T;
+
+		if (FAILED(pObject->Init(eID)))
+		{
+			SafeDelete(pObject);
+			return nullptr;
+		}
+
+		return pObject;
+	}
 };

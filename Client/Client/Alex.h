@@ -15,5 +15,6 @@ public:
 	virtual void ChangeStateKey(DIR_ID eID);
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
+	virtual HRESULT Init(LAYER_ID eID);
 };
 

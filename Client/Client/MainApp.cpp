@@ -70,12 +70,12 @@ void CMainApp::Render()
 void CMainApp::Release()
 {
 	CFontMgr::GetInstance()->DestroyInstance();
+	CObjectMgr::GetInstance()->DestroyInstance();
 	CRenderMgr::GetInstance()->DestroyInstance();
 	CPathMgr::GetInstance()->DestroyInstance();
 	CKeyMgr::GetInstance()->DestroyInstance();
 	CSceneMgr::GetInstance()->DestroyInstance();
-	CTextureMgr::GetInstance()->DestroyInstance();
-	CObjectMgr::GetInstance()->DestroyInstance();
+	CTextureMgr::GetInstance()->DestroyInstance();	
 	CTimerMgr::GetInstance()->DestroyInstance();
 	CDevice::GetInstance()->DestroyInstance();
 }

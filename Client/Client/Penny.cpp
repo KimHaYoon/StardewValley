@@ -115,3 +115,8 @@ HRESULT CPenny::Init(OBJECT_ID eID)
 
 	return S_OK;
 }
+
+HRESULT CPenny::Init(LAYER_ID eID)
+{
+	return E_NOTIMPL;
+}
