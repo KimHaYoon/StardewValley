@@ -14,6 +14,10 @@ public:
 	void			Render_Layer_3();
 	void			Render_Layer_4();
 	void			Render_Layer_5();
+	void			Render_Layer_6();
+public:
+	void			Release_Layer(OBJECT_ID eID);
+	void			Release_LAYER_6();
 public:
 	void			Release();
 	void			Release_RenderObj(OBJECT_ID eID);

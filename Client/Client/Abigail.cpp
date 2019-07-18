@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Abigail.h"
-
+#include "TextBox.h"
 
 CAbigail::CAbigail()
 {
@@ -36,7 +36,6 @@ HRESULT CAbigail::Init()
 
 _int CAbigail::Update(const _float & fTimeDelta)
 {
-
 	_matrix matTrans, matScale;
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);

@@ -10,6 +10,13 @@ CRenderMgr::CRenderMgr()
 
 CRenderMgr::~CRenderMgr()
 {
+	for (int i = 0; i < LAYER_ID_END; ++i)
+	{
+		for (auto& iter : m_RenderLst[i])
+		{
+			SafeDelete(iter);
+		}
+	}
 	//Release();
 }
 
@@ -28,6 +35,7 @@ void CRenderMgr::RenderGroup()
 	Render_Layer_3();
 	Render_Layer_4();
 	Render_Layer_5();
+	Render_Layer_6();
 }
 
 void CRenderMgr::Render_Layer_1()
@@ -62,6 +70,22 @@ void CRenderMgr::Render_Layer_5()
 		iter->Render();
 }
 
+void CRenderMgr::Render_Layer_6()
+{
+	for (auto& iter : m_RenderLst[LAYER_ID_6])
+		iter->Render();
+}
+
+void CRenderMgr::Release_Layer(OBJECT_ID eID)
+{
+	m_RenderLst[eID].clear();
+}
+
+void CRenderMgr::Release_LAYER_6()
+{
+	m_RenderLst[LAYER_ID_6].clear();
+}
+
 void CRenderMgr::Release()
 {
 	for (int i = 0; i < LAYER_ID_END; ++i)
@@ -79,7 +103,7 @@ void CRenderMgr::Release_RenderObj(OBJECT_ID eID)
 		{
 			if (iter[0]->GetObjectID() == eID)
 			{
-				iter = m_RenderLst[i].erase(iter);
+				
 			}
 			else
 				++iter;
