@@ -52,3 +52,12 @@ typedef struct tagNPCInfo
 	TCHAR*							szName;
 	map<int, vector<D3DXVECTOR3>>	mapInfo;
 }NPCInfo;
+
+
+typedef struct tagMonsterInfo
+{
+	string								strImgName;
+	int									iHP;
+	int									iDamage;
+	map<string, float>		mapDropItem;
+}MonsterInfo;

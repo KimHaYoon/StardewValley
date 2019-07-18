@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "HaYoonTestScene.h"
-
+#include "MonsterMgr.h"
 
 CHaYoonTestScene::CHaYoonTestScene()
 {
@@ -9,6 +9,7 @@ CHaYoonTestScene::CHaYoonTestScene()
 
 CHaYoonTestScene::~CHaYoonTestScene()
 {
+	CMonsterMgr::GetInstance()->DestroyInstance();
 }
 
 HRESULT CHaYoonTestScene::Init()
@@ -18,6 +19,9 @@ HRESULT CHaYoonTestScene::Init()
 		ERR_MSG(L"Image Load Failed");
 		return E_FAIL;
 	}
+
+	CMonsterMgr::GetInstance()->GetInstance()->LoadMonsterInfo();
+
 	return S_OK;
 }
 

@@ -193,6 +193,9 @@
     <Filter Include="01. Object\01. Stage\01. NPC\03. Demetrius">
       <UniqueIdentifier>{c45c6f37-d1d1-444b-be3d-df64c898e29d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="97. Managers\05. ObjectMgr\00.MonsterMgr">
+      <UniqueIdentifier>{d15e4376-680d-4def-8368-ea82920b4bb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -372,6 +375,9 @@
     <ClInclude Include="Pierre.h">
       <Filter>01. Object\01. Stage\01. NPC\22. Pierre</Filter>
     </ClInclude>
+    <ClInclude Include="MonsterMgr.h">
+      <Filter>97. Managers\05. ObjectMgr\00.MonsterMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -541,6 +547,9 @@
     </ClCompile>
     <ClCompile Include="Pierre.cpp">
       <Filter>01. Object\01. Stage\01. NPC\22. Pierre</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterMgr.cpp">
+      <Filter>97. Managers\05. ObjectMgr\00.MonsterMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

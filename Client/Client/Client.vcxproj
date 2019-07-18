@@ -184,6 +184,7 @@
     <ClInclude Include="Marlon.h" />
     <ClInclude Include="Marnie.h" />
     <ClInclude Include="Maru.h" />
+    <ClInclude Include="MonsterMgr.h" />
     <ClInclude Include="Morris.h" />
     <ClInclude Include="MultiTexture.h" />
     <ClInclude Include="MyMap.h" />
@@ -242,6 +243,7 @@
     <ClCompile Include="Marlon.cpp" />
     <ClCompile Include="Marnie.cpp" />
     <ClCompile Include="Maru.cpp" />
+    <ClCompile Include="MonsterMgr.cpp" />
     <ClCompile Include="Morris.cpp" />
     <ClCompile Include="MultiTexture.cpp" />
     <ClCompile Include="MyMap.cpp" />
