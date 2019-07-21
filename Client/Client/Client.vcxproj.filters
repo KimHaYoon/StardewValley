@@ -196,6 +196,21 @@
     <Filter Include="97. Managers\05. ObjectMgr\00.MonsterMgr">
       <UniqueIdentifier>{d15e4376-680d-4def-8368-ea82920b4bb4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01. Object\01. Stage\02. Monster">
+      <UniqueIdentifier>{e3293585-5ad9-454d-af50-c5deef455bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\02. Monster\00. Bat">
+      <UniqueIdentifier>{43045e7c-d5bd-4ec1-887b-3f634c29cca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\02. Monster\01. FrostBat">
+      <UniqueIdentifier>{df505330-1be6-474b-8ecf-75c7f1ec853d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\02. Monster\02. LavaBat">
+      <UniqueIdentifier>{bdf20a14-b8fd-46c6-b791-412709ccd847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\02. Monster\03. IridiumBat">
+      <UniqueIdentifier>{471c8c92-bcc3-4a26-a6ed-2cf2b715b59b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -378,6 +393,12 @@
     <ClInclude Include="MonsterMgr.h">
       <Filter>97. Managers\05. ObjectMgr\00.MonsterMgr</Filter>
     </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>01. Object\01. Stage\02. Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Bat.h">
+      <Filter>01. Object\01. Stage\02. Monster\00. Bat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -550,6 +571,12 @@
     </ClCompile>
     <ClCompile Include="MonsterMgr.cpp">
       <Filter>97. Managers\05. ObjectMgr\00.MonsterMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>01. Object\01. Stage\02. Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Bat.cpp">
+      <Filter>01. Object\01. Stage\02. Monster\00. Bat</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

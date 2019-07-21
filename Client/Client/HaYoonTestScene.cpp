@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "HaYoonTestScene.h"
 #include "MonsterMgr.h"
+#include "Bat.h"
+#include "BackTerrain.h"
 
 CHaYoonTestScene::CHaYoonTestScene()
 {
@@ -19,8 +21,16 @@ HRESULT CHaYoonTestScene::Init()
 		ERR_MSG(L"Image Load Failed");
 		return E_FAIL;
 	}
+	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj( L"../Data/Mountain_Tile_Back.dat" );
+	if ( nullptr == pObj )
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_TERRAIN );
 
 	CMonsterMgr::GetInstance()->GetInstance()->LoadMonsterInfo();
+	pObj = CAbstractFactory<CBat>::CreateObj();
+	if ( !pObj )
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_MONSTER );
 
 	return S_OK;
 }

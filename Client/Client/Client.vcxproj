@@ -157,6 +157,7 @@
     <ClInclude Include="Abstract_Factory.h" />
     <ClInclude Include="Alex.h" />
     <ClInclude Include="BackTerrain.h" />
+    <ClInclude Include="Bat.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Caroline.h" />
     <ClInclude Include="Client.h" />
@@ -184,6 +185,7 @@
     <ClInclude Include="Marlon.h" />
     <ClInclude Include="Marnie.h" />
     <ClInclude Include="Maru.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="MonsterMgr.h" />
     <ClInclude Include="Morris.h" />
     <ClInclude Include="MultiTexture.h" />
@@ -218,6 +220,7 @@
     <ClCompile Include="Abigail.cpp" />
     <ClCompile Include="Alex.cpp" />
     <ClCompile Include="BackTerrain.cpp" />
+    <ClCompile Include="Bat.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Caroline.cpp" />
     <ClCompile Include="Client.cpp" />
@@ -243,6 +246,7 @@
     <ClCompile Include="Marlon.cpp" />
     <ClCompile Include="Marnie.cpp" />
     <ClCompile Include="Maru.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="MonsterMgr.cpp" />
     <ClCompile Include="Morris.cpp" />
     <ClCompile Include="MultiTexture.cpp" />

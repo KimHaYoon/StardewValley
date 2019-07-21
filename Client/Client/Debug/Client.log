@@ -1,3 +1,2 @@
-﻿  MonsterMgr.cpp
-d:\00.학교\2019 여름방학\stardewvalley\client\client\monstermgr.cpp(64): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Client.vcxproj -> D:\00.학교\2019 여름방학\StardewValley\Client\Debug\Client.exe
+﻿  Bat.cpp
+  Client.vcxproj -> D:\01.KPU\4학년여름방학\StardewValley\Client\Debug\Client.exe
