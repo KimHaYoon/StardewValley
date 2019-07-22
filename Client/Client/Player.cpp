@@ -2,6 +2,8 @@
 #include "Player.h"
 #include "ScrollMgr.h"
 #include "Equipment.h"
+#include "Inventory.h"
+#include "QuickSlot.h"
 CPlayer::CPlayer()
 {
 }
@@ -27,6 +29,16 @@ HRESULT CPlayer::Init()
 	if (nullptr == m_pEquip)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pEquip, OBJECT_ID_NPC);
+
+	m_pInven = CAbstractFactory<CInventory>::CreateObj(OBJECT_ID_UI);
+	if (m_pInven == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pInven, OBJECT_ID_UI);
+
+	m_pSlot = CAbstractFactory<CQuickSlot>::CreateObj(OBJECT_ID_UI);
+	if (m_pSlot == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pSlot, OBJECT_ID_UI);
 
 	return S_OK;
 }

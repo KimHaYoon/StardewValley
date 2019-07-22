@@ -205,6 +205,12 @@
     <Filter Include="01. Object\01. Stage\01. NPC\19. Maru">
       <UniqueIdentifier>{a10e5957-e0f0-4a6e-9d1d-57f46a2b9956}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01. Object\02. UI\01. QuickSlot">
+      <UniqueIdentifier>{0fe36eb9-9e22-444b-8092-dd1c870b8683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. UI\02. Inventory">
+      <UniqueIdentifier>{f9fdc27d-260a-4140-b945-eb1efc4c0135}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -396,6 +402,12 @@
     <ClInclude Include="TextBox.h">
       <Filter>01. Object\02. UI\00. TextBox</Filter>
     </ClInclude>
+    <ClInclude Include="QuickSlot.h">
+      <Filter>01. Object\02. UI\01. QuickSlot</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>01. Object\02. UI\02. Inventory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -577,6 +589,12 @@
     </ClCompile>
     <ClCompile Include="TextBox.cpp">
       <Filter>01. Object\02. UI\00. TextBox</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSlot.cpp">
+      <Filter>01. Object\02. UI\01. QuickSlot</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>01. Object\02. UI\02. Inventory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

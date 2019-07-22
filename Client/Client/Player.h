@@ -12,9 +12,13 @@ class CPlayer : public CObj
 	_float m_fMoveFrame = 1.f;
 
 	CObj *m_pEquip = NULL;
+
+	CObj *m_pInven = NULL;
+
+	CObj *m_pSlot = NULL;
 public:
 	CPlayer();
-	~CPlayer();
+	virtual ~CPlayer();
 
 	virtual HRESULT Init();
 

@@ -8,7 +8,7 @@ class CEquipment : public CObj
 	bool m_bActive;
 public:
 	CEquipment();
-	~CEquipment();
+	virtual ~CEquipment();
 
 	virtual HRESULT Init();
 	virtual HRESULT Init(OBJECT_ID eID);

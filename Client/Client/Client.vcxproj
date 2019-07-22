@@ -175,6 +175,7 @@
     <ClInclude Include="Haley.h" />
     <ClInclude Include="Harvey.h" />
     <ClInclude Include="HaYoonTestScene.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Jas.h" />
     <ClInclude Include="Jodi.h" />
     <ClInclude Include="Kent.h" />
@@ -198,6 +199,7 @@
     <ClInclude Include="Penny.h" />
     <ClInclude Include="Pierre.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="QuickSlot.h" />
     <ClInclude Include="RenderMgr.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Robin.h" />
@@ -237,6 +239,7 @@
     <ClCompile Include="Haley.cpp" />
     <ClCompile Include="Harvey.cpp" />
     <ClCompile Include="HaYoonTestScene.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Jas.cpp" />
     <ClCompile Include="Jodi.cpp" />
     <ClCompile Include="Kent.cpp" />
@@ -258,6 +261,7 @@
     <ClCompile Include="Penny.cpp" />
     <ClCompile Include="Pierre.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="QuickSlot.cpp" />
     <ClCompile Include="RenderMgr.cpp" />
     <ClCompile Include="Robin.cpp" />
     <ClCompile Include="Sam.cpp" />
