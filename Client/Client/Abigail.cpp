@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Abigail.h"
-
+#include "TextBox.h"
 
 CAbigail::CAbigail()
 {
@@ -14,7 +14,6 @@ CAbigail::~CAbigail()
 
 HRESULT CAbigail::Init()
 {
-	//m_tInfo.vPos = {8.f, 8.f,0.f};
 	m_tInfo.vSize = { 1.f,1.f,0.f};
 	m_strObjectKey = L"Abigail";
 	m_strStateKey = L"Abigail_Forward";
@@ -37,7 +36,6 @@ HRESULT CAbigail::Init()
 
 _int CAbigail::Update(const _float & fTimeDelta)
 {
-
 	_matrix matTrans, matScale;
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
@@ -89,6 +87,50 @@ void CAbigail::ChangeStateKey(DIR_ID eID)
 		m_strStateKey = L"Abigail_Left";
 	else if (eID == DIR_ID_RIGHT)
 		m_strStateKey = L"Abigail_Right";
+}
+
+HRESULT CAbigail::Init(OBJECT_ID eID)
+{
+	m_tInfo.vSize = { 1.f,1.f,0.f };
+	m_strObjectKey = L"Abigail";
+	m_strStateKey = L"Abigail_Forward";
+	m_fSpeed = 10.f;
+	m_tFrame = { 0.f, 4.f };
+	m_eCurDir = DIR_ID_FORWORD;
+	m_ePastDIr = m_ePastDIr;
+	m_eObjID = eID;
+	if (FAILED(CNPC::LoadPath()))
+		return E_FAIL;
+
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos = iter.second.front();
+		break;
+	}
+
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
+	return S_OK;
+}
+
+HRESULT CAbigail::Init(LAYER_ID eID)
+{
+	m_tInfo.vSize = { 1.f,1.f,0.f };
+	m_strObjectKey = L"Abigail";
+	m_strStateKey = L"Abigail_Forward";
+	m_fSpeed = 10.f;
+	m_tFrame = { 0.f, 4.f };
+	m_eCurDir = DIR_ID_FORWORD;
+	m_ePastDIr = m_ePastDIr;
+	m_eLayerID = eID;
+	if (FAILED(CNPC::LoadPath()))
+		return E_FAIL;
+
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos = iter.second.front();
+		break;
+	}
+	return S_OK;
 }
 
 

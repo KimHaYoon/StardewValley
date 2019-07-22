@@ -22,6 +22,7 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
+#include <locale>
 using namespace std;
 
 #include <d3d9.h>
@@ -29,6 +30,8 @@ using namespace std;
 
 #include <d3dx9.h>
 #pragma comment(lib, "d3dx9.lib")
+
+
 
 //Headers
 #include "Define.h"
@@ -39,6 +42,20 @@ using namespace std;
 #include "Funtor.h"
 #include "Struct.h"
 #include "Typedef.h"
+
+
+// For.CRTDBG
+#ifdef _DEBUG 
+#define _CRTDBG_MAP_ALLOC 
+#include <stdlib.h> 
+#include <crtdbg.h> 
+
+#ifndef DBG_NEW 
+#define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ ) 
+#define new DBG_NEW 
+#endif 
+#endif  // _DEBUG  
+
 
 //Managers
 #include "Device.h"
@@ -51,4 +68,9 @@ using namespace std;
 #include "KeyMgr.h"
 #include "PathMgr.h"
 #include "RenderMgr.h"
+#include "FontMgr.h"
 
+
+
+//Console
+//#pragma comment(linker,"/entry:wWinMainCRTStartup /subsystem:console")

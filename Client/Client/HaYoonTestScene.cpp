@@ -53,4 +53,5 @@ void CHaYoonTestScene::Render()
 
 void CHaYoonTestScene::Release()
 {
+
 }

@@ -2,7 +2,10 @@
   Abigail.cpp
   Alex.cpp
   BackTerrain.cpp
+<<<<<<< HEAD
   Bat.cpp
+=======
+>>>>>>> master
   Camera.cpp
   Caroline.cpp
   Client.cpp
@@ -10,7 +13,13 @@
   DongKuTestScene.cpp
   Elliott.cpp
   Emily.cpp
+<<<<<<< HEAD
   Evelyn.cpp
+=======
+  Equipment.cpp
+  Evelyn.cpp
+  FontMgr.cpp
+>>>>>>> master
   George.cpp
   Haley.cpp
   Harvey.cpp
@@ -18,8 +27,13 @@
   Jas.cpp
   Jodi.cpp
   Kent.cpp
+<<<<<<< HEAD
   KeyMgr.cpp
   컴파일하고 있습니다...
+=======
+  컴파일하고 있습니다...
+  KeyMgr.cpp
+>>>>>>> master
   Leah.cpp
   Lewis.cpp
   Linus.cpp
@@ -29,9 +43,12 @@
   Marlon.cpp
   Marnie.cpp
   Maru.cpp
+<<<<<<< HEAD
   Monster.cpp
   MonsterMgr.cpp
 d:\01.kpu\4학년여름방학\stardewvalley\client\client\monstermgr.cpp(64): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+=======
+>>>>>>> master
   Morris.cpp
   MultiTexture.cpp
   MyMap.cpp
@@ -41,8 +58,13 @@ d:\01.kpu\4학년여름방학\stardewvalley\client\client\monstermgr.cpp(64): wa
   Pierre.cpp
   Player.cpp
   RenderMgr.cpp
+<<<<<<< HEAD
   컴파일하고 있습니다...
   Robin.cpp
+=======
+  Robin.cpp
+  컴파일하고 있습니다...
+>>>>>>> master
   Sam.cpp
   Sandy.cpp
   Scene.cpp
@@ -61,8 +83,14 @@ d:\01.kpu\4학년여름방학\stardewvalley\client\client\monstermgr.cpp(64): wa
   TimerMgr.cpp
   Vincent.cpp
   코드를 생성하고 있습니다.
+<<<<<<< HEAD
   1871 of 1871 functions (100.0%) were compiled.
     744 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
+=======
+  525 of 2190 functions (24.0%) were compiled, the rest were copied from previous compilation.
+    354 functions were new in current compilation
+    266 functions had inline decision re-evaluated but remain unchanged
+>>>>>>> master
   코드를 생성했습니다.
   Client.vcxproj -> D:\01.KPU\4학년여름방학\StardewValley\Client\Release\Client.exe

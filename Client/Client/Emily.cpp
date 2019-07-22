@@ -88,3 +88,49 @@ void CEmily::ChangeStateKey(DIR_ID eID)
 	else if (eID == DIR_ID_RIGHT)
 		m_strStateKey = L"Emily_Right";
 }
+
+HRESULT CEmily::Init(OBJECT_ID eID)
+{
+	m_tInfo.vPos = { 100.f, 100.f,0.f };
+	m_tInfo.vSize = { 1.f,1.f,0.f };
+	m_strObjectKey = L"Emily";
+	m_strStateKey = L"Emily_Forward";
+	m_fSpeed = 10.f;
+	m_tFrame = { 0.f, 4.f };
+	m_eCurDir = DIR_ID_FORWORD;
+	m_ePastDIr = m_ePastDIr;
+	m_eObjID = eID;
+	if (FAILED(CNPC::LoadPath()))
+		return E_FAIL;
+
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos = iter.second.front();
+		break;
+	}
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
+
+	return S_OK;
+}
+
+HRESULT CEmily::Init(LAYER_ID eID)
+{
+	m_tInfo.vPos = { 100.f, 100.f,0.f };
+	m_tInfo.vSize = { 1.f,1.f,0.f };
+	m_strObjectKey = L"Emily";
+	m_strStateKey = L"Emily_Forward";
+	m_fSpeed = 10.f;
+	m_tFrame = { 0.f, 4.f };
+	m_eCurDir = DIR_ID_FORWORD;
+	m_ePastDIr = m_ePastDIr;
+	m_eLayerID = eID;
+	if (FAILED(CNPC::LoadPath()))
+		return E_FAIL;
+
+	for (auto& iter : m_mapPos)
+	{
+		m_tInfo.vPos = iter.second.front();
+		break;
+	}
+	return S_OK;
+}

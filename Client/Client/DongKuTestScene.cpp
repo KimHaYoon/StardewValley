@@ -13,6 +13,7 @@ CDongKuTestScene::CDongKuTestScene()
 
 CDongKuTestScene::~CDongKuTestScene()
 {
+	Release();
 }
 
 HRESULT CDongKuTestScene::Init()
@@ -43,6 +44,8 @@ HRESULT CDongKuTestScene::Init()
 
 void CDongKuTestScene::Update( const _float & fTimeDelta )
 {
+	if (CKeyMgr::GetInstance()->KeyDown(KEY_RETURN))
+		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_HAYOON);
 	CObjectMgr::GetInstance()->Update( fTimeDelta );
 }
 
@@ -58,4 +61,5 @@ void CDongKuTestScene::Render()
 
 void CDongKuTestScene::Release()
 {
+	CObjectMgr::GetInstance()->Release();
 }

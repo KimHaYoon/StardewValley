@@ -9,6 +9,7 @@ CNPC::CNPC()
 
 CNPC::~CNPC()
 {
+	int i = 0;
 }
 
 HRESULT CNPC::LoadPath()

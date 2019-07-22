@@ -28,7 +28,6 @@ typedef struct tagUNITINFO
 	D3DXMATRIX	matWorld;
 	D3DXVECTOR3 vPos;
 	D3DXVECTOR3 vSize;
-
 	LAYER_ID	eID;
 	int			iMapNum;
 	bool		Check=false;
@@ -53,6 +52,7 @@ typedef struct tagNPCInfo
 	map<int, vector<D3DXVECTOR3>>	mapInfo;
 }NPCInfo;
 
+<<<<<<< HEAD
 
 typedef struct tagMonsterInfo
 {
@@ -61,3 +61,10 @@ typedef struct tagMonsterInfo
 	int									iDamage;
 	map<string, float>		mapDropItem;
 }MonsterInfo;
+=======
+typedef struct tagTextInfo
+{
+	TCHAR*						szName;
+	map<int, vector<wstring>>	mapText;
+}TEXTINFO;
+>>>>>>> master

@@ -13,9 +13,6 @@ public:
 private:
 	void KeyInput(const _float& fTimeDelta);
 private:
-	CDevice*	m_pDevice;
-	CSceneMgr*	m_pSceneMgr;
-private:
 	_float		m_fTimeDelta=0.f;
 };
 

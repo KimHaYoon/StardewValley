@@ -4,9 +4,6 @@
 
 CMainApp::CMainApp()
 {
-	m_pDevice = CDevice::GetInstance();
-	m_pSceneMgr = CSceneMgr::GetInstance();
-
 }
 
 
@@ -17,10 +14,11 @@ CMainApp::~CMainApp()
 
 HRESULT CMainApp::Initialize()
 {
-	if (FAILED(m_pDevice->InitDevice()))
+	locale::global(locale("kor"));
+	if (FAILED(CDevice::GetInstance()->InitDevice()))
 		return E_FAIL;
 
-	if (FAILED(m_pSceneMgr->SceneChange(SCENE_ID_HAYOON)))
+	if (FAILED(CSceneMgr::GetInstance()->SceneChange(SCENE_ID_LOGO)))
 	{
 		ERR_MSG(L"Scene change Failed!!");
 		return E_FAIL;
@@ -37,45 +35,47 @@ void CMainApp::Update()
 	CTimerMgr::GetInstance()->UpdateTime();
 	m_fTimeDelta=CTimerMgr::GetInstance()->GetDeltaTime();
 	CKeyMgr::GetInstance()->Update();
-	m_pSceneMgr->Update(m_fTimeDelta);
+	CSceneMgr::GetInstance()->Update(m_fTimeDelta);
 }
 
 void CMainApp::LateUpdate()
 {
-	m_pSceneMgr->LateUpdate(m_fTimeDelta);
+	CSceneMgr::GetInstance()->LateUpdate(m_fTimeDelta);
 }
 
 void CMainApp::Render()
 {
-	m_pDevice->GetDevice()->Clear(0, nullptr, D3DCLEAR_ZBUFFER | D3DCLEAR_STENCIL
+	CDevice::GetInstance()->GetDevice()->Clear(0, nullptr, D3DCLEAR_ZBUFFER | D3DCLEAR_STENCIL
 		| D3DCLEAR_TARGET, D3DCOLOR_ARGB(255, 0, 0, 0), 1.f, 0);
 
-	m_pDevice->Render_Begin();
+	CDevice::GetInstance()->Render_Begin();
 
 	//m_pSceneMgr->Render();
 	CRenderMgr::GetInstance()->RenderGroup();
 
-	m_pDevice->Render_End();
+	CDevice::GetInstance()->Render_End();
 
 
-	m_pDevice->Render_Begin();
+	CDevice::GetInstance()->Render_Begin();
 
 	CFrameMgr::GetInstance()->RenderFrame();
 
-	m_pDevice->Render_End();
-	m_pDevice->GetDevice()->Present(nullptr, nullptr, nullptr, nullptr);
+	CDevice::GetInstance()->Render_End();
+	CDevice::GetInstance()->GetDevice()->Present(nullptr, nullptr, nullptr, nullptr);
 }
 
 void CMainApp::Release()
 {
-	CRenderMgr::GetInstance()->DestroyInstance();
-	CPathMgr::GetInstance()->DestroyInstance();
-	CKeyMgr::GetInstance()->DestroyInstance();
-	CSceneMgr::GetInstance()->DestroyInstance();
-	CTextureMgr::GetInstance()->DestroyInstance();
-	CObjectMgr::GetInstance()->DestroyInstance();
-	CTimerMgr::GetInstance()->DestroyInstance();
-	CDevice::GetInstance()->DestroyInstance();
+	CFontMgr::GetInstance()->DestroyInstance();//
+	CObjectMgr::GetInstance()->DestroyInstance();//
+	CRenderMgr::GetInstance()->DestroyInstance();//
+	CPathMgr::GetInstance()->DestroyInstance();//
+	CKeyMgr::GetInstance()->DestroyInstance();//
+	CSceneMgr::GetInstance()->DestroyInstance();//
+	CTextureMgr::GetInstance()->DestroyInstance();	//
+	CFrameMgr::GetInstance()->DestroyInstance();//
+	CTimerMgr::GetInstance()->DestroyInstance();//
+	CDevice::GetInstance()->DestroyInstance();//
 }
 
 void CMainApp::KeyInput(const _float & fTimeDelta)

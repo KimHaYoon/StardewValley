@@ -53,6 +53,8 @@ void CPathMgr::Release()
 {
 	for (auto& iter : m_vecNPCInfo)
 	{
+		for (auto& iter1 : iter->mapInfo)
+			iter1.second.clear();
 		iter->mapInfo.clear();
 		SafeDelete(iter);
 	}

@@ -6,12 +6,22 @@ CObj::CObj()
 {
 }
 
-
 CObj::~CObj()
 {
+	int i = 0;
 }
 
-HRESULT CObj::Init(const _tchar * pFilePath)
+HRESULT CObj::Init(const _tchar * pFilePath, OBJECT_ID eID)
+{
+	return S_OK;
+}
+
+HRESULT CObj::Init(OBJECT_ID eID)
+{
+	return S_OK;
+}
+
+HRESULT CObj::Init(LAYER_ID eID)
 {
 	return S_OK;
 }

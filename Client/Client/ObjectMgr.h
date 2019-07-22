@@ -12,6 +12,7 @@ public:
 	void			LateUpdate(const _float& fTimeDelta);
 	void			Render();
 	void			Release();
+	void			Release_Scene(OBJECT_ID eID);
 private:
 	list<CObj*>		m_listObject[OBJECT_ID_END];
 };

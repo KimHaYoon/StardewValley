@@ -55,11 +55,13 @@ HRESULT CDevice::InitDevice()
 	}
 
 	D3DXFONT_DESCW	tFontInfo;	
-	tFontInfo.Height = 20;
-	tFontInfo.Width = 10;
-	tFontInfo.Weight = FW_HEAVY;
+	tFontInfo.Height = 5;
+	tFontInfo.Width = 3;
+	tFontInfo.Weight = FW_THIN;
 	tFontInfo.CharSet = HANGEUL_CHARSET;
-	lstrcpy(tFontInfo.FaceName, L"±Ã¼­");
+	tFontInfo.Quality = DEFAULT_QUALITY;
+	tFontInfo.Italic = false;
+	lstrcpy(tFontInfo.FaceName, L"Arial");
 
 	if (FAILED(D3DXCreateFontIndirect(m_pDevice, &tFontInfo, &m_pFont)))
 	{

@@ -1,0 +1,21 @@
+
+xnbData: 
+    target: "w"
+    compressed: true
+    hiDef: true
+    readerData: 
+        - 
+            type: "Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+            version: 0
+
+        - 
+            type: "Microsoft.Xna.Framework.Content.StringReader"
+            version: 0
+
+
+    numSharedResources: 0
+
+content:  #!Dictionary<String,String>
+    558291/y 3/H: "grandpas_theme/-2000 -1000/farmer 13 23 2/broadcastEvent/addTemporaryActor Grandpa 1 1 -100 -100 2 true/specificTemporarySprite grandpaSpirit/viewport -1000 -1000 true/pause 10000/speak Grandpa \"내 소중한 손주야…^내 소중한 손녀야…#$b#우리 마지막으로 이야기한지도 여러 해가 지났구나. 그때 넌 그저 작은 소년이었지… 기억하니?^우리 마지막으로 이야기한지도 여러 해가 지났구나. 그때 넌 그저 작은 소녀였지… 기억하니?#$b#그 후로 많은 것을 이뤘구나!#$b#네가 나를 잊었을 수는 있어도, 난 쭉 여기 있었단다.#$b#보다시피… 내 몸은 이 세상을 떠났지만, 내 마음은 언제나 스타듀 밸리에 있을 것이란다.\"/specificTemporarySprite grandpaNight/pause 4000/speak Grandpa \"벌써 네가 여기 온 지도 2년이 지났구나…\"/grandpaEvaluation/pause 3000/speak Grandpa \"%farm 농장의 미래는 이제 네 손에 있단다.#$b#그럼, 잘 지내거라!\"/pause 1000/globalFade/removeTemporarySprites/playMusic none/pause 1000/end bed" #!String
+    558292/e 321777/t 600 620/H: "grandpas_theme/-2000 -1000/farmer 13 23 2/broadcastEvent/addTemporaryActor Grandpa 1 1 -100 -100 2 true/skippable/specificTemporarySprite grandpaSpirit/viewport -1000 -1000 true/pause 10000/speak Grandpa \"내 소중한 손주야…^내 소중한 손녀야…#$b#나를 불러줘서 기쁘단다. 내가… 지난번에는 너무 냉혹했던 것 같구나.#$b#용서해다오. 너는 열심히 일했고, 나는 그 사실이 자랑스러워.\"/specificTemporarySprite grandpaNight/pause 4000/speak Grandpa \"어디 보자…\"/grandpaEvaluation2/pause 3000/globalFade/removeTemporarySprites/playMusic none/pause 1000/end bed" #!String
+

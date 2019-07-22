@@ -29,15 +29,16 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -123,9 +124,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_AFXDLL;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>../../Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -166,7 +168,9 @@
     <ClInclude Include="DongKuTestScene.h" />
     <ClInclude Include="Elliott.h" />
     <ClInclude Include="Emily.h" />
+    <ClInclude Include="Equipment.h" />
     <ClInclude Include="Evelyn.h" />
+    <ClInclude Include="FontMgr.h" />
     <ClInclude Include="FrameMgr.h" />
     <ClInclude Include="George.h" />
     <ClInclude Include="Haley.h" />
@@ -211,9 +215,11 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Terrain.h" />
+    <ClInclude Include="TextBox.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureMgr.h" />
     <ClInclude Include="TimerMgr.h" />
+    <ClInclude Include="UI.h" />
     <ClInclude Include="Vincent.h" />
   </ItemGroup>
   <ItemGroup>
@@ -228,7 +234,9 @@
     <ClCompile Include="DongKuTestScene.cpp" />
     <ClCompile Include="Elliott.cpp" />
     <ClCompile Include="Emily.cpp" />
+    <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Evelyn.cpp" />
+    <ClCompile Include="FontMgr.cpp" />
     <ClCompile Include="George.cpp" />
     <ClCompile Include="Haley.cpp" />
     <ClCompile Include="Harvey.cpp" />
@@ -277,9 +285,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureMgr.cpp" />
     <ClCompile Include="TimerMgr.cpp" />
+    <ClCompile Include="UI.cpp" />
     <ClCompile Include="Vincent.cpp" />
   </ItemGroup>
   <ItemGroup>

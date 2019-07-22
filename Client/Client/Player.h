@@ -10,6 +10,8 @@ class CPlayer : public CObj
 	_bool m_bIDLE;
 
 	_float m_fMoveFrame = 1.f;
+
+	CObj *m_pEquip = NULL;
 public:
 	CPlayer();
 	~CPlayer();
