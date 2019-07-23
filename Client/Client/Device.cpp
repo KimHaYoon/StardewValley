@@ -55,8 +55,8 @@ HRESULT CDevice::InitDevice()
 	}
 
 	D3DXFONT_DESCW	tFontInfo;	
-	tFontInfo.Height = 5;
-	tFontInfo.Width = 3;
+	tFontInfo.Height = 10;
+	tFontInfo.Width = 10;
 	tFontInfo.Weight = FW_THIN;
 	tFontInfo.CharSet = HANGEUL_CHARSET;
 	tFontInfo.Quality = DEFAULT_QUALITY;

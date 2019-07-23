@@ -100,3 +100,19 @@ void CNPC::Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta)
 
 }
 
+HRESULT CNPC::LoadText()
+{
+	for (auto& iter : CFontMgr::GetInstance()->GetTEXTInfo())
+	{
+		if (iter->szName == m_strObjectKey)
+		{
+			for (auto& iter1 : iter->mapText)
+			{
+				m_mapTex.insert(iter1);
+			}
+			break;
+		}
+	}
+	return S_OK;
+}
+

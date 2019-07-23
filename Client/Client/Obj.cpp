@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Obj.h"
-
+#include "TextBox.h"
 
 CObj::CObj()
 {

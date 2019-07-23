@@ -1,4 +1,5 @@
 #pragma once
+class CTextBox;
 class CObj
 {
 public:
@@ -30,6 +31,8 @@ protected:
 protected:
 	OBJECT_ID		m_eObjID;
 	LAYER_ID		m_eLayerID;
+protected:
+	CObj*		m_pTextBox = nullptr;
 protected:
 	void			MoveFrame();
 	void			MoveFrame(float num);

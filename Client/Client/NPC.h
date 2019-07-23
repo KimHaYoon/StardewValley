@@ -18,8 +18,12 @@ public:
 	HRESULT		  LoadPath();
 	void		  TraceThePath(const _int& iIdx, const _float& fTimeDelta);
 	void		  Check_DIR(vector<_vec3>& vPos, const _float& fTimeDelta);
+public:
+	HRESULT		  LoadText();
 protected:
 	map<_int, vector<_vec3>>		m_mapPos;	
+	map<_int, vector<wstring>>		m_mapTex;
+
 protected:
 	_int							m_iIdx = 0;
 	_int							m_iVecSize = 0;

@@ -35,6 +35,12 @@ _int CTextBox::Update(const _float & fTimeDelta)
 
 void CTextBox::LateUpdate(const _float & fTimeDelta)
 {
+	m_fTime += fTimeDelta;
+	if (m_fTime >= 0.5f)
+	{
+	
+		m_fTime = 0.f;
+	}
 }
 
 void CTextBox::Render()
@@ -52,7 +58,7 @@ void CTextBox::Render()
 
 
 	CDevice::GetInstance()->GetFont()->DrawTextW(
-		CDevice::GetInstance()->GetSprite(), L"HELLO", -1, nullptr, DT_CENTER | DT_TOP, D3DCOLOR_ARGB(255, 0, 0, 0));
+		CDevice::GetInstance()->GetSprite(), m_vConver[0], -1, nullptr, DT_NOCLIP | DT_RIGHT, D3DCOLOR_ARGB(255, 0, 0, 0));
 }
 
 void CTextBox::Release()
@@ -69,5 +75,14 @@ HRESULT CTextBox::Init(OBJECT_ID eID)
 	m_tFrame = { 0.f, 1.f };
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
+	return S_OK;
+}
+
+HRESULT CTextBox::AddText(vector<wstring> v)
+{
+	for (auto& iter : v)
+	{
+		m_vConver.push_back(iter.c_str());
+	}
 	return S_OK;
 }
