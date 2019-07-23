@@ -42,15 +42,6 @@ _int CAbigail::Update(const _float & fTimeDelta)
 
 	m_tInfo.matWorld = matScale * matTrans;
 
-	if(GetAsyncKeyState(VK_SPACE)&0x8000)
-	{
-		m_pTextBox = CAbstractFactory<CTextBox>::CreateObj(OBJECT_ID_TEXTBOX);
-		if (m_pTextBox == nullptr)
-			return -1;
-		dynamic_cast<CTextBox*>(m_pTextBox)->AddText(m_mapTex[0]);
-		CObjectMgr::GetInstance()->AddObject(m_pTextBox, OBJECT_ID_TEXTBOX);
-	}
-	
 
 	return NO_EVENT;
 }
@@ -109,8 +100,6 @@ HRESULT CAbigail::Init(OBJECT_ID eID)
 	m_ePastDIr = m_ePastDIr;
 	m_eObjID = eID;
 	if (FAILED(CNPC::LoadPath()))
-		return E_FAIL;
-	if (FAILED(CNPC::LoadText()))
 		return E_FAIL;
 
 	for (auto& iter : m_mapPos)

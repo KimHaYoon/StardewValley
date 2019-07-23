@@ -46,7 +46,7 @@ void CTextBox::LateUpdate(const _float & fTimeDelta)
 void CTextBox::Render()
 {
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
-		m_strObjectKey, m_strStateKey, 0);
+		m_strObjectKey, m_strStateKey, 1);
 	NULL_CHECK_VOID(pTexInfo);
 
 	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
@@ -55,10 +55,10 @@ void CTextBox::Render()
 	CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
 	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
 		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
-
+	RECT rt = {0, 0, 800, 600};//{10, 500, 300, 600};
 
 	CDevice::GetInstance()->GetFont()->DrawTextW(
-		CDevice::GetInstance()->GetSprite(), m_vConver[0], -1, nullptr, DT_NOCLIP | DT_RIGHT, D3DCOLOR_ARGB(255, 0, 0, 0));
+		CDevice::GetInstance()->GetSprite(), m_vConver[0], -1, &rt, DT_TOP|DT_LEFT, D3DCOLOR_ARGB(255, 0, 0, 0));
 }
 
 void CTextBox::Release()
