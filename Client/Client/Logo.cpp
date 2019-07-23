@@ -47,11 +47,11 @@ CLogo::~CLogo()
 
 HRESULT CLogo::Init()
 {
-// 	if (FAILED(CTextureMgr::GetInstance()->ReadImgPath(L"../Data/ImgPathInfo.txt")))
-// 	{
-// 		ERR_MSG(L"Image Load Failed");
-// 		return E_FAIL;
-// 	}
+	if (FAILED(CTextureMgr::GetInstance()->ReadImgPath(L"../Data/ImgPathInfo.txt")))
+	{
+		ERR_MSG(L"Image Load Failed");
+		return E_FAIL;
+	}
 	//PathFile
 // 	{
 // 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Abigail/Abigail%d.dat", L"Abigail", 1)))

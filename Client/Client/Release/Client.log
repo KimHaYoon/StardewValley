@@ -1,67 +1,8 @@
-﻿  stdafx.cpp
-  Abigail.cpp
-  Alex.cpp
-  BackTerrain.cpp
-  Camera.cpp
-  Caroline.cpp
-  Client.cpp
-  Demetrius.cpp
-  DongKuTestScene.cpp
-  Elliott.cpp
-  Emily.cpp
-  Equipment.cpp
-  Evelyn.cpp
-  FontMgr.cpp
-  George.cpp
-  Haley.cpp
-  Harvey.cpp
-  HaYoonTestScene.cpp
-  Jas.cpp
-  Jodi.cpp
-  Kent.cpp
-  컴파일하고 있습니다...
-  KeyMgr.cpp
-  Leah.cpp
-  Lewis.cpp
-  Linus.cpp
-  Logo.cpp
-  MainApp.cpp
-  Marcello.cpp
-  Marlon.cpp
-  Marnie.cpp
-  Maru.cpp
-  Morris.cpp
-  MultiTexture.cpp
-  MyMap.cpp
-  NPC.cpp
-  PathMgr.cpp
-  Penny.cpp
-  Pierre.cpp
-  Player.cpp
-  RenderMgr.cpp
-  Robin.cpp
-  컴파일하고 있습니다...
-  Sam.cpp
-  Sandy.cpp
-  Scene.cpp
-  Obj.cpp
-  ObjectMgr.cpp
-  SceneMgr.cpp
-  ScrollMgr.cpp
-  Sebastian.cpp
-  SingleTexture.cpp
-  Stage.cpp
-  Device.cpp
-  FrameMgr.cpp
-  Terrain.cpp
-  Texture.cpp
-  TextureMgr.cpp
-  TimerMgr.cpp
-  Vincent.cpp
+﻿  Logo.cpp
   코드를 생성하고 있습니다.
-  525 of 2190 functions (24.0%) were compiled, the rest were copied from previous compilation.
-    354 functions were new in current compilation
-    266 functions had inline decision re-evaluated but remain unchanged
+  1 of 1944 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    71 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.exe
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.pdb (Full PDB)

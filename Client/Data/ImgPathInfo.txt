@@ -333,7 +333,7 @@ Bug|Bug_Die|2|..\Texture\Monster\Bug\Bug_Die\Bug_Die%d.png
 Bug|Bug_Forward|4|..\Texture\Monster\Bug\Bug_Forward\Bug_Forward%d.png
 Bug|Bug_Left|4|..\Texture\Monster\Bug\Bug_Left\Bug_Left%d.png
 Bug|Bug_Right|4|..\Texture\Monster\Bug\Bug_Right\Bug_Right%d.png
-CarbonGhost|CarbonGhost_Back|4|..\Texture\Monster\CarbonGhost\CarbonGhost_Back\Carbon-Ghost_0%d.png
+CarbonGhost|CarbonGhost_Back|4|..\Texture\Monster\CarbonGhost\CarbonGhost_Back\CarbonGhost_Back%d.png
 CarbonGhost|CarbonGhost_Die|4|..\Texture\Monster\CarbonGhost\CarbonGhost_Die\CarbonGhost_Die%d.png
 CarbonGhost|CarbonGhost_Forward|4|..\Texture\Monster\CarbonGhost\CarbonGhost_Forward\CarbonGhost_Forward%d.png
 CarbonGhost|CarbonGhost_Left|4|..\Texture\Monster\CarbonGhost\CarbonGhost_Left\CarbonGhost_Left%d.png
@@ -349,9 +349,7 @@ Crow|Crow_Fly|4|..\Texture\Monster\Crow\Crow_Fly\Crow_Fly%d.png
 Crow|Crow_Forward|4|..\Texture\Monster\Crow\Crow_Forward\Crow_Forward%d.png
 Crow|Crow_Left|4|..\Texture\Monster\Crow\Crow_Left\Crow_Left%d.png
 Crow|Crow_Right|4|..\Texture\Monster\Crow\Crow_Right\Crow_Right%d.png
-Crow|Crow_Unknown|4|..\Texture\Monster\Crow\Crow_Unknown\Crow_1%d.png
 Duggy|Duggy_Die|1|..\Texture\Monster\Duggy\Duggy_Die\Duggy_Die%d.png
-Duggy|Duggy_Unknown|15|..\Texture\Monster\Duggy\Duggy_Unknown\Duggy_0%d.png
 DustSpirit|Dust_Die|4|..\Texture\Monster\DustSpirit\Dust_Die\Dust_Die%d.png
 DustSpirit|Dust_IDLE|4|..\Texture\Monster\DustSpirit\Dust_IDLE\Dust_IDLE%d.png
 Fireball|Firball_IDLE|16|..\Texture\Monster\Fireball\Firball_IDLE\Fireball_IDLE%d.png
@@ -362,7 +360,7 @@ Fly|Fly_Left|4|..\Texture\Monster\Fly\Fly_Left\Fly_Left%d.png
 Fly|Fly_Right|4|..\Texture\Monster\Fly\Fly_Right\Fly_Right%d.png
 Frog|Frog_IDLE|6|..\Texture\Monster\Frog\Frog_IDLE\Frog_IDLE%d.png
 FrostBat|FrostBat_Die|2|..\Texture\Monster\FrostBat\FrostBat_Die\FrostBat_Die%d.png
-FrostBat|FrostBat_Fly|11|..\Texture\Monster\FrostBat\FrostBat_Fly\Frost-Bat_0%d.png
+FrostBat|FrostBat_Fly|11|..\Texture\Monster\FrostBat\FrostBat_Fly\FrostBat_Fly%d.png
 FrostBat|FrostBat_IDLE|1|..\Texture\Monster\FrostBat\FrostBat_IDLE\FrostBat_IDLE%d.png
 Ghost|Ghost_Back|4|..\Texture\Monster\Ghost\Ghost_Back\Ghost_Back%d.png
 Ghost|Ghost_Die|4|..\Texture\Monster\Ghost\Ghost_Die\Ghost_Die%d.png
@@ -374,7 +372,6 @@ GreenSlime|GreenSlime_Forward|4|..\Texture\Monster\GreenSlime\GreenSlime_Forward
 GreenSlime|GreenSlime_IDLE|4|..\Texture\Monster\GreenSlime\GreenSlime_IDLE\Green_Slime_IDLE%d.png
 GreenSlime|GreenSlime_Left|4|..\Texture\Monster\GreenSlime\GreenSlime_Left\Green_Slime_Left%d.png
 GreenSlime|GreenSlime_Right|4|..\Texture\Monster\GreenSlime\GreenSlime_Right\Green_Slime_Right%d.png
-GreenSlime|GreenSlime_Unknown|24|..\Texture\Monster\GreenSlime\GreenSlime_Unknown\Green-Slime_2%d.png
 Grub|Grub_Back|4|..\Texture\Monster\Grub\Grub_Back\Grub_Back%d.png
 Grub|Grub_Die|4|..\Texture\Monster\Grub\Grub_Die\Grub_Die%d.png
 Grub|Grub_Forward|4|..\Texture\Monster\Grub\Grub_Forward\Grub_Forward%d.png
@@ -387,7 +384,7 @@ IridiumBat|IdidiumBat_IDLE|1|..\Texture\Monster\IridiumBat\IdidiumBat_IDLE\Ididi
 IridiumCrab|IridiumCrab_Die|6|..\Texture\Monster\IridiumCrab\IridiumCrab_Die\IridiumCrab_Die%d.png
 IridiumCrab|IridiumCrab_IDLE|1|..\Texture\Monster\IridiumCrab\IridiumCrab_IDLE\IridiumCrab_IDLE%d.png
 IridiumCrab|IridiumCrab_Trace|3|..\Texture\Monster\IridiumCrab\IridiumCrab_Trace\IridiumCrab_Trace%d.png
-LavaBat|LavaBat_Die|2|..\Texture\Monster\LavaBat\LavaBat_Die\Lava-Bat_1%d.png
+LavaBat|LavaBat_Die|2|..\Texture\Monster\LavaBat\LavaBat_Die\LavaBat_Die%d.png
 LavaBat|LavaBat_Fly|15|..\Texture\Monster\LavaBat\LavaBat_Fly\LavaBat_Fly%d.png
 LavaBat|LavaBat_IDLE|1|..\Texture\Monster\LavaBat\LavaBat_IDLE\LavaBat_IDLE%d.png
 LavaCrab|LavaCrab_Die|6|..\Texture\Monster\LavaCrab\LavaCrab_Die\LavaCrab_Die%d.png
@@ -425,19 +422,6 @@ ShadowShaman|ShadowShaman_Forward|4|..\Texture\Monster\ShadowShaman\ShadowShaman
 ShadowShaman|ShadowShaman_IDLE|4|..\Texture\Monster\ShadowShaman\ShadowShaman_IDLE\Shadow_Shaman_IDLE%d.png
 ShadowShaman|ShadowShaman_Left|4|..\Texture\Monster\ShadowShaman\ShadowShaman_Left\Shadow_Shaman_Left%d.png
 ShadowShaman|ShadowShaman_Right|4|..\Texture\Monster\ShadowShaman\ShadowShaman_Right\Shadow_Shaman_Right%d.png
-Skeleton|Skeleton_Attack|4|..\Texture\Monster\Skeleton\Skeleton_Attack\Skeleton_Attack%d.png
-Skeleton|Skeleton_Back|4|..\Texture\Monster\Skeleton\Skeleton_Back\Skeleton_Back%d.png
-Skeleton|Skeleton_Die|2|..\Texture\Monster\Skeleton\Skeleton_Die\SkeletonMage_Die%d.png
-Skeleton|Skeleton_Forward|4|..\Texture\Monster\Skeleton\Skeleton_Forward\Skeleton_Forward%d.png
-Skeleton|Skeleton_Left|4|..\Texture\Monster\Skeleton\Skeleton_Left\Skeleton_Left%d.png
-Skeleton|Skeleton_Right|4|..\Texture\Monster\Skeleton\Skeleton_Right\Skeleton_Right%d.png
-SkeletonMage|SkeletonMage_Attack|4|..\Texture\Monster\SkeletonMage\SkeletonMage_Attack\SkeletonMage_Attack%d.png
-SkeletonMage|SkeletonMage_Back|4|..\Texture\Monster\SkeletonMage\SkeletonMage_Back\SkeletonMage_Back%d.png
-SkeletonMage|SkeletonMage_Die|2|..\Texture\Monster\SkeletonMage\SkeletonMage_Die\SkeletonMage_Die%d.png
-SkeletonMage|SkeletonMage_Forward|4|..\Texture\Monster\SkeletonMage\SkeletonMage_Forward\SkeletonMage_Forward%d.png
-SkeletonMage|SkeletonMage_Left|4|..\Texture\Monster\SkeletonMage\SkeletonMage_Left\SkeletonMage_Left%d.png
-SkeletonMage|SkeletonMage_Right|4|..\Texture\Monster\SkeletonMage\SkeletonMage_Right\SkeletonMage_Right%d.png
-Monster|Spiker|5|..\Texture\Monster\Spiker\Spike%d.png
 SquidKid|SquidKid_Back|4|..\Texture\Monster\SquidKid\SquidKid_Back\SquidKid_Back%d.png
 SquidKid|SquidKid_Die|7|..\Texture\Monster\SquidKid\SquidKid_Die\SquidKid_Die%d.png
 SquidKid|SquidKid_Forward|4|..\Texture\Monster\SquidKid\SquidKid_Forward\SquidKid_Forward%d.png
@@ -455,5 +439,4 @@ WildernessGolem|WildernessGolem_Left|4|..\Texture\Monster\WildernessGolem\Wilder
 WildernessGolem|WildernessGolem_Right|4|..\Texture\Monster\WildernessGolem\WildernessGolem_Right\WildernessGolem_Right%d.png
 WildernessGolem|WildernessGolem_Spawn|8|..\Texture\Monster\WildernessGolem\WildernessGolem_Spawn\WildernessGolem_Spawn%d.png
 WildernessGolem|WildrnessGolem_Back|4|..\Texture\Monster\WildernessGolem\WildrnessGolem_Back\WildernessGolem_Back%d.png
-UI|ETC|6|..\Texture\UI\ETC\ETC%d.png
-UI|TextBox|2|..\Texture\UI\TextBox\TextBox%d.png
+
