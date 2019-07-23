@@ -3,7 +3,6 @@
 #include "ScrollMgr.h"
 #include "Equipment.h"
 #include "Inventory.h"
-#include "QuickSlot.h"
 CPlayer::CPlayer()
 {
 }
@@ -25,7 +24,7 @@ HRESULT CPlayer::Init()
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 
-	m_pEquip = CAbstractFactory<CEquipment>::CreateObj();
+	m_pEquip = CAbstractFactory<CEquipment>::CreateObj(OBJECT_ID_UI);
 	if (nullptr == m_pEquip)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pEquip, OBJECT_ID_NPC);
@@ -34,11 +33,6 @@ HRESULT CPlayer::Init()
 	if (m_pInven == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pInven, OBJECT_ID_UI);
-
-	m_pSlot = CAbstractFactory<CQuickSlot>::CreateObj(OBJECT_ID_UI);
-	if (m_pSlot == nullptr)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(m_pSlot, OBJECT_ID_UI);
 
 	return S_OK;
 }
@@ -63,7 +57,7 @@ _int CPlayer::Update(const _float& fTimeDelta)
 
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_LBUTTON) && m_pEquip)
 	{
-		m_pEquip->Init(OBJECT_ID_END);
+		dynamic_cast<CEquipment*>(m_pEquip)->SetActive();
 	}
 
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_SHIFT))

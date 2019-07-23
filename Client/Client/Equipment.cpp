@@ -27,8 +27,14 @@ HRESULT CEquipment::Init()
 
 HRESULT CEquipment::Init(OBJECT_ID eID)
 {
-	m_bActive = true;
+	m_tInfo.vPos = { 400.f, 300.f,0.f };
+	m_tInfo.vSize = { 1.f, 1.f,0.f };
+	m_strStateKey = L"Kent_Forward";
+	m_tFrame = { 0.f, 1.f };
 	m_fAngle = 0.f;
+	m_bActive = false;
+
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 
 	return S_OK;
 }

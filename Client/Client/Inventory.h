@@ -2,7 +2,15 @@
 #include "UI.h"
 class CInventory : public CUI
 {
-	bool m_bActive = false;
+	_bool			m_bActive = false;
+
+	_int			m_nSelect;
+
+	CObj			*m_pItem[3][12] = { NULL };
+
+	UNITIFNO		m_tQuickSlot;
+	TCHAR*			m_strSlotObjectKey = L"";
+	TCHAR*			m_strSlotStateKey = L"";
 public:
 	CInventory();
 	virtual ~CInventory();

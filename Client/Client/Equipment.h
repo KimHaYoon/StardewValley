@@ -19,5 +19,7 @@ public:
 	virtual void Release();
 
 	float GetRadian() { return m_fAngle / 180.f * 3.141592f; }
+
+	void SetActive() { m_bActive = true; m_fAngle = 0.f; }
 };
 

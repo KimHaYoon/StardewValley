@@ -15,7 +15,6 @@ class CPlayer : public CObj
 
 	CObj *m_pInven = NULL;
 
-	CObj *m_pSlot = NULL;
 public:
 	CPlayer();
 	virtual ~CPlayer();

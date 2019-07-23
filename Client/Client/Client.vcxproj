@@ -199,7 +199,6 @@
     <ClInclude Include="Penny.h" />
     <ClInclude Include="Pierre.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="QuickSlot.h" />
     <ClInclude Include="RenderMgr.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Robin.h" />
@@ -261,7 +260,6 @@
     <ClCompile Include="Penny.cpp" />
     <ClCompile Include="Pierre.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="QuickSlot.cpp" />
     <ClCompile Include="RenderMgr.cpp" />
     <ClCompile Include="Robin.cpp" />
     <ClCompile Include="Sam.cpp" />
