@@ -162,6 +162,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Caroline.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="CollisionMgr.h" />
     <ClInclude Include="Demetrius.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="DongKuTestScene.h" />
@@ -227,6 +228,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Caroline.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="CollisionMgr.cpp" />
     <ClCompile Include="Demetrius.cpp" />
     <ClCompile Include="DongKuTestScene.cpp" />
     <ClCompile Include="Elliott.cpp" />

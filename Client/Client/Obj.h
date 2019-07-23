@@ -18,7 +18,11 @@ public:
 public:
 	const UNITIFNO		GetInfo() const { return m_tInfo; }
 	OBJECT_ID			GetObjectID() { return m_eObjID; }
-	const LAYER_ID			GetLayerID() const { return m_eLayerID; }
+	const LAYER_ID		GetLayerID() const { return m_eLayerID; }\
+public:
+	void				SetPos(float x, float y) { m_tInfo.vPos.x = x, m_tInfo.vPos.y = y; }
+public:
+	_vec3				GetCollSize() { return m_ObjCollSize; }
 protected:
 	UNITIFNO		m_tInfo;
 	_float			m_fSpeed=0.f;
@@ -33,6 +37,8 @@ protected:
 	LAYER_ID		m_eLayerID;
 protected:
 	CObj*		m_pTextBox = nullptr;
+protected:
+	_vec3				m_ObjCollSize;
 protected:
 	void			MoveFrame();
 	void			MoveFrame(float num);

@@ -69,6 +69,7 @@ using namespace std;
 #include "PathMgr.h"
 #include "RenderMgr.h"
 #include "FontMgr.h"
+#include "CollisionMgr.h"
 
 
 

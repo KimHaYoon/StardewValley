@@ -13,6 +13,8 @@ public:
 	void			Render();
 	void			Release();
 	void			Release_Scene(OBJECT_ID eID);
+public:
+	list<CObj*>		&GetPlayer() { return m_listObject[OBJECT_ID_PLAYER]; }
 private:
 	list<CObj*>		m_listObject[OBJECT_ID_END];
 };
