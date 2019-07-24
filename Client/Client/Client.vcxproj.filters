@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Alex.cpp">
       <Filter>01. Object\01. NPC\01. Alex</Filter>
     </ClCompile>
@@ -195,11 +194,13 @@
       <Filter>01. Object\03. UI</Filter>
     </ClCompile>
     <ClCompile Include="Stage.cpp">
-      <Filter>02. Scene</Filter>
+      <Filter>02. Scene\01. Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipment.cpp">
+      <Filter>01. Object\99. Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Equipment.h" />
     <ClInclude Include="Alex.h">
       <Filter>01. Object\01. NPC\01. Alex</Filter>
     </ClInclude>
@@ -362,9 +363,6 @@
     <ClInclude Include="MyMap.h">
       <Filter>02. Scene\97. MyMap</Filter>
     </ClInclude>
-    <ClInclude Include="Obj.h">
-      <Filter>01. Object</Filter>
-    </ClInclude>
     <ClInclude Include="BackTerrain.h">
       <Filter>01. Object\98. Public\01. BackTerrain</Filter>
     </ClInclude>
@@ -398,11 +396,17 @@
     <ClInclude Include="TextBox.h">
       <Filter>01. Object\03. UI</Filter>
     </ClInclude>
-    <ClInclude Include="Stage.h">
-      <Filter>02. Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>02. Scene\01. Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Equipment.h">
+      <Filter>01. Object\99. Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj.h">
+      <Filter>01. Object\99. Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
