@@ -1,0 +1,10 @@
+무/Radish/40/50
+멜론/Melon/80/100
+고추/HotPepper/40/50
+홉/Hops/60/75
+토마토/Tomato/60/11/X/4
+블루베리/Blueberry/80
+옥수수/Corn/150/187
+밀/Wheat/10/12
+붉은양배추/RedCabbage/100
+스타후르츠/Starfruit/0/0/400

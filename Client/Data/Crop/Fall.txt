@@ -1,0 +1,9 @@
+청경채/BokChoy/80/4
+마/Yam/160/10
+호박/Pumpkin/320/13/O
+가지/Eggplant/60/5/X/5
+크랜베리/Cranberry/75/7/X/5
+포도/Grape/80/10/X/3
+아마란스/Amaranth/150/7
+아티초크/Artichoke/160/8
+비트/Beet/100/6

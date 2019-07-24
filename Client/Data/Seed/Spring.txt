@@ -1,0 +1,8 @@
+설탕당근/Parsnip/20/25
+감자/Potato/50/62
+케일/Kale/70/87
+콜리플라워/Cauliflower/80/100
+딸기/Strawberry/100
+콩/GreenBean/60/75
+마늘/Gralic/40
+대황/Rhubarb/0/0/100
