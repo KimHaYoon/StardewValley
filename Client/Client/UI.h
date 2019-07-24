@@ -1,5 +1,16 @@
 #pragma once
 #include "Obj.h"
+
+enum UISPRITE {
+	QUICKSLOT,
+	SELECTSLOT,
+	CLOCKHANDLE,
+	INFOCLOCK,
+	ENERGY,
+	GAUGE,
+	END
+};
+
 class CUI :
 	public CObj
 {
