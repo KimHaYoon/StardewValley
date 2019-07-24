@@ -211,6 +211,12 @@
     <Filter Include="97. Managers\13. CollisionMgr">
       <UniqueIdentifier>{e6e5ac3c-2d14-438f-a099-54678e83d739}</UniqueIdentifier>
     </Filter>
+    <Filter Include="97. Managers\05. ObjectMgr\00. MonsterMgr">
+      <UniqueIdentifier>{0fa5ac96-9012-4ba8-90f9-9ec2192fae3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Stage\02. Monster">
+      <UniqueIdentifier>{2a5c013d-0af7-4b3f-b342-7ad1c4676759}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -408,6 +414,12 @@
     <ClInclude Include="CollisionMgr.h">
       <Filter>97. Managers\13. CollisionMgr</Filter>
     </ClInclude>
+    <ClInclude Include="MonsterMgr.h">
+      <Filter>97. Managers\05. ObjectMgr\00. MonsterMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>01. Object\01. Stage\02. Monster</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -595,6 +607,12 @@
     </ClCompile>
     <ClCompile Include="CollisionMgr.cpp">
       <Filter>97. Managers\13. CollisionMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterMgr.cpp">
+      <Filter>97. Managers\05. ObjectMgr\00. MonsterMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>01. Object\01. Stage\02. Monster</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
