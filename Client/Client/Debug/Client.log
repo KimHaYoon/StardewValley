@@ -1,1 +1,81 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  MonsterMgr.cpp
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.h(11): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.h(11): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.h(11): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.h(14): error C2065: 'MonsterInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.h(14): error C2059: 구문 오류: '>'
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.h(14): error C2976: 'std::map': 템플릿 인수가 너무 적습니다.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\map(72): note: 'std::map' 선언을 참조하십시오.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(8): error C2512: 'std::map': 사용할 수 있는 적절한 기본 생성자가 없습니다.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\map(72): note: 'std::map' 선언을 참조하십시오.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(31): error C2065: 'MonsterInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(31): error C2065: 'tInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(31): error C2061: 구문 오류: 식별자 'MonsterInfo'
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(44): error C2065: 'tInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(44): error C2227: '->strImgName' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(44): note: 'unknown-type' 형식입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(49): error C2065: 'tInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(49): error C2227: '->iHP' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(49): note: 'unknown-type' 형식입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(54): error C2065: 'tInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(54): error C2227: '->iDamage' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(54): note: 'unknown-type' 형식입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(64): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(69): error C2065: 'tInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(69): error C2227: '->mapDropItem' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(69): note: 'unknown-type' 형식입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(69): error C2228: '.insert' 왼쪽에는 클래스/구조체/공용 구조체가 있어야 합니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(81): error C2065: 'tInfo': 선언되지 않은 식별자입니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(81): error C2672: 'std::map<_Kty,_Ty,_Pr,_Alloc>::insert': 일치하는 오버로드된 함수가 없습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(81): error C2780: '_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Tree_base_types<_Traits::value_type,_Traits::allocator_type>::_Alloc,false>>::iterator std::map<_Kty,_Ty,_Pr,_Alloc>::insert(_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Tree_base_types<_Traits::value_type,_Traits::allocator_type>::_Alloc,false>>::const_iterator,_Valty &&)': 인수가 2개 있어야 하는데 1개를 사용했습니다.
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\map(199): note: 'std::map<_Kty,_Ty,_Pr,_Alloc>::insert' 선언을 참조하십시오.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(87): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(87): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(87): error C2039: 'FindMonsterInfo': 'CMonsterMgr'의 멤버가 아닙니다.
+  c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.h(3): note: 'CMonsterMgr' 선언을 참조하십시오.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(88): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(88): error C2059: 구문 오류: '{'
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(88): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+c:\users\msi\desktop\teamstardew\stardewvalley\client\client\monstermgr.cpp(88): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+  Monster.cpp
+  Linus.cpp
+  Inventory.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Vincent.cpp
+  UI.cpp
+  TextBox.cpp
+  Sebastian.cpp
+  Obj.cpp
+  Sandy.cpp
+  Sam.cpp
+  Robin.cpp
+  Player.cpp
+  Pierre.cpp
+  Penny.cpp
+  NPC.cpp
+  NameTag.cpp
+  Morris.cpp
+  Maru.cpp
+  Marnie.cpp
+  Marlon.cpp
+  Marcello.cpp
+  Logo.cpp
+  Lewis.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Leah.cpp
+  Kent.cpp
+  Jodi.cpp
+  Jas.cpp
+  Harvey.cpp
+  Haley.cpp
+  George.cpp
+  Evelyn.cpp
+  Emily.cpp
+  Elliott.cpp
+  Demetrius.cpp
+  Caroline.cpp
+  Alex.cpp
+  Abigail.cpp
+  코드를 생성하고 있습니다...
