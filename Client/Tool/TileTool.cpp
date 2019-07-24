@@ -10,6 +10,8 @@
 #include "Terrain.h"
 #include "MyMap.h"
 #include "Building.h"
+#include "MainFrm.h"
+#include "MyForm.h"
 
 
 // CTileTool 대화 상자입니다.
@@ -43,6 +45,8 @@ void CTileTool::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_RADIO4, m_RadioSeason[1]);
 	DDX_Control(pDX, IDC_RADIO5, m_RadioSeason[2]);
 	DDX_Control(pDX, IDC_RADIO6, m_RadioSeason[3]);
+	DDX_Control(pDX, IDC_RADIO16, m_RadioReaction[0]);
+	DDX_Control(pDX, IDC_RADIO17, m_RadioReaction[1]);
 }
 
 
@@ -65,6 +69,8 @@ BOOL CTileTool::OnInitDialog()
 		m_RadioMap[i].SetCheck(false);
 	for (int i = 1; i < 4; ++i)
 		m_RadioSeason[i].SetCheck(false);
+	for (int i = 0; i < 2; ++i)
+		m_RadioReaction[i].SetCheck(false);
 	return TRUE;
 }
 
@@ -72,7 +78,13 @@ BOOL CTileTool::OnInitDialog()
 void CTileTool::OnMouseMove(UINT nFlags, CPoint point)
 {
 	CDialog::OnMouseMove(nFlags, point);
+	CMainFrame* pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
+	CToolView*	pView = dynamic_cast<CToolView*>(pMainFrm->m_MainSplt.GetPane(0,1));
 
+	if (m_RadioReaction[0].GetCheck() == true)
+		pView->m_bReactionCheck = true;
+	else if (m_RadioReaction[1].GetCheck() == true)
+		pView->m_bReactionCheck = false;
 }
 
 
@@ -94,7 +106,7 @@ void CTileTool::OnBnClickedTileSave()
 	PathRemoveFileSpec(szCurPath);
 	lstrcat(szCurPath, L"\\Data");
 
-	Dlg.m_ofn.lpstrInitialDir = szCurPath;	// 절대경로!
+	Dlg.m_ofn.lpstrInitialDir = szCurPath;
 
 	if (IDOK == Dlg.DoModal())
 	{

@@ -338,6 +338,15 @@ void CToolView::OnInitialUpdate()
 
 	}
 
+
+
+	{
+		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI, L"../Texture/ReationTile/tile/tile%d.png", L"ReationTile", L"tile", 3)))
+		{
+			AfxMessageBox(L"ReationTile Image Insert Failed");
+			return;
+		}
+	}
 	if (nullptr == m_pTerrain)
 	{
 		m_pTerrain = new CTerrain;
@@ -377,49 +386,57 @@ void CToolView::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	CScrollView::OnLButtonDown(nFlags, point);
 
-
-
 	point.x += CScrollView::GetScrollPos(0);
 	point.y += CScrollView::GetScrollPos(1);
 
 	CMainFrame* pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
 	CImageView* pView = dynamic_cast<CImageView*>(pMainFrm->m_MainSplt.GetPane(0, 2));
+	CMyForm*	pFormView = dynamic_cast<CMyForm*>(pMainFrm->m_MainSplt.GetPane(0, 0));
 	CTerrain* pTerrain = pView->m_pTerrain;
 
-	if (m_bMouseLButtonClick)
+	if (!m_bReactionCheck)
 	{
-		if (!pView->Check)
+
+		if (m_bMouseLButtonClick)
 		{
-			return;
+			if (!pView->Check)
+			{
+				return;
+			}
+			m_pTerrain->TileChange(pView->ObjKey, pView->StateKey, D3DXVECTOR3(float(point.x), float(point.y), 0.f), pView->iIdx);
 		}
-		m_pTerrain->TileChange(pView->ObjKey, pView->StateKey, D3DXVECTOR3(float(point.x), float(point.y), 0.f), pView->iIdx);
+		else
+		{
+			_vec3	tempv = { (float)point.x, (float)point.y, 0.f };
+			_vec3   vecResult = {};
+			_int	least = 100;
+			for (auto& iter : pTerrain->GetTile())
+			{
+				_vec3 v = iter->vPos - tempv;
+				float f = D3DXVec3Length(&v);
+
+				if (f > least)
+				{
+					continue;
+				}
+				else
+				{
+					least = f;
+					vecResult = iter->vPos;
+				}
+			}
+			m_vecNPCOnlyPath.push_back(vecResult);
+
+			_vec3 vt = _vec3(float(point.x), float(point.y), 0.f);
+
+			m_pTerrain->fAlphaCheck(vt);
+		}
 	}
 	else
 	{
-		_vec3	tempv = { (float)point.x, (float)point.y, 0.f };
-		_vec3   vecResult = {};
-		_int	least = 100;
-		for (auto& iter : pTerrain->GetTile())
-		{
-			_vec3 v = iter->vPos - tempv;
-			float f = D3DXVec3Length(&v);
-
-			if (f > least)
-			{
-				continue;
-			}
-			else
-			{
-				least = f;
-				vecResult = iter->vPos;
-			}
-		}
-		m_vecNPCOnlyPath.push_back(vecResult);	
-
-		_vec3 vt = _vec3(float(point.x), float(point.y), 0.f);
-
-		m_pTerrain->fAlphaCheck(vt);
+		m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
 	}
+
 	Invalidate(FALSE);
 
 }
@@ -445,6 +462,11 @@ void CToolView::OnMouseMove(UINT nFlags, CPoint point)
 		}
 		m_pTerrain->TileChange(pView->ObjKey, pView->StateKey, D3DXVECTOR3(float(point.x), float(point.y), 0.f), pView->iIdx);
 
+
+		if(m_bReactionCheck)
+		{
+			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
+		}
 	}
 
 	CMainFrame* pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());

@@ -193,6 +193,7 @@
     <ClInclude Include="Morris.h" />
     <ClInclude Include="MultiTexture.h" />
     <ClInclude Include="MyMap.h" />
+    <ClInclude Include="NameTag.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="ObjectMgr.h" />
@@ -200,6 +201,7 @@
     <ClInclude Include="Penny.h" />
     <ClInclude Include="Pierre.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="ReactionTerrain.h" />
     <ClInclude Include="RenderMgr.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Robin.h" />
@@ -257,11 +259,13 @@
     <ClCompile Include="Morris.cpp" />
     <ClCompile Include="MultiTexture.cpp" />
     <ClCompile Include="MyMap.cpp" />
+    <ClCompile Include="NameTag.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="PathMgr.cpp" />
     <ClCompile Include="Penny.cpp" />
     <ClCompile Include="Pierre.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ReactionTerrain.cpp" />
     <ClCompile Include="RenderMgr.cpp" />
     <ClCompile Include="Robin.cpp" />
     <ClCompile Include="Sam.cpp" />

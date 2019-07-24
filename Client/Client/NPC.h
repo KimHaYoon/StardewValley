@@ -1,5 +1,6 @@
 #pragma once
 #include "Obj.h"
+#include "NameTag.h"
 class CNPC :
 	public CObj
 {
@@ -23,7 +24,6 @@ public:
 protected:
 	map<_int, vector<_vec3>>		m_mapPos;	
 	map<_int, vector<wstring>>		m_mapTex;
-
 protected:
 	_int							m_iIdx = 0;
 	_int							m_iVecSize = 0;
@@ -31,6 +31,7 @@ protected:
 	_bool							m_bForwardPath = false;
 	_bool							m_bBackPath = false;
 	_int							m_iPathIdx = 0;
+	_tchar*							m_pNPCName = L"";
 protected:
 	_vec3							m_vTempPos;
 	

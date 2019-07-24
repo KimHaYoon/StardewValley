@@ -31,7 +31,6 @@
 #define IDC_BUTTON9                     1006
 #define IDC_EDIT5                       1007
 #define IDC_BUTTON7                     1007
-#define IDC_BUTTON15                    1007
 #define IDC_LIST1                       1008
 #define IDC_BUTTON14                    1008
 #define IDC_BUTTON2                     1009
@@ -40,7 +39,9 @@
 #define IDC_RADIO5                      1018
 #define IDC_RADIO6                      1019
 #define IDC_LIST4                       1020
+#define IDC_RADIO16                     1020
 #define IDC_RADIO15                     1021
+#define IDC_RADIO17                     1021
 #define IDC_RADIO1                      1022
 #define IDC_RADIO2                      1023
 #define IDC_RADIO7                      1024

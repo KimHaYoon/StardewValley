@@ -439,6 +439,8 @@ WildernessGolem|WildernessGolem_Left|4|..\Texture\Monster\WildernessGolem\Wilder
 WildernessGolem|WildernessGolem_Right|4|..\Texture\Monster\WildernessGolem\WildernessGolem_Right\WildernessGolem_Right%d.png
 WildernessGolem|WildernessGolem_Spawn|8|..\Texture\Monster\WildernessGolem\WildernessGolem_Spawn\WildernessGolem_Spawn%d.png
 WildernessGolem|WildrnessGolem_Back|4|..\Texture\Monster\WildernessGolem\WildrnessGolem_Back\WildernessGolem_Back%d.png
-UI|ETC|6|..\Texture\UI\ETC\ETC%d.png
+UI|ETC|7|..\Texture\UI\ETC\ETC%d.png
 UI|TextBox|2|..\Texture\UI\TextBox\TextBox%d.png
+ReationTile|tile|3|..\Texture\ReationTile\tile\tile%d.png
+
 

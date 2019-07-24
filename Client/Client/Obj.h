@@ -15,6 +15,7 @@ public:
 	virtual	HRESULT Init(const _tchar* pFilePath, OBJECT_ID eID=OBJECT_ID_TERRAIN);
 	virtual HRESULT Init(OBJECT_ID eID);
 	virtual HRESULT Init(LAYER_ID eID);
+	virtual HRESULT Init(_vec3 vPos, _tchar* pName);
 public:
 	const UNITIFNO		GetInfo() const { return m_tInfo; }
 	OBJECT_ID			GetObjectID() { return m_eObjID; }
@@ -23,6 +24,8 @@ public:
 	void				SetPos(float x, float y) { m_tInfo.vPos.x = x, m_tInfo.vPos.y = y; }
 public:
 	_vec3				GetCollSize() { return m_ObjCollSize; }
+public:
+	TCHAR*			GetObjectKey() { return m_strObjectKey; }
 protected:
 	UNITIFNO		m_tInfo;
 	_float			m_fSpeed=0.f;

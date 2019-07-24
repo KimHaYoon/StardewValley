@@ -106,7 +106,10 @@ HRESULT CSandy::Init(OBJECT_ID eID)
 		m_tInfo.vPos = iter.second.front();
 		break;
 	}
-
+	CObj* pObj = CAbstractFactory<CNameTag>::CreateObj(m_tInfo.vPos, L"Sandy");
+	if (pObj == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 
 	return S_OK;

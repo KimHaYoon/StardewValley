@@ -26,6 +26,7 @@ HRESULT CBackTerrain::Init(const _tchar * pFilePath, OBJECT_ID eID)
 	m_fSpeed = 10.f;
 	for (auto& iter : m_vecTile)
 		wcscpy_s(iter->ObjKey, L"Fall");
+
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_1);
 	return S_OK;
 }
@@ -52,8 +53,6 @@ _int CBackTerrain::Update(const _float & fTimeDelta)
 // 		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  3 * m_fSpeed * fTimeDelta , 0.f });
 // 		m_tInfo.vPos.y += fTimeDelta;
 // 	}
-
-
 	return NO_ERROR;
 }
 

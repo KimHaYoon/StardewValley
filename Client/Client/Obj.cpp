@@ -26,6 +26,11 @@ HRESULT CObj::Init(LAYER_ID eID)
 	return S_OK;
 }
 
+HRESULT CObj::Init(_vec3 vPos, _tchar* pName)
+{
+	return E_NOTIMPL;
+}
+
 void CObj::MoveFrame()
 {
 	m_tFrame.fFrame += m_tFrame.fMax * CTimerMgr::GetInstance()->GetDeltaTime();

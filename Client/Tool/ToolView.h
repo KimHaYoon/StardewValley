@@ -45,6 +45,8 @@ public:
 	bool			m_bCheck = false;
 	bool			m_bMouseLButtonClick = true;
 	POINT			m_pt;
+public:
+	_bool			m_bReactionCheck = false;
 
 
 public:

@@ -56,4 +56,17 @@ public:
 
 		return pObject;
 	}
+
+	static CObj* CreateObj(_vec3 vPos, _tchar* pName)
+	{
+		CObj* pObject = new T;
+
+		if (FAILED(pObject->Init(vPos, pName)))
+		{
+			SafeDelete(pObject);
+			return nullptr;
+		}
+
+		return pObject;
+	}
 };

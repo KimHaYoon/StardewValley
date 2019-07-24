@@ -57,26 +57,6 @@ void CObjectMgr::Render()
 		for (auto& pObject : m_listObject[i])
 			pObject->Render();
 	}
-
-// 	list<CObj*> vObj;
-// 	CObj* pTemp;
-// 	for (int i = 0; i < OBJECT_ID_END; ++i)
-// 		for (auto& iter : m_listObject[i])
-// 		{
-// 			pTemp = iter;
-// 			vObj.push_back(pTemp);
-// 		}
-// 
-// 	vObj.sort([](CObj* a, CObj* b)
-// 	{
-// 		return a->GetLayerID() < b->GetLayerID();
-// 	});
-// 
-// 	for (auto& iter : vObj)
-// 	{
-// 		iter->Render();
-// 		SafeDelete(iter);
-// 	}
 }
 
 void CObjectMgr::Release()
@@ -96,4 +76,16 @@ void CObjectMgr::Release_Scene(OBJECT_ID eID)
 {
 	for_each(m_listObject[eID].begin(), m_listObject[eID].end(), SafeDelete<CObj*>);
 	m_listObject[eID].clear();
+}
+
+CObj* CObjectMgr::GetNPC(const _tchar * pName)
+{
+	for (auto& iter : m_listObject[OBJECT_ID_NPC])
+	{
+		if (iter->GetObjectKey() == pName)
+		{
+			return iter;
+		}
+	}
+	return nullptr;
 }

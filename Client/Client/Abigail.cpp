@@ -108,6 +108,11 @@ HRESULT CAbigail::Init(OBJECT_ID eID)
 		break;
 	}
 
+	CObj* pObj = CAbstractFactory<CNameTag>::CreateObj(m_tInfo.vPos, L"Abigail");
+	if (pObj == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
+
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
 	return S_OK;
 }

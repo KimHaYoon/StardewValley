@@ -1,2 +1,1 @@
-UI|ETC|6|..\Texture\UI\ETC\ETC%d.png
-UI|TextBox|2|..\Texture\UI\TextBox\TextBox%d.png
+ReationTile|tile|3|..\Texture\ReationTile\tile\tile%d.png

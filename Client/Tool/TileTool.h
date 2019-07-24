@@ -35,4 +35,7 @@ public:
 	CTerrain*			  m_pTile;
 	CButton m_RadioSeason[4];
 	afx_msg void OnBnClickedClear();
+	CButton m_RadioReaction[2];
+public:
+	_bool		m_bReactionCheck = false;
 };
