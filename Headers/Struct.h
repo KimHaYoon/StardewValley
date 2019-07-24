@@ -57,3 +57,11 @@ typedef struct tagTextInfo
 	TCHAR*						szName;
 	map<int, vector<wstring>>	mapText;
 }TEXTINFO;
+
+typedef struct tagMonsterInfo
+{
+	string strImgName;
+	int		iHP;
+	int		iDamage;
+	map<string, float> mapDropItem;
+}MonsterInfo;

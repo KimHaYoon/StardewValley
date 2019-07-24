@@ -1,5 +1,0 @@
-﻿  TileTool.cpp
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\tiletool.cpp(84): warning C4805: '==': 연산에 'int' 형식과 'bool' 형식을 함께 사용하는 것은 안전하지 않습니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\tiletool.cpp(86): warning C4805: '==': 연산에 'int' 형식과 'bool' 형식을 함께 사용하는 것은 안전하지 않습니다.
-  Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Tool.exe
-  Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Tool.pdb (Partial PDB)
