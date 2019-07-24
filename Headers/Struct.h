@@ -65,3 +65,18 @@ typedef struct tagMonsterInfo
 	int		iDamage;
 	map<string, float> mapDropItem;
 }MonsterInfo;
+
+typedef struct tagSeedInfo
+{
+	string			strName;
+	list<int>		listPrice;
+ }SeedInfo;
+
+typedef struct tagCropInfo
+{
+	string		strName;
+	int			iSellPrice;
+	int			iDate;
+	bool		bBig;
+	int			iCycle;
+}CropInfo;
