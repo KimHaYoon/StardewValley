@@ -121,6 +121,7 @@ void CTileTool::OnBnClickedTileSave()
 		HANDLE hFile = CreateFile(FilePath.GetString(), GENERIC_WRITE, 0, 0,
 			CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
 
+		int i = 0;
 		if (INVALID_HANDLE_VALUE == hFile)
 		{
 			AfxMessageBox(L"Tile Save Failed!!");

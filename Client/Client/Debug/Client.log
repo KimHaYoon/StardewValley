@@ -1,9 +1,1 @@
-﻿  ObjectMgr.cpp
-  ReactionTerrain.cpp
-  Logo.cpp
-  BackTerrain.cpp
-  코드를 생성하고 있습니다...
-  건너뛰고 있습니다... (관련된 변경 내용 없음)
-  DongKuTestScene.cpp
-  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.exe
-  Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.pdb (Full PDB)
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: The build tools for v141 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install v141 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".

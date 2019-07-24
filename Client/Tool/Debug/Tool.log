@@ -1,22 +1,5 @@
-﻿  ToolView.cpp
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(424): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(573): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\toolview.cpp(610): warning C4244: '=': 'float'에서 '_int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  TileTool.cpp
+﻿  TileTool.cpp
 c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\tiletool.cpp(84): warning C4805: '==': 연산에 'int' 형식과 'bool' 형식을 함께 사용하는 것은 안전하지 않습니다.
 c:\users\msi\desktop\teamstardew\stardewvalley\client\tool\tiletool.cpp(86): warning C4805: '==': 연산에 'int' 형식과 'bool' 형식을 함께 사용하는 것은 안전하지 않습니다.
-  코드를 생성하고 있습니다...
-  건너뛰고 있습니다... (관련된 변경 내용 없음)
-  Tool.cpp
-  Terrain.cpp
-  ObjectTool.cpp
-  NPCTool.cpp
-  MyMap.cpp
-  MyImage.cpp
-  MiniView.cpp
-  MainFrm.cpp
-  ImageViewTool.cpp
-  ImageView.cpp
-  Building.cpp
   Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Tool.exe
   Tool.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Tool.pdb (Partial PDB)
