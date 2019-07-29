@@ -15,6 +15,10 @@ class CPlayer : public CObj
 
 	CObj *m_pInven = NULL;
 
+	CObj *m_pClock = NULL;
+
+	CObj *m_pEnergyGauge = NULL;
+
 public:
 	CPlayer();
 	virtual ~CPlayer();

@@ -3,6 +3,8 @@
 #include "ScrollMgr.h"
 #include "Equipment.h"
 #include "Inventory.h"
+#include "Clock.h"
+#include "EnergyGauge.h"
 CPlayer::CPlayer()
 {
 }
@@ -15,7 +17,7 @@ CPlayer::~CPlayer()
 HRESULT CPlayer::Init()
 {
 	m_bIDLE = true;
-	m_tInfo.vPos = { 400.f, 300.f,0.f };
+	m_tInfo.vPos = { WINCX / 2.f, WINCY / 2.f,0.f };
 	m_tInfo.vSize = { 1.f, 1.f,0.f };
 	m_strStateKey = L"Abigail_Forward";
 	m_tFrame = { 0.f, 1.f };
@@ -33,6 +35,16 @@ HRESULT CPlayer::Init()
 	if (m_pInven == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pInven, OBJECT_ID_UI);
+
+	m_pClock = CAbstractFactory<CClock>::CreateObj(OBJECT_ID_UI);
+	if (m_pClock == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pClock, OBJECT_ID_UI);
+
+	m_pEnergyGauge = CAbstractFactory<CEnergyGauge>::CreateObj(OBJECT_ID_UI);
+	if (m_pEnergyGauge == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pEnergyGauge, OBJECT_ID_UI);
 
 	return S_OK;
 }

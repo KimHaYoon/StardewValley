@@ -199,6 +199,30 @@
     <ClCompile Include="Equipment.cpp">
       <Filter>01. Object\99. Object</Filter>
     </ClCompile>
+    <ClCompile Include="Clock.cpp">
+      <Filter>01. Object\03. UI\02. Clock</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockHand.cpp">
+      <Filter>01. Object\03. UI\03. ClockHand</Filter>
+    </ClCompile>
+    <ClCompile Include="Energy.cpp">
+      <Filter>01. Object\03. UI\05. Energy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnergyGauge.cpp">
+      <Filter>01. Object\03. UI\04. EnergyGauge</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>01. Object\04. Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Axe.cpp">
+      <Filter>01. Object\04. Item\00. Axe</Filter>
+    </ClCompile>
+    <ClCompile Include="Pickaxe.cpp">
+      <Filter>01. Object\04. Item\01. Pickaxe</Filter>
+    </ClCompile>
+    <ClCompile Include="Hoe.cpp">
+      <Filter>01. Object\04. Item\02. Hoe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alex.h">
@@ -407,6 +431,33 @@
     </ClInclude>
     <ClInclude Include="Obj.h">
       <Filter>01. Object\99. Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Clock.h">
+      <Filter>01. Object\03. UI\02. Clock</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockHand.h">
+      <Filter>01. Object\03. UI\03. ClockHand</Filter>
+    </ClInclude>
+    <ClInclude Include="Energy.h">
+      <Filter>01. Object\03. UI\05. Energy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnergyGauge.h">
+      <Filter>01. Object\03. UI\04. EnergyGauge</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>01. Object\04. Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemList.h">
+      <Filter>01. Object\04. Item\99. ItemList</Filter>
+    </ClInclude>
+    <ClInclude Include="Axe.h">
+      <Filter>01. Object\04. Item\00. Axe</Filter>
+    </ClInclude>
+    <ClInclude Include="Pickaxe.h">
+      <Filter>01. Object\04. Item\01. Pickaxe</Filter>
+    </ClInclude>
+    <ClInclude Include="Hoe.h">
+      <Filter>01. Object\04. Item\02. Hoe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -633,6 +684,33 @@
     </Filter>
     <Filter Include="01. Object\03. UI\01. Inventory">
       <UniqueIdentifier>{a6c9f978-4594-42ee-b1dc-b034e8054b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\02. Clock">
+      <UniqueIdentifier>{2810144d-022f-43e5-ada0-09f88c05709e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\03. ClockHand">
+      <UniqueIdentifier>{6780afa3-1c85-49e3-ad32-664cedcd029d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\04. EnergyGauge">
+      <UniqueIdentifier>{b2ed2b41-3ba2-464c-b43b-6e5623cc70c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\05. Energy">
+      <UniqueIdentifier>{21f56d15-1861-4262-81bc-577853a0a572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Item">
+      <UniqueIdentifier>{d659418b-810d-4628-a15f-1e575b28e75d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Item\00. Axe">
+      <UniqueIdentifier>{998aa7e1-405a-44e1-b766-9d1ef720dba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Item\01. Pickaxe">
+      <UniqueIdentifier>{e0e9c1e5-eb3b-402b-9639-d7c34144664d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Item\02. Hoe">
+      <UniqueIdentifier>{e8e51883-3e32-4c2d-904f-488b3fb771ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Item\99. ItemList">
+      <UniqueIdentifier>{8e5608ce-1031-4990-88fa-3ec965b168a7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

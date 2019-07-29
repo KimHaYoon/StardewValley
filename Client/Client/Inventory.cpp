@@ -2,6 +2,8 @@
 #include "Inventory.h"
 #include "Define.h"
 
+#include "ItemList.h"
+
 CInventory::CInventory()
 {
 }
@@ -63,6 +65,27 @@ HRESULT CInventory::Init(OBJECT_ID eID)
 	m_tQuickSlot.matWorld = matScale * matTrans;
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
+
+
+	m_pItem[0][0] = CAbstractFactory<CAxe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[0][0] == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pItem[0][0], OBJECT_ID_UI);
+	dynamic_cast<CAxe*>(m_pItem[0][0])->SetIndex(0);
+
+	m_pItem[0][5] = CAbstractFactory<CPickaxe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[0][5] == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pItem[0][5], OBJECT_ID_UI);
+	dynamic_cast<CPickaxe*>(m_pItem[0][5])->SetIndex(5);
+
+	m_pItem[0][8] = CAbstractFactory<CHoe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[0][8] == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pItem[0][8], OBJECT_ID_UI);
+	dynamic_cast<CHoe*>(m_pItem[0][8])->SetIndex(8);
+
+
 	return S_OK;
 }
 
@@ -195,7 +218,7 @@ void CInventory::Render()
 
 		CDevice::GetInstance()->GetSprite()->SetTransform(&m_tQuickSlot.matWorld);
 		CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
-			&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 125));
+			&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 
 		// =========================================================
 		if (m_nSelect != -1)
@@ -209,7 +232,7 @@ void CInventory::Render()
 
 			CDevice::GetInstance()->GetSprite()->SetTransform(&m_tSelectSlot.matWorld);
 			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
-				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 125));
+				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 		}
 		// ==========================================================
 	}
@@ -225,7 +248,7 @@ void CInventory::Render()
 
 		CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
 		CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
-			&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 125));
+			&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 
 
 		CDevice::GetInstance()->GetFont()->DrawTextW(
