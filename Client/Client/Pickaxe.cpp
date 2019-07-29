@@ -44,10 +44,15 @@ HRESULT CPickaxe::Init(OBJECT_ID eID)
 
 _int CPickaxe::Update(const _float & fTimeDelta)
 {
-	if (CKeyMgr::GetInstance()->KeyDown(KEY_LEFT))
-		m_nIndex--;
-	if (CKeyMgr::GetInstance()->KeyDown(KEY_RIGHT))
-		m_nIndex++;
+// 	if (CKeyMgr::GetInstance()->KeyDown(KEY_LEFT))
+// 		m_nIndex--;
+// 	if (CKeyMgr::GetInstance()->KeyDown(KEY_RIGHT))
+// 		m_nIndex++;
+
+// 	if(GetAsyncKeyState(VK_LEFT)&0x8000)
+// 		m_nIndex--;
+// 	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+// 		m_nIndex++;
 	return NO_EVENT;
 }
 
