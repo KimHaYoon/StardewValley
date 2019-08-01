@@ -18,7 +18,7 @@ CDongKuTestScene::~CDongKuTestScene()
 
 HRESULT CDongKuTestScene::Init()
 {
-	if ( FAILED( CTextureMgr::GetInstance()->ReadImgPath( L"../Data/ImgPathInfo.txt" ) ) )
+	if ( FAILED( CTextureMgr::GetInstance()->ReadImgPath( L"../Data/DT.txt" ) ) )
 	{
 		ERR_MSG( L"Image Load Failed" );
 		return E_FAIL;

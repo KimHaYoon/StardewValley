@@ -189,6 +189,29 @@ void CReactionTerrain::TileCollision()
 
 			// Monster
 			fMoveX = 0.f, fMoveY = 0.f;
+			iter = CObjectMgr::GetInstance()->GetMonsterList().begin();
+			for (; iter != CObjectMgr::GetInstance()->GetMonsterList().end(); iter++)
+			{
+				if (CheckRect_NonePlayer(m_vecTile[iIndex], (*iter), &fMoveX, &fMoveY))
+				{
+					if (m_vecTile[iIndex]->byDrawID == 2101)
+					{
+						if (fMoveX > fMoveY)
+						{
+							if ((*iter)->GetInfo().vPos.y <= m_vecTile[iIndex]->vPos.y)
+								fMoveY *= -1.f;
+
+							(*iter)->SetPos((*iter)->GetInfo().vPos.x, (*iter)->GetInfo().vPos.y + fMoveY);
+						}
+						else
+						{
+							if ((*iter)->GetInfo().vPos.x <= m_vecTile[iIndex]->vPos.x)
+								fMoveX *= -1.f;
+							(*iter)->SetPos((*iter)->GetInfo().vPos.x + fMoveX, (*iter)->GetInfo().vPos.y);
+						}
+					}
+				}
+			}
 		}
 	}
 }
