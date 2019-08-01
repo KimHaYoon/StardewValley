@@ -216,6 +216,7 @@
     <ClInclude Include="RenderMgr.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Robin.h" />
+    <ClInclude Include="Room.h" />
     <ClInclude Include="Sam.h" />
     <ClInclude Include="Sandy.h" />
     <ClInclude Include="Scene.h" />
@@ -289,6 +290,7 @@
     <ClCompile Include="ReactionTerrain.cpp" />
     <ClCompile Include="RenderMgr.cpp" />
     <ClCompile Include="Robin.cpp" />
+    <ClCompile Include="Room.cpp" />
     <ClCompile Include="Sam.cpp" />
     <ClCompile Include="Sandy.cpp" />
     <ClCompile Include="Scene.cpp" />

@@ -213,19 +213,19 @@ void CToolView::OnInitialUpdate()
 	{
 		//Spring_Tile
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Spring/Beach_Tile/Beach_Tile%d.png", L"Spring", L"Beach_Tile", 2101)))
+			L"../Texture/Season/Spring/Beach_Tile/Beach_Tile%d.png", L"Spring", L"Beach_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Spring/OutDoor_Tile/OutDoor_Tile%d.png", L"Spring", L"OutDoor_Tile", 2101)))
+			L"../Texture/Season/Spring/OutDoor_Tile/OutDoor_Tile%d.png", L"Spring", L"OutDoor_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Spring/Town_Tile/Town_Tile%d.png", L"Spring", L"Town_Tile", 2101)))
+			L"../Texture/Season/Spring/Town_Tile/Town_Tile%d.png", L"Spring", L"Town_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
@@ -234,19 +234,19 @@ void CToolView::OnInitialUpdate()
 
 		//Summer_TIle
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Summer/Beach_Tile/Beach_Tile%d.png", L"Summer", L"Beach_Tile", 2101)))
+			L"../Texture/Season/Summer/Beach_Tile/Beach_Tile%d.png", L"Summer", L"Beach_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Summer/OutDoor_Tile/OutDoor_Tile%d.png", L"Summer", L"OutDoor_Tile", 2101)))
+			L"../Texture/Season/Summer/OutDoor_Tile/OutDoor_Tile%d.png", L"Summer", L"OutDoor_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Summer/Town_Tile/Town_Tile%d.png", L"Summer", L"Town_Tile", 2101)))
+			L"../Texture/Season/Summer/Town_Tile/Town_Tile%d.png", L"Summer", L"Town_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
@@ -255,19 +255,19 @@ void CToolView::OnInitialUpdate()
 
 		//Fall_Tile
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Fall/Beach_Tile/Beach_Tile%d.png", L"Fall", L"Beach_Tile", 2101)))
+			L"../Texture/Season/Fall/Beach_Tile/Beach_Tile%d.png", L"Fall", L"Beach_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Fall/OutDoor_Tile/OutDoor_Tile%d.png", L"Fall", L"OutDoor_Tile", 2101)))
+			L"../Texture/Season/Fall/OutDoor_Tile/OutDoor_Tile%d.png", L"Fall", L"OutDoor_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Fall/Town_Tile/Town_Tile%d.png", L"Fall", L"Town_Tile", 2101)))
+			L"../Texture/Season/Fall/Town_Tile/Town_Tile%d.png", L"Fall", L"Town_Tile", 2104)))
 		{
 			AfxMessageBox(L"Spring Beach_Tile Image Insert Failed");
 			return;
@@ -275,41 +275,21 @@ void CToolView::OnInitialUpdate()
 
 		//Winter_Tile
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Winter/Beach_Tile/Beach_Tile%d.png", L"Winter", L"Beach_Tile", 2101)))
+			L"../Texture/Season/Winter/Beach_Tile/Beach_Tile%d.png", L"Winter", L"Beach_Tile", 2104)))
 		{
 			AfxMessageBox(L"Winter Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Winter/OutDoor_Tile/OutDoor_Tile%d.png", L"Winter", L"OutDoor_Tile", 2101)))
+			L"../Texture/Season/Winter/OutDoor_Tile/OutDoor_Tile%d.png", L"Winter", L"OutDoor_Tile", 2104)))
 		{
 			AfxMessageBox(L"Winter Beach_Tile Image Insert Failed");
 			return;
 		}
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Winter/Town_Tile/Town_Tile%d.png", L"Winter", L"Town_Tile", 2101)))
+			L"../Texture/Season/Winter/Town_Tile/Town_Tile%d.png", L"Winter", L"Town_Tile", 2104)))
 		{
 			AfxMessageBox(L"Winter Beach_Tile Image Insert Failed");
-			return;
-		}
-
-		// Path_Tile
-		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Path/Beach_Tile/Beach_Tile%d.png", L"Path", L"Beach_Tile", 2101)))
-		{
-			AfxMessageBox(L"Path Beach_Tile Image Insert Failed");
-			return;
-		}
-		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Path/OutDoor_Tile/OutDoor_Tile%d.png", L"Path", L"OutDoor_Tile", 2101)))
-		{
-			AfxMessageBox(L"Path Beach_Tile Image Insert Failed");
-			return;
-		}
-		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-			L"../Texture/Season/Path/Town_Tile/Town_Tile%d.png", L"Path", L"Town_Tile", 2101)))
-		{
-			AfxMessageBox(L"Path Beach_Tile Image Insert Failed");
 			return;
 		}
 	}
@@ -434,7 +414,12 @@ void CToolView::OnLButtonDown(UINT nFlags, CPoint point)
 	}
 	else
 	{
-		m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
+		if(GetAsyncKeyState('Z')&0x8000)
+			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
+		if (GetAsyncKeyState('X') & 0x8000)
+			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
+		if (GetAsyncKeyState('C') & 0x8000)
+			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
 	}
 
 	Invalidate(FALSE);
@@ -462,11 +447,6 @@ void CToolView::OnMouseMove(UINT nFlags, CPoint point)
 		}
 		m_pTerrain->TileChange(pView->ObjKey, pView->StateKey, D3DXVECTOR3(float(point.x), float(point.y), 0.f), pView->iIdx);
 
-
-		if(m_bReactionCheck)
-		{
-			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
-		}
 	}
 
 	CMainFrame* pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());

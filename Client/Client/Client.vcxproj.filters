@@ -223,6 +223,9 @@
     <ClCompile Include="Hoe.cpp">
       <Filter>01. Object\04. Item\02. Hoe</Filter>
     </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>02. Scene\07. Room</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alex.h">
@@ -458,6 +461,9 @@
     </ClInclude>
     <ClInclude Include="Hoe.h">
       <Filter>01. Object\04. Item\02. Hoe</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>02. Scene\07. Room</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -711,6 +717,9 @@
     </Filter>
     <Filter Include="01. Object\04. Item\99. ItemList">
       <UniqueIdentifier>{8e5608ce-1031-4990-88fa-3ec965b168a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene\07. Room">
+      <UniqueIdentifier>{ca1bdd7f-d161-4577-bee2-03635d767205}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
