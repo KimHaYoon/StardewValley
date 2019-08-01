@@ -86,12 +86,6 @@ HRESULT CLogo::Init()
 	}
 
 
-	//Text File
- 	{
- 		if (FAILED(CFontMgr::GetInstance()->LoadData(L"../Data/Text/Abigail/Abigail%d.txt", 1, L"Abigail")))
- 			return E_FAIL;
- 	}
-
 	//Object
 	{
 		CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Vacant_Tile_Back.dat");
