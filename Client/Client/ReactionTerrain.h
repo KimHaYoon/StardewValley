@@ -16,11 +16,15 @@ public:
 	virtual HRESULT	Init(const _tchar* pFilePath, OBJECT_ID eID = OBJECT_ID_TERRAIN);
 public:
 	HRESULT LoadData(const _tchar* pFilePath);
+	void	TileCollision();
+	bool	CheckRect_NonePlayer(TILE* pDst, CObj*& pSrc, float* pMoveX, float* pMoveY);
+	bool	CheckRect_Player(TILE* pDst, CObj*& pSrc, float* pMoveX, float* pMoveY);
 private:
 	_int			m_iIdx = 2100;
 private:
 	vector<TILE*>	m_vecTile;
 	TILE*			m_pTile = nullptr;
+	CObj*			m_pTarget;
 public:
 	vector<TILE*>&  GetTile() { return m_vecTile; }
 };

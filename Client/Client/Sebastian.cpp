@@ -37,8 +37,9 @@ HRESULT CSebastian::Init()
 _int CSebastian::Update(const _float & fTimeDelta)
 {
 	_matrix matTrans, matScale;
+	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
-	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
+	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x - vScroll.x, m_tInfo.vPos.y - vScroll.y, 0.f);
 
 	m_tInfo.matWorld = matScale * matTrans;
 	return NO_EVENT;

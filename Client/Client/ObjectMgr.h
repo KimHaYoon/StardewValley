@@ -14,7 +14,8 @@ public:
 	void			Release();
 	void			Release_Scene(OBJECT_ID eID);
 public:
-	list<CObj*>		&GetPlayer() { return m_listObject[OBJECT_ID_PLAYER]; }
+	list<CObj*>		&GetNPCList() { return m_listObject[OBJECT_ID_NPC]; }
+	CObj*			&GetPlayer() { return m_listObject[OBJECT_ID_PLAYER].front(); }
 	CObj*			GetNPC(const _tchar* pName);
 private:
 	list<CObj*>		m_listObject[OBJECT_ID_END];

@@ -92,8 +92,9 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		vPos.y -= m_fSpeed * fTimeDelta;
 		CScrollMgr::SetScroll(vPos);
 		m_strStateKey = L"Abigail_Back";
+		
 	}
-	if (CKeyMgr::GetInstance()->KeyPressing(KEY_S))
+	else if (CKeyMgr::GetInstance()->KeyPressing(KEY_S))
 	{
 		//m_tInfo.vPos.y += m_fSpeed * fTimeDelta;
 		m_bIDLE = false;
@@ -103,7 +104,7 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		CScrollMgr::SetScroll(vPos);
 		m_strStateKey = L"Abigail_Forward";
 	}
-	if (CKeyMgr::GetInstance()->KeyPressing(KEY_A))
+	else if (CKeyMgr::GetInstance()->KeyPressing(KEY_A))
 	{
 		//m_tInfo.vPos.x -= m_fSpeed * fTimeDelta;
 		m_bIDLE = false;
@@ -112,8 +113,9 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		vPos.x -= m_fSpeed * fTimeDelta;
 		CScrollMgr::SetScroll(vPos);
 		m_strStateKey = L"Abigail_Left";
+
 	}
-	if (CKeyMgr::GetInstance()->KeyPressing(KEY_D))
+	else if (CKeyMgr::GetInstance()->KeyPressing(KEY_D))
 	{
 		//m_tInfo.vPos.x += m_fSpeed * fTimeDelta;
 		m_bIDLE = false;
@@ -157,16 +159,56 @@ void CPlayer::Render()
 	m_tInfo.matWorld = matScale * matTrans;
 
 	CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
-
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 		L"Abigail", m_strStateKey, (_int)m_tFrame.fFrame);
 	NULL_CHECK_VOID(pTexInfo);
 
-	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture,
-		nullptr, &D3DXVECTOR3(0, 0, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
+	float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+	CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
+	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
 
 void CPlayer::Release()
 {
 	SafeDelete(m_pEquip);
+}
+
+HRESULT CPlayer::Init(OBJECT_ID eID)
+{
+	m_bIDLE = true;
+	m_tInfo.vPos = { WINCX / 2.f, WINCY / 2.f,0.f };
+	m_tInfo.vSize = { 1.f, 1.f,0.f };
+	m_strStateKey = L"Abigail_Forward";
+	m_tFrame = { 0.f, 1.f };
+	m_fSpeed = WALKSPEED;
+	m_fMoveFrame = m_fSpeed / 100.f;
+	m_eObjID = eID;
+	m_ObjCollSize = { 16.f, 32.f, 0.f };
+
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
+
+	m_pEquip = CAbstractFactory<CEquipment>::CreateObj(OBJECT_ID_UI);
+	if (nullptr == m_pEquip)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pEquip, OBJECT_ID_NPC);
+
+	m_pInven = CAbstractFactory<CInventory>::CreateObj(OBJECT_ID_UI);
+	if (m_pInven == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pInven, OBJECT_ID_UI);
+
+	m_pClock = CAbstractFactory<CClock>::CreateObj(OBJECT_ID_UI);
+	if (m_pClock == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pClock, OBJECT_ID_UI);
+
+	m_pEnergyGauge = CAbstractFactory<CEnergyGauge>::CreateObj(OBJECT_ID_UI);
+	if (m_pEnergyGauge == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pEnergyGauge, OBJECT_ID_UI);
+
+	return S_OK;
 }

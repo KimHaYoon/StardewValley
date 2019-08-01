@@ -29,12 +29,13 @@ void CNameTag::LateUpdate(const _float & fTimeDelta)
 
 void CNameTag::Render()
 {
+	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
 	m_tInfo.vPos.x = CObjectMgr::GetInstance()->GetNPC(m_pName)->GetInfo().vPos.x;
 	m_tInfo.vPos.y = CObjectMgr::GetInstance()->GetNPC(m_pName)->GetInfo().vPos.y - 20.f;
 
 	_matrix matTrans, matScale;
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
-	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
+	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x-vScroll.x, m_tInfo.vPos.y-vScroll.y, 0.f);
 	m_tInfo.matWorld = matScale * matTrans;
 
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(

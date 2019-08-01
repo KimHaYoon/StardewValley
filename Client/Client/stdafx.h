@@ -70,6 +70,7 @@ using namespace std;
 #include "RenderMgr.h"
 #include "FontMgr.h"
 #include "CollisionMgr.h"
+#include "ScrollMgr.h"
 
 
 

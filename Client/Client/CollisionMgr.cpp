@@ -12,7 +12,7 @@ CCollisionMgr::~CCollisionMgr()
 {
 }
 
-void CCollisionMgr::CollisionPlayer(list<CObj*>& dstLst, list<CObj*>& srcLst)
+void CCollisionMgr::Collision_Player(list<CObj*>& dstLst, list<CObj*>& srcLst)
 {
 	_vec3 vScroll = CScrollMgr::GetScroll();
 
@@ -22,7 +22,7 @@ void CCollisionMgr::CollisionPlayer(list<CObj*>& dstLst, list<CObj*>& srcLst)
 	{
 		for (CObj*& pSrc : srcLst)
 		{
-			if (CheckRect(pDst, pSrc, &fMoveX, &fMoveY))
+			if (CheckRect_Player(pDst, pSrc, &fMoveX, &fMoveY))
 			{
 
 				if (fMoveX > fMoveY)
@@ -44,7 +44,7 @@ void CCollisionMgr::CollisionPlayer(list<CObj*>& dstLst, list<CObj*>& srcLst)
 	}
 }
 
-void CCollisionMgr::CollisionRects(list<CObj*>& dstLst, list<CObj*>& srcLst)
+void CCollisionMgr::Collision_NonePlayer(list<CObj*>& dstLst, list<CObj*>& srcLst)
 {
 	float fMoveX = 0.f, fMoveY = 0.f;
 
@@ -52,7 +52,7 @@ void CCollisionMgr::CollisionRects(list<CObj*>& dstLst, list<CObj*>& srcLst)
 	{
 		for (CObj*& pSrc : srcLst)
 		{
-			if (CheckRects(pDst, pSrc, &fMoveX, &fMoveY, 1))
+			if (CheckRect_NonePlayer(pDst, pSrc, &fMoveX, &fMoveY))
 			{
 				if (fMoveX > fMoveY)
 				{
@@ -74,7 +74,7 @@ void CCollisionMgr::CollisionRects(list<CObj*>& dstLst, list<CObj*>& srcLst)
 	}
 }
 
-void CCollisionMgr::CollisionMonster(list<CObj*>& Lst)
+void CCollisionMgr::Collision_Monster(list<CObj*>& Lst)
 {
 	float fMoveX = 0.f, fMoveY = 0.f;
 
@@ -88,7 +88,7 @@ void CCollisionMgr::CollisionMonster(list<CObj*>& Lst)
 			if (iter == iter1)
 				continue;
 
-			if (CheckRects((*iter1), (*iter), &fMoveX, &fMoveY, 1))
+			if (CheckRect_NonePlayer((*iter1), (*iter), &fMoveX, &fMoveY))
 			{
 				if (fMoveX > fMoveY)
 				{
@@ -109,7 +109,7 @@ void CCollisionMgr::CollisionMonster(list<CObj*>& Lst)
 	}
 }
 
-bool CCollisionMgr::CheckRect(CObj *& pDst, CObj *& pSrc, float * pMoveX, float * pMoveY)
+bool CCollisionMgr::CheckRect_Player(CObj *& pDst, CObj *& pSrc, float * pMoveX, float * pMoveY)
 {
 	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
 	float fSumRadX = (pDst->GetCollSize().x + pSrc->GetCollSize().x)*0.5f;
@@ -130,7 +130,7 @@ bool CCollisionMgr::CheckRect(CObj *& pDst, CObj *& pSrc, float * pMoveX, float 
 	return false;
 }
 
-bool CCollisionMgr::CheckRects(CObj *& pDst, CObj *& pSrc, float * pMoveX, float * pMoveY, int num)
+bool CCollisionMgr::CheckRect_NonePlayer(CObj *& pDst, CObj *& pSrc, float * pMoveX, float * pMoveY)
 {
 	float fSumRadX = (pDst->GetCollSize().x + pSrc->GetCollSize().x)* 0.5f;
 	float fSumRadY = (pDst->GetCollSize().y + pSrc->GetCollSize().y)* 0.5f;

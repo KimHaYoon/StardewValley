@@ -37,8 +37,9 @@ HRESULT CAbigail::Init()
 _int CAbigail::Update(const _float & fTimeDelta)
 {
 	_matrix matTrans, matScale;
+	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
-	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
+	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x - vScroll.x, m_tInfo.vPos.y - vScroll.y, 0.f);
 
 	m_tInfo.matWorld = matScale * matTrans;
 
@@ -50,6 +51,7 @@ void CAbigail::LateUpdate(const _float & fTimeDelta)
 {
 	CObj::MoveFrame();
 	CNPC::TraceThePath(m_iPathIdx, fTimeDelta);
+
 	ChangeStateKey(m_eCurDir);
 }
 
@@ -58,7 +60,7 @@ void CAbigail::Render()
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 		m_strObjectKey, m_strStateKey,(int)m_tFrame.fFrame);
 	NULL_CHECK_VOID(pTexInfo);
-
+	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
 	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
 	float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
 

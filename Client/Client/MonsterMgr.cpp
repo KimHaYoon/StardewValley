@@ -61,7 +61,7 @@ void CMonsterMgr::LoadMonsterInfo()
 
 				else
 				{
-					fItemRate = atof( strTemp.c_str() );
+					fItemRate = (_float)atof( strTemp.c_str() );
 				}
 
 				if ( !strItemTag.empty() && fItemRate != 0.f )

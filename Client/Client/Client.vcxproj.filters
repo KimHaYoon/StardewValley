@@ -178,9 +178,6 @@
     <ClCompile Include="ReactionTerrain.cpp">
       <Filter>01. Object\98. Public\02. ReactionTerrain</Filter>
     </ClCompile>
-    <ClCompile Include="RenderMgr.cpp">
-      <Filter>98. Managers</Filter>
-    </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>02. Scene</Filter>
     </ClCompile>
@@ -228,6 +225,9 @@
     </ClCompile>
     <ClCompile Include="Bat.cpp">
       <Filter>01. Object\02. Monster\00. Bat</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderMgr.cpp">
+      <Filter>98. Managers\13. RenderMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -411,9 +411,6 @@
     <ClInclude Include="ReactionTerrain.h">
       <Filter>01. Object\98. Public\02. ReactionTerrain</Filter>
     </ClInclude>
-    <ClInclude Include="RenderMgr.h">
-      <Filter>98. Managers</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>02. Scene</Filter>
     </ClInclude>
@@ -470,6 +467,9 @@
     </ClInclude>
     <ClInclude Include="Bat.h">
       <Filter>01. Object\02. Monster\00. Bat</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderMgr.h">
+      <Filter>98. Managers\13. RenderMgr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -729,6 +729,9 @@
     </Filter>
     <Filter Include="01. Object\02. Monster\00. Bat">
       <UniqueIdentifier>{5d3e5bb6-4c8c-4a3a-ba67-16045ed81bc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Managers\13. RenderMgr">
+      <UniqueIdentifier>{fb9be983-58c7-43e0-8964-06f9031b3321}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

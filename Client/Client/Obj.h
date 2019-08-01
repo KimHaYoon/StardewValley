@@ -39,9 +39,9 @@ protected:
 	OBJECT_ID		m_eObjID;
 	LAYER_ID		m_eLayerID;
 protected:
-	CObj*		m_pTextBox = nullptr;
+	CObj*			m_pTextBox = nullptr;
 protected:
-	_vec3				m_ObjCollSize;
+	_vec3			m_ObjCollSize;
 protected:
 	void			MoveFrame();
 	void			MoveFrame(float num);

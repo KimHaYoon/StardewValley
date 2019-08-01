@@ -19,11 +19,12 @@ HRESULT CReactionTerrain::Init()
 
 _int CReactionTerrain::Update(const _float & fTimeDelta)
 {
-	return _int();
+	return NO_EVENT;
 }
 
 void CReactionTerrain::LateUpdate(const _float & fTimeDelta)
 {
+	TileCollision();
 }
 
 void CReactionTerrain::Render()
@@ -117,4 +118,119 @@ HRESULT CReactionTerrain::LoadData(const _tchar * pFilePath)
 	CloseHandle(fFile);
 
 	return S_OK;
+}
+
+void CReactionTerrain::TileCollision()
+{
+	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
+	m_pTarget = CObjectMgr::GetInstance()->GetPlayer();
+	int iCullX = (int)vScroll.x / TILECX;
+	int iCullY = (int)vScroll.y / TILECY;
+
+	int iCullEndX = iCullX + WINCX / TILECX;
+	int iCullEndY = iCullY + WINCY / TILECY;
+	for (int i = iCullY; i < iCullEndY; ++i)
+	{
+		for (int j = iCullX; j < iCullEndX; ++j)
+		{
+			int iIndex = j + (TILEX * i);
+
+			if (0 > iIndex || m_vecTile.size() <= (size_t)iIndex)
+				continue;
+
+			// Player
+			float fMoveX = 0.f, fMoveY = 0.f;
+			if (CheckRect_Player(m_vecTile[iIndex], m_pTarget, &fMoveX, &fMoveY))
+			{
+				if (m_vecTile[iIndex]->byDrawID== 2101)
+				{
+					if (fMoveX > fMoveY)
+					{
+						if (m_vecTile[iIndex]->vPos.y - vScroll.y >= m_pTarget->GetInfo().vPos.y)
+							fMoveY *= -1.f;
+
+						CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f, fMoveY, 0.f });
+					}
+					else
+					{
+						if (m_vecTile[iIndex]->vPos.x - vScroll.x >= m_pTarget->GetInfo().vPos.x)
+							fMoveX *= -1.f;
+
+						CScrollMgr::SetScroll(D3DXVECTOR3{ fMoveX, 0.f, 0.f });
+					}
+				}
+			}
+
+			// NPC
+			fMoveX = 0.f, fMoveY = 0.f;
+			auto& iter = CObjectMgr::GetInstance()->GetNPCList().begin();
+			for (; iter != CObjectMgr::GetInstance()->GetNPCList().end(); iter++)
+			{
+				if (CheckRect_NonePlayer(m_vecTile[iIndex], (*iter), &fMoveX, &fMoveY))
+				{
+					if (m_vecTile[iIndex]->byDrawID == 2101)
+					{
+						if (fMoveX > fMoveY)
+						{
+							if ((*iter)->GetInfo().vPos.y <= m_vecTile[iIndex]->vPos.y)
+								fMoveY *= -1.f;
+
+							(*iter)->SetPos((*iter)->GetInfo().vPos.x, (*iter)->GetInfo().vPos.y + fMoveY);
+						}
+						else
+						{
+							if ((*iter)->GetInfo().vPos.x <= m_vecTile[iIndex]->vPos.x)
+								fMoveX *= -1.f;
+							(*iter)->SetPos((*iter)->GetInfo().vPos.x + fMoveX, (*iter)->GetInfo().vPos.y);
+						}
+					}
+				}
+			}
+
+			// Monster
+			fMoveX = 0.f, fMoveY = 0.f;
+		}
+	}
+}
+
+bool CReactionTerrain::CheckRect_NonePlayer(TILE * pDst, CObj *& pSrc, float * pMoveX, float * pMoveY)
+{
+	float fSumRadX = (pDst->vSize.x + pSrc->GetCollSize().x)*0.5f;	//pSrc.x=30, y=40
+	float fSumRadY = (pDst->vSize.y + pSrc->GetCollSize().y)* 0.5f;
+
+
+	float fDistX = fabs(pDst->vPos.x - pSrc->GetInfo().vPos.x);
+	float fDistY = fabs(pDst->vPos.y - pSrc->GetInfo().vPos.y);
+
+
+	if (fSumRadX >= fDistX && fSumRadY >= fDistY)
+	{
+		*pMoveX = fSumRadX - fDistX;
+		*pMoveY = fSumRadY - fDistY;
+
+		return true;
+	}
+
+	return false;
+}
+bool CReactionTerrain::CheckRect_Player(TILE * pDst, CObj *& pSrc, float * pMoveX, float * pMoveY)
+{
+	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
+
+	float fSumRadX = (pDst->vSize.x + pSrc->GetCollSize().x)*0.5f;
+	float fSumRadY = (pDst->vSize.y + pSrc->GetCollSize().y)* 0.5f;
+
+
+	float fDistX = fabs(pDst->vPos.x - pSrc->GetInfo().vPos.x - vScroll.x);
+	float fDistY = fabs(pDst->vPos.y - pSrc->GetInfo().vPos.y - vScroll.y);
+
+
+	if (fSumRadX >= fDistX && fSumRadY >= fDistY)
+	{
+		*pMoveX = fSumRadX - fDistX;
+		*pMoveY = fSumRadY - fDistY;
+
+		return true;
+	}
+	return false;
 }
