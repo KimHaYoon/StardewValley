@@ -415,11 +415,11 @@ void CToolView::OnLButtonDown(UINT nFlags, CPoint point)
 	else
 	{
 		if(GetAsyncKeyState('Z')&0x8000)
-			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
-		if (GetAsyncKeyState('X') & 0x8000)
-			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
-		if (GetAsyncKeyState('C') & 0x8000)
-			m_pTerrain->TileChange(L"ReationTile", L"tile", D3DXVECTOR3(float(point.x), float(point.y), 0.f), 0);
+			m_pTerrain->TileChange(pView->ObjKey, pView->StateKey, D3DXVECTOR3(float(point.x), float(point.y), 0.f), 2101);
+		else if (GetAsyncKeyState('X') & 0x8000)
+			m_pTerrain->TileChange(pView->ObjKey, pView->StateKey, D3DXVECTOR3(float(point.x), float(point.y), 0.f), 2102);
+		else if (GetAsyncKeyState('C') & 0x8000)
+			m_pTerrain->TileChange(pView->ObjKey, pView->StateKey, D3DXVECTOR3(float(point.x), float(point.y), 0.f), 2103);
 	}
 
 	Invalidate(FALSE);
