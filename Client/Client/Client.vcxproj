@@ -160,6 +160,7 @@
     <ClInclude Include="Alex.h" />
     <ClInclude Include="Axe.h" />
     <ClInclude Include="BackTerrain.h" />
+    <ClInclude Include="Bat.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Caroline.h" />
     <ClInclude Include="Client.h" />
@@ -240,6 +241,7 @@
     <ClCompile Include="Alex.cpp" />
     <ClCompile Include="Axe.cpp" />
     <ClCompile Include="BackTerrain.cpp" />
+    <ClCompile Include="Bat.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Caroline.cpp" />
     <ClCompile Include="Client.cpp" />

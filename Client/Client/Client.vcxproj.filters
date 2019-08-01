@@ -226,6 +226,9 @@
     <ClCompile Include="Room.cpp">
       <Filter>02. Scene\07. Room</Filter>
     </ClCompile>
+    <ClCompile Include="Bat.cpp">
+      <Filter>01. Object\02. Monster\00. Bat</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alex.h">
@@ -464,6 +467,9 @@
     </ClInclude>
     <ClInclude Include="Room.h">
       <Filter>02. Scene\07. Room</Filter>
+    </ClInclude>
+    <ClInclude Include="Bat.h">
+      <Filter>01. Object\02. Monster\00. Bat</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -720,6 +726,9 @@
     </Filter>
     <Filter Include="02. Scene\07. Room">
       <UniqueIdentifier>{ca1bdd7f-d161-4577-bee2-03635d767205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. Monster\00. Bat">
+      <UniqueIdentifier>{5d3e5bb6-4c8c-4a3a-ba67-16045ed81bc9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
