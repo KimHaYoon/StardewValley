@@ -88,19 +88,21 @@ HRESULT CLogo::Init()
 
 	//Object
 	{
-		CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Vacant_Tile_Back.dat");
-		if (nullptr == pObj)
-			return E_FAIL;
-		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
-		pObj = CAbstractFactory<CReactionTerrain>::CreateObj(L"../Data/Vacant_Tile_Back_Test.dat");
+		CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Back.dat");
 		if (nullptr == pObj)
 			return E_FAIL;
 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
-// 		pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Vacant_Tile_Front.dat");
+// 		pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Front.dat");
 // 		if (nullptr == pObj)
 // 			return E_FAIL;
 //  		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+
+		CObj*pObj = CAbstractFactory<CReactionTerrain>::CreateObj(L"../Data/Tile/Vacant/Vacant_Tile_Reaction.dat");
+		if (nullptr == pObj)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+
 
 		pObj = CAbstractFactory<CAbigail>::CreateObj(OBJECT_ID_NPC);
 		if (nullptr == pObj)
