@@ -5,13 +5,14 @@ class CMonster :
 {
 public:
 	CMonster();
-	~CMonster();
-
-	// CObj을(를) 통해 상속됨
-	virtual HRESULT Init() override = 0;
-	virtual _int Update( const _float & fTimeDelta ) override = 0;
-	virtual void LateUpdate( const _float & fTimeDelta ) override = 0;
-	virtual void Render() override = 0;
-	virtual void Release() override = 0;
+	virtual ~CMonster();
+public:
+	virtual HRESULT Init()PURE;
+	virtual _int Update( const _float & fTimeDelta )PURE;
+	virtual void LateUpdate( const _float & fTimeDelta )PURE;
+	virtual void Render() PURE;
+	virtual void Release() PURE;
+public:
+	virtual HRESULT Init(OBJECT_ID eID);
 };
 

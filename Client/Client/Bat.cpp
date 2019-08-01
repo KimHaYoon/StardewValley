@@ -41,6 +41,7 @@ _int CBat::Update( const _float & fTimeDelta )
 
 void CBat::LateUpdate( const _float & fTimeDelta )
 {
+	CObj::MoveFrame();
 }
 
 void CBat::Render()
@@ -59,4 +60,21 @@ void CBat::Render()
 
 void CBat::Release()
 {
+}
+
+HRESULT CBat::Init(OBJECT_ID eID)
+{
+	m_tInfo.vPos = { 100.f, 100.f,0.f };
+	m_tInfo.vSize = { 1.f,1.f,0.f };
+	m_strObjectKey = L"Bat";
+	m_strStateKey = L"Bat_Fly";
+	m_fSpeed = 10.f;
+	m_tFrame = { 0.f, 5.f };
+	m_eCurDir = DIR_ID_FORWORD;
+	m_ePastDIr = m_ePastDIr;
+	m_eObjID = eID;
+
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
+
+	return S_OK;
 }
