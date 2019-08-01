@@ -302,8 +302,6 @@ void CToolView::OnInitialUpdate()
 			AfxMessageBox(L"Spring Building Image Insert Failed");
 			return;
 		}
-
-
 		//Summer Building
 
 		//Fall Building
@@ -317,9 +315,6 @@ void CToolView::OnInitialUpdate()
 		//Winter Building
 
 	}
-
-
-
 	{
 		if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI, L"../Texture/ReationTile/tile/tile%d.png", L"ReationTile", L"tile", 3)))
 		{
