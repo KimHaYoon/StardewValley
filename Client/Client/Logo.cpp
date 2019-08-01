@@ -88,10 +88,10 @@ HRESULT CLogo::Init()
 
 	//Object
 	{
-		CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Back.dat");
-		if (nullptr == pObj)
-			return E_FAIL;
-		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+// 		CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Back.dat");
+// 		if (nullptr == pObj)
+// 			return E_FAIL;
+// 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
 // 		pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Front.dat");
 // 		if (nullptr == pObj)

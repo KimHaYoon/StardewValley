@@ -1,3 +1,4 @@
 ﻿  Logo.cpp
+cl : 명령줄 warning D9028: 최소 다시 빌드에 실패했습니다. 정상 빌드로 되돌립니다.
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.exe
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Debug\Client.pdb (Full PDB)
