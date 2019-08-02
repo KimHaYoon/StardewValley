@@ -24,5 +24,6 @@ public:
 	virtual HRESULT Init(OBJECT_ID eID);
 
 	void Active() { m_bActive = !m_bActive; }
+	bool GetActive() { return m_bActive; }
 };
 

@@ -31,11 +31,6 @@ HRESULT CPlayer::Init()
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pEquip, OBJECT_ID_NPC);
 
-	m_pInven = CAbstractFactory<CInventory>::CreateObj(OBJECT_ID_UI);
-	if (m_pInven == nullptr)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(m_pInven, OBJECT_ID_UI);
-
 	m_pClock = CAbstractFactory<CClock>::CreateObj(OBJECT_ID_UI);
 	if (m_pClock == nullptr)
 		return E_FAIL;
@@ -45,6 +40,11 @@ HRESULT CPlayer::Init()
 	if (m_pEnergyGauge == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pEnergyGauge, OBJECT_ID_UI);
+
+	m_pInven = CAbstractFactory<CInventory>::CreateObj(OBJECT_ID_UI);
+	if (m_pInven == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pInven, OBJECT_ID_UI);
 
 	return S_OK;
 }
@@ -72,6 +72,12 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		dynamic_cast<CEquipment*>(m_pEquip)->SetActive();
 	}
 
+	if (CKeyMgr::GetInstance()->KeyDown(KEY_I))
+	{
+		dynamic_cast<CInventory*>(m_pInven)->Active();
+	}
+
+
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_SHIFT))
 	{
 		m_fSpeed = RUNSPEED;
@@ -92,9 +98,9 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		vPos.y -= m_fSpeed * fTimeDelta;
 		CScrollMgr::SetScroll(vPos);
 		m_strStateKey = L"Abigail_Back";
-		
+
 	}
-	else if (CKeyMgr::GetInstance()->KeyPressing(KEY_S))
+	if (CKeyMgr::GetInstance()->KeyPressing(KEY_S))
 	{
 		//m_tInfo.vPos.y += m_fSpeed * fTimeDelta;
 		m_bIDLE = false;
@@ -104,7 +110,7 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		CScrollMgr::SetScroll(vPos);
 		m_strStateKey = L"Abigail_Forward";
 	}
-	else if (CKeyMgr::GetInstance()->KeyPressing(KEY_A))
+	if (CKeyMgr::GetInstance()->KeyPressing(KEY_A))
 	{
 		//m_tInfo.vPos.x -= m_fSpeed * fTimeDelta;
 		m_bIDLE = false;
@@ -115,7 +121,7 @@ _int CPlayer::Update(const _float& fTimeDelta)
 		m_strStateKey = L"Abigail_Left";
 
 	}
-	else if (CKeyMgr::GetInstance()->KeyPressing(KEY_D))
+	if (CKeyMgr::GetInstance()->KeyPressing(KEY_D))
 	{
 		//m_tInfo.vPos.x += m_fSpeed * fTimeDelta;
 		m_bIDLE = false;
@@ -211,4 +217,9 @@ HRESULT CPlayer::Init(OBJECT_ID eID)
 	CObjectMgr::GetInstance()->AddObject(m_pEnergyGauge, OBJECT_ID_UI);
 
 	return S_OK;
+}
+
+bool CPlayer::GetInventoryState()
+{
+	return dynamic_cast<CInventory*>(m_pInven)->GetActive();
 }
