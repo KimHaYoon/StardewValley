@@ -14,6 +14,7 @@ public:
 public:
 	virtual	HRESULT Init(const _tchar* pFilePath, OBJECT_ID eID=OBJECT_ID_TERRAIN);
 	virtual HRESULT Init(OBJECT_ID eID);
+	virtual HRESULT Init(OBJECT_ID eID, _int iNum);
 	virtual HRESULT Init(LAYER_ID eID);
 	virtual HRESULT Init(_vec3 vPos, _tchar* pName);
 public:

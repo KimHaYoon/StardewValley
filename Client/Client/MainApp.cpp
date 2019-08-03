@@ -36,6 +36,10 @@ void CMainApp::Update()
 	m_fTimeDelta=CTimerMgr::GetInstance()->GetDeltaTime();
 	CKeyMgr::GetInstance()->Update();
 	CSceneMgr::GetInstance()->Update(m_fTimeDelta);
+
+	POINT pt = {};
+	GetCursorPos(&pt);
+	ScreenToClient(g_hWnd, &pt);
 }
 
 void CMainApp::LateUpdate()

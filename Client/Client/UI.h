@@ -34,5 +34,8 @@ public:
 	virtual void LateUpdate(const _float & fTimeDelta) PURE;
 	virtual void Render() PURE;
 	virtual void Release() PURE;
+	virtual HRESULT Init(OBJECT_ID eID);
+protected:
+	_int		m_iNumOfTitle = 0;
 };
 
