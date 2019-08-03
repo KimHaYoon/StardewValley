@@ -14,6 +14,7 @@ public:
 	virtual void Release() override;
 public:
 	virtual HRESULT Init(_vec3 vPos, _tchar* pName)override;
+	virtual HRESULT Init(OBJECT_ID eID);
 private:
 	_tchar* m_pName = nullptr;
 };

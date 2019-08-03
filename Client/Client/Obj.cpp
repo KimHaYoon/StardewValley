@@ -21,6 +21,11 @@ HRESULT CObj::Init(OBJECT_ID eID)
 	return S_OK;
 }
 
+HRESULT CObj::Init(OBJECT_ID eID, _int iNum)
+{
+	return E_NOTIMPL;
+}
+
 HRESULT CObj::Init(LAYER_ID eID)
 {
 	return S_OK;

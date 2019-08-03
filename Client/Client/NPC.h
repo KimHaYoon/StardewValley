@@ -13,6 +13,7 @@ public:
 	virtual void LateUpdate(const _float & fTimeDelta) PURE;
 	virtual void Render() PURE;
 	virtual void Release() PURE;
+
 public:
 	virtual void ChangeStateKey(DIR_ID eID)PURE;
 public:
