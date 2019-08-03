@@ -79,4 +79,5 @@ typedef struct tagCropInfo
 	int			iDate;
 	bool		bBig;
 	int			iCycle;
+	int			iSeason;
 }CropInfo;
