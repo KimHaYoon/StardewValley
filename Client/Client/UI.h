@@ -35,6 +35,8 @@ public:
 	virtual void Render() PURE;
 	virtual void Release() PURE;
 	virtual HRESULT Init(OBJECT_ID eID);
+public:
+	_int		GetIdxofTitle() { return m_iNumOfTitle; }
 protected:
 	_int		m_iNumOfTitle = 0;
 };

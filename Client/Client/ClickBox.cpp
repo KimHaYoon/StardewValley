@@ -30,6 +30,7 @@ _int CClickBox::Update(const _float & fTimeDelta)
 
 void CClickBox::LateUpdate(const _float & fTimeDelta)
 {
+	CheckClick();
 }
 
 void CClickBox::Render()
@@ -57,6 +58,7 @@ HRESULT CClickBox::Init(OBJECT_ID eID, _int iNum)
 	m_strStateKey = L"UnClickedMenu";
 	m_eObjID = eID;
 	m_iNumOfTitle = iNum;
+
 	if (iNum == 0)
 	{
 		m_tInfo.vPos = { 175.f, 500.f,0.f };
@@ -75,4 +77,46 @@ HRESULT CClickBox::Init(OBJECT_ID eID, _int iNum)
 	}
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
 	return S_OK;
+}
+
+void CClickBox::CheckClick()
+{
+	POINT pt = {};
+	GetCursorPos(&pt);
+	ScreenToClient(g_hWnd, &pt);
+
+	_vec3 vPoint = {(_float)pt.x, (_float)pt.y, 0.f};
+	_vec3 vTemp = this->GetInfo().vPos - vPoint;
+	_float fLength = 0.f;
+
+	fLength = D3DXVec3Length(&vTemp);
+	if (fLength <= 30.f)
+	{
+		m_strStateKey = L"ClickedMenu";
+		if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
+		{
+			if (this->GetIdxofTitle() == 0)
+			{
+				CSceneMgr::GetInstance()->SceneChange(SCENE_ID_ROOM);
+			}
+			else if (this->GetIdxofTitle() == 1)
+			{
+				// 파일 입출력
+				int i = 0;
+			}
+			else if (this->GetIdxofTitle() == 2)
+			{
+				int i = 0;
+			}
+			else if (this->GetIdxofTitle() == 3)
+			{
+				// 종료
+				int i = 0;
+			}
+		}
+	}
+	else
+	{
+		m_strStateKey = L"UnClickedMenu";
+	}
 }

@@ -13,5 +13,9 @@ public:
 	virtual void Render() override;
 	virtual void Release() override;
 	virtual HRESULT Init(OBJECT_ID eID, _int iNum);
+private:
+	void CheckClick();
+private:
+	_int m_iBtnIdx = 0;
 };
 

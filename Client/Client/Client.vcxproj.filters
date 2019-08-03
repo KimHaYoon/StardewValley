@@ -190,9 +190,6 @@
     <ClCompile Include="Stage.cpp">
       <Filter>02. Scene\01. Stage</Filter>
     </ClCompile>
-    <ClCompile Include="Equipment.cpp">
-      <Filter>01. Object\99. Object</Filter>
-    </ClCompile>
     <ClCompile Include="Clock.cpp">
       <Filter>01. Object\03. UI\02. Clock</Filter>
     </ClCompile>
@@ -236,6 +233,9 @@
     </ClCompile>
     <ClCompile Include="Title.cpp">
       <Filter>01. Object\03. UI\97. Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipment.cpp">
+      <Filter>01. Object\98. Public\98. EquipMent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -434,9 +434,6 @@
     <ClInclude Include="Stage.h">
       <Filter>02. Scene\01. Stage</Filter>
     </ClInclude>
-    <ClInclude Include="Equipment.h">
-      <Filter>01. Object\99. Object</Filter>
-    </ClInclude>
     <ClInclude Include="Obj.h">
       <Filter>01. Object\99. Object</Filter>
     </ClInclude>
@@ -486,6 +483,9 @@
     </ClInclude>
     <ClInclude Include="Title.h">
       <Filter>01. Object\03. UI\97. Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Equipment.h">
+      <Filter>01. Object\98. Public\98. EquipMent</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -760,6 +760,9 @@
     </Filter>
     <Filter Include="01. Object\03. UI\97. Title">
       <UniqueIdentifier>{e7841fdd-deb3-4462-9745-e6ffce6f1af6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\98. Public\98. EquipMent">
+      <UniqueIdentifier>{2eac8c29-fea0-412b-8b5c-20f08564b55d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
