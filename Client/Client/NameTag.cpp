@@ -73,3 +73,8 @@ HRESULT CNameTag::Init(_vec3 vPos, _tchar* pName)
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_3);
 	return S_OK;
 }
+
+HRESULT CNameTag::Init(OBJECT_ID eID)
+{
+	return E_NOTIMPL;
+}
