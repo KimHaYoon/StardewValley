@@ -180,6 +180,7 @@
     <ClInclude Include="Evelyn.h" />
     <ClInclude Include="FontMgr.h" />
     <ClInclude Include="FrameMgr.h" />
+    <ClInclude Include="GameTime.h" />
     <ClInclude Include="George.h" />
     <ClInclude Include="Haley.h" />
     <ClInclude Include="Harvey.h" />
@@ -259,6 +260,7 @@
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Evelyn.cpp" />
     <ClCompile Include="FontMgr.cpp" />
+    <ClCompile Include="GameTime.cpp" />
     <ClCompile Include="George.cpp" />
     <ClCompile Include="Haley.cpp" />
     <ClCompile Include="Harvey.cpp" />

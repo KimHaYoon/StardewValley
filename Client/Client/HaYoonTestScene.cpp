@@ -1,14 +1,21 @@
 #include "stdafx.h"
 #include "HaYoonTestScene.h"
 #include "Bat.h"
+#include "Clock.h"
+#include "GameTime.h"
+#include "BackTerrain.h"
+#include "Terrain.h"
 
 CHaYoonTestScene::CHaYoonTestScene()
 {
+	m_pGameTime = new CGameTime;
 }
 
 
 CHaYoonTestScene::~CHaYoonTestScene()
 {
+	delete m_pGameTime;
+	m_pGameTime = NULL;
 }
 
 HRESULT CHaYoonTestScene::Init()
@@ -18,17 +25,33 @@ HRESULT CHaYoonTestScene::Init()
 		ERR_MSG( L"Image Load Failed" );
 		return E_FAIL;
 	}
+	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj( L"../Data//Tile/Vacant/Vacant_Tile_Back.dat" );
+	if ( nullptr == pObj )
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_TERRAIN );
 
-	CObj* pObj = CAbstractFactory<CBat>::CreateObj( OBJECT_ID_MONSTER );
+	pObj = CAbstractFactory<CTerrain>::CreateObj( L"../Data//Tile/Vacant/Vacant_Tile_Front.dat" );
+	if ( nullptr == pObj )
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_TERRAIN );
+
+
+	/*CObj* */pObj = CAbstractFactory<CBat>::CreateObj( OBJECT_ID_MONSTER );
 	if ( nullptr == pObj )
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_MONSTER );
 
+	pObj = CAbstractFactory<CClock>::CreateObj( OBJECT_ID_UI );
+	if ( nullptr == pObj )
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_UI );
 	return S_OK;
 }
 
 void CHaYoonTestScene::Update( const _float & fTimeDelta )
 {
+	m_pGameTime->Update( fTimeDelta );
+	m_pGameTime->Input( );
 	CObjectMgr::GetInstance()->Update( fTimeDelta );
 }
 

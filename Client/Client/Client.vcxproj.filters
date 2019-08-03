@@ -229,6 +229,7 @@
     <ClCompile Include="RenderMgr.cpp">
       <Filter>98. Managers\13. RenderMgr</Filter>
     </ClCompile>
+    <ClCompile Include="GameTime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alex.h">
@@ -471,6 +472,7 @@
     <ClInclude Include="RenderMgr.h">
       <Filter>98. Managers\13. RenderMgr</Filter>
     </ClInclude>
+    <ClInclude Include="GameTime.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
@@ -732,6 +734,9 @@
     </Filter>
     <Filter Include="98. Managers\13. RenderMgr">
       <UniqueIdentifier>{fb9be983-58c7-43e0-8964-06f9031b3321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\05. Crop">
+      <UniqueIdentifier>{e8cf9a1f-ba42-42d0-98d8-a1199404cafe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

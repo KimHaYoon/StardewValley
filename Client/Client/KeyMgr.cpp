@@ -76,6 +76,10 @@ void CKeyMgr::Update()
 	if (GetAsyncKeyState(VK_ESCAPE) & 0x8000)
 		m_dwKey |= KEY_ESCAPE;
 
+	if ( GetAsyncKeyState( VK_PRIOR ) & 0x8000 )
+		m_dwKey |= KEY_PAGEUP;
+	if ( GetAsyncKeyState( VK_NEXT ) & 0x8000 )
+		m_dwKey |= KEY_PAGEDOWN;
 }
 
 bool CKeyMgr::KeyUp(DWORD dwKey)
