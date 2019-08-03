@@ -165,6 +165,7 @@
     <ClInclude Include="Bat.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Caroline.h" />
+    <ClInclude Include="ClickBox.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="ClockHand.h" />
@@ -237,6 +238,7 @@
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureMgr.h" />
     <ClInclude Include="TimerMgr.h" />
+    <ClInclude Include="Title.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="Vincent.h" />
   </ItemGroup>
@@ -248,6 +250,7 @@
     <ClCompile Include="Bat.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Caroline.cpp" />
+    <ClCompile Include="ClickBox.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="ClockHand.cpp" />
@@ -322,6 +325,7 @@
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureMgr.cpp" />
     <ClCompile Include="TimerMgr.cpp" />
+    <ClCompile Include="Title.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Vincent.cpp" />
   </ItemGroup>

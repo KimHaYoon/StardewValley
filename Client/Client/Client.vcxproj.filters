@@ -187,9 +187,6 @@
     <ClCompile Include="UI.cpp">
       <Filter>01. Object\03. UI</Filter>
     </ClCompile>
-    <ClCompile Include="TextBox.cpp">
-      <Filter>01. Object\03. UI</Filter>
-    </ClCompile>
     <ClCompile Include="Stage.cpp">
       <Filter>02. Scene\01. Stage</Filter>
     </ClCompile>
@@ -231,6 +228,15 @@
     </ClCompile>
     <ClCompile Include="GameTime.cpp" />
     <ClCompile Include="Crop.cpp" />
+    <ClCompile Include="TextBox.cpp">
+      <Filter>01. Object\03. UI\99. TextBox</Filter>
+    </ClCompile>
+    <ClCompile Include="ClickBox.cpp">
+      <Filter>01. Object\03. UI\98. ClickBox</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>01. Object\03. UI\97. Title</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alex.h">
@@ -422,9 +428,6 @@
     <ClInclude Include="UI.h">
       <Filter>01. Object\03. UI</Filter>
     </ClInclude>
-    <ClInclude Include="TextBox.h">
-      <Filter>01. Object\03. UI</Filter>
-    </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>99. Default</Filter>
     </ClInclude>
@@ -475,6 +478,15 @@
     </ClInclude>
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="Crop.h" />
+    <ClInclude Include="TextBox.h">
+      <Filter>01. Object\03. UI\99. TextBox</Filter>
+    </ClInclude>
+    <ClInclude Include="ClickBox.h">
+      <Filter>01. Object\03. UI\98. ClickBox</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>01. Object\03. UI\97. Title</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
@@ -739,6 +751,15 @@
     </Filter>
     <Filter Include="01. Object\05. Crop">
       <UniqueIdentifier>{e8cf9a1f-ba42-42d0-98d8-a1199404cafe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\99. TextBox">
+      <UniqueIdentifier>{b77d6238-7cde-48fb-b313-126e4ff4c58b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\98. ClickBox">
+      <UniqueIdentifier>{18ef7372-5eb5-4e19-a3d1-98c4e1dc5a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\97. Title">
+      <UniqueIdentifier>{e7841fdd-deb3-4462-9745-e6ffce6f1af6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

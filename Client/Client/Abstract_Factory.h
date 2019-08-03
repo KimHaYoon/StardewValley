@@ -69,4 +69,16 @@ public:
 
 		return pObject;
 	}
+	static CObj* CreateObj(OBJECT_ID eID, _int inum)
+	{
+		CObj* pObject = new T;
+
+		if (FAILED(pObject->Init(eID, inum)))
+		{
+			SafeDelete(pObject);
+			return nullptr;
+		}
+
+		return pObject;
+	}
 };
