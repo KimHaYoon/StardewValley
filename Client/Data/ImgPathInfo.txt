@@ -442,5 +442,8 @@ WildernessGolem|WildrnessGolem_Back|4|..\Texture\Monster\WildernessGolem\Wildrne
 UI|ETC|17|..\Texture\UI\ETC\ETC%d.png
 UI|TextBox|2|..\Texture\UI\TextBox\TextBox%d.png
 ReationTile|tile|3|..\Texture\ReationTile\tile\tile%d.png
+Menu|ClickedMenu|5|..\Texture\Menu\ClickedMenu\Menu%d.png
+Menu|Title|1|..\Texture\Menu\Title\Title%d.png
+Menu|UnClickedMenu|5|..\Texture\Menu\UnClickedMenu\Menu%d.png
 
 

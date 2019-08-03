@@ -191,10 +191,7 @@
       <Filter>01. Object\03. UI</Filter>
     </ClCompile>
     <ClCompile Include="Stage.cpp">
-      <Filter>02. Scene\01. Stage</Filter>
-    </ClCompile>
-    <ClCompile Include="Equipment.cpp">
-      <Filter>01. Object\99. Object</Filter>
+      <Filter>02. Scene\01. Vacant</Filter>
     </ClCompile>
     <ClCompile Include="Clock.cpp">
       <Filter>01. Object\03. UI\02. Clock</Filter>
@@ -228,6 +225,9 @@
     </ClCompile>
     <ClCompile Include="RenderMgr.cpp">
       <Filter>98. Managers\13. RenderMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipment.cpp">
+      <Filter>01. Object\98. Public\98. Equipment</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -427,10 +427,7 @@
       <Filter>99. Default</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h">
-      <Filter>02. Scene\01. Stage</Filter>
-    </ClInclude>
-    <ClInclude Include="Equipment.h">
-      <Filter>01. Object\99. Object</Filter>
+      <Filter>02. Scene\01. Vacant</Filter>
     </ClInclude>
     <ClInclude Include="Obj.h">
       <Filter>01. Object\99. Object</Filter>
@@ -470,6 +467,9 @@
     </ClInclude>
     <ClInclude Include="RenderMgr.h">
       <Filter>98. Managers\13. RenderMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Equipment.h">
+      <Filter>01. Object\98. Public\98. Equipment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -604,9 +604,6 @@
     <Filter Include="02. Scene\00. Logo">
       <UniqueIdentifier>{2cd87590-1fb0-4f27-8812-7fc087edb926}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\01. Stage">
-      <UniqueIdentifier>{62c44f91-6897-4535-bcce-ff20bfba1218}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02. Scene\02. BusStop">
       <UniqueIdentifier>{891c26a1-44b3-4380-aa40-86fb5452c6f9}</UniqueIdentifier>
     </Filter>
@@ -732,6 +729,12 @@
     </Filter>
     <Filter Include="98. Managers\13. RenderMgr">
       <UniqueIdentifier>{fb9be983-58c7-43e0-8964-06f9031b3321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\98. Public\98. Equipment">
+      <UniqueIdentifier>{e3aee94b-2689-46e5-ac04-b567a4cfc49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene\01. Vacant">
+      <UniqueIdentifier>{62c44f91-6897-4535-bcce-ff20bfba1218}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

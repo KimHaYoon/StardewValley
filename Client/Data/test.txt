@@ -1,1 +1,0 @@
-ReationTile|tile|3|..\Texture\ReationTile\tile\tile%d.png
