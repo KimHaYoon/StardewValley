@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  GameTime.cpp
 GameTime.cpp(8): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 GameTime.cpp(9): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -7,6 +8,14 @@ GameTime.cpp(9): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서
   15 of 2282 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
     3 functions were new in current compilation
     6 functions had inline decision re-evaluated but remain unchanged
+=======
+﻿  MainApp.cpp
+  ReactionTerrain.cpp
+  코드를 생성하고 있습니다.
+  2 of 2276 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+>>>>>>> 56494902a272bb0638696adb391a2b1c4d27452f
   코드를 생성했습니다.
   Client.vcxproj -> D:\00.학교\2019 여름방학\StardewValley\Client\Release\Client.exe
   Client.vcxproj -> D:\00.학교\2019 여름방학\StardewValley\Client\Release\Client.pdb (Full PDB)

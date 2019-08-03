@@ -169,6 +169,7 @@
     <ClInclude Include="Clock.h" />
     <ClInclude Include="ClockHand.h" />
     <ClInclude Include="CollisionMgr.h" />
+    <ClInclude Include="Crop.h" />
     <ClInclude Include="Demetrius.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="DongKuTestScene.h" />
@@ -251,6 +252,7 @@
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="ClockHand.cpp" />
     <ClCompile Include="CollisionMgr.cpp" />
+    <ClCompile Include="Crop.cpp" />
     <ClCompile Include="Demetrius.cpp" />
     <ClCompile Include="DongKuTestScene.cpp" />
     <ClCompile Include="Elliott.cpp" />

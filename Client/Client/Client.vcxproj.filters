@@ -230,6 +230,7 @@
       <Filter>98. Managers\13. RenderMgr</Filter>
     </ClCompile>
     <ClCompile Include="GameTime.cpp" />
+    <ClCompile Include="Crop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alex.h">
@@ -473,6 +474,7 @@
       <Filter>98. Managers\13. RenderMgr</Filter>
     </ClInclude>
     <ClInclude Include="GameTime.h" />
+    <ClInclude Include="Crop.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
