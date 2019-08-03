@@ -1,38 +1,8 @@
-﻿  Abigail.cpp
-  Alex.cpp
-  Caroline.cpp
-  Demetrius.cpp
-  Elliott.cpp
-  Emily.cpp
-  Evelyn.cpp
-  George.cpp
-  Haley.cpp
-  Harvey.cpp
-  Jas.cpp
-  Jodi.cpp
-  Kent.cpp
-  Leah.cpp
-  Lewis.cpp
-  Linus.cpp
-  Logo.cpp
-  Marcello.cpp
-  Marlon.cpp
-  Marnie.cpp
-  컴파일하고 있습니다...
-  Maru.cpp
-  Morris.cpp
-  NPC.cpp
-  Penny.cpp
-  Pierre.cpp
-  Robin.cpp
-  Sam.cpp
-  Sandy.cpp
-  Sebastian.cpp
-  Vincent.cpp
+﻿  Logo.cpp
   코드를 생성하고 있습니다.
-  57 of 2234 functions ( 2.6%) were compiled, the rest were copied from previous compilation.
+  1 of 2260 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    42 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.exe
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.pdb (Full PDB)

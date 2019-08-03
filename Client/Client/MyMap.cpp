@@ -39,7 +39,7 @@ void CMyMap::Render()
 	float fRatioX = WINCX / fCurWinCX;
 	float fRatioY = WINCY / fCurWinCY;
 
-	D3DXMatrixScaling(&matScale, 1.f, 1.f, 0.f);
+	D3DXMatrixScaling(&matScale, 3.f, 3.f, 0.f);
 	D3DXMatrixTranslation(&matTrans,
 		0.f,
 		0.f,
@@ -47,15 +47,26 @@ void CMyMap::Render()
 
 	matWorld = matScale * matTrans;
 
-	CDevice::GetInstance()->GetSprite()->SetTransform(&matWorld);
+
 
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
-		L"MapImage", L"Map", (_int)m_tFrame.fFrame);
+		L"MapImage", L"Map", m_iMapNum);
 	NULL_CHECK_VOID(pTexInfo);
 
-	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture,
-		nullptr, &D3DXVECTOR3(0, 0, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
+	float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+	CDevice::GetInstance()->GetSprite()->SetTransform(&matWorld);
+	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
 void CMyMap::Release()
 {
+}
+
+HRESULT CMyMap::Init(OBJECT_ID eID, _int iNum)
+{
+	m_iMapNum = iNum;
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
+	return S_OK;
 }

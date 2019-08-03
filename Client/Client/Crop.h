@@ -1,17 +1,15 @@
 #pragma once
-#include "Obj.h"
-class CCrop :
-	public CObj
+class CCrop 
 {
+	_DECLARE_SINGLETON( CCrop )
+
 public:
 	CCrop();
 	~CCrop();
 
-	// CObj을(를) 통해 상속됨
-	virtual HRESULT Init() override PURE;
-	virtual _int Update( const _float & fTimeDelta ) override PURE;
-	virtual void LateUpdate( const _float & fTimeDelta ) override PURE;
-	virtual void Render() override PURE;
-	virtual void Release() override PURE;
+	void LoadCropInfo();
+
+private:
+	map<string, CropInfo*>		m_mapCrop[SEASON_END];
 };
 

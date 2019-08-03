@@ -5,10 +5,12 @@
 #include "GameTime.h"
 #include "BackTerrain.h"
 #include "Terrain.h"
+#include "Crop.h"
 
 CHaYoonTestScene::CHaYoonTestScene()
 {
 	m_pGameTime = new CGameTime;
+
 }
 
 
@@ -16,6 +18,8 @@ CHaYoonTestScene::~CHaYoonTestScene()
 {
 	delete m_pGameTime;
 	m_pGameTime = NULL;
+
+	CCrop::GetInstance()->DestroyInstance();
 }
 
 HRESULT CHaYoonTestScene::Init()
@@ -45,6 +49,9 @@ HRESULT CHaYoonTestScene::Init()
 	if ( nullptr == pObj )
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_UI );
+
+	CCrop::GetInstance()->LoadCropInfo();
+
 	return S_OK;
 }
 
