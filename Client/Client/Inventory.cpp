@@ -66,24 +66,29 @@ HRESULT CInventory::Init(OBJECT_ID eID)
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
 
-
-	m_pItem[0][0] = CAbstractFactory<CAxe>::CreateObj(OBJECT_ID_UI);
-	if (m_pItem[0][0] == nullptr)
+	m_pItem[0][1] = CAbstractFactory<CAxe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[0][1] == nullptr)
 		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(m_pItem[0][0], OBJECT_ID_UI);
-	dynamic_cast<CAxe*>(m_pItem[0][0])->SetIndex(0, 0);
+	CObjectMgr::GetInstance()->AddObject(m_pItem[0][1], OBJECT_ID_UI);
+	dynamic_cast<CItem*>(m_pItem[0][1])->SetIndex(0, 1);
 
-	m_pItem[0][5] = CAbstractFactory<CPickaxe>::CreateObj(OBJECT_ID_UI);
-	if (m_pItem[0][5] == nullptr)
+	m_pItem[1][5] = CAbstractFactory<CPickaxe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[1][5] == nullptr)
 		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(m_pItem[0][5], OBJECT_ID_UI);
-	dynamic_cast<CPickaxe*>(m_pItem[0][5])->SetIndex(1, 5);
+	CObjectMgr::GetInstance()->AddObject(m_pItem[1][5], OBJECT_ID_UI);
+	dynamic_cast<CItem*>(m_pItem[1][5])->SetIndex(1, 5);
 
-	m_pItem[0][8] = CAbstractFactory<CHoe>::CreateObj(OBJECT_ID_UI);
-	if (m_pItem[0][8] == nullptr)
+	m_pItem[2][8] = CAbstractFactory<CHoe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[2][8] == nullptr)
 		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(m_pItem[0][8], OBJECT_ID_UI);
-	dynamic_cast<CHoe*>(m_pItem[0][8])->SetIndex(2, 8);
+	CObjectMgr::GetInstance()->AddObject(m_pItem[2][8], OBJECT_ID_UI);
+	dynamic_cast<CItem*>(m_pItem[2][8])->SetIndex(2, 8);
+
+	m_pItem[0][4] = CAbstractFactory<CHoe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[0][4] == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pItem[0][4], OBJECT_ID_UI);
+	dynamic_cast<CItem*>(m_pItem[0][4])->SetIndex(0, 4);
 
 
 	return S_OK;
@@ -210,7 +215,28 @@ void CInventory::Render()
 {
 	if (m_bActive)
 	{
-		{
+		{ // BACKGROUND
+			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+				m_strObjectKey, m_strStateKey, BACKGROUND);
+			NULL_CHECK_VOID(pTexInfo);
+
+			UNITIFNO tInfo = m_tInfo;
+			tInfo.vSize = { (float)WINCX / 1920.f , (float)WINCY / 1020.f, 0.f };
+
+			_matrix matTrans, matScale;
+			D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+			D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+			tInfo.matWorld = matScale * matTrans;
+
+			float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
+			float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+			CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		}
+
+		{ // INVENTORY
 			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 				m_strObjectKey, m_strStateKey, INVENTORY);
 			NULL_CHECK_VOID(pTexInfo);
@@ -355,3 +381,44 @@ void CInventory::Release()
 {
 }
 
+void CInventory::Drag(const _float& x, const _float& y)
+{
+	if (m_bSelect)
+		m_pItem[m_nItemIndexLine][m_nItemIndex]->SetPos(x, y);
+}
+
+void CInventory::Click(const _float& x, const _float& y)
+{
+	_float fSize = (float)WINCX / 1920.f;
+	if (m_bActive)
+	{
+
+	}
+	else
+	{
+		for (int i = 0; i < 12; ++i)
+		{
+			if (m_pItem[0][i])
+			{
+				D3DXVECTOR3 vPos = m_pItem[0][i]->GetInfo().vPos;
+				if (vPos.x - (20.f) < x && vPos.x + (20.f) > x && vPos.y - (20.f) < y && vPos.y + (20.f) > y)
+				{
+					m_bSelect = true;
+					m_nItemIndex = i;
+					m_nItemIndexLine = 0;
+					m_nOrginIndex = i;
+					m_nOrginIndexLine = 0;
+					break;
+				}
+			}
+		}
+	}
+	//cout << x << " | " << y << endl;
+}
+
+void CInventory::EndClick()
+{
+	if (m_pItem[m_nItemIndex][m_nItemIndexLine])
+		dynamic_cast<CItem*>(m_pItem[m_nItemIndex][m_nItemIndexLine])->SetIndex(m_nOrginIndexLine, m_nOrginIndex);
+	m_bSelect = false;
+}

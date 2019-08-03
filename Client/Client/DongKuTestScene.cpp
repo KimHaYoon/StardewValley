@@ -18,40 +18,38 @@ CDongKuTestScene::~CDongKuTestScene()
 
 HRESULT CDongKuTestScene::Init()
 {
-	if ( FAILED( CTextureMgr::GetInstance()->ReadImgPath( L"../Data/DT.txt" ) ) )
+	if (FAILED(CTextureMgr::GetInstance()->ReadImgPath(L"../Data/DT.txt")))
 	{
-		ERR_MSG( L"Image Load Failed" );
+		ERR_MSG(L"Image Load Failed");
 		return E_FAIL;
 	}
-	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Mountain_Tile_Back.dat");
+	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data/Tile/Mountain/Mountain_Tile_Back.dat");
 	if (nullptr == pObj)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
-	pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Mountain_Tile_Front.dat");
+	pObj = CAbstractFactory<CTerrain>::CreateObj(L"../Data/Tile/Mountain/Mountain_Tile_Front.dat");
 	if (nullptr == pObj)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
 
-	pObj = CAbstractFactory<CPlayer>::CreateObj();
-	if ( nullptr == pObj )
+	pObj = CAbstractFactory<CPlayer>::CreateObj(OBJECT_ID_PLAYER);
+	if (nullptr == pObj)
 		return E_FAIL;
 
-	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_PLAYER );
+	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_PLAYER);
 
 	return S_OK;
 }
 
-void CDongKuTestScene::Update( const _float & fTimeDelta )
+void CDongKuTestScene::Update(const _float & fTimeDelta)
 {
-	if (CKeyMgr::GetInstance()->KeyDown(KEY_RETURN))
-		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_HAYOON);
-	CObjectMgr::GetInstance()->Update( fTimeDelta );
+	CObjectMgr::GetInstance()->Update(fTimeDelta);
 }
 
-void CDongKuTestScene::LateUpdate( const _float & fTimeDelta )
+void CDongKuTestScene::LateUpdate(const _float & fTimeDelta)
 {
-	CObjectMgr::GetInstance()->LateUpdate( fTimeDelta );
+	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
 }
 
 void CDongKuTestScene::Render()

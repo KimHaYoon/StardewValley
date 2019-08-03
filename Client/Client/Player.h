@@ -8,6 +8,8 @@ class CPlayer : public CObj
 {
 	_float m_fTime = 0.f;
 	_bool m_bIDLE;
+	_bool m_bDrag;
+	_bool m_bPause;
 
 	_float m_fMoveFrame = 1.f;
 
@@ -33,5 +35,9 @@ public:
 	virtual HRESULT Init(OBJECT_ID eID);
 
 	bool GetInventoryState();
+
+	void Drag();
+	void Click();
+	void EndClick();
 };
 

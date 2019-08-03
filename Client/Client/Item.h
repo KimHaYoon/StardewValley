@@ -15,6 +15,7 @@ protected:
 	_tchar* m_pName = nullptr;
 
 	ITEM_TYPE		m_eType;
+	UNITIFNO		m_tInfo2;
 
 	_int			m_nCount;
 
@@ -30,5 +31,5 @@ public:
 	virtual void Render();
 	virtual void Release() PURE;
 
-	void SetIndex(_int line, _int index) { m_nIndexLine = line;  m_nIndex = index; }
+	void SetIndex(_int line, _int index);
 };
