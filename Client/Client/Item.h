@@ -30,5 +30,5 @@ public:
 	virtual void Render();
 	virtual void Release() PURE;
 
-	void SetIndex(_int index) { m_nIndex = index; }
+	void SetIndex(_int line, _int index) { m_nIndexLine = line;  m_nIndex = index; }
 };

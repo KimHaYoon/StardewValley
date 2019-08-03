@@ -38,11 +38,11 @@ HRESULT CInventory::Init()
 HRESULT CInventory::Init(OBJECT_ID eID)
 {
 	m_nSelect = -1;
-
-	m_tInfo.vPos = { 200.f,250.f,0.f };
-	m_tInfo.vSize = { 2.f,1.5f,0.f };
-
 	_float fSize = (float)WINCX / 1920.f;
+
+	m_tInfo.vPos = { WINCX / 2.f,WINCY / 2.f,0.f };
+	m_tInfo.vSize = { fSize * 1.8f, fSize * 1.8f, 0.f };
+
 	m_tQuickSlot.vPos = { (float)WINCX / 2.f, (float)(WINCY)-(100.f * fSize), 0.f };
 	m_tQuickSlot.vSize = { fSize, fSize, 0.f };
 
@@ -71,19 +71,19 @@ HRESULT CInventory::Init(OBJECT_ID eID)
 	if (m_pItem[0][0] == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pItem[0][0], OBJECT_ID_UI);
-	dynamic_cast<CAxe*>(m_pItem[0][0])->SetIndex(0);
+	dynamic_cast<CAxe*>(m_pItem[0][0])->SetIndex(0, 0);
 
 	m_pItem[0][5] = CAbstractFactory<CPickaxe>::CreateObj(OBJECT_ID_UI);
 	if (m_pItem[0][5] == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pItem[0][5], OBJECT_ID_UI);
-	dynamic_cast<CPickaxe*>(m_pItem[0][5])->SetIndex(5);
+	dynamic_cast<CPickaxe*>(m_pItem[0][5])->SetIndex(1, 5);
 
 	m_pItem[0][8] = CAbstractFactory<CHoe>::CreateObj(OBJECT_ID_UI);
 	if (m_pItem[0][8] == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pItem[0][8], OBJECT_ID_UI);
-	dynamic_cast<CHoe*>(m_pItem[0][8])->SetIndex(8);
+	dynamic_cast<CHoe*>(m_pItem[0][8])->SetIndex(2, 8);
 
 
 	return S_OK;
@@ -208,6 +208,119 @@ void CInventory::LateUpdate(const _float & fTimeDelta)
 
 void CInventory::Render()
 {
+	if (m_bActive)
+	{
+		{
+			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+				m_strObjectKey, m_strStateKey, INVENTORY);
+			NULL_CHECK_VOID(pTexInfo);
+
+			float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
+			float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+			CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
+			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		}
+
+		for (int i = 0; i < 6; ++i) // TAB
+		{
+			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+				m_strObjectKey, m_strStateKey, ITEMTAB + i);
+			NULL_CHECK_VOID(pTexInfo);
+
+			UNITIFNO tInfo = m_tInfo;
+			float fSize = (float)WINCX / 1920.f;
+			if (i == 0)
+				tInfo.vPos = { (m_tInfo.vPos.x - (600.f * fSize)) + (90.f * fSize * (i + 1)), (m_tInfo.vPos.y - (361.f * fSize)) - (108.f * fSize), 0.f };
+			else
+				tInfo.vPos = { (m_tInfo.vPos.x - (600.f * fSize)) + (90.f * fSize * (i + 1)), (m_tInfo.vPos.y - (361.f * fSize)) - (128.f * fSize), 0.f };
+			_matrix matTrans, matScale;
+			D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+			D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+			tInfo.matWorld = matScale * matTrans;
+
+			float CenterX = pTexInfo->tImgInfo.Width * 0.5f;
+			float CenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+			CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+				&D3DXVECTOR3(CenterX, CenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		}
+
+		// CANCEL
+		{
+			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+				m_strObjectKey, m_strStateKey, CANCEL);
+			NULL_CHECK_VOID(pTexInfo);
+
+			UNITIFNO tInfo = m_tInfo;
+
+			float fSize = (float)WINCX / 1920.f;
+			tInfo.vPos = { m_tInfo.vPos.x + (650.f * fSize), m_tInfo.vPos.y - (540.f * fSize), 0.f };
+
+			_matrix matTrans, matScale;
+			D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+			D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+			tInfo.matWorld = matScale * matTrans;
+
+			float CenterX = pTexInfo->tImgInfo.Width * 0.5f;
+			float CenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+			CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+				&D3DXVECTOR3(CenterX, CenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		}
+
+		// UNKNOWN
+		{
+			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+				m_strObjectKey, m_strStateKey, UNKNOWN);
+			NULL_CHECK_VOID(pTexInfo);
+
+			UNITIFNO tInfo = m_tInfo;
+
+			float fSize = (float)WINCX / 1920.f;
+			tInfo.vPos = { m_tInfo.vPos.x + (710.f * fSize), m_tInfo.vPos.y - (250.f * fSize), 0.f };
+
+			_matrix matTrans, matScale;
+			D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+			D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+			tInfo.matWorld = matScale * matTrans;
+
+			float CenterX = pTexInfo->tImgInfo.Width * 0.5f;
+			float CenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+			CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+				&D3DXVECTOR3(CenterX, CenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		}
+
+		//TRASH
+		{
+			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+				m_strObjectKey, m_strStateKey, TRASH);
+			NULL_CHECK_VOID(pTexInfo);
+
+			UNITIFNO tInfo = m_tInfo;
+
+			float fSize = (float)WINCX / 1920.f;
+			tInfo.vPos = { m_tInfo.vPos.x + (720.f * fSize), m_tInfo.vPos.y + (100.f * fSize), 0.f };
+
+			_matrix matTrans, matScale;
+			D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+			D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+			tInfo.matWorld = matScale * matTrans;
+
+			float CenterX = pTexInfo->tImgInfo.Width * 0.5f;
+			float CenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+			CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+				&D3DXVECTOR3(CenterX, CenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		}
+	}
+	else
 	{
 		const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 			m_strObjectKey, m_strStateKey, QUICKSLOT);
@@ -235,24 +348,6 @@ void CInventory::Render()
 				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 		}
 		// ==========================================================
-	}
-
-	if (m_bActive)
-	{
-		const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
-			m_strObjectKey, m_strStateKey, 0);
-		NULL_CHECK_VOID(pTexInfo);
-
-		float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
-		float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
-
-		CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
-		CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
-			&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
-
-
-		CDevice::GetInstance()->GetFont()->DrawTextW(
-			CDevice::GetInstance()->GetSprite(), L"Inventory", -1, nullptr, DT_CENTER | DT_TOP, D3DCOLOR_ARGB(255, 0, 0, 0));
 	}
 }
 

@@ -31,5 +31,7 @@ public:
 	virtual void Release();
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
+
+	bool GetInventoryState();
 };
 
