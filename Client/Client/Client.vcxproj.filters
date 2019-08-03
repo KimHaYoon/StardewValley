@@ -243,6 +243,9 @@
     <ClCompile Include="Title.cpp">
       <Filter>01. Object\03. UI\97. Title</Filter>
     </ClCompile>
+<<<<<<< HEAD
+>>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
+=======
 >>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
   </ItemGroup>
   <ItemGroup>
@@ -500,6 +503,9 @@
     <ClInclude Include="Title.h">
       <Filter>01. Object\03. UI\97. Title</Filter>
     </ClInclude>
+<<<<<<< HEAD
+>>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
+=======
 >>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
   </ItemGroup>
   <ItemGroup>
