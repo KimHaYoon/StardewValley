@@ -156,7 +156,12 @@ HRESULT CLogo::Init()
 // 			return E_FAIL;
 // 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
 
-		CObj* pObj = CAbstractFactory<CTitle>::CreateObj(OBJECT_ID_UI);
+
+		CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_UI, 10);
+		if (pObj == nullptr)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
+		 pObj = CAbstractFactory<CTitle>::CreateObj(OBJECT_ID_UI);
 		if (pObj == nullptr)
 			return E_FAIL;
 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
@@ -169,6 +174,7 @@ HRESULT CLogo::Init()
 			CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
 
 		}
+
 	}
 
 	return S_OK;
