@@ -52,12 +52,27 @@ void CClickBox::Release()
 
 HRESULT CClickBox::Init(OBJECT_ID eID, _int iNum)
 {
-	m_tInfo.vPos = { 100.f, 100.f,0.f };
-	m_tInfo.vSize = { 1.f,1.f,0.f };
+	m_tInfo.vSize = { 2.f,2.f,0.f };
 	m_strObjectKey = L"Menu";
-	m_strStateKey = L"ClickedMenu";
+	m_strStateKey = L"UnClickedMenu";
 	m_eObjID = eID;
 	m_iNumOfTitle = iNum;
+	if (iNum == 0)
+	{
+		m_tInfo.vPos = { 175.f, 500.f,0.f };
+	}
+	else if (iNum == 1)
+	{
+		m_tInfo.vPos = { 325.f, 500.f,0.f };
+	}
+	else if (iNum == 2)
+	{
+		m_tInfo.vPos = { 475.f, 500.f,0.f };
+	}
+	else if (iNum == 3)
+	{
+		m_tInfo.vPos = { 625.f, 500.f,0.f };
+	}
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
 	return S_OK;
 }

@@ -12,5 +12,6 @@ public:
 	virtual void LateUpdate(const _float & fTimeDelta) override;
 	virtual void Render() override;
 	virtual void Release() override;
+	virtual HRESULT Init(OBJECT_ID eID);
 };
 
