@@ -162,7 +162,7 @@ WhiteCow|WhiteCow_Forward|4|..\Texture\Animals\WhiteCow\WhiteCow_Forward\WhiteCo
 WhiteCow|WhiteCow_IDLE|2|..\Texture\Animals\WhiteCow\WhiteCow_IDLE\WhiteCow_IDLE%d.png
 WhiteCow|WhiteCow_Left|4|..\Texture\Animals\WhiteCow\WhiteCow_Left\WhiteCow_Left%d.png
 WhiteCow|WhiteCow_Right|4|..\Texture\Animals\WhiteCow\WhiteCow_Right\WhiteCow_Right%d.png
-MapImage|Map|11|..\Texture\MapImage\Map\Map%d.png
+MapImage|Map|10|..\Texture\MapImage\Map\Map%d.png
 Abigail|Abigail_Back|4|..\Texture\NPC\Abigail\Abigail_Back\Abigail_Back%d.png
 Abigail|Abigail_Forward|4|..\Texture\NPC\Abigail\Abigail_Forward\Abigail_Forward%d.png
 Abigail|Abigail_IDLE|4|..\Texture\NPC\Abigail\Abigail_IDLE\Abigail_IDLE%d.png
@@ -308,6 +308,17 @@ Winter|Beach_Tile|2104|..\Texture\Season\Winter\Beach_Tile\Beach_Tile%d.png
 Winter|OutDoor_Tile|2104|..\Texture\Season\Winter\OutDoor_Tile\OutDoor_Tile%d.png
 Winter|Town_Tile|2104|..\Texture\Season\Winter\Town_Tile\Town_Tile%d.png
 Season|Winter|3|..\Texture\Season\Winter\Winter%d.png
+EFFECT|BossMultiAttack|36|..\Texture\Stage\EFFECT\BossMultiAttack\BossMultiAttack%d.png
+EFFECT|Crash|4|..\Texture\Stage\EFFECT\Crash\Crash%d.png
+EFFECT|Cray|8|..\Texture\Stage\EFFECT\Cray\Cray%d.png
+EFFECT|Dust|6|..\Texture\Stage\EFFECT\Dust\Dust%d.png
+EFFECT|ElectronicShock|9|..\Texture\Stage\EFFECT\ElectronicShock\ElecShock%d.png
+EFFECT|Fire|39|..\Texture\Stage\EFFECT\Fire\AKAAKIHA_AKI51_%d.png
+PLAYER|Attack|6|..\Texture\Stage\PLAYER\Attack\AKIHA_AKI01_00%d.png
+PLAYER|Dash|11|..\Texture\Stage\PLAYER\Dash\AKIHA_AKI13_00%d.png
+PLAYER|Stand|12|..\Texture\Stage\PLAYER\Stand\AKIHA_AKI00_00%d.png
+PLAYER|Walk|13|..\Texture\Stage\PLAYER\Walk\AKIHA_AKI26_00%d.png
+TERRAIN|tile|9|..\Texture\Stage\TERRAIN\tile\tile%d.png
 Armored-Bug|ArmoredBug_Back|4|..\Texture\Monster\Armored-Bug\ArmoredBug_Back\ArmoredBug_Back%d.png
 Armored-Bug|ArmoredBug_Die|2|..\Texture\Monster\Armored-Bug\ArmoredBug_Die\ArmoredBug_Die%d.png
 Armored-Bug|ArmoredBug_Forward|4|..\Texture\Monster\Armored-Bug\ArmoredBug_Forward\ArmoredBug_Forward%d.png
@@ -428,7 +439,7 @@ WildernessGolem|WildernessGolem_Left|4|..\Texture\Monster\WildernessGolem\Wilder
 WildernessGolem|WildernessGolem_Right|4|..\Texture\Monster\WildernessGolem\WildernessGolem_Right\WildernessGolem_Right%d.png
 WildernessGolem|WildernessGolem_Spawn|8|..\Texture\Monster\WildernessGolem\WildernessGolem_Spawn\WildernessGolem_Spawn%d.png
 WildernessGolem|WildrnessGolem_Back|4|..\Texture\Monster\WildernessGolem\WildrnessGolem_Back\WildernessGolem_Back%d.png
-UI|ETC|18|..\Texture\UI\ETC\ETC%d.png
+UI|ETC|17|..\Texture\UI\ETC\ETC%d.png
 UI|TextBox|2|..\Texture\UI\TextBox\TextBox%d.png
 ReationTile|tile|3|..\Texture\ReationTile\tile\tile%d.png
 Menu|ClickedMenu|5|..\Texture\Menu\ClickedMenu\Menu%d.png

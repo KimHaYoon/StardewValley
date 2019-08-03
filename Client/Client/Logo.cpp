@@ -39,9 +39,6 @@
 #include "TextBox.h"
 #include "ReactionTerrain.h"
 
-#include "Title.h"
-#include "ClickBox.h"
-
 CLogo::CLogo()
 {
 }
@@ -156,24 +153,6 @@ HRESULT CLogo::Init()
 // 			return E_FAIL;
 // 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
 
-
-		CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_UI, 10);
-		if (pObj == nullptr)
-			return E_FAIL;
-		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
-		 pObj = CAbstractFactory<CTitle>::CreateObj(OBJECT_ID_UI);
-		if (pObj == nullptr)
-			return E_FAIL;
-		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
-
-		for (int i = 0; i < 4; ++i)
-		{
-			pObj = CAbstractFactory<CClickBox>::CreateObj(OBJECT_ID_UI, i);
-			if (pObj == nullptr)
-				return E_FAIL;
-			CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
-
-		}
 
 	}
 
