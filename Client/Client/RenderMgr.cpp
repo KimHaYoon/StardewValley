@@ -17,7 +17,6 @@ CRenderMgr::~CRenderMgr()
 			SafeDelete(iter);
 		}
 	}
-	//Release();
 }
 
 HRESULT CRenderMgr::AddRenderObect(CObj * pObj, LAYER_ID eID)
@@ -43,54 +42,68 @@ void CRenderMgr::Render_Layer_1()
 	for (auto& iter : m_RenderLst[LAYER_ID_1])
 	{
 		iter->Render();
+		//SafeDelete(iter);
 	}
 }
 
 void CRenderMgr::Render_Layer_2()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_2])
+	{
 		iter->Render();
+		//SafeDelete(iter);
+	}
 }
 
 void CRenderMgr::Render_Layer_3()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_3])
+	{
 		iter->Render();
+		//SafeDelete(iter);
+	}
 }
 
 void CRenderMgr::Render_Layer_4()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_4])
+	{
 		iter->Render();
+		//SafeDelete(iter);
+	}
 }
 
 void CRenderMgr::Render_Layer_5()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_5])
+	{
 		iter->Render();
+		//SafeDelete(iter);
+	}
 }
 
 void CRenderMgr::Render_Layer_6()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_6])
+	{
 		iter->Render();
+		//SafeDelete(iter);
+	}
 }
-
-void CRenderMgr::Release_Layer(OBJECT_ID eID)
-{
-	m_RenderLst[eID].clear();
-}
-
-void CRenderMgr::Release_LAYER_6()
-{
-	m_RenderLst[LAYER_ID_6].clear();
-}
-
 void CRenderMgr::Release()
 {
 	for (int i = 0; i < LAYER_ID_END; ++i)
 	{
-		m_RenderLst[i].clear();
+		auto& iter = m_RenderLst[i].begin();
+		for (; iter != m_RenderLst[i].end(); )
+		{
+			if (*iter == nullptr)
+			{
+
+			}
+			else
+				++iter;
+		}
 	}
 }
 

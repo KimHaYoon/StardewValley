@@ -72,8 +72,10 @@ void CObjectMgr::Release()
 	CRenderMgr::GetInstance()->Release();
 }
 
-void CObjectMgr::Release_Scene(OBJECT_ID eID)
+
+void CObjectMgr::Release_Group(OBJECT_ID eID)
 {
+
 	for_each(m_listObject[eID].begin(), m_listObject[eID].end(), SafeDelete<CObj*>);
 	m_listObject[eID].clear();
 }
