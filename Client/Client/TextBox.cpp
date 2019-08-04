@@ -30,6 +30,8 @@ _int CTextBox::Update(const _float & fTimeDelta)
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
 	m_tInfo.matWorld = matScale * matTrans;
+
+	
 	return NO_EVENT;
 }
 
@@ -37,10 +39,10 @@ void CTextBox::LateUpdate(const _float & fTimeDelta)
 {
 	m_fTime += fTimeDelta;
 	if (m_fTime >= 0.5f)
-	{
-	
+	{	
 		m_fTime = 0.f;
 	}
+
 }
 
 void CTextBox::Render()
@@ -73,8 +75,8 @@ HRESULT CTextBox::Init(OBJECT_ID eID)
 	m_strStateKey = L"TextBox";
 	m_fSpeed = 10.f;
 	m_tFrame = { 0.f, 1.f };
-
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
+
 	return S_OK;
 }
 

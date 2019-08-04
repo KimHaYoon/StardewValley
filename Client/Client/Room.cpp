@@ -2,6 +2,11 @@
 #include "Room.h"
 
 
+#include "Player.h"
+#include "MyMap.h"
+
+
+
 CRoom::CRoom()
 {
 }

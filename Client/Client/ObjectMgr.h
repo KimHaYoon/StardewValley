@@ -12,7 +12,8 @@ public:
 	void			LateUpdate(const _float& fTimeDelta);
 	void			Render();
 	void			Release();
-	void			Release_Scene(OBJECT_ID eID);
+public:
+	void			Release_Group(OBJECT_ID eID);
 public:
 	list<CObj*>		&GetNPCList() { return m_listObject[OBJECT_ID_NPC]; }
 	list<CObj*>		&GetMonsterList() { return m_listObject[OBJECT_ID_MONSTER]; }
