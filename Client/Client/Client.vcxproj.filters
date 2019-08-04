@@ -1,793 +1,772 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Alex.cpp">
-      <Filter>01. Object\01. NPC\01. Alex</Filter>
-    </ClCompile>
-    <ClCompile Include="Abigail.cpp">
-      <Filter>01. Object\01. NPC\00. Abigail</Filter>
-    </ClCompile>
     <ClCompile Include="Client.cpp">
-      <Filter>99. Default</Filter>
-    </ClCompile>
-    <ClCompile Include="Caroline.cpp">
-      <Filter>01. Object\01. NPC\02. Caroline</Filter>
-    </ClCompile>
-    <ClCompile Include="CollisionMgr.cpp">
-      <Filter>98. Managers\04. CollisionMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="Device.cpp">
-      <Filter>98. Managers\00. Device</Filter>
-    </ClCompile>
-    <ClCompile Include="FontMgr.cpp">
-      <Filter>98. Managers\05. FontMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="FrameMgr.cpp">
-      <Filter>98. Managers\06. FrameMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="MainApp.cpp">
-      <Filter>00. Main</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyMgr.cpp">
-      <Filter>98. Managers\08. KeyMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="MonsterMgr.cpp">
-      <Filter>98. Managers\09. MonsterMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="MultiTexture.cpp">
-      <Filter>98. Managers\11. TextureMgr\00. Texture\01. MultiTexture</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjectMgr.cpp">
-      <Filter>98. Managers\01. ObjectMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneMgr.cpp">
-      <Filter>98. Managers\02. SceneMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="ScrollMgr.cpp">
-      <Filter>98. Managers\12. ScrollMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="SingleTexture.cpp">
-      <Filter>98. Managers\11. TextureMgr\00. Texture\00. SingleTexture</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>98. Managers\11. TextureMgr\00. Texture</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureMgr.cpp">
-      <Filter>98. Managers\11. TextureMgr\01. TextureMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="TimerMgr.cpp">
-      <Filter>98. Managers\07. TimerMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="PathMgr.cpp">
-      <Filter>98. Managers\10. PathMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>99. Default</Filter>
+      <Filter>98. Headers</Filter>
     </ClCompile>
     <ClCompile Include="NPC.cpp">
-      <Filter>01. Object\01. NPC</Filter>
-    </ClCompile>
-    <ClCompile Include="Demetrius.cpp">
-      <Filter>01. Object\01. NPC\03. Demetrius</Filter>
-    </ClCompile>
-    <ClCompile Include="Elliott.cpp">
-      <Filter>01. Object\01. NPC\04. Elliott</Filter>
-    </ClCompile>
-    <ClCompile Include="Emily.cpp">
-      <Filter>01. Object\01. NPC\05. Emily</Filter>
-    </ClCompile>
-    <ClCompile Include="Evelyn.cpp">
-      <Filter>01. Object\01. NPC\06. Evelyn</Filter>
-    </ClCompile>
-    <ClCompile Include="George.cpp">
-      <Filter>01. Object\01. NPC\07. George</Filter>
-    </ClCompile>
-    <ClCompile Include="Haley.cpp">
-      <Filter>01. Object\01. NPC\08. Haley</Filter>
-    </ClCompile>
-    <ClCompile Include="Harvey.cpp">
-      <Filter>01. Object\01. NPC\09. Harvey</Filter>
-    </ClCompile>
-    <ClCompile Include="Jas.cpp">
-      <Filter>01. Object\01. NPC\10. Jas</Filter>
-    </ClCompile>
-    <ClCompile Include="Jodi.cpp">
-      <Filter>01. Object\01. NPC\11. Jodi</Filter>
-    </ClCompile>
-    <ClCompile Include="Kent.cpp">
-      <Filter>01. Object\01. NPC\12. Kent</Filter>
-    </ClCompile>
-    <ClCompile Include="Leah.cpp">
-      <Filter>01. Object\01. NPC\13. Leah</Filter>
-    </ClCompile>
-    <ClCompile Include="Lewis.cpp">
-      <Filter>01. Object\01. NPC\14. Lewis</Filter>
-    </ClCompile>
-    <ClCompile Include="Linus.cpp">
-      <Filter>01. Object\01. NPC\15. Linus</Filter>
-    </ClCompile>
-    <ClCompile Include="Marcello.cpp">
-      <Filter>01. Object\01. NPC\16. Marecello</Filter>
-    </ClCompile>
-    <ClCompile Include="Marlon.cpp">
-      <Filter>01. Object\01. NPC\17. Marlon</Filter>
-    </ClCompile>
-    <ClCompile Include="Marnie.cpp">
-      <Filter>01. Object\01. NPC\18. Marnie</Filter>
-    </ClCompile>
-    <ClCompile Include="Maru.cpp">
-      <Filter>01. Object\01. NPC\19. Maru</Filter>
-    </ClCompile>
-    <ClCompile Include="Morris.cpp">
-      <Filter>01. Object\01. NPC\20. Morris</Filter>
-    </ClCompile>
-    <ClCompile Include="Penny.cpp">
-      <Filter>01. Object\01. NPC\21. Penny</Filter>
-    </ClCompile>
-    <ClCompile Include="Pierre.cpp">
-      <Filter>01. Object\01. NPC\22. Pierre</Filter>
-    </ClCompile>
-    <ClCompile Include="Robin.cpp">
-      <Filter>01. Object\01. NPC\23. Robin</Filter>
-    </ClCompile>
-    <ClCompile Include="Sam.cpp">
-      <Filter>01. Object\01. NPC\24. Sam</Filter>
-    </ClCompile>
-    <ClCompile Include="Sandy.cpp">
-      <Filter>01. Object\01. NPC\25. Sandy</Filter>
-    </ClCompile>
-    <ClCompile Include="Sebastian.cpp">
-      <Filter>01. Object\01. NPC\26. Sebastian</Filter>
-    </ClCompile>
-    <ClCompile Include="Vincent.cpp">
-      <Filter>01. Object\01. NPC\27. Vincent</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>01. Object\98. Public\99. Camera</Filter>
-    </ClCompile>
-    <ClCompile Include="Logo.cpp">
-      <Filter>02. Scene\00. Logo</Filter>
-    </ClCompile>
-    <ClCompile Include="DongKuTestScene.cpp">
-      <Filter>02. Scene\99. DongKu</Filter>
-    </ClCompile>
-    <ClCompile Include="HaYoonTestScene.cpp">
-      <Filter>02. Scene\98. Hayoon</Filter>
-    </ClCompile>
-    <ClCompile Include="MyMap.cpp">
-      <Filter>02. Scene\97. MyMap</Filter>
-    </ClCompile>
-    <ClCompile Include="Obj.cpp">
-      <Filter>01. Object\99. Object</Filter>
-    </ClCompile>
-    <ClCompile Include="BackTerrain.cpp">
-      <Filter>01. Object\98. Public\01. BackTerrain</Filter>
-    </ClCompile>
-    <ClCompile Include="Inventory.cpp">
-      <Filter>01. Object\03. UI\01. Inventory</Filter>
-    </ClCompile>
-    <ClCompile Include="Monster.cpp">
-      <Filter>01. Object\02. Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="NameTag.cpp">
-      <Filter>01. Object\03. UI\00. NameTag</Filter>
+      <Filter>01. Object\02. NPC</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>01. Object\00. Player</Filter>
     </ClCompile>
-    <ClCompile Include="ReactionTerrain.cpp">
-      <Filter>01. Object\98. Public\02. ReactionTerrain</Filter>
+    <ClCompile Include="Obj.cpp">
+      <Filter>01. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MainApp.cpp">
+      <Filter>00. MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>01. Object\01. Monster</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>02. Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Terrain.cpp">
-      <Filter>01. Object\98. Public\00. Terrain</Filter>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>99. Default</Filter>
     </ClCompile>
     <ClCompile Include="UI.cpp">
       <Filter>01. Object\03. UI</Filter>
     </ClCompile>
-    <ClCompile Include="Stage.cpp">
-      <Filter>02. Scene\01. Stage</Filter>
+    <ClCompile Include="BackTerrain.cpp">
+      <Filter>01. Object\99. Public\00. BackTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="ReactionTerrain.cpp">
+      <Filter>01. Object\99. Public\02. ReactionTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>01. Object\99. Public\01. FrontTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMap.cpp">
+      <Filter>01. Object\99. Public\04. Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Axe.cpp">
+      <Filter>01. Object\03. UI\00. Axe</Filter>
     </ClCompile>
     <ClCompile Include="Clock.cpp">
-      <Filter>01. Object\03. UI\02. Clock</Filter>
+      <Filter>01. Object\03. UI\01. Clock</Filter>
     </ClCompile>
     <ClCompile Include="ClockHand.cpp">
-      <Filter>01. Object\03. UI\03. ClockHand</Filter>
+      <Filter>01. Object\03. UI\02. ClockHand</Filter>
     </ClCompile>
     <ClCompile Include="Energy.cpp">
-      <Filter>01. Object\03. UI\05. Energy</Filter>
+      <Filter>01. Object\03. UI\03. Energy</Filter>
     </ClCompile>
     <ClCompile Include="EnergyGauge.cpp">
       <Filter>01. Object\03. UI\04. EnergyGauge</Filter>
     </ClCompile>
     <ClCompile Include="Item.cpp">
-      <Filter>01. Object\04. Item</Filter>
-    </ClCompile>
-    <ClCompile Include="Axe.cpp">
-      <Filter>01. Object\04. Item\00. Axe</Filter>
+      <Filter>01. Object\03. UI\05. Item</Filter>
     </ClCompile>
     <ClCompile Include="Pickaxe.cpp">
-      <Filter>01. Object\04. Item\01. Pickaxe</Filter>
+      <Filter>01. Object\03. UI\06. PickAxe</Filter>
     </ClCompile>
-    <ClCompile Include="Hoe.cpp">
-      <Filter>01. Object\04. Item\02. Hoe</Filter>
+    <ClCompile Include="GameTime.cpp">
+      <Filter>04. System\00. GameTime</Filter>
     </ClCompile>
-    <ClCompile Include="Room.cpp">
-      <Filter>02. Scene\07. Room</Filter>
-    </ClCompile>
-    <ClCompile Include="Bat.cpp">
-      <Filter>01. Object\02. Monster\00. Bat</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderMgr.cpp">
-      <Filter>98. Managers\13. RenderMgr</Filter>
-    </ClCompile>
-    <ClCompile Include="GameTime.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="Crop.cpp">
-      <Filter>01. Object\05. Crop</Filter>
-    </ClCompile>
-    <ClCompile Include="Parsnip.cpp" />
-=======
-    <ClCompile Include="Crop.cpp" />
-    <ClCompile Include="TextBox.cpp">
-      <Filter>01. Object\03. UI\99. TextBox</Filter>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>01. Object\03. UI\07. Inventory</Filter>
     </ClCompile>
     <ClCompile Include="ClickBox.cpp">
-      <Filter>01. Object\03. UI\98. ClickBox</Filter>
+      <Filter>01. Object\03. UI\08. ClickBox</Filter>
+    </ClCompile>
+    <ClCompile Include="NameTag.cpp">
+      <Filter>01. Object\03. UI\09. NameTag</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>01. Object\03. UI\10. TextBox</Filter>
     </ClCompile>
     <ClCompile Include="Title.cpp">
-      <Filter>01. Object\03. UI\97. Title</Filter>
+      <Filter>01. Object\03. UI\11. Title</Filter>
     </ClCompile>
-<<<<<<< HEAD
+    <ClCompile Include="Bat.cpp">
+      <Filter>01. Object\01. Monster\00. Bat</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>02. Scene\02. Vacant</Filter>
+    </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>02. Scene\01. Room</Filter>
+    </ClCompile>
+    <ClCompile Include="Logo.cpp">
+      <Filter>02. Scene\00. Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="DongKuTestScene.cpp">
+      <Filter>02. Scene\99. Test_D</Filter>
+    </ClCompile>
+    <ClCompile Include="HaYoonTestScene.cpp">
+      <Filter>02. Scene\98. Test_H</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectMgr.cpp">
+      <Filter>97. Managers\01. Object_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionMgr.cpp">
+      <Filter>97. Managers\03. Collision_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>97. Managers\00. Device</Filter>
+    </ClCompile>
+    <ClCompile Include="FontMgr.cpp">
+      <Filter>97. Managers\04. Font_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameMgr.cpp">
+      <Filter>97. Managers\05. Frame_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerMgr.cpp">
+      <Filter>97. Managers\06. Timer_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyMgr.cpp">
+      <Filter>97. Managers\07. Key_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterMgr.cpp">
+      <Filter>97. Managers\08. Monster_Manger</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleTexture.cpp">
+      <Filter>97. Managers\09. Texture_Manager\01. SingleTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiTexture.cpp">
+      <Filter>97. Managers\09. Texture_Manager\02. MultiTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>97. Managers\09. Texture_Manager\00. Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMgr.cpp">
+      <Filter>97. Managers\09. Texture_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="PathMgr.cpp">
+      <Filter>97. Managers\10. NPC_Path_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderMgr.cpp">
+      <Filter>97. Managers\11. Render_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMgr.cpp">
+      <Filter>97. Managers\12. Scene_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollMgr.cpp">
+      <Filter>97. Managers\13. Scroll_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Crop.cpp">
+      <Filter>01. Object\04. Crop</Filter>
+    </ClCompile>
     <ClCompile Include="Equipment.cpp">
-      <Filter>01. Object\98. Public\98. EquipMent</Filter>
+      <Filter>01. Object\05. EquipMent</Filter>
     </ClCompile>
-=======
->>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
->>>>>>> d3a8c36606c471819ac6615586a95476117a41bc
+    <ClCompile Include="Hoe.cpp">
+      <Filter>01. Object\04. Crop\00. Hoe</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsnip.cpp">
+      <Filter>01. Object\04. Crop\01. Parsnip</Filter>
+    </ClCompile>
+    <ClCompile Include="Abigail.cpp">
+      <Filter>01. Object\02. NPC\00. Abigail</Filter>
+    </ClCompile>
+    <ClCompile Include="Alex.cpp">
+      <Filter>01. Object\02. NPC\01. Alex</Filter>
+    </ClCompile>
+    <ClCompile Include="Caroline.cpp">
+      <Filter>01. Object\02. NPC\02. Caroline</Filter>
+    </ClCompile>
+    <ClCompile Include="Demetrius.cpp">
+      <Filter>01. Object\02. NPC\03. Demetrius</Filter>
+    </ClCompile>
+    <ClCompile Include="Elliott.cpp">
+      <Filter>01. Object\02. NPC\04. Elliott</Filter>
+    </ClCompile>
+    <ClCompile Include="Evelyn.cpp">
+      <Filter>01. Object\02. NPC\06. Evelyn</Filter>
+    </ClCompile>
+    <ClCompile Include="Emily.cpp">
+      <Filter>01. Object\02. NPC\05. Emily</Filter>
+    </ClCompile>
+    <ClCompile Include="George.cpp">
+      <Filter>01. Object\02. NPC\07. George</Filter>
+    </ClCompile>
+    <ClCompile Include="Haley.cpp">
+      <Filter>01. Object\02. NPC\08. Haley</Filter>
+    </ClCompile>
+    <ClCompile Include="Harvey.cpp">
+      <Filter>01. Object\02. NPC\09. Harvey</Filter>
+    </ClCompile>
+    <ClCompile Include="Jas.cpp">
+      <Filter>01. Object\02. NPC\10. Jas</Filter>
+    </ClCompile>
+    <ClCompile Include="Jodi.cpp">
+      <Filter>01. Object\02. NPC\11. Jodi</Filter>
+    </ClCompile>
+    <ClCompile Include="Kent.cpp">
+      <Filter>01. Object\02. NPC\12. Kent</Filter>
+    </ClCompile>
+    <ClCompile Include="Leah.cpp">
+      <Filter>01. Object\02. NPC\13. Leah</Filter>
+    </ClCompile>
+    <ClCompile Include="Lewis.cpp">
+      <Filter>01. Object\02. NPC\14. Lewis</Filter>
+    </ClCompile>
+    <ClCompile Include="Linus.cpp">
+      <Filter>01. Object\02. NPC\15. Linus</Filter>
+    </ClCompile>
+    <ClCompile Include="Marcello.cpp">
+      <Filter>01. Object\02. NPC\16. Marcello</Filter>
+    </ClCompile>
+    <ClCompile Include="Marlon.cpp">
+      <Filter>01. Object\02. NPC\17. Marlon</Filter>
+    </ClCompile>
+    <ClCompile Include="Marnie.cpp">
+      <Filter>01. Object\02. NPC\18. Marnie</Filter>
+    </ClCompile>
+    <ClCompile Include="Maru.cpp">
+      <Filter>01. Object\02. NPC\19. Maru</Filter>
+    </ClCompile>
+    <ClCompile Include="Morris.cpp">
+      <Filter>01. Object\02. NPC\20. Morris</Filter>
+    </ClCompile>
+    <ClCompile Include="Penny.cpp">
+      <Filter>01. Object\02. NPC\21. Penny</Filter>
+    </ClCompile>
+    <ClCompile Include="Pierre.cpp">
+      <Filter>01. Object\02. NPC\22. Pierre</Filter>
+    </ClCompile>
+    <ClCompile Include="Robin.cpp">
+      <Filter>01. Object\02. NPC\23. Robin</Filter>
+    </ClCompile>
+    <ClCompile Include="Sam.cpp">
+      <Filter>01. Object\02. NPC\24. Sam</Filter>
+    </ClCompile>
+    <ClCompile Include="Sandy.cpp">
+      <Filter>01. Object\02. NPC\25. Sandy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sebastian.cpp">
+      <Filter>01. Object\02. NPC\26. Sabastian</Filter>
+    </ClCompile>
+    <ClCompile Include="Vincent.cpp">
+      <Filter>01. Object\02. NPC\27. Vincent</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Alex.h">
-      <Filter>01. Object\01. NPC\01. Alex</Filter>
-    </ClInclude>
-    <ClInclude Include="Abigail.h">
-      <Filter>01. Object\01. NPC\00. Abigail</Filter>
-    </ClInclude>
-    <ClInclude Include="Abstract_Factory.h">
-      <Filter>98. Managers\03. AbstractFactory</Filter>
-    </ClInclude>
     <ClInclude Include="Client.h">
-      <Filter>99. Default</Filter>
+      <Filter>98. Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Caroline.h">
-      <Filter>01. Object\01. NPC\02. Caroline</Filter>
+    <ClInclude Include="NPC.h">
+      <Filter>01. Object\02. NPC</Filter>
     </ClInclude>
-    <ClInclude Include="CollisionMgr.h">
-      <Filter>98. Managers\04. CollisionMgr</Filter>
+    <ClInclude Include="Player.h">
+      <Filter>01. Object\00. Player</Filter>
     </ClInclude>
-    <ClInclude Include="Device.h">
-      <Filter>98. Managers\00. Device</Filter>
-    </ClInclude>
-    <ClInclude Include="FontMgr.h">
-      <Filter>98. Managers\05. FontMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="FrameMgr.h">
-      <Filter>98. Managers\06. FrameMgr</Filter>
+    <ClInclude Include="Obj.h">
+      <Filter>01. Object</Filter>
     </ClInclude>
     <ClInclude Include="MainApp.h">
-      <Filter>00. Main</Filter>
+      <Filter>00. MainApp</Filter>
     </ClInclude>
-    <ClInclude Include="KeyMgr.h">
-      <Filter>98. Managers\08. KeyMgr</Filter>
+    <ClInclude Include="Monster.h">
+      <Filter>01. Object\01. Monster</Filter>
     </ClInclude>
-    <ClInclude Include="MonsterMgr.h">
-      <Filter>98. Managers\09. MonsterMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="MultiTexture.h">
-      <Filter>98. Managers\11. TextureMgr\00. Texture\01. MultiTexture</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectMgr.h">
-      <Filter>98. Managers\01. ObjectMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMgr.h">
-      <Filter>98. Managers\02. SceneMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="ScrollMgr.h">
-      <Filter>98. Managers\12. ScrollMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="SingleTexture.h">
-      <Filter>98. Managers\11. TextureMgr\00. Texture\00. SingleTexture</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>98. Managers\11. TextureMgr\00. Texture</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureMgr.h">
-      <Filter>98. Managers\11. TextureMgr\01. TextureMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="TimerMgr.h">
-      <Filter>98. Managers\07. TimerMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="PathMgr.h">
-      <Filter>98. Managers\10. PathMgr</Filter>
+    <ClInclude Include="Scene.h">
+      <Filter>02. Scene</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
       <Filter>99. Default</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>99. Default</Filter>
     </ClInclude>
-    <ClInclude Include="NPC.h">
-      <Filter>01. Object\01. NPC</Filter>
-    </ClInclude>
-    <ClInclude Include="Demetrius.h">
-      <Filter>01. Object\01. NPC\03. Demetrius</Filter>
-    </ClInclude>
-    <ClInclude Include="Elliott.h">
-      <Filter>01. Object\01. NPC\04. Elliott</Filter>
-    </ClInclude>
-    <ClInclude Include="Emily.h">
-      <Filter>01. Object\01. NPC\05. Emily</Filter>
-    </ClInclude>
-    <ClInclude Include="Evelyn.h">
-      <Filter>01. Object\01. NPC\06. Evelyn</Filter>
-    </ClInclude>
-    <ClInclude Include="George.h">
-      <Filter>01. Object\01. NPC\07. George</Filter>
-    </ClInclude>
-    <ClInclude Include="Haley.h">
-      <Filter>01. Object\01. NPC\08. Haley</Filter>
-    </ClInclude>
-    <ClInclude Include="Harvey.h">
-      <Filter>01. Object\01. NPC\09. Harvey</Filter>
-    </ClInclude>
-    <ClInclude Include="Jas.h">
-      <Filter>01. Object\01. NPC\10. Jas</Filter>
-    </ClInclude>
-    <ClInclude Include="Jodi.h">
-      <Filter>01. Object\01. NPC\11. Jodi</Filter>
-    </ClInclude>
-    <ClInclude Include="Kent.h">
-      <Filter>01. Object\01. NPC\12. Kent</Filter>
-    </ClInclude>
-    <ClInclude Include="Leah.h">
-      <Filter>01. Object\01. NPC\13. Leah</Filter>
-    </ClInclude>
-    <ClInclude Include="Lewis.h">
-      <Filter>01. Object\01. NPC\14. Lewis</Filter>
-    </ClInclude>
-    <ClInclude Include="Linus.h">
-      <Filter>01. Object\01. NPC\15. Linus</Filter>
-    </ClInclude>
-    <ClInclude Include="Marcello.h">
-      <Filter>01. Object\01. NPC\16. Marecello</Filter>
-    </ClInclude>
-    <ClInclude Include="Marlon.h">
-      <Filter>01. Object\01. NPC\17. Marlon</Filter>
-    </ClInclude>
-    <ClInclude Include="Marnie.h">
-      <Filter>01. Object\01. NPC\18. Marnie</Filter>
-    </ClInclude>
-    <ClInclude Include="Maru.h">
-      <Filter>01. Object\01. NPC\19. Maru</Filter>
-    </ClInclude>
-    <ClInclude Include="Morris.h">
-      <Filter>01. Object\01. NPC\20. Morris</Filter>
-    </ClInclude>
-    <ClInclude Include="Penny.h">
-      <Filter>01. Object\01. NPC\21. Penny</Filter>
-    </ClInclude>
-    <ClInclude Include="Pierre.h">
-      <Filter>01. Object\01. NPC\22. Pierre</Filter>
-    </ClInclude>
-    <ClInclude Include="Robin.h">
-      <Filter>01. Object\01. NPC\23. Robin</Filter>
-    </ClInclude>
-    <ClInclude Include="Sam.h">
-      <Filter>01. Object\01. NPC\24. Sam</Filter>
-    </ClInclude>
-    <ClInclude Include="Sandy.h">
-      <Filter>01. Object\01. NPC\25. Sandy</Filter>
-    </ClInclude>
-    <ClInclude Include="Sebastian.h">
-      <Filter>01. Object\01. NPC\26. Sebastian</Filter>
-    </ClInclude>
-    <ClInclude Include="Vincent.h">
-      <Filter>01. Object\01. NPC\27. Vincent</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>01. Object\98. Public\99. Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="Logo.h">
-      <Filter>02. Scene\00. Logo</Filter>
-    </ClInclude>
-    <ClInclude Include="DongKuTestScene.h">
-      <Filter>02. Scene\99. DongKu</Filter>
-    </ClInclude>
-    <ClInclude Include="HaYoonTestScene.h">
-      <Filter>02. Scene\98. Hayoon</Filter>
-    </ClInclude>
-    <ClInclude Include="MyMap.h">
-      <Filter>02. Scene\97. MyMap</Filter>
-    </ClInclude>
-    <ClInclude Include="BackTerrain.h">
-      <Filter>01. Object\98. Public\01. BackTerrain</Filter>
-    </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>01. Object\03. UI\01. Inventory</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster.h">
-      <Filter>01. Object\02. Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="NameTag.h">
-      <Filter>01. Object\03. UI\00. NameTag</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>01. Object\00. Player</Filter>
-    </ClInclude>
-    <ClInclude Include="ReactionTerrain.h">
-      <Filter>01. Object\98. Public\02. ReactionTerrain</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>02. Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Terrain.h">
-      <Filter>01. Object\98. Public\00. Terrain</Filter>
-    </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>01. Object\03. UI</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>99. Default</Filter>
+    <ClInclude Include="BackTerrain.h">
+      <Filter>01. Object\99. Public\00. BackTerrain</Filter>
     </ClInclude>
-    <ClInclude Include="Stage.h">
-      <Filter>02. Scene\01. Stage</Filter>
+    <ClInclude Include="ReactionTerrain.h">
+      <Filter>01. Object\99. Public\02. ReactionTerrain</Filter>
     </ClInclude>
-    <ClInclude Include="Obj.h">
-      <Filter>01. Object\99. Object</Filter>
+    <ClInclude Include="Terrain.h">
+      <Filter>01. Object\99. Public\01. FrontTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMap.h">
+      <Filter>01. Object\99. Public\04. Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Axe.h">
+      <Filter>01. Object\03. UI\00. Axe</Filter>
     </ClInclude>
     <ClInclude Include="Clock.h">
-      <Filter>01. Object\03. UI\02. Clock</Filter>
+      <Filter>01. Object\03. UI\01. Clock</Filter>
     </ClInclude>
     <ClInclude Include="ClockHand.h">
-      <Filter>01. Object\03. UI\03. ClockHand</Filter>
+      <Filter>01. Object\03. UI\02. ClockHand</Filter>
     </ClInclude>
     <ClInclude Include="Energy.h">
-      <Filter>01. Object\03. UI\05. Energy</Filter>
+      <Filter>01. Object\03. UI\03. Energy</Filter>
     </ClInclude>
     <ClInclude Include="EnergyGauge.h">
       <Filter>01. Object\03. UI\04. EnergyGauge</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>01. Object\04. Item</Filter>
+      <Filter>01. Object\03. UI\05. Item</Filter>
     </ClInclude>
     <ClInclude Include="ItemList.h">
-      <Filter>01. Object\04. Item\99. ItemList</Filter>
-    </ClInclude>
-    <ClInclude Include="Axe.h">
-      <Filter>01. Object\04. Item\00. Axe</Filter>
+      <Filter>01. Object\03. UI\05. Item</Filter>
     </ClInclude>
     <ClInclude Include="Pickaxe.h">
-      <Filter>01. Object\04. Item\01. Pickaxe</Filter>
+      <Filter>01. Object\03. UI\06. PickAxe</Filter>
     </ClInclude>
-    <ClInclude Include="Hoe.h">
-      <Filter>01. Object\04. Item\02. Hoe</Filter>
+    <ClInclude Include="GameTime.h">
+      <Filter>04. System\00. GameTime</Filter>
     </ClInclude>
-    <ClInclude Include="Room.h">
-      <Filter>02. Scene\07. Room</Filter>
-    </ClInclude>
-    <ClInclude Include="Bat.h">
-      <Filter>01. Object\02. Monster\00. Bat</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderMgr.h">
-      <Filter>98. Managers\13. RenderMgr</Filter>
-    </ClInclude>
-    <ClInclude Include="GameTime.h" />
-<<<<<<< HEAD
-    <ClInclude Include="Crop.h">
-      <Filter>01. Object\05. Crop</Filter>
-    </ClInclude>
-    <ClInclude Include="Parsnip.h" />
-=======
-    <ClInclude Include="Crop.h" />
-    <ClInclude Include="TextBox.h">
-      <Filter>01. Object\03. UI\99. TextBox</Filter>
+    <ClInclude Include="Inventory.h">
+      <Filter>01. Object\03. UI\07. Inventory</Filter>
     </ClInclude>
     <ClInclude Include="ClickBox.h">
-      <Filter>01. Object\03. UI\98. ClickBox</Filter>
+      <Filter>01. Object\03. UI\08. ClickBox</Filter>
+    </ClInclude>
+    <ClInclude Include="NameTag.h">
+      <Filter>01. Object\03. UI\09. NameTag</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>01. Object\03. UI\10. TextBox</Filter>
     </ClInclude>
     <ClInclude Include="Title.h">
-      <Filter>01. Object\03. UI\97. Title</Filter>
+      <Filter>01. Object\03. UI\11. Title</Filter>
     </ClInclude>
-<<<<<<< HEAD
+    <ClInclude Include="Bat.h">
+      <Filter>01. Object\01. Monster\00. Bat</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>02. Scene\02. Vacant</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>02. Scene\01. Room</Filter>
+    </ClInclude>
+    <ClInclude Include="Logo.h">
+      <Filter>02. Scene\00. Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="DongKuTestScene.h">
+      <Filter>02. Scene\99. Test_D</Filter>
+    </ClInclude>
+    <ClInclude Include="HaYoonTestScene.h">
+      <Filter>02. Scene\98. Test_H</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectMgr.h">
+      <Filter>97. Managers\01. Object_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Abstract_Factory.h">
+      <Filter>97. Managers\02. Abstract_Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionMgr.h">
+      <Filter>97. Managers\03. Collision_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>97. Managers\00. Device</Filter>
+    </ClInclude>
+    <ClInclude Include="FontMgr.h">
+      <Filter>97. Managers\04. Font_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameMgr.h">
+      <Filter>97. Managers\05. Frame_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerMgr.h">
+      <Filter>97. Managers\06. Timer_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyMgr.h">
+      <Filter>97. Managers\07. Key_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterMgr.h">
+      <Filter>97. Managers\08. Monster_Manger</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTexture.h">
+      <Filter>97. Managers\09. Texture_Manager\01. SingleTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiTexture.h">
+      <Filter>97. Managers\09. Texture_Manager\02. MultiTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>97. Managers\09. Texture_Manager\00. Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMgr.h">
+      <Filter>97. Managers\09. Texture_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="PathMgr.h">
+      <Filter>97. Managers\10. NPC_Path_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderMgr.h">
+      <Filter>97. Managers\11. Render_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMgr.h">
+      <Filter>97. Managers\12. Scene_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollMgr.h">
+      <Filter>97. Managers\13. Scroll_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Crop.h">
+      <Filter>01. Object\04. Crop</Filter>
+    </ClInclude>
     <ClInclude Include="Equipment.h">
-      <Filter>01. Object\98. Public\98. EquipMent</Filter>
+      <Filter>01. Object\05. EquipMent</Filter>
     </ClInclude>
-=======
->>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
->>>>>>> d3a8c36606c471819ac6615586a95476117a41bc
+    <ClInclude Include="Hoe.h">
+      <Filter>01. Object\04. Crop\00. Hoe</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsnip.h">
+      <Filter>01. Object\04. Crop\01. Parsnip</Filter>
+    </ClInclude>
+    <ClInclude Include="Abigail.h">
+      <Filter>01. Object\02. NPC\00. Abigail</Filter>
+    </ClInclude>
+    <ClInclude Include="Alex.h">
+      <Filter>01. Object\02. NPC\01. Alex</Filter>
+    </ClInclude>
+    <ClInclude Include="Caroline.h">
+      <Filter>01. Object\02. NPC\02. Caroline</Filter>
+    </ClInclude>
+    <ClInclude Include="Demetrius.h">
+      <Filter>01. Object\02. NPC\03. Demetrius</Filter>
+    </ClInclude>
+    <ClInclude Include="Elliott.h">
+      <Filter>01. Object\02. NPC\04. Elliott</Filter>
+    </ClInclude>
+    <ClInclude Include="Evelyn.h">
+      <Filter>01. Object\02. NPC\06. Evelyn</Filter>
+    </ClInclude>
+    <ClInclude Include="Emily.h">
+      <Filter>01. Object\02. NPC\05. Emily</Filter>
+    </ClInclude>
+    <ClInclude Include="George.h">
+      <Filter>01. Object\02. NPC\07. George</Filter>
+    </ClInclude>
+    <ClInclude Include="Haley.h">
+      <Filter>01. Object\02. NPC\08. Haley</Filter>
+    </ClInclude>
+    <ClInclude Include="Harvey.h">
+      <Filter>01. Object\02. NPC\09. Harvey</Filter>
+    </ClInclude>
+    <ClInclude Include="Jas.h">
+      <Filter>01. Object\02. NPC\10. Jas</Filter>
+    </ClInclude>
+    <ClInclude Include="Jodi.h">
+      <Filter>01. Object\02. NPC\11. Jodi</Filter>
+    </ClInclude>
+    <ClInclude Include="Kent.h">
+      <Filter>01. Object\02. NPC\12. Kent</Filter>
+    </ClInclude>
+    <ClInclude Include="Leah.h">
+      <Filter>01. Object\02. NPC\13. Leah</Filter>
+    </ClInclude>
+    <ClInclude Include="Lewis.h">
+      <Filter>01. Object\02. NPC\14. Lewis</Filter>
+    </ClInclude>
+    <ClInclude Include="Linus.h">
+      <Filter>01. Object\02. NPC\15. Linus</Filter>
+    </ClInclude>
+    <ClInclude Include="Marcello.h">
+      <Filter>01. Object\02. NPC\16. Marcello</Filter>
+    </ClInclude>
+    <ClInclude Include="Marlon.h">
+      <Filter>01. Object\02. NPC\17. Marlon</Filter>
+    </ClInclude>
+    <ClInclude Include="Marnie.h">
+      <Filter>01. Object\02. NPC\18. Marnie</Filter>
+    </ClInclude>
+    <ClInclude Include="Maru.h">
+      <Filter>01. Object\02. NPC\19. Maru</Filter>
+    </ClInclude>
+    <ClInclude Include="Morris.h">
+      <Filter>01. Object\02. NPC\20. Morris</Filter>
+    </ClInclude>
+    <ClInclude Include="Penny.h">
+      <Filter>01. Object\02. NPC\21. Penny</Filter>
+    </ClInclude>
+    <ClInclude Include="Pierre.h">
+      <Filter>01. Object\02. NPC\22. Pierre</Filter>
+    </ClInclude>
+    <ClInclude Include="Robin.h">
+      <Filter>01. Object\02. NPC\23. Robin</Filter>
+    </ClInclude>
+    <ClInclude Include="Sam.h">
+      <Filter>01. Object\02. NPC\24. Sam</Filter>
+    </ClInclude>
+    <ClInclude Include="Sandy.h">
+      <Filter>01. Object\02. NPC\25. Sandy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sebastian.h">
+      <Filter>01. Object\02. NPC\26. Sabastian</Filter>
+    </ClInclude>
+    <ClInclude Include="Vincent.h">
+      <Filter>01. Object\02. NPC\27. Vincent</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
-      <Filter>99. Default</Filter>
+      <Filter>98. Headers</Filter>
     </Image>
     <Image Include="small.ico">
       <Filter>99. Default</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="00. Main">
-      <UniqueIdentifier>{e5f53c4e-35e3-4e51-b095-f7c0b0c23241}</UniqueIdentifier>
+    <Filter Include="00. MainApp">
+      <UniqueIdentifier>{b662e45a-f7d7-49a1-89d3-f32b2ac2fe0e}</UniqueIdentifier>
     </Filter>
     <Filter Include="99. Default">
-      <UniqueIdentifier>{facbcce5-e0a7-4897-b183-4aceb9efb3a2}</UniqueIdentifier>
+      <UniqueIdentifier>{1c35244a-e713-41ac-8e6c-f9a976ce43da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Headers">
+      <UniqueIdentifier>{4445cac9-877b-4812-9227-a13c8f3f0fb9}</UniqueIdentifier>
     </Filter>
     <Filter Include="01. Object">
-      <UniqueIdentifier>{b07b1a0c-7634-492c-8c40-1c99b90e8b38}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\00. Player">
-      <UniqueIdentifier>{c2dd9868-ab6f-4c20-bc1e-b04ce5ba3e3a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC">
-      <UniqueIdentifier>{46b52bbb-5bbb-43ab-b118-1bd7c437782f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\99. Object">
-      <UniqueIdentifier>{1ed8959c-c3eb-4748-8f93-b8e11adb452d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\98. Public">
-      <UniqueIdentifier>{12842e26-0025-46aa-9875-92ded1d495ec}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\00. Abigail">
-      <UniqueIdentifier>{ca62b12c-eee4-4085-8381-b2e9b4f7438e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\01. Alex">
-      <UniqueIdentifier>{7aa4154c-5e5b-47fb-b171-1086abb4ee34}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\02. Caroline">
-      <UniqueIdentifier>{5f2092db-2063-4676-9ad2-b3e0698e6f15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\03. Demetrius">
-      <UniqueIdentifier>{38b7edad-4f1b-4b97-870f-bfe700f08f16}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\04. Elliott">
-      <UniqueIdentifier>{ece06fc1-f994-4b9d-b6b3-85a5cdc1eb04}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\05. Emily">
-      <UniqueIdentifier>{93595048-4d9a-4336-b6e2-02ac3fcf5a37}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\06. Evelyn">
-      <UniqueIdentifier>{94b97f1a-698d-41ae-ab0f-c26a1f0eeaa4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\07. George">
-      <UniqueIdentifier>{c18b0416-b0b7-4684-820a-0fc8e90494c2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\08. Haley">
-      <UniqueIdentifier>{75e142ad-3469-496f-8d77-92013116fb8a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\09. Harvey">
-      <UniqueIdentifier>{0272d8c7-d207-4194-a396-c8541e89f884}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\10. Jas">
-      <UniqueIdentifier>{46c2d427-5373-4966-bf66-61b6d7a11fcd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\11. Jodi">
-      <UniqueIdentifier>{f22dd63f-96e2-495e-9c25-297c26013b97}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\12. Kent">
-      <UniqueIdentifier>{bc1ba3fc-72e9-4aff-9ceb-6d17e223deed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\13. Leah">
-      <UniqueIdentifier>{aad217a9-e444-430a-b084-c0062f080fbd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\14. Lewis">
-      <UniqueIdentifier>{2c9f20c9-2563-4dc5-8aac-c8222711cfe8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\15. Linus">
-      <UniqueIdentifier>{9d98c952-36c1-4c63-acaa-555ff1f7a91c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\16. Marecello">
-      <UniqueIdentifier>{9d73c2a7-3ab0-4d87-825f-4ef10fdc9f67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\17. Marlon">
-      <UniqueIdentifier>{5f958fa4-6cd0-40c5-a46a-f08e566c1912}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\18. Marnie">
-      <UniqueIdentifier>{4074eb22-f3de-41df-b4fd-4d9297eac292}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\19. Maru">
-      <UniqueIdentifier>{1dd40475-442e-4231-be91-6a4b6dcdbd3b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\20. Morris">
-      <UniqueIdentifier>{bb846839-0593-443c-ba05-0ddc8ea23ebc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\21. Penny">
-      <UniqueIdentifier>{837e7a03-30a5-42fe-905f-da4639f6aa47}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\22. Pierre">
-      <UniqueIdentifier>{69cd523e-9ac8-4741-9db6-c4a14fc843a1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\23. Robin">
-      <UniqueIdentifier>{92fe9270-2e65-4401-92bf-a0c89dcf13d3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\24. Sam">
-      <UniqueIdentifier>{02bea99f-5aad-409c-a39e-b479cd1c835d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\25. Sandy">
-      <UniqueIdentifier>{fbc22670-e1e6-46e6-8913-a9ffba31e86d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\26. Sebastian">
-      <UniqueIdentifier>{68adb9e8-1a37-4a8e-ac29-780cba3ba063}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\01. NPC\27. Vincent">
-      <UniqueIdentifier>{eeeb78e8-4c95-405e-a4f3-0b6022465103}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\98. Public\00. Terrain">
-      <UniqueIdentifier>{e8ee1f6d-585e-43a9-9ab3-cd2ac6a58e3a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\98. Public\01. BackTerrain">
-      <UniqueIdentifier>{07951e51-f2fb-4349-bcaa-3f3ccb27e9bc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\98. Public\02. ReactionTerrain">
-      <UniqueIdentifier>{278f361c-1e4c-40bd-bacb-242c4ce6a903}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\98. Public\99. Camera">
-      <UniqueIdentifier>{2ab47133-78b0-41f9-8f88-323a5b5554ab}</UniqueIdentifier>
+      <UniqueIdentifier>{a72e62e5-0a5f-4540-9557-cb6cf9011575}</UniqueIdentifier>
     </Filter>
     <Filter Include="02. Scene">
-      <UniqueIdentifier>{b8bb1aa6-4a00-4bff-8316-1ec5b4a901d5}</UniqueIdentifier>
+      <UniqueIdentifier>{e2715782-537c-46b6-8782-a3bc4c706d5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\00. Player">
+      <UniqueIdentifier>{5b705583-8ce2-4433-959a-5b30e1f1d7a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Monster">
+      <UniqueIdentifier>{c550ebc7-da41-4c48-a930-73d57e091a59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC">
+      <UniqueIdentifier>{50abc943-b94a-44e5-92f7-7eeab168d664}</UniqueIdentifier>
     </Filter>
     <Filter Include="02. Scene\00. Logo">
-      <UniqueIdentifier>{2cd87590-1fb0-4f27-8812-7fc087edb926}</UniqueIdentifier>
+      <UniqueIdentifier>{fe845a84-9e49-45d9-a12f-ed7d7274b05e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\01. Stage">
-      <UniqueIdentifier>{62c44f91-6897-4535-bcce-ff20bfba1218}</UniqueIdentifier>
+    <Filter Include="02. Scene\01. Room">
+      <UniqueIdentifier>{9406007a-b7f3-4520-b54e-314195648a34}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\02. BusStop">
-      <UniqueIdentifier>{891c26a1-44b3-4380-aa40-86fb5452c6f9}</UniqueIdentifier>
+    <Filter Include="02. Scene\02. Vacant">
+      <UniqueIdentifier>{98afc2bf-6544-4735-97c5-ad6b56cbae67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\03. Town">
-      <UniqueIdentifier>{edf15bd2-67cb-461f-a0b8-034625a00250}</UniqueIdentifier>
+    <Filter Include="02. Scene\03. BusStop">
+      <UniqueIdentifier>{ae89ab9a-f7ce-4426-ba97-4fff85357c37}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\04. Mountain">
-      <UniqueIdentifier>{7730a072-c054-4b9e-8375-242400a55e22}</UniqueIdentifier>
+    <Filter Include="02. Scene\04. Town">
+      <UniqueIdentifier>{2d2ec048-bd43-4d4a-919a-8cf6ab644924}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\05. Beach">
-      <UniqueIdentifier>{317dc3fb-bc45-4421-833e-35274af07b9b}</UniqueIdentifier>
+    <Filter Include="97. Managers">
+      <UniqueIdentifier>{6a1c6b99-ac66-4820-945e-0074722512dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\06. Dessert">
-      <UniqueIdentifier>{126a05d2-153d-4daa-ad4b-2dd8e1845587}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02. Scene\97. MyMap">
-      <UniqueIdentifier>{3811edd9-244d-43d1-84c4-71e99011c09d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02. Scene\98. Hayoon">
-      <UniqueIdentifier>{c0020801-fe30-48a3-90c5-e476568e2833}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers">
-      <UniqueIdentifier>{2d162d9f-ca09-402b-90e6-5202d6c22b81}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\00. Device">
-      <UniqueIdentifier>{431f96f2-3594-433f-9911-1832387490de}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\01. ObjectMgr">
-      <UniqueIdentifier>{79729054-2d2b-4360-b3f6-4ef7bff7cd43}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\02. SceneMgr">
-      <UniqueIdentifier>{f1c85778-580f-4214-8e8f-deda5516d744}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\03. AbstractFactory">
-      <UniqueIdentifier>{d57f8371-44cd-474d-9e5c-baf088cb7681}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\04. CollisionMgr">
-      <UniqueIdentifier>{0a3eeec6-b76b-4bf1-b7e9-8995915f6bf6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\05. FontMgr">
-      <UniqueIdentifier>{8d459673-81f7-4166-ace6-671e7b698447}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\06. FrameMgr">
-      <UniqueIdentifier>{530a734f-7fe2-475a-ab7f-c8837afc937c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\07. TimerMgr">
-      <UniqueIdentifier>{3d5a588f-1694-4924-80ba-1c2686e5e95f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\08. KeyMgr">
-      <UniqueIdentifier>{717e6305-ad03-4dba-90af-a642db13c8e5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\09. MonsterMgr">
-      <UniqueIdentifier>{1004f5be-cc7b-4cb9-9c67-3343cab1756c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\10. PathMgr">
-      <UniqueIdentifier>{3dfb0c1c-dafd-436b-b4a9-f9f64af4b7eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\11. TextureMgr">
-      <UniqueIdentifier>{6494a1be-e86b-4fef-9a45-ebbf9ae942d2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\11. TextureMgr\00. Texture">
-      <UniqueIdentifier>{64f936b3-16e8-40ef-9b38-7b24c623f092}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\11. TextureMgr\00. Texture\00. SingleTexture">
-      <UniqueIdentifier>{366a7387-2417-4da1-98bb-df5dd4606cf8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\11. TextureMgr\00. Texture\01. MultiTexture">
-      <UniqueIdentifier>{2137763f-3ba0-46fd-8f77-9cf70d1728e1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\11. TextureMgr\01. TextureMgr">
-      <UniqueIdentifier>{96b58413-15cb-4ac2-9f0c-eb10dbd16c32}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="98. Managers\12. ScrollMgr">
-      <UniqueIdentifier>{dfc61060-a5c2-40a8-b071-fe1ff4d5596f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="02. Scene\99. DongKu">
-      <UniqueIdentifier>{727dd6ed-ea79-460f-81d7-c84fa565dd73}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\02. Monster">
-      <UniqueIdentifier>{6334b76c-87d4-4c6b-9cbb-f2fe29e0c5cb}</UniqueIdentifier>
+    <Filter Include="01. Object\99. Public">
+      <UniqueIdentifier>{ad20e087-644c-443c-a3be-cbdb1f895b21}</UniqueIdentifier>
     </Filter>
     <Filter Include="01. Object\03. UI">
-      <UniqueIdentifier>{1bfbe0ef-3926-4dca-85b3-85f92cdf62b7}</UniqueIdentifier>
+      <UniqueIdentifier>{275eb824-4d06-4820-a9db-ae91672d63f8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\00. NameTag">
-      <UniqueIdentifier>{a10d4e0a-8f25-4df4-910a-a0465c72bc3c}</UniqueIdentifier>
+    <Filter Include="01. Object\99. Public\00. BackTerrain">
+      <UniqueIdentifier>{4194890b-275d-4b7e-ad4d-244804f1f047}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\01. Inventory">
-      <UniqueIdentifier>{a6c9f978-4594-42ee-b1dc-b034e8054b3d}</UniqueIdentifier>
+    <Filter Include="01. Object\99. Public\01. FrontTerrain">
+      <UniqueIdentifier>{2d535749-1cec-4487-adfc-4393491d9af3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\02. Clock">
-      <UniqueIdentifier>{2810144d-022f-43e5-ada0-09f88c05709e}</UniqueIdentifier>
+    <Filter Include="01. Object\99. Public\02. ReactionTerrain">
+      <UniqueIdentifier>{a330c42e-c5e1-42b3-9d05-ac184a825e00}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\03. ClockHand">
-      <UniqueIdentifier>{6780afa3-1c85-49e3-ad32-664cedcd029d}</UniqueIdentifier>
+    <Filter Include="01. Object\99. Public\04. Map">
+      <UniqueIdentifier>{9318b74c-bbc1-49f2-ac14-db972e121266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\00. Axe">
+      <UniqueIdentifier>{bdf8e0c1-1864-42aa-b4b9-02fcf6c538b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\01. Clock">
+      <UniqueIdentifier>{3c11e647-107c-4aef-8f95-ade974926e99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\02. ClockHand">
+      <UniqueIdentifier>{fc1b9a70-cd5e-454a-b827-8eb8af68f15a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\03. Energy">
+      <UniqueIdentifier>{aa6ffac2-6426-4c27-a8bf-b46677ac7fe4}</UniqueIdentifier>
     </Filter>
     <Filter Include="01. Object\03. UI\04. EnergyGauge">
-      <UniqueIdentifier>{b2ed2b41-3ba2-464c-b43b-6e5623cc70c6}</UniqueIdentifier>
+      <UniqueIdentifier>{f79eac3e-9497-46ea-9a13-e3f4ca83dc69}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\05. Energy">
-      <UniqueIdentifier>{21f56d15-1861-4262-81bc-577853a0a572}</UniqueIdentifier>
+    <Filter Include="01. Object\01. Monster\00. Bat">
+      <UniqueIdentifier>{81d6f6e9-e5cd-405b-8dd7-1089bb87ed9b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\04. Item">
-      <UniqueIdentifier>{d659418b-810d-4628-a15f-1e575b28e75d}</UniqueIdentifier>
+    <Filter Include="02. Scene\99. Test_D">
+      <UniqueIdentifier>{5156b15c-2bab-43d9-a3f3-c33eeffda15d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\04. Item\00. Axe">
-      <UniqueIdentifier>{998aa7e1-405a-44e1-b766-9d1ef720dba6}</UniqueIdentifier>
+    <Filter Include="02. Scene\98. Test_H">
+      <UniqueIdentifier>{808e9556-b9c9-486f-8864-cc476f5107f2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\04. Item\01. Pickaxe">
-      <UniqueIdentifier>{e0e9c1e5-eb3b-402b-9639-d7c34144664d}</UniqueIdentifier>
+    <Filter Include="97. Managers\01. Object_Manager">
+      <UniqueIdentifier>{0542a423-81c3-48c5-88f6-9a37b5bfb430}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\04. Item\02. Hoe">
-      <UniqueIdentifier>{e8e51883-3e32-4c2d-904f-488b3fb771ba}</UniqueIdentifier>
+    <Filter Include="97. Managers\02. Abstract_Factory">
+      <UniqueIdentifier>{ea8452b2-c551-412d-8e0b-9ffe2a5b5ee1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\04. Item\99. ItemList">
-      <UniqueIdentifier>{8e5608ce-1031-4990-88fa-3ec965b168a7}</UniqueIdentifier>
+    <Filter Include="97. Managers\03. Collision_Manager">
+      <UniqueIdentifier>{074c12f5-9402-4533-b450-253ab7d528d0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. Scene\07. Room">
-      <UniqueIdentifier>{ca1bdd7f-d161-4577-bee2-03635d767205}</UniqueIdentifier>
+    <Filter Include="97. Managers\00. Device">
+      <UniqueIdentifier>{4dfba845-e1c7-4a07-bedf-582aa513fc47}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\02. Monster\00. Bat">
-      <UniqueIdentifier>{5d3e5bb6-4c8c-4a3a-ba67-16045ed81bc9}</UniqueIdentifier>
+    <Filter Include="97. Managers\05. Frame_Manager">
+      <UniqueIdentifier>{06af0ef2-4614-4a32-a91a-7daa34203ac2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="98. Managers\13. RenderMgr">
-      <UniqueIdentifier>{fb9be983-58c7-43e0-8964-06f9031b3321}</UniqueIdentifier>
+    <Filter Include="97. Managers\04. Font_Manager">
+      <UniqueIdentifier>{55dc2dba-0210-4fc9-817b-b77163cb96b5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\05. Crop">
-      <UniqueIdentifier>{e8cf9a1f-ba42-42d0-98d8-a1199404cafe}</UniqueIdentifier>
+    <Filter Include="97. Managers\06. Timer_Manager">
+      <UniqueIdentifier>{ca567473-2dff-4a73-aded-1fb156811390}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\99. TextBox">
-      <UniqueIdentifier>{b77d6238-7cde-48fb-b313-126e4ff4c58b}</UniqueIdentifier>
+    <Filter Include="97. Managers\07. Key_Manager">
+      <UniqueIdentifier>{093554fa-40c4-4a4b-a35a-882796994018}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\98. ClickBox">
-      <UniqueIdentifier>{18ef7372-5eb5-4e19-a3d1-98c4e1dc5a0b}</UniqueIdentifier>
+    <Filter Include="97. Managers\08. Monster_Manger">
+      <UniqueIdentifier>{f7e50bfa-3756-4966-969c-cc7be84d1eb5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\03. UI\97. Title">
-      <UniqueIdentifier>{e7841fdd-deb3-4462-9745-e6ffce6f1af6}</UniqueIdentifier>
+    <Filter Include="97. Managers\09. Texture_Manager">
+      <UniqueIdentifier>{ca1d7ef0-0951-4b1a-a75c-a2cccacf5232}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01. Object\98. Public\98. EquipMent">
-      <UniqueIdentifier>{2eac8c29-fea0-412b-8b5c-20f08564b55d}</UniqueIdentifier>
+    <Filter Include="97. Managers\09. Texture_Manager\00. Texture">
+      <UniqueIdentifier>{083a6762-2087-41e5-97f9-445ea0d5b06a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\09. Texture_Manager\01. SingleTexture">
+      <UniqueIdentifier>{7267a730-70f8-4d65-a190-fe76bf9d1fa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\09. Texture_Manager\02. MultiTexture">
+      <UniqueIdentifier>{4dc13642-496b-4349-a268-7809e4376fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\10. NPC_Path_Manager">
+      <UniqueIdentifier>{fee0e395-76e4-4bcb-8baf-3c616c3707be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\11. Render_Manager">
+      <UniqueIdentifier>{f1243d94-7d49-42ef-a9b1-b744b7584734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\12. Scene_Manager">
+      <UniqueIdentifier>{2f32ca3f-9919-460f-9dff-78d47765572d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97. Managers\13. Scroll_Manager">
+      <UniqueIdentifier>{4958f3de-783d-444f-9d9b-7a62599ce300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Crop">
+      <UniqueIdentifier>{36f53ff6-82f0-4bf5-9918-d6799630e410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\05. EquipMent">
+      <UniqueIdentifier>{31ef2f0a-a0cc-404a-9dba-13f19b0018e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\05. Item">
+      <UniqueIdentifier>{9a5d8bad-0a07-469a-8f4a-7172750aed0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\06. PickAxe">
+      <UniqueIdentifier>{d27c9c8f-05ae-4e15-9871-aa3dd39fdac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\07. Inventory">
+      <UniqueIdentifier>{c029e54e-e3e8-4aa2-82c7-3eb4f8e85ba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\08. ClickBox">
+      <UniqueIdentifier>{d3626ea1-d2d7-4254-ab0b-8705c9d3a626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\09. NameTag">
+      <UniqueIdentifier>{23ca263e-534d-419e-97c8-98b24070ae2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\10. TextBox">
+      <UniqueIdentifier>{e449841e-7262-497b-a619-a55fc486a526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\03. UI\11. Title">
+      <UniqueIdentifier>{f3da6e9f-6fb6-433f-8e0e-cd5303eb6ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Crop\00. Hoe">
+      <UniqueIdentifier>{7f3ea2f7-432a-4f66-9911-2ba8770ff050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. System">
+      <UniqueIdentifier>{2cb02c26-dcca-43d8-9601-1c87126a4d1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. System\00. GameTime">
+      <UniqueIdentifier>{8127d6b7-2a4c-4f51-8814-25906dca24bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\04. Crop\01. Parsnip">
+      <UniqueIdentifier>{f114a197-57c3-474d-a833-3d8d7b10a1b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\00. Abigail">
+      <UniqueIdentifier>{7921346e-b8da-41b2-bd34-d7749f452f66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\01. Alex">
+      <UniqueIdentifier>{38aedcb3-6a35-4a9c-bd37-599b02f3fe35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\02. Caroline">
+      <UniqueIdentifier>{d289ebcf-e314-4cb8-9ad9-454e469928db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\03. Demetrius">
+      <UniqueIdentifier>{9018171b-3dec-4e5e-92ed-00317b642e51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\04. Elliott">
+      <UniqueIdentifier>{3165197d-e17b-426c-9c38-b808926c744f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\05. Emily">
+      <UniqueIdentifier>{6d429ace-9dcb-40fe-b72d-4648a7e7d03a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\06. Evelyn">
+      <UniqueIdentifier>{d47b861f-d7d7-4760-9ad3-303a5489c9eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\07. George">
+      <UniqueIdentifier>{e816685a-25c5-47ff-919e-d31edd268487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\08. Haley">
+      <UniqueIdentifier>{56df5079-e617-46aa-9aed-bf1437f996f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\09. Harvey">
+      <UniqueIdentifier>{b52bb21f-6557-4f48-b453-89b22952c5dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\10. Jas">
+      <UniqueIdentifier>{f913e874-9fd2-4c1e-a0c6-cf5a9f77c35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\11. Jodi">
+      <UniqueIdentifier>{cfbf6d29-f621-4e8e-8c36-0338a30b2995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\12. Kent">
+      <UniqueIdentifier>{a4b7f53f-8d06-4f83-8d15-27dbcac3a3e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\13. Leah">
+      <UniqueIdentifier>{109b7233-97a3-44e5-a6cc-1a60b4014eb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\14. Lewis">
+      <UniqueIdentifier>{674b0bb5-a196-439c-ad0e-ebccfa7acd78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\15. Linus">
+      <UniqueIdentifier>{04d2bef0-9131-48a8-ae8a-64cd8ebe8448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\16. Marcello">
+      <UniqueIdentifier>{fcef5aa8-933e-4b2d-8e45-8a8fc3dfd538}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\17. Marlon">
+      <UniqueIdentifier>{41ec3486-b471-43e4-a339-397c86bf8333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\18. Marnie">
+      <UniqueIdentifier>{1e7b1a30-b017-4f18-8a52-4231981d6022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\19. Maru">
+      <UniqueIdentifier>{5c92df33-d264-4807-9aee-3f86476be887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\20. Morris">
+      <UniqueIdentifier>{c1dbdf8c-3107-42c0-88aa-73e552e0e0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\21. Penny">
+      <UniqueIdentifier>{085656e0-00c8-4999-b2ee-9ee124328ec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\22. Pierre">
+      <UniqueIdentifier>{d5124214-a819-446d-b485-6d7263a8f12d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\23. Robin">
+      <UniqueIdentifier>{5825629e-2215-470b-9ad1-a05271f46cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\24. Sam">
+      <UniqueIdentifier>{427abb7c-7169-426b-a239-93802678c418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\25. Sandy">
+      <UniqueIdentifier>{255b0ce9-b976-4b99-aac9-c406786fb2d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\26. Sabastian">
+      <UniqueIdentifier>{b53c3bc5-b8b1-4aa3-9fa2-ed8cd69c3d68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. NPC\27. Vincent">
+      <UniqueIdentifier>{960365f5-ffc7-4eef-a3eb-287f1ab91bab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
-      <Filter>99. Default</Filter>
+      <Filter>98. Headers</Filter>
     </ResourceCompile>
   </ItemGroup>
 </Project>

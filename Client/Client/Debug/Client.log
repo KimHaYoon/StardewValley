@@ -1,87 +1,55 @@
-﻿  stdafx.cpp
+﻿  Player.cpp
+  Item.cpp
+  Inventory.cpp
+  DongKuTestScene.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
   Vincent.cpp
   UI.cpp
   Title.cpp
-  TimerMgr.cpp
-  TextureMgr.cpp
-  Texture.cpp
   TextBox.cpp
-  Terrain.cpp
-  FrameMgr.cpp
-  Device.cpp
-  Stage.cpp
-  SingleTexture.cpp
   Sebastian.cpp
-  ScrollMgr.cpp
   SceneMgr.cpp
-  ObjectMgr.cpp
-  Obj.cpp
-  Scene.cpp
   Sandy.cpp
   Sam.cpp
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  Room.cpp
   Robin.cpp
-  RenderMgr.cpp
-  ReactionTerrain.cpp
-  Player.cpp
   Pierre.cpp
   Pickaxe.cpp
   Penny.cpp
-  PathMgr.cpp
-  Parsnip.cpp
-  NPC.cpp
+  Obj.cpp
   NameTag.cpp
-  MyMap.cpp
-  MultiTexture.cpp
+  NPC.cpp
   Morris.cpp
-  MonsterMgr.cpp
-  Monster.cpp
   Maru.cpp
   Marnie.cpp
   Marlon.cpp
+  Marcello.cpp
   코드를 생성하고 있습니다...
   컴파일하고 있습니다...
-  Marcello.cpp
-  MainApp.cpp
   Logo.cpp
   Linus.cpp
   Lewis.cpp
   Leah.cpp
-  KeyMgr.cpp
   Kent.cpp
   Jodi.cpp
   Jas.cpp
-  Item.cpp
-  Inventory.cpp
   Hoe.cpp
-  HaYoonTestScene.cpp
   Harvey.cpp
   Haley.cpp
+  HaYoonTestScene.cpp
   George.cpp
-  GameTime.cpp
-  FontMgr.cpp
   Evelyn.cpp
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  Equipment.cpp
   EnergyGauge.cpp
   Energy.cpp
   Emily.cpp
   Elliott.cpp
-  DongKuTestScene.cpp
   Demetrius.cpp
-  Crop.cpp
-  CollisionMgr.cpp
   ClockHand.cpp
   Clock.cpp
-  Client.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
   ClickBox.cpp
   Caroline.cpp
-  Camera.cpp
-  Bat.cpp
-  BackTerrain.cpp
   Axe.cpp
   Alex.cpp
   Abigail.cpp
