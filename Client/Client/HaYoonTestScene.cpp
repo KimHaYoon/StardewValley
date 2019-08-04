@@ -5,7 +5,7 @@
 #include "GameTime.h"
 #include "BackTerrain.h"
 #include "Terrain.h"
-#include "Crop.h"
+#include "CropManager.h"
 
 CHaYoonTestScene::CHaYoonTestScene()
 {
@@ -19,7 +19,7 @@ CHaYoonTestScene::~CHaYoonTestScene()
 	delete m_pGameTime;
 	m_pGameTime = NULL;
 
-	CCrop::GetInstance()->DestroyInstance();
+	CCropManager::GetInstance()->DestroyInstance();
 }
 
 HRESULT CHaYoonTestScene::Init()
@@ -50,7 +50,7 @@ HRESULT CHaYoonTestScene::Init()
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_UI );
 
-	CCrop::GetInstance()->LoadCropInfo();
+	CCropManager::GetInstance()->LoadCropInfo();
 
 	return S_OK;
 }

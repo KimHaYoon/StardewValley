@@ -241,6 +241,9 @@
     <ClCompile Include="Client.cpp">
       <Filter>99. Default</Filter>
     </ClCompile>
+    <ClCompile Include="CropManager.cpp">
+      <Filter>01. Object\04. Crop</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NPC.h">
@@ -494,6 +497,9 @@
     </ClInclude>
     <ClInclude Include="Client.h">
       <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="CropManager.h">
+      <Filter>01. Object\04. Crop</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
