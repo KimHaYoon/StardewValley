@@ -19,5 +19,6 @@ public:
 
 private:
 	CropInfo* m_tCropInfo;
+	wstring strTemp{};
 };
 

@@ -16,6 +16,7 @@ HRESULT CCrop::Init()
 {
 	m_tInfo.vPos = { 100.f, 100.f,0.f };
 	m_tInfo.vSize = { 1.f,1.f,0.f };
+
 	m_strObjectKey = L"Crop";
 	m_strStateKey = L"";
 	m_fSpeed = 10.f;
@@ -61,12 +62,12 @@ HRESULT CCrop::Init( OBJECT_ID eID )
 	return CCrop::Init();
 }
 
-void CCrop::SetCropName( const string & strName )
-{
-	wstring strTemp{ };
-	strTemp.assign( strName.begin(), strName.end() );
+void CCrop::SetCropName(const string& strName)
+{	
+ 	strTemp.assign( strName.begin(), strName.end() );
+ 
+ 	m_strStateKey = const_cast< TCHAR * >( strTemp.c_str() );
 
-	m_strStateKey = const_cast< TCHAR * >( strTemp.c_str() );
-
-	m_tCropInfo = CCropManager::GetInstance()->FindCropInfo( strName );
+	//m_strStateKey = const_cast<_tchar *>(strName);
+	m_tCropInfo = CCropManager::GetInstance()->FindCropInfo( strName );	
 }
