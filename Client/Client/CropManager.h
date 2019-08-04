@@ -7,6 +7,7 @@ public:
 	~CCropManager();
 
 	void LoadCropInfo();
+	CropInfo* FindCropInfo( const string& strName );
 
 private:
 	map<string, CropInfo*>		m_mapCrop[SEASON_END];

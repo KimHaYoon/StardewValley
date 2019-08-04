@@ -100,3 +100,26 @@ void CCropManager::LoadCropInfo()
 
 	int a = 0;
 }
+
+CropInfo * CCropManager::FindCropInfo( const string & strName )
+{
+	CropInfo* tInfo = NULL;
+
+	for ( int i = 0; i < SEASON_END; ++i )
+	{
+		auto iter = m_mapCrop[i].find( strName );
+
+		if ( iter == m_mapCrop[i].end() )
+		{
+			continue;
+		}
+
+		else
+		{
+			tInfo = iter->second;
+			break;
+		}
+	}
+
+	return tInfo;
+}
