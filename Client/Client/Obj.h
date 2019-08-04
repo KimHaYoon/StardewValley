@@ -27,7 +27,10 @@ public:
 	_vec3				GetCollSize() { return m_ObjCollSize; }
 public:
 	TCHAR*			GetObjectKey() { return m_strObjectKey; }
+public:
+	_int			GetCheckNum() { return m_iCheckNum; }
 protected:
+	_int			m_iCheckNum = 100;
 	UNITIFNO		m_tInfo;
 	_float			m_fSpeed=0.f;
 	FRAME			m_tFrame;

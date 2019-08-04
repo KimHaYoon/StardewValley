@@ -16,6 +16,6 @@ public:
 private:
 	void CheckClick();
 private:
-	_int m_iBtnIdx = 0;
+	_int	m_iBtnIdx = 0;
 };
 

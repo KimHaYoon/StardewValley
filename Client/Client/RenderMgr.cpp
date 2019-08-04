@@ -10,13 +10,13 @@ CRenderMgr::CRenderMgr()
 
 CRenderMgr::~CRenderMgr()
 {
-	for (int i = 0; i < LAYER_ID_END; ++i)
-	{
-		for (auto& iter : m_RenderLst[i])
-		{
-			SafeDelete(iter);
-		}
-	}
+// 	for (int i = 0; i < LAYER_ID_END; ++i)
+// 	{
+// 		for (auto& iter : m_RenderLst[i])
+// 		{
+// 			SafeDelete(iter);
+// 		}
+// 	}
 }
 
 HRESULT CRenderMgr::AddRenderObect(CObj * pObj, LAYER_ID eID)
@@ -97,14 +97,15 @@ void CRenderMgr::Release()
 		auto& iter = m_RenderLst[i].begin();
 		for (; iter != m_RenderLst[i].end(); )
 		{
-			if (*iter == nullptr)
+			if (iter[0]->GetCheckNum()!=100)
 			{
-
+				iter = m_RenderLst[i].erase(iter);
 			}
 			else
 				++iter;
 		}
 	}
+	_int i = 0;
 }
 
 void CRenderMgr::Release_RenderObj(OBJECT_ID eID)

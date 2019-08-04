@@ -24,10 +24,12 @@ HRESULT CRoom::Init()
 
 void CRoom::Update(const _float & fTimeDelta)
 {
+	CObjectMgr::GetInstance()->Update(fTimeDelta);
 }
 
 void CRoom::LateUpdate(const _float & fTimeDelta)
 {
+	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
 }
 
 void CRoom::Render()

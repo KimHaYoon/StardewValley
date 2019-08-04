@@ -191,6 +191,11 @@ void CLogo::Update(const _float& fTimeDelta)
 void CLogo::LateUpdate(const _float& fTimeDelta)
 {
 	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
+	if (CSceneMgr::GetInstance()->GetCheckRelease() == true)
+	{
+		CSceneMgr::GetInstance()->GetCheckRelease() = false;
+		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_ROOM);
+	}
 }
 
 void CLogo::Render()
@@ -200,5 +205,5 @@ void CLogo::Render()
 
 void CLogo::Release()
 {
-	//CObjectMgr::GetInstance()->Release();
+	CObjectMgr::GetInstance()->Release();
 }

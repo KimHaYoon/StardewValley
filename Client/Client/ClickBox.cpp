@@ -97,7 +97,8 @@ void CClickBox::CheckClick()
 		{
 			if (this->GetIdxofTitle() == 0)
 			{
-				CSceneMgr::GetInstance()->SceneChange(SCENE_ID_ROOM);
+				CSceneMgr::GetInstance()->GetCheckRelease() = true;
+				
 			}
 			else if (this->GetIdxofTitle() == 1)
 			{
