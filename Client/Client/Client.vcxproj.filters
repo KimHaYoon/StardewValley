@@ -224,6 +224,12 @@
       <Filter>98. Managers\13. RenderMgr</Filter>
     </ClCompile>
     <ClCompile Include="GameTime.cpp" />
+<<<<<<< HEAD
+    <ClCompile Include="Crop.cpp">
+      <Filter>01. Object\05. Crop</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsnip.cpp" />
+=======
     <ClCompile Include="Crop.cpp" />
     <ClCompile Include="TextBox.cpp">
       <Filter>01. Object\03. UI\99. TextBox</Filter>
@@ -234,9 +240,13 @@
     <ClCompile Include="Title.cpp">
       <Filter>01. Object\03. UI\97. Title</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Equipment.cpp">
       <Filter>01. Object\98. Public\98. EquipMent</Filter>
     </ClCompile>
+=======
+>>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
+>>>>>>> d3a8c36606c471819ac6615586a95476117a41bc
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alex.h">
@@ -474,6 +484,12 @@
       <Filter>98. Managers\13. RenderMgr</Filter>
     </ClInclude>
     <ClInclude Include="GameTime.h" />
+<<<<<<< HEAD
+    <ClInclude Include="Crop.h">
+      <Filter>01. Object\05. Crop</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsnip.h" />
+=======
     <ClInclude Include="Crop.h" />
     <ClInclude Include="TextBox.h">
       <Filter>01. Object\03. UI\99. TextBox</Filter>
@@ -484,9 +500,13 @@
     <ClInclude Include="Title.h">
       <Filter>01. Object\03. UI\97. Title</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Equipment.h">
       <Filter>01. Object\98. Public\98. EquipMent</Filter>
     </ClInclude>
+=======
+>>>>>>> f5368d3072ead5a15838e6dca7abaa129f4d9a28
+>>>>>>> d3a8c36606c471819ac6615586a95476117a41bc
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
