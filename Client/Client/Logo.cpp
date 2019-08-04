@@ -182,8 +182,8 @@ HRESULT CLogo::Init()
 
 void CLogo::Update(const _float& fTimeDelta)
 {
-	if (CKeyMgr::GetInstance()->KeyDown(KEY_RETURN))
-		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_DONGKU);
+// 	if (CKeyMgr::GetInstance()->KeyDown(KEY_RETURN))
+// 		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_DONGKU);
 
 	CObjectMgr::GetInstance()->Update(fTimeDelta);
 }
