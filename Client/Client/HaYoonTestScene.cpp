@@ -53,11 +53,11 @@ HRESULT CHaYoonTestScene::Init()
 
 	CCropManager::GetInstance()->LoadCropInfo();
 
-	/*pObj = CAbstractFactory<CCrop>::CreateObj( OBJECT_ID_CROP );
+	pObj = CAbstractFactory<CCrop>::CreateObj( OBJECT_ID_CROP );
 	if ( nullptr == pObj )
 		return E_FAIL;
 	( ( CCrop* )pObj )->SetCropName( "Parsnip" );
-	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_CROP );*/
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_CROP );
 
 	return S_OK;
 }

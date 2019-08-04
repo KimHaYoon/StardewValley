@@ -79,4 +79,13 @@ typedef struct tagCropInfo
 	int			iDate;
 	bool		bBig;
 	int			iCycle;
+
+	tagCropInfo() 
+	{
+		iSellPrice = 0;
+		iDate = 0;
+		bBig = false;
+		iCycle = 0;
+	}
+
 }CropInfo;

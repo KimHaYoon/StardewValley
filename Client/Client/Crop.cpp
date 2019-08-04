@@ -17,6 +17,7 @@ HRESULT CCrop::Init()
 	m_tInfo.vPos = { 100.f, 100.f,0.f };
 	m_tInfo.vSize = { 1.f,1.f,0.f };
 	m_strObjectKey = L"Crop";
+	m_strStateKey = L"";
 	m_fSpeed = 10.f;
 	m_tFrame = { 0.f, 4.f };
 
@@ -36,7 +37,7 @@ void CCrop::LateUpdate( const _float & fTimeDelta )
 
 void CCrop::Render()
 {
-	if ( !m_strStateKey )
+	if ( m_strStateKey == L"")
 		return;
 
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
