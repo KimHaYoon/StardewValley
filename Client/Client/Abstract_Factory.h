@@ -44,18 +44,18 @@ public:
 	}
 
 
-	static CObj* CreateObj(LAYER_ID eID)
-	{
-		CObj* pObject = new T;
-
-		if (FAILED(pObject->Init(eID)))
-		{
-			SafeDelete(pObject);
-			return nullptr;
-		}
-
-		return pObject;
-	}
+// 	static CObj* CreateObj(LAYER_ID eID)
+// 	{
+// 		CObj* pObject = new T;
+// 
+// 		if (FAILED(pObject->Init(eID)))
+// 		{
+// 			SafeDelete(pObject);
+// 			return nullptr;
+// 		}
+// 
+// 		return pObject;
+// 	}
 
 	static CObj* CreateObj(_vec3 vPos, _tchar* pName)
 	{

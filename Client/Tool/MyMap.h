@@ -20,6 +20,9 @@ public:
 	void	SetRatio(D3DXMATRIX* pOut, float fRatioX, float fRatioY);
 
 	_int			m_iMapNum = 0;
+public:
+	_float			m_fX = 0.f;
+	_float			m_fY = 0.f;
 private:
 	CToolView*		m_pViewWnd;
 

@@ -28,14 +28,19 @@ public:
 	afx_msg void OnBnClickedTileSave();
 	afx_msg void OnBnClickedTileLoad();
 	afx_msg void OnBnClickedApply();
-
+	afx_msg void OnBnClickedClear();
+	afx_msg void OnBnClickedPos();
 public:
 	CButton m_RadioMap[10];
 public:
 	CTerrain*			  m_pTile;
 	CButton m_RadioSeason[4];
-	afx_msg void OnBnClickedClear();
 	CButton m_RadioReaction[2];
+	CString m_strInputX;
+	CString m_strInputY;
+public:
+	_int	m_iInputX = 0;
+	_int	m_iInputY = 0;
 public:
 	_bool		m_bReactionCheck = false;
 };

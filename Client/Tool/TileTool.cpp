@@ -20,6 +20,8 @@ IMPLEMENT_DYNAMIC(CTileTool, CDialog)
 
 CTileTool::CTileTool(CWnd* pParent /*=NULL*/)
 	: CDialog(IDD_TILETOOL, pParent)
+	, m_strInputX(_T(""))
+	, m_strInputY(_T(""))
 {
 
 }
@@ -47,6 +49,8 @@ void CTileTool::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_RADIO6, m_RadioSeason[3]);
 	DDX_Control(pDX, IDC_RADIO16, m_RadioReaction[0]);
 	DDX_Control(pDX, IDC_RADIO17, m_RadioReaction[1]);
+	DDX_Text(pDX, IDC_EDIT1, m_strInputX);
+	DDX_Text(pDX, IDC_EDIT4, m_strInputY);
 }
 
 
@@ -57,6 +61,7 @@ BEGIN_MESSAGE_MAP(CTileTool, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON8, &CTileTool::OnBnClickedTileLoad)
 	ON_BN_CLICKED(IDC_BUTTON10, &CTileTool::OnBnClickedApply)
 	ON_BN_CLICKED(IDC_BUTTON13, &CTileTool::OnBnClickedClear)
+	ON_BN_CLICKED(IDC_BUTTON1, &CTileTool::OnBnClickedPos)
 END_MESSAGE_MAP()
 
 BOOL CTileTool::OnInitDialog()
@@ -281,4 +286,22 @@ void CTileTool::OnBnClickedClear()
 		iter->byDrawID = 2100;
 	}
 	pView->Invalidate(FALSE);
+}
+
+
+void CTileTool::OnBnClickedPos()
+{
+	UpdateData(TRUE);
+	m_iInputX = _ttoi(m_strInputX);
+	m_iInputY = _ttoi(m_strInputY);
+
+
+	CMainFrame* pMainFrm = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
+	CToolView* pView = dynamic_cast<CToolView*>(pMainFrm->m_MainSplt.GetPane(0, 1));
+
+	pView->m_pMap->m_fX	= m_iInputX;
+	pView->m_pMap->m_fY = m_iInputY;
+
+	pView->Invalidate(FALSE);
+	UpdateData(FALSE);
 }

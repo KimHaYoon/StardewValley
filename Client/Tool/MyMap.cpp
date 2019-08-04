@@ -38,8 +38,8 @@ void CMyMap::Render()
 
 	D3DXMatrixScaling(&matScale, 1.f, 1.f, 0.f);
 	D3DXMatrixTranslation(&matTrans,
-		0.f - m_pViewWnd->GetScrollPos(0),
-		0.f - m_pViewWnd->GetScrollPos(1),
+		m_fX - m_pViewWnd->GetScrollPos(0),
+		m_fY - m_pViewWnd->GetScrollPos(1),
 		0.f);
 
 	matWorld = matScale * matTrans;
@@ -50,9 +50,13 @@ void CMyMap::Render()
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 		L"Map", L"Map", m_iMapNum);
 	NULL_CHECK_VOID(pTexInfo);
+	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
+	float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
 
-	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture,
-		nullptr, &D3DXVECTOR3(0, 0, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+
+
+	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
 
 void CMyMap::MiniRender(float fRatio)

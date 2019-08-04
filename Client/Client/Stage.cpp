@@ -36,10 +36,12 @@ HRESULT CStage::Init()
 
 void CStage::Update(const _float& fTimeDelta)
 {
+	CObjectMgr::GetInstance()->Update(fTimeDelta);
 }
 
 void CStage::LateUpdate(const _float& fTimeDelta)
 {
+	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
 }
 
 void CStage::Render()
@@ -48,4 +50,5 @@ void CStage::Render()
 
 void CStage::Release()
 {
+	CObjectMgr::GetInstance()->Release();
 }

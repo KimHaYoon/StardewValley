@@ -20,35 +20,19 @@ HRESULT CMyMap::Init()
 
 _int CMyMap::Update(const _float& fTimeDelta)
 {
-	return NO_ERROR;
+	_matrix matTrans, matScale;
+	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
+	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
+	D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x - vScroll.x, m_tInfo.vPos.y - vScroll.y, 0.f);
+
+	m_tInfo.matWorld = matScale * matTrans;
+	return NO_EVENT;
 }
 void CMyMap::LateUpdate(const _float& fTimeDelta)
 {
-	CObj::MoveFrame();
 }
 void CMyMap::Render()
 {
-	D3DXMATRIX matScale, matTrans, matWorld;
-	TCHAR szBuf[MIN_STR] = L"";
-
-	RECT rc = {};
-
-	float fCurWinCX = float(rc.right - rc.left);
-	float fCurWinCY = float(rc.bottom - rc.top);
-
-	float fRatioX = WINCX / fCurWinCX;
-	float fRatioY = WINCY / fCurWinCY;
-
-	D3DXMatrixScaling(&matScale, 3.f, 3.f, 0.f);
-	D3DXMatrixTranslation(&matTrans,
-		0.f,
-		0.f,
-		0.f);
-
-	matWorld = matScale * matTrans;
-
-
-
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 		L"MapImage", L"Map", m_iMapNum);
 	NULL_CHECK_VOID(pTexInfo);
@@ -56,7 +40,7 @@ void CMyMap::Render()
 	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
 	float fCenterY = pTexInfo->tImgInfo.Height * 0.5f;
 
-	CDevice::GetInstance()->GetSprite()->SetTransform(&matWorld);
+	CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
 	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
 		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
@@ -67,6 +51,16 @@ void CMyMap::Release()
 HRESULT CMyMap::Init(OBJECT_ID eID, _int iNum)
 {
 	m_iMapNum = iNum;
-	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_6);
+	if (iNum == 0)
+	{
+		m_tInfo.vPos = { 400.f,300.f,0.f };
+		m_tInfo.vSize = {1.f,1.f,0.f};
+	}
+	else if (iNum == 10)
+	{
+		m_tInfo.vPos = {0.f,0.f,0.f};
+		m_tInfo.vSize = { 3.f,3.f,0.f };
+	}
+	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_1);
 	return S_OK;
 }
