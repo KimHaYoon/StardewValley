@@ -22,10 +22,10 @@ public:
 private:
 	_int			m_iIdx = 2100;
 private:
-	vector<TILE*>	m_vecTile;
+	vector<TILE_DESC*>	m_vecTile;
 	TILE*			m_pTile = nullptr;
 	CObj*			m_pTarget;
 public:
-	vector<TILE*>&  GetTile() { return m_vecTile; }
+	vector<TILE_DESC*>&  GetTile() { return m_vecTile; }
 };
 

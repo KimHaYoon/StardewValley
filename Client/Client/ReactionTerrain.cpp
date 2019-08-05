@@ -73,7 +73,7 @@ void CReactionTerrain::Render()
 
 void CReactionTerrain::Release()
 {
-	for_each(m_vecTile.begin(), m_vecTile.end(), SafeDelete<TILE*>);
+	for_each(m_vecTile.begin(), m_vecTile.end(), SafeDelete<TILE_DESC*>);
 	m_vecTile.clear();
 	m_vecTile.shrink_to_fit();
 }
@@ -92,7 +92,7 @@ HRESULT CReactionTerrain::Init(const _tchar * pFilePath, OBJECT_ID eID)
 
 HRESULT CReactionTerrain::LoadData(const _tchar * pFilePath)
 {
-	for_each(m_vecTile.begin(), m_vecTile.end(), SafeDelete<TILE*>);
+	for_each(m_vecTile.begin(), m_vecTile.end(), SafeDelete<TILE_DESC*>);
 	m_vecTile.clear();
 	m_vecTile.shrink_to_fit();
 
@@ -100,17 +100,35 @@ HRESULT CReactionTerrain::LoadData(const _tchar * pFilePath)
 	fFile = CreateFile(pFilePath, GENERIC_READ, 0, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
 
 	DWORD dwByte = 0;
-	TILE* pTile = nullptr;
+	TILE_DESC* pTile = nullptr;
 	TILE t = {};
-
+	
+	_int	iTempFront = 0;
+	_int	iTempBack = 0;
 	while (true)
 	{
+		_int	iFrontTileCnt = 0;
+		_int	iBackTileCnt = 0;
 		ReadFile(fFile, &t, sizeof(TILE), &dwByte, nullptr);
 
+		if (t.byDrawID == 2103)
+		{
+			iFrontTileCnt = iTempFront;
+			iFrontTileCnt++;	
+			iTempFront = iFrontTileCnt;
+		}
+		else if (t.byDrawID == 2102)
+		{
+			iBackTileCnt = iTempBack;
+			iBackTileCnt++;
+			iTempBack = iBackTileCnt;
+		}
 		if (0 == dwByte)
 			break;
 
-		pTile = new TILE(t);
+		pTile = new TILE_DESC(t);
+		pTile->iFrontTileNum = iFrontTileCnt;
+		pTile->iBackTileNum = iBackTileCnt;
 		m_vecTile.push_back(pTile);
 	}
 

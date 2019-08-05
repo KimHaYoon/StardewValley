@@ -45,6 +45,24 @@ typedef struct tagTile
 	bool		AlphaCheck=true;
 }TILE;
 
+typedef struct tagTile_Desc :public tagTile
+{
+	int iFrontTileNum=0;
+	int iBackTileNum=0;
+public:
+	tagTile_Desc() {}
+	tagTile_Desc(TILE tTile)
+	{
+		wcscpy_s(this->ObjKey, tTile.ObjKey);
+		wcscpy_s(this->StateKey, tTile.StateKey);
+		this->vPos = tTile.vPos;
+		this->vSize = tTile.vSize;
+		this->byDrawID = tTile.byDrawID;
+		this->byOption = tTile.byOption;
+		this->AlphaCheck = tTile.AlphaCheck;
+	}
+}TILE_DESC;
+
 
 typedef struct tagNPCInfo
 {

@@ -75,5 +75,4 @@ using namespace std;
 
 
 //Console
-
 //#pragma comment(linker,"/entry:wWinMainCRTStartup /subsystem:console")

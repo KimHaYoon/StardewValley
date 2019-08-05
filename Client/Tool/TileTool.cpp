@@ -150,6 +150,7 @@ void CTileTool::OnBnClickedTileSave()
 
 void CTileTool::OnBnClickedTileLoad()
 {
+	UpdateData(TRUE);
 	CFileDialog Dlg(TRUE, L"dat", L"제목없음.dat", OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,
 		L"Data Files(*.dat)|*.dat||", this);
 
@@ -188,7 +189,7 @@ void CTileTool::OnBnClickedTileLoad()
 			ReadFile(hFile, &pT, sizeof(TILE), &dwByte, nullptr);
 
 			int j = m_pTile->GetTile().size();
-
+											
 			if (0 == dwByte)
 				break;
 
