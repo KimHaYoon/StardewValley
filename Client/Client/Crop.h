@@ -19,6 +19,10 @@ public:
 
 private:
 	CropInfo* m_tCropInfo;
-	wstring strTemp{};
+	wstring m_strTemp{};
+	int			m_iCurrentDate;
+	int			m_iBaseDate;
+	int			m_iSubDate;
+	bool		m_bHarvest;
 };
 

@@ -52,12 +52,12 @@ void CCropManager::LoadCropInfo()
 				{
 					if ( iCount == 0 )
 					{
-						strTag = strTemp;
+						tInfo->strName = strTemp;
 					}
 
 					else if ( iCount == 1 )
 					{
-						tInfo->strName = strTemp;
+						tInfo->iFrame = atoi( strTemp.c_str() );
 					}
 
 					else if ( iCount == 2 )

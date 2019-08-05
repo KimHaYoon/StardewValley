@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "GameTime.h"
 
+_IMPLEMENT_SINGLETON( CGameTime )
+
 CGameTime::CGameTime()
 {
 	m_fTime = 0.f;
@@ -69,4 +71,9 @@ void CGameTime::Input()
 		m_iDate += 1;
 		m_bChangeDay = true;
 	}
+}
+
+int  CGameTime::GetCurrentDate() const
+{
+	return m_iDate;
 }

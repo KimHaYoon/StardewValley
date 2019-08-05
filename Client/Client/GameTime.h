@@ -1,6 +1,8 @@
 #pragma once
 class CGameTime
 {
+	_DECLARE_SINGLETON( CGameTime )
+
 public:
 	CGameTime();
 	~CGameTime();
@@ -18,5 +20,7 @@ private:
 public:
 	void Update( const _float& fDeltaTime );
 	void Input();
+
+	int GetCurrentDate() const;
 };
 

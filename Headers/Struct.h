@@ -93,6 +93,7 @@ typedef struct tagSeedInfo
 typedef struct tagCropInfo
 {
 	string		strName;
+	int			iFrame;
 	int			iSellPrice;
 	int			iDate;
 	bool		bBig;
@@ -100,6 +101,8 @@ typedef struct tagCropInfo
 
 	tagCropInfo() 
 	{
+		strName = {};
+		iFrame = 0;
 		iSellPrice = 0;
 		iDate = 0;
 		bBig = false;

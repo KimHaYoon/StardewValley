@@ -13,7 +13,5 @@ public:
 	virtual void Render() override;
 	virtual void Release() override;
 
-private:
-	class CGameTime* m_pGameTime;
 };
 

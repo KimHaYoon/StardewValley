@@ -10,16 +10,12 @@
 
 CHaYoonTestScene::CHaYoonTestScene()
 {
-	m_pGameTime = new CGameTime;
-
 }
 
 
 CHaYoonTestScene::~CHaYoonTestScene()
 {
-	delete m_pGameTime;
-	m_pGameTime = NULL;
-
+	CGameTime::GetInstance()->DestroyInstance();
 	CCropManager::GetInstance()->DestroyInstance();
 }
 
@@ -64,8 +60,8 @@ HRESULT CHaYoonTestScene::Init()
 
 void CHaYoonTestScene::Update( const _float & fTimeDelta )
 {
-	m_pGameTime->Update( fTimeDelta );
-	m_pGameTime->Input( );
+	CGameTime::GetInstance()->Update( fTimeDelta );
+	CGameTime::GetInstance()->Input( );
 	CObjectMgr::GetInstance()->Update( fTimeDelta );
 }
 
