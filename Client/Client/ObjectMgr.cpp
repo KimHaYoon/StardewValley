@@ -80,6 +80,23 @@ void CObjectMgr::Release_Group(OBJECT_ID eID)
 	CRenderMgr::GetInstance()->Release();
 }
 
+void CObjectMgr::Release_NonePlayer()
+{
+	for (int i = 0; i < OBJECT_ID_END; ++i)
+	{
+		if(i==OBJECT_ID_PLAYER)
+			continue;
+		if (i==OBJECT_ID_UI)
+			continue;
+		for (auto& iter : m_listObject[i])
+		{
+			SafeDelete(iter);
+		}
+		m_listObject[i].clear();
+	}
+	CRenderMgr::GetInstance()->Release();
+}
+
 CObj* CObjectMgr::GetNPC(const _tchar * pName)
 {
 	for (auto& iter : m_listObject[OBJECT_ID_NPC])

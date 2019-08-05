@@ -20,10 +20,10 @@ CRoom::~CRoom()
 
 HRESULT CRoom::Init()
 {
-	CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_UI, 0);
+	CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_MAP, 0);
 	if (pObj == nullptr)
 		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
+	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_MAP);
 
 	pObj = CAbstractFactory<CPlayer>::CreateObj(OBJECT_ID_PLAYER);
 	if (pObj == nullptr)
@@ -45,9 +45,10 @@ void CRoom::Update(const _float & fTimeDelta)
 void CRoom::LateUpdate(const _float & fTimeDelta)
 {
 	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
-	if (CSceneMgr::GetInstance()->GetCheckRelease() == true)
+
+	if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_FRONT)
 	{
-		CSceneMgr::GetInstance()->GetCheckRelease() = false;
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END);
 		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_STAGE);
 	}
 }
@@ -59,6 +60,6 @@ void CRoom::Render()
 
 void CRoom::Release()
 {
-	CObjectMgr::GetInstance()->Release();
+	CObjectMgr::GetInstance()->Release_NonePlayer();
 }
 

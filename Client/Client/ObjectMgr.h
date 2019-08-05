@@ -14,6 +14,7 @@ public:
 	void			Release();
 public:
 	void			Release_Group(OBJECT_ID eID);
+	void			Release_NonePlayer();
 public:
 	list<CObj*>		&GetNPCList() { return m_listObject[OBJECT_ID_NPC]; }
 	list<CObj*>		&GetMonsterList() { return m_listObject[OBJECT_ID_MONSTER]; }

@@ -33,6 +33,7 @@ void CMyMap::LateUpdate(const _float& fTimeDelta)
 }
 void CMyMap::Render()
 {
+
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 		L"MapImage", L"Map", m_iMapNum);
 	NULL_CHECK_VOID(pTexInfo);

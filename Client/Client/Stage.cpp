@@ -17,6 +17,7 @@ CStage::~CStage()
 
 HRESULT CStage::Init()
 {
+	CScrollMgr::SetScrolling(_vec3{56.f, -24.f,0.f});
 	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Back.dat");
 	if (nullptr == pObj)
 		return E_FAIL;
@@ -50,5 +51,5 @@ void CStage::Render()
 
 void CStage::Release()
 {
-	CObjectMgr::GetInstance()->Release();
+	CObjectMgr::GetInstance()->CObjectMgr::GetInstance()->Release_NonePlayer();
 }

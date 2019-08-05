@@ -97,8 +97,7 @@ void CClickBox::CheckClick()
 		{
 			if (this->GetIdxofTitle() == 0)
 			{
-				CSceneMgr::GetInstance()->GetCheckRelease() = true;
-				
+				CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_FRONT);
 			}
 			else if (this->GetIdxofTitle() == 1)
 			{

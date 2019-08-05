@@ -157,21 +157,21 @@ HRESULT CLogo::Init()
 // 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
 
 
-		CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_UI, 10);
+		CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_MAP, 10);
 		if (pObj == nullptr)
 			return E_FAIL;
-		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
-		 pObj = CAbstractFactory<CTitle>::CreateObj(OBJECT_ID_UI);
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_MAP);
+		 pObj = CAbstractFactory<CTitle>::CreateObj(OBJECT_ID_MENU);
 		if (pObj == nullptr)
 			return E_FAIL;
-		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_MENU);
 
 		for (int i = 0; i < 4; ++i)
 		{
-			pObj = CAbstractFactory<CClickBox>::CreateObj(OBJECT_ID_UI, i);
+			pObj = CAbstractFactory<CClickBox>::CreateObj(OBJECT_ID_MENU, i);
 			if (pObj == nullptr)
 				return E_FAIL;
-			CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_UI);
+			CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_MENU);
 
 		}
 
@@ -191,9 +191,9 @@ void CLogo::Update(const _float& fTimeDelta)
 void CLogo::LateUpdate(const _float& fTimeDelta)
 {
 	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
-	if (CSceneMgr::GetInstance()->GetCheckRelease() == true)
+	if (CSceneMgr::GetInstance()->GetPass_ID() ==PASS_ID_FRONT)
 	{
-		CSceneMgr::GetInstance()->GetCheckRelease() = false;
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END);
 		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_ROOM);
 	}
 }
@@ -205,5 +205,5 @@ void CLogo::Render()
 
 void CLogo::Release()
 {
-	CObjectMgr::GetInstance()->Release();
+	CObjectMgr::GetInstance()->Release_NonePlayer();
 }

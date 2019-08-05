@@ -159,9 +159,13 @@ void CReactionTerrain::TileCollision()
 						CScrollMgr::SetScroll(D3DXVECTOR3{ fMoveX, 0.f, 0.f });
 					}
 				}
+				if (m_vecTile[iIndex]->byDrawID == 2102)
+				{
+
+				}
 				if (m_vecTile[iIndex]->byDrawID == 2103)
 				{
-					CSceneMgr::GetInstance()->GetCheckRelease() = true;
+					CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_FRONT);
 				}
 			}
 
