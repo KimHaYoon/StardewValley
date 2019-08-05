@@ -416,9 +416,33 @@ void CInventory::Click(const _float& x, const _float& y)
 	//cout << x << " | " << y << endl;
 }
 
-void CInventory::EndClick()
+void CInventory::EndClick(const _float& x, const _float& y)
 {
-	if (m_pItem[m_nItemIndex][m_nItemIndexLine])
-		dynamic_cast<CItem*>(m_pItem[m_nItemIndex][m_nItemIndexLine])->SetIndex(m_nOrginIndexLine, m_nOrginIndex);
+	if (m_pItem[m_nItemIndexLine][m_nItemIndex])
+	{
+		if (m_bActive)
+		{
+
+		}
+		else
+		{
+			for (int i = 0; i < 12; ++i)
+			{
+				if (i == m_nItemIndex)
+					continue;
+				D3DXVECTOR3 vPos = { ((float)(WINCX) / 5.15f) + (WINCX / 17.85f * i),
+						(float)(WINCY)-(30.f * (float)WINCX / 1920.f * 3.f), 0.f };
+
+				if (vPos.x - (20.f) < x && vPos.x + (20.f) > x && vPos.y - (20.f) < y && vPos.y + (20.f) > y)
+				{
+					/*dynamic_cast<CItem*>(m_pItem[m_nItemIndexLine][m_nItemIndex])->SetIndex(0, i);
+					dynamic_cast<CItem*>(m_pItem[0][i])->SetIndex(m_nOrginIndexLine, m_nOrginIndex);*/
+					break;
+				}
+			}
+		}
+		//CItem* pItem = dynamic_cast<CItem*>(m_pItem[m_nItemIndexLine][m_nItemIndex]);
+		//pItem->SetIndex(m_nOrginIndexLine, m_nOrginIndex);
+	}
 	m_bSelect = false;
 }

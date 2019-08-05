@@ -35,6 +35,6 @@ public:
 	bool GetActive() { return m_bActive; }
 	void Drag(const _float& x, const _float& y);
 	void Click(const _float& x, const _float& y);
-	void EndClick();
+	void EndClick(const _float& x, const _float& y);
 };
 
