@@ -1,8 +1,8 @@
 #pragma once
 #include "Scene.h"
-#include <iostream>
-using namespace std;
-/*#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")*/
+//#include <iostream>
+//using namespace std;
+//#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
 
 class CDongKuTestScene :
 	public CScene

@@ -210,7 +210,6 @@ void CPlayer::LateUpdate(const _float& fTimeDelta)
 void CPlayer::Render()
 {
 	D3DXMATRIX matScale, matTrans;
-	cout << CScrollMgr::GetScroll().x << " " << CScrollMgr::GetScroll().y << endl;
 	D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 	D3DXMatrixTranslation(&matTrans,
 		m_tInfo.vPos.x,
@@ -257,7 +256,7 @@ void CPlayer::Click()
 	GetCursorPos(&pt);
 	ScreenToClient(g_hWnd, &pt);
 
-	//dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
+	dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
 }
 
 void CPlayer::EndClick()
@@ -266,5 +265,5 @@ void CPlayer::EndClick()
 	GetCursorPos(&pt);
 	ScreenToClient(g_hWnd, &pt);
 
-	//dynamic_cast<CInventory*>(m_pInven)->EndClick((float)pt.x, (float)pt.y);
+	dynamic_cast<CInventory*>(m_pInven)->EndClick((float)pt.x, (float)pt.y);
 }

@@ -90,6 +90,18 @@ HRESULT CInventory::Init(OBJECT_ID eID)
 	CObjectMgr::GetInstance()->AddObject(m_pItem[0][4], OBJECT_ID_UI);
 	dynamic_cast<CItem*>(m_pItem[0][4])->SetIndex(0, 4);
 
+	m_pItem[0][7] = CAbstractFactory<CHoe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[0][7] == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pItem[0][7], OBJECT_ID_UI);
+	dynamic_cast<CItem*>(m_pItem[0][7])->SetIndex(0, 7);
+
+	m_pItem[0][10] = CAbstractFactory<CHoe>::CreateObj(OBJECT_ID_UI);
+	if (m_pItem[0][10] == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pItem[0][10], OBJECT_ID_UI);
+	dynamic_cast<CItem*>(m_pItem[0][10])->SetIndex(0, 10);
+
 
 	return S_OK;
 }
@@ -390,39 +402,93 @@ void CInventory::Drag(const _float& x, const _float& y)
 void CInventory::Click(const _float& x, const _float& y)
 {
 	_float fSize = (float)WINCX / 1920.f;
-	if (m_bActive)
+	if (m_bActive) // 인벤창이 켜져있을 때
 	{
+		for (int i = 0; i < 3; ++i)
+		{
+			for (int j = 0; j < 12; ++j)
+			{
+				if (m_pItem[i][j])
+				{
+					_float fx = ((float)(WINCX) / 4.55f) + (WINCX / 19.65f * j);
+					_float fy;
 
+					if (i == 0)
+						fy = ((float)(WINCY) / 3.75f);
+					else
+						fy = ((float)(WINCY) / 2.85f) + (WINCY / 14.f * (i - 1));
+					D3DXVECTOR3 vPos = { fx, fy, 0.f };
+
+					if (vPos.x - (20.f) < x && vPos.x + (20.f) > x && vPos.y - (20.f) < y && vPos.y + (20.f) > y)
+					{
+						m_bSelect = true;
+						dynamic_cast<CItem*>(m_pItem[i][j])->SelectOn();
+						m_nItemIndex = j;
+						m_nItemIndexLine = i;
+						break;
+					}
+				}
+			}
+		}
 	}
-	else
+	else // 퀵슬릇에서만
 	{
 		for (int i = 0; i < 12; ++i)
 		{
 			if (m_pItem[0][i])
 			{
-				D3DXVECTOR3 vPos = m_pItem[0][i]->GetInfo().vPos;
+				//D3DXVECTOR3 vPos = m_pItem[0][i]->GetInfo().vPos;
+				D3DXVECTOR3 vPos = { ((float)(WINCX) / 5.15f) + (WINCX / 17.85f * i),
+						(float)(WINCY)-(30.f * (float)WINCX / 1920.f * 3.f), 0.f };
 				if (vPos.x - (20.f) < x && vPos.x + (20.f) > x && vPos.y - (20.f) < y && vPos.y + (20.f) > y)
 				{
 					m_bSelect = true;
+					dynamic_cast<CItem*>(m_pItem[0][i])->SelectOn();
 					m_nItemIndex = i;
 					m_nItemIndexLine = 0;
-					m_nOrginIndex = i;
-					m_nOrginIndexLine = 0;
 					break;
 				}
 			}
 		}
 	}
-	//cout << x << " | " << y << endl;
 }
 
 void CInventory::EndClick(const _float& x, const _float& y)
 {
 	if (m_pItem[m_nItemIndexLine][m_nItemIndex])
 	{
-		if (m_bActive)
+		if (m_bActive) // 인벤창이 켜져있을 때
 		{
+			for (int i = 0; i < 3; ++i)
+			{
+				for (int j = 0; j < 12; ++j)
+				{
+					if (i == m_nItemIndexLine && j == m_nItemIndex)
+						continue;
+					_float fx = ((float)(WINCX) / 4.55f) + (WINCX / 19.65f * j);
+					_float fy;
 
+					if (i == 0)
+						fy = ((float)(WINCY) / 3.75f);
+					else
+						fy = ((float)(WINCY) / 2.85f) + (WINCY / 14.f * (i - 1));
+					D3DXVECTOR3 vPos = { fx, fy, 0.f };
+
+					if (vPos.x - (20.f / 1.25f) < x && vPos.x + (20.f / 1.25f) > x && vPos.y - (20.f / 1.25f) < y && vPos.y + (20.f / 1.25f) > y)
+					{
+						CObj* tTempItem = m_pItem[i][j];
+						m_pItem[i][j] = m_pItem[m_nItemIndexLine][m_nItemIndex];
+						m_pItem[m_nItemIndexLine][m_nItemIndex] = tTempItem;
+						if (m_pItem[m_nItemIndexLine][m_nItemIndex])
+							dynamic_cast<CItem*>(m_pItem[m_nItemIndexLine][m_nItemIndex])->SetIndex(m_nItemIndexLine, m_nItemIndex);
+						if (m_pItem[i][j])
+							dynamic_cast<CItem*>(m_pItem[i][j])->SetIndex(i, j);
+						m_nItemIndex = j;
+						m_nItemIndexLine = i;
+						break;
+					}
+				}
+			}
 		}
 		else
 		{
@@ -435,14 +501,24 @@ void CInventory::EndClick(const _float& x, const _float& y)
 
 				if (vPos.x - (20.f) < x && vPos.x + (20.f) > x && vPos.y - (20.f) < y && vPos.y + (20.f) > y)
 				{
-					/*dynamic_cast<CItem*>(m_pItem[m_nItemIndexLine][m_nItemIndex])->SetIndex(0, i);
-					dynamic_cast<CItem*>(m_pItem[0][i])->SetIndex(m_nOrginIndexLine, m_nOrginIndex);*/
+					CObj* tTempItem = m_pItem[0][i];
+					m_pItem[0][i] = m_pItem[m_nItemIndexLine][m_nItemIndex];
+					m_pItem[m_nItemIndexLine][m_nItemIndex] = tTempItem;
+					if (m_pItem[m_nItemIndexLine][m_nItemIndex])
+						dynamic_cast<CItem*>(m_pItem[m_nItemIndexLine][m_nItemIndex])->SetIndex(m_nItemIndexLine, m_nItemIndex);
+					if (m_pItem[0][i])
+						dynamic_cast<CItem*>(m_pItem[0][i])->SetIndex(0, i);
+					m_nItemIndex = i;
+					m_nItemIndexLine = 0;
 					break;
 				}
 			}
 		}
 		//CItem* pItem = dynamic_cast<CItem*>(m_pItem[m_nItemIndexLine][m_nItemIndex]);
 		//pItem->SetIndex(m_nOrginIndexLine, m_nOrginIndex);
+		dynamic_cast<CItem*>(m_pItem[m_nItemIndexLine][m_nItemIndex])->SelectOff();
+		m_nItemIndex = -1;
+		m_nItemIndexLine = -1;
 	}
 	m_bSelect = false;
 }

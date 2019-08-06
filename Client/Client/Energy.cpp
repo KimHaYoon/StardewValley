@@ -22,6 +22,7 @@ HRESULT CEnergy::Init(OBJECT_ID eID)
 {
 	_float fSize = (float)WINCX / 1920.f * 1.8f;
 	m_fMaxEnergyScale = fSize * 1.2f;
+	m_fEnergy = 1000.f;
 	m_tInfo.vPos = { WINCX - (35.f * fSize), WINCY - (20.5f * fSize), 0.f };
 	m_tInfo.vSize = { fSize, m_fMaxEnergyScale, 0.f };
 
@@ -38,9 +39,13 @@ HRESULT CEnergy::Init(OBJECT_ID eID)
 
 _int CEnergy::Update(const _float & fTimeDelta)
 {
-	m_tInfo.vSize.y -= m_fMaxEnergyScale / 1000.f;
-	if (m_tInfo.vSize.y <= 0.f)
+	m_tInfo.vSize.y = m_fMaxEnergyScale / 1000.f * m_fEnergy;
+	m_fEnergy -= 1.f;
+	if (m_fEnergy <= 0.f)
+	{
 		m_tInfo.vSize.y = m_fMaxEnergyScale;
+		m_fEnergy = 1000.f;
+	}
 	return NO_EVENT;
 }
 
@@ -63,6 +68,7 @@ void CEnergy::Render()
 	float fCenterY = (float)pTexInfo->tImgInfo.Height;
 
 	CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
+
 	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
 		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 }

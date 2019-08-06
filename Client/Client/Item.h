@@ -21,6 +21,8 @@ protected:
 
 	_int			m_nIndex;
 	_int			m_nIndexLine;
+
+	_bool			m_bSelect = false;
 public:
 	CItem();
 	virtual ~CItem();
@@ -32,4 +34,7 @@ public:
 	virtual void Release() PURE;
 
 	void SetIndex(_int line, _int index);
+
+	void SelectOn() { m_bSelect = true; }
+	void SelectOff() { m_bSelect = false; }
 };
