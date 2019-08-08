@@ -10,13 +10,7 @@ CRenderMgr::CRenderMgr()
 
 CRenderMgr::~CRenderMgr()
 {
-// 	for (int i = 0; i < LAYER_ID_END; ++i)
-// 	{
-// 		for (auto& iter : m_RenderLst[i])
-// 		{
-// 			SafeDelete(iter);
-// 		}
-// 	}
+	Release();
 }
 
 HRESULT CRenderMgr::AddRenderObect(CObj * pObj, LAYER_ID eID)
@@ -40,54 +34,57 @@ void CRenderMgr::RenderGroup()
 void CRenderMgr::Render_Layer_1()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_1])
-	{
 		iter->Render();
-		//SafeDelete(iter);
-	}
 }
 
 void CRenderMgr::Render_Layer_2()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_2])
-	{
 		iter->Render();
-		//SafeDelete(iter);
-	}
 }
 
 void CRenderMgr::Render_Layer_3()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_3])
-	{
 		iter->Render();
-		//SafeDelete(iter);
-	}
 }
 
 void CRenderMgr::Render_Layer_4()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_4])
-	{
 		iter->Render();
-		//SafeDelete(iter);
-	}
 }
 
 void CRenderMgr::Render_Layer_5()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_5])
-	{
 		iter->Render();
-		//SafeDelete(iter);
-	}
 }
 
 void CRenderMgr::Render_Layer_6()
 {
 	for (auto& iter : m_RenderLst[LAYER_ID_6])
+		iter->Render();	
+}
+void CRenderMgr::Update_Renderer()
+{
+	if (bCheckOfRenderer)
 	{
-		iter->Render();
-		//SafeDelete(iter);
+		for (int i = 0; i < LAYER_ID_END; ++i)
+		{
+			auto& iter = m_RenderLst[i].begin();
+			for (; iter != m_RenderLst[i].end(); )
+			{
+				if (iter[0]->GetCheckNum() != 100)
+				{
+					iter = m_RenderLst[i].erase(iter);
+				}
+				else
+					++iter;
+			}
+		}
+
+		bCheckOfRenderer = false;
 	}
 }
 void CRenderMgr::Release()
@@ -97,7 +94,7 @@ void CRenderMgr::Release()
 		auto& iter = m_RenderLst[i].begin();
 		for (; iter != m_RenderLst[i].end(); )
 		{
-			if (iter[0]->GetCheckNum()!=100)
+			if (iter[0]->GetCheckNum() != 100)
 			{
 				iter = m_RenderLst[i].erase(iter);
 			}
@@ -105,22 +102,6 @@ void CRenderMgr::Release()
 				++iter;
 		}
 	}
-	_int i = 0;
 }
 
-void CRenderMgr::Release_RenderObj(OBJECT_ID eID)
-{
-	for (int i = 0; i < LAYER_ID_END; ++i)
-	{
-		auto& iter = m_RenderLst[i].begin();
-		for (; iter != m_RenderLst[i].end();)
-		{
-			if (iter[0]->GetObjectID() == eID)
-			{
-				
-			}
-			else
-				++iter;
-		}
-	}
-}
+

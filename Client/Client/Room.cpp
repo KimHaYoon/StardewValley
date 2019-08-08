@@ -20,20 +20,32 @@ CRoom::~CRoom()
 
 HRESULT CRoom::Init()
 {
+	CObjectMgr::GetInstance()->Release_NonePlayer();
+	CRenderMgr::GetInstance()->Update_Renderer();
+	if(CSceneMgr::GetInstance()->GetPass_ID()==PASS_ID_BACK)
+		CScrollMgr::SetScrolling(_vec3{ 0.f,0.f,0.f });
+	else if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_FRONT)
+	{
+		CScrollMgr::SetScrolling(_vec3{ 0.f,0.f,0.f });
+		CObj* pObj = CAbstractFactory<CPlayer>::CreateObj(OBJECT_ID_PLAYER);
+		if (pObj == nullptr)
+			return E_FAIL;
+		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_PLAYER);
+	}
+
 	CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_MAP, 0);
 	if (pObj == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_MAP);
 
-	pObj = CAbstractFactory<CPlayer>::CreateObj(OBJECT_ID_PLAYER);
-	if (pObj == nullptr)
-		return E_FAIL;
-	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_PLAYER);
+
 
 	pObj = CAbstractFactory<CReactionTerrain>::CreateObj(L"../Data/Tile/Room/Room_Tile_Reaction.dat");
 	if (pObj == nullptr)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_TERRAIN);
+
+
 	return S_OK;
 }
 
@@ -48,8 +60,8 @@ void CRoom::LateUpdate(const _float & fTimeDelta)
 
 	if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_FRONT)
 	{
-		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END);
-		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_STAGE);
+		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetNextScene());
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
 	}
 }
 
@@ -60,6 +72,6 @@ void CRoom::Render()
 
 void CRoom::Release()
 {
-	CObjectMgr::GetInstance()->Release_NonePlayer();
+
 }
 

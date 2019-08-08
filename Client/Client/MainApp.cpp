@@ -18,7 +18,7 @@ HRESULT CMainApp::Initialize()
 	if (FAILED(CDevice::GetInstance()->InitDevice()))
 		return E_FAIL;
 
-	if (FAILED(CSceneMgr::GetInstance()->SceneChange(SCENE_ID_HAYOON)))
+	if (FAILED(CSceneMgr::GetInstance()->SceneChange(SCENE_ID_LOGO)))
 	{
 		ERR_MSG(L"Scene change Failed!!");
 		return E_FAIL;
@@ -36,8 +36,6 @@ void CMainApp::Update()
 	m_fTimeDelta=CTimerMgr::GetInstance()->GetDeltaTime();
 	CKeyMgr::GetInstance()->Update();
 	CSceneMgr::GetInstance()->Update(m_fTimeDelta);
-
-
 }
 
 void CMainApp::LateUpdate()
@@ -77,6 +75,8 @@ void CMainApp::Release()
 	CTextureMgr::GetInstance()->DestroyInstance();	//
 	CFrameMgr::GetInstance()->DestroyInstance();//
 	CTimerMgr::GetInstance()->DestroyInstance();//
+	CCollisionMgr::GetInstance()->DestroyInstance();
+	CMonsterMgr::GetInstance()->DestroyInstance();
 	CDevice::GetInstance()->DestroyInstance();//
 }
 

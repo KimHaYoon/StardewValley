@@ -60,34 +60,34 @@ HRESULT CLogo::Init()
 
 	//PathFile
 	{
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Abigail/Abigail%d.dat", L"Abigail", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Alex/Alex%d.dat", L"Alex", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Caroline/Caroline%d.dat", L"Caroline", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Demetrius/Demetrius%d.dat", L"Demetrius", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Elliott/Elliott%d.dat", L"Elliott", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Emily/Emily%d.dat", L"Emily", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Evelyn/Evelyn%d.dat", L"Evelyn", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/George/George%d.dat", L"George", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Haley/Haley%d.dat", L"Haley", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Harvey/Harvey%d.dat", L"Harvey", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Jas/Jas%d.dat", L"Jas", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Jodi/Jodi%d.dat", L"Jodi", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Kent/Kent%d.dat", L"Kent", 1)))
-			return E_FAIL;
-		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Leah/Leah%d.dat", L"Leah", 1)))
-			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Abigail/Abigail%d.dat", L"Abigail", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Alex/Alex%d.dat", L"Alex", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Caroline/Caroline%d.dat", L"Caroline", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Demetrius/Demetrius%d.dat", L"Demetrius", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Elliott/Elliott%d.dat", L"Elliott", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Emily/Emily%d.dat", L"Emily", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Evelyn/Evelyn%d.dat", L"Evelyn", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/George/George%d.dat", L"George", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Haley/Haley%d.dat", L"Haley", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Harvey/Harvey%d.dat", L"Harvey", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Jas/Jas%d.dat", L"Jas", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Jodi/Jodi%d.dat", L"Jodi", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Kent/Kent%d.dat", L"Kent", 1)))
+// 			return E_FAIL;
+// 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Leah/Leah%d.dat", L"Leah", 1)))
+// 			return E_FAIL;
 	}
 
 
@@ -156,11 +156,11 @@ HRESULT CLogo::Init()
 // 			return E_FAIL;
 // 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_NPC);
 
-
 		CObj* pObj = CAbstractFactory<CMyMap>::CreateObj(OBJECT_ID_MAP, 10);
 		if (pObj == nullptr)
 			return E_FAIL;
 		CObjectMgr::GetInstance()->AddObject(pObj, OBJECT_ID_MAP);
+
 		 pObj = CAbstractFactory<CTitle>::CreateObj(OBJECT_ID_MENU);
 		if (pObj == nullptr)
 			return E_FAIL;
@@ -182,9 +182,6 @@ HRESULT CLogo::Init()
 
 void CLogo::Update(const _float& fTimeDelta)
 {
-// 	if (CKeyMgr::GetInstance()->KeyDown(KEY_RETURN))
-// 		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_DONGKU);
-
 	CObjectMgr::GetInstance()->Update(fTimeDelta);
 }
 
@@ -193,8 +190,8 @@ void CLogo::LateUpdate(const _float& fTimeDelta)
 	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
 	if (CSceneMgr::GetInstance()->GetPass_ID() ==PASS_ID_FRONT)
 	{
-		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END);
-		CSceneMgr::GetInstance()->SceneChange(SCENE_ID_ROOM);
+		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetNextScene());
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
 	}
 }
 
@@ -205,5 +202,5 @@ void CLogo::Render()
 
 void CLogo::Release()
 {
-	CObjectMgr::GetInstance()->Release_NonePlayer();
+	
 }

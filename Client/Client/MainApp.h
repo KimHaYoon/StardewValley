@@ -14,5 +14,6 @@ private:
 	void KeyInput(const _float& fTimeDelta);
 private:
 	_float		m_fTimeDelta=0.f;
+
 };
 

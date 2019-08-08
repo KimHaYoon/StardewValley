@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Bat.h"
-#include "MonsterMgr.h"
+
 
 
 CBat::CBat()

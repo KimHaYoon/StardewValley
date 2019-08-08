@@ -19,7 +19,7 @@ CSceneMgr::~CSceneMgr()
 
 HRESULT CSceneMgr::SceneChange(SCENE_ID eCurScene)
 {
-	if (m_ePreScene != eCurScene)
+	if (m_eTempScene != eCurScene)
 	{
 		SafeDelete(m_pScene);
 
@@ -47,10 +47,9 @@ HRESULT CSceneMgr::SceneChange(SCENE_ID eCurScene)
 			ERR_MSG(L"Scene Create Failed");
 			return E_FAIL;
 		}
-
-		m_eCurScene = eCurScene;
-		m_ePreScene = eCurScene;
 	}
+	m_eCurScene = eCurScene;
+	m_eTempScene = eCurScene;
 
 	return S_OK;
 }
@@ -73,4 +72,17 @@ void CSceneMgr::Render()
 void CSceneMgr::Release()
 {
 	SafeDelete(m_pScene);
+}
+
+void CSceneMgr::SetPass_ID(PASS_ID eID, SCENE_ID eNextSceneID, SCENE_ID ePreSceneID)
+{
+	m_ePass_ID = eID;
+	m_eNextScene = eNextSceneID;
+	m_ePreScene = ePreSceneID;
+}
+
+void CSceneMgr::SetTileNum(_int iFrontTileNum, _int iBackTileNum)
+{
+	m_iBackTileNum = iBackTileNum;
+	m_iFrontTileNum = iFrontTileNum;
 }

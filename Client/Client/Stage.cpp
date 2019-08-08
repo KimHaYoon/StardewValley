@@ -13,11 +13,22 @@ CStage::CStage()
 
 CStage::~CStage()
 {
+	Release();
 }
 
 HRESULT CStage::Init()
 {
-	CScrollMgr::SetScrolling(_vec3{56.f, -24.f,0.f});
+	CObjectMgr::GetInstance()->Release_NonePlayer();
+	CRenderMgr::GetInstance()->Update_Renderer();
+	if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_FRONT)
+		CScrollMgr::SetScrolling(_vec3{56.f, -24.f,0.f});
+	if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_BACK)
+	{
+		if (CSceneMgr::GetInstance()->GetBackTileNum() == 1)
+		{
+			// 전에 있던 scene중에서 밟은 BackTileNum을 가져옴
+		}
+	}
 	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Back.dat");
 	if (nullptr == pObj)
 		return E_FAIL;
@@ -43,6 +54,17 @@ void CStage::Update(const _float& fTimeDelta)
 void CStage::LateUpdate(const _float& fTimeDelta)
 {
 	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
+
+	if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_FRONT)
+	{
+		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetNextScene());
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
+	}
+	else if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_BACK)
+	{
+		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetPreScene());
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
+	}
 }
 
 void CStage::Render()

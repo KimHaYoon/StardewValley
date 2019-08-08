@@ -2,7 +2,7 @@
 class CMonsterMgr
 {
 	_DECLARE_SINGLETON(CMonsterMgr)
-public:
+private:
 	CMonsterMgr();
 	~CMonsterMgr();
 

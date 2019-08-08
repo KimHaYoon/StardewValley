@@ -69,7 +69,7 @@ void CObjectMgr::Release()
 		}
 		m_listObject[i].clear();
 	}
-	CRenderMgr::GetInstance()->Release();
+	bCheckOfRenderer = true;
 }
 
 
@@ -77,7 +77,7 @@ void CObjectMgr::Release_Group(OBJECT_ID eID)
 {
 	for_each(m_listObject[eID].begin(), m_listObject[eID].end(), SafeDelete<CObj*>);
 	m_listObject[eID].clear();
-	CRenderMgr::GetInstance()->Release();
+	bCheckOfRenderer = true;
 }
 
 void CObjectMgr::Release_NonePlayer()
@@ -86,7 +86,7 @@ void CObjectMgr::Release_NonePlayer()
 	{
 		if(i==OBJECT_ID_PLAYER)
 			continue;
-		if (i==OBJECT_ID_UI)
+		if (i == OBJECT_ID_UI)
 			continue;
 		for (auto& iter : m_listObject[i])
 		{
@@ -94,7 +94,7 @@ void CObjectMgr::Release_NonePlayer()
 		}
 		m_listObject[i].clear();
 	}
-	CRenderMgr::GetInstance()->Release();
+	bCheckOfRenderer = true;
 }
 
 CObj* CObjectMgr::GetNPC(const _tchar * pName)

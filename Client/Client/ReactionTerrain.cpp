@@ -177,14 +177,81 @@ void CReactionTerrain::TileCollision()
 						CScrollMgr::SetScroll(D3DXVECTOR3{ fMoveX, 0.f, 0.f });
 					}
 				}
-				if (m_vecTile[iIndex]->byDrawID == 2102)
+				if (m_vecTile[iIndex]->byDrawID == 2102)		//Backward
 				{
+					if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_ROOM)
+					{
+						// 없음
+					}
+					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_STAGE)
+					{
+						if (m_vecTile[iIndex]->iBackTileNum == 1)
+						{
+							
+							CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_BACK, SCENE_ID_END, SCENE_ID_ROOM);
+						}
+					}
+					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_BUSSTOP)
+					{
 
+					}
 				}
-				if (m_vecTile[iIndex]->byDrawID == 2103)
+				if (m_vecTile[iIndex]->byDrawID == 2103)		//forward
 				{
-					CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_FRONT);
+					if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_ROOM)
+					{
+						if (m_vecTile[iIndex]->iFrontTileNum == 1)
+						{
+							CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_FRONT, SCENE_ID_STAGE, SCENE_ID_END);
+						}
+					}
+					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_STAGE)
+					{
+						if (m_vecTile[iIndex]->iFrontTileNum == 1)
+						{
+							// ?
+						}
+						if (m_vecTile[iIndex]->iFrontTileNum == 2)
+						{
+							// Dungeon
+						}
+						if (m_vecTile[iIndex]->iFrontTileNum == 3)
+						{
+							// Dungeon
+						}
+						if (m_vecTile[iIndex]->iFrontTileNum == 4)
+						{
+							CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_FRONT, SCENE_ID_BUSSTOP, SCENE_ID_END);
+						}
+						if (m_vecTile[iIndex]->iFrontTileNum == 5)
+						{
+							// beach
+						}
+					}
+					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_BUSSTOP)
+					{
+						if (m_vecTile[iIndex]->iFrontTileNum == 1)
+						{
+							// Vacant
+						}
+						if (m_vecTile[iIndex]->iFrontTileNum == 2)
+						{
+							// Town
+						}
+					}
+					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_TOWN)
+					{
+						// 들어갈 수 있는 타일 못가는 타일 선택
+					}
+					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_MOUNTAIN)
+					{
+
+					}
+					//CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_FRONT);
 				}
+
+
+				CSceneMgr::GetInstance()->SetTileNum(m_vecTile[iIndex]->iFrontTileNum, m_vecTile[iIndex]->iBackTileNum);
 			}
 
 			// NPC

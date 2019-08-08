@@ -256,7 +256,7 @@ void CPlayer::Click()
 	GetCursorPos(&pt);
 	ScreenToClient(g_hWnd, &pt);
 
-	dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
+	//dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
 }
 
 void CPlayer::EndClick()
@@ -265,5 +265,5 @@ void CPlayer::EndClick()
 	GetCursorPos(&pt);
 	ScreenToClient(g_hWnd, &pt);
 
-	dynamic_cast<CInventory*>(m_pInven)->EndClick((float)pt.x, (float)pt.y);
+	//dynamic_cast<CInventory*>(m_pInven)->EndClick((float)pt.x, (float)pt.y);
 }
