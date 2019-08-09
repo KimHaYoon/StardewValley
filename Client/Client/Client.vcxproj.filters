@@ -244,6 +244,9 @@
     <ClCompile Include="CropManager.cpp">
       <Filter>01. Object\04. Crop</Filter>
     </ClCompile>
+    <ClCompile Include="BusStop.cpp">
+      <Filter>02. Scene\03. BusStop</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NPC.h">
@@ -500,6 +503,9 @@
     </ClInclude>
     <ClInclude Include="CropManager.h">
       <Filter>01. Object\04. Crop</Filter>
+    </ClInclude>
+    <ClInclude Include="BusStop.h">
+      <Filter>02. Scene\03. BusStop</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

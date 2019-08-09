@@ -163,6 +163,7 @@
     <ClInclude Include="Axe.h" />
     <ClInclude Include="BackTerrain.h" />
     <ClInclude Include="Bat.h" />
+    <ClInclude Include="BusStop.h" />
     <ClInclude Include="Caroline.h" />
     <ClInclude Include="ClickBox.h" />
     <ClInclude Include="Client.h" />
@@ -249,6 +250,7 @@
     <ClCompile Include="Axe.cpp" />
     <ClCompile Include="BackTerrain.cpp" />
     <ClCompile Include="Bat.cpp" />
+    <ClCompile Include="BusStop.cpp" />
     <ClCompile Include="Caroline.cpp" />
     <ClCompile Include="CropManager.cpp" />
     <ClCompile Include="ClickBox.cpp" />

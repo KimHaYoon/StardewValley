@@ -73,5 +73,4 @@ void CStage::Render()
 
 void CStage::Release()
 {
-	CObjectMgr::GetInstance()->CObjectMgr::GetInstance()->Release_NonePlayer();
 }
