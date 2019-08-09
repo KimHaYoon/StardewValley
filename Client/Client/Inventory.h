@@ -34,5 +34,7 @@ public:
 	void Drag(const _float& x, const _float& y);
 	void Click(const _float& x, const _float& y);
 	void EndClick(const _float& x, const _float& y);
+
+	void ActiveItem(const _float& x, const _float& y);
 };
 

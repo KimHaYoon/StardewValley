@@ -14,5 +14,7 @@ public:
 	virtual void Release() override;
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
+
+	virtual void Active(const _float& x, const _float& y);
 };
 

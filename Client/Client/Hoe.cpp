@@ -60,3 +60,14 @@ void CHoe::Release()
 {
 }
 
+void CHoe::Active(const _float& x, const _float& y)
+{
+	D3DXVECTOR3 vPos = CObjectMgr::GetInstance()->GetPlayer()->GetInfo().vPos;
+	vPos -= D3DXVECTOR3(x, y, 0.f);
+
+	_float length = D3DXVec3Length(&vPos);
+	if (length < 40.f) // ¶¥ °³°£
+	{
+
+	}
+}

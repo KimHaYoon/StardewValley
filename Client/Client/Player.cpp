@@ -93,8 +93,6 @@ _int CPlayer::Update(const _float& fTimeDelta)
 {
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_LBUTTON))
 	{
-		if (m_pEquip && m_bPause)
-			dynamic_cast<CEquipment*>(m_pEquip)->SetActive();
 		m_bDrag = true;
 		Click();
 	}
@@ -256,7 +254,10 @@ void CPlayer::Click()
 	GetCursorPos(&pt);
 	ScreenToClient(g_hWnd, &pt);
 
-	//dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
+	dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
+
+	if (m_pInven && m_bPause)
+		ActiveItem((float)pt.x, (float)pt.y);
 }
 
 void CPlayer::EndClick()
@@ -265,5 +266,10 @@ void CPlayer::EndClick()
 	GetCursorPos(&pt);
 	ScreenToClient(g_hWnd, &pt);
 
-	//dynamic_cast<CInventory*>(m_pInven)->EndClick((float)pt.x, (float)pt.y);
+	dynamic_cast<CInventory*>(m_pInven)->EndClick((float)pt.x, (float)pt.y);
+}
+
+void CPlayer::ActiveItem(const _float& x, const _float& y)
+{
+	dynamic_cast<CInventory*>(m_pInven)->ActiveItem(x, y);
 }

@@ -32,6 +32,7 @@ public:
 	virtual void LateUpdate(const _float & fTimeDelta) PURE;
 	virtual void Render();
 	virtual void Release() PURE;
+	virtual void Active(const _float& x, const _float& y) PURE;
 
 	void SetIndex(_int line, _int index);
 

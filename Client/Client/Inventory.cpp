@@ -233,7 +233,8 @@ void CInventory::Render()
 			NULL_CHECK_VOID(pTexInfo);
 
 			UNITIFNO tInfo = m_tInfo;
-			tInfo.vSize = { (float)WINCX / 1920.f , (float)WINCY / 1020.f, 0.f };
+			tInfo.vPos = { (float)WINCX / 2.f, (float)WINCY / 2.f, 0.f };
+			tInfo.vSize = { 2.f, 2.f, 0.f };
 
 			_matrix matTrans, matScale;
 			D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
@@ -245,7 +246,7 @@ void CInventory::Render()
 
 			CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
 			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
-				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(125, 255, 255, 255));
 		}
 
 		{ // INVENTORY
@@ -521,4 +522,10 @@ void CInventory::EndClick(const _float& x, const _float& y)
 		m_nItemIndexLine = -1;
 	}
 	m_bSelect = false;
+}
+
+void CInventory::ActiveItem(const _float& x, const _float& y)
+{
+	if (m_pItem[0][m_nSelect])
+		dynamic_cast<CItem*>(m_pItem[0][m_nSelect])->Active(x, y);
 }
