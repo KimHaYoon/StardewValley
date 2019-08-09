@@ -55,8 +55,11 @@ void CMyMap::Render()
 
 
 
+// 	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+// 		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+
 	CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
-		&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		nullptr, nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
 
 void CMyMap::MiniRender(float fRatio)

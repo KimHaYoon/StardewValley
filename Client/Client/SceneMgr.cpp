@@ -6,6 +6,7 @@
 #include "DongKuTestScene.h"
 #include "HaYoonTestScene.h"
 #include "Room.h"
+#include "BusStop.h"
 _IMPLEMENT_SINGLETON(CSceneMgr)
 CSceneMgr::CSceneMgr()
 {
@@ -33,6 +34,9 @@ HRESULT CSceneMgr::SceneChange(SCENE_ID eCurScene)
 			break;
 		case SCENE_ID_ROOM:
 			m_pScene = new CRoom;
+			break;
+		case SCENE_ID_BUSSTOP:
+			m_pScene = new CBusStop;
 			break;
 		case SCENE_ID_DONGKU:
 			m_pScene = new CDongKuTestScene;

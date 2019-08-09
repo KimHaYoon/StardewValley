@@ -186,8 +186,7 @@ void CReactionTerrain::TileCollision()
 					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_STAGE)
 					{
 						if (m_vecTile[iIndex]->iBackTileNum == 1)
-						{
-							
+						{							
 							CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_BACK, SCENE_ID_END, SCENE_ID_ROOM);
 						}
 					}

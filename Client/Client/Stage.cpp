@@ -65,6 +65,7 @@ void CStage::LateUpdate(const _float& fTimeDelta)
 		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetPreScene());
 		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
 	}
+
 }
 
 void CStage::Render()

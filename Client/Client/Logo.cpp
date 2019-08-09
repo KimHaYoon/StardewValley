@@ -58,6 +58,9 @@ HRESULT CLogo::Init()
 		return E_FAIL;
 	}
 
+	// 타일 2104 -> 땅만 판거
+	// 타일 2105-> 물뿌리기
+
 	//PathFile
 	{
 // 		if (FAILED(CPathMgr::GetInstance()->InsertPath(L"../Data/Abigail/Abigail%d.dat", L"Abigail", 1)))
