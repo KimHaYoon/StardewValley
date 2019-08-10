@@ -52,7 +52,7 @@ HRESULT CHaYoonTestScene::Init()
 	pObj = CAbstractFactory<CCrop>::CreateObj( OBJECT_ID_CROP );
 	if ( nullptr == pObj )
 		return E_FAIL;
-	( ( CCrop* )pObj )->SetCropName( "Parsnip" );
+	( ( CCrop* )pObj )->SetCropName( "Melon" );
 	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_CROP );
 
 	return S_OK;

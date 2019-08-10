@@ -151,9 +151,6 @@
     <ClCompile Include="Hoe.cpp">
       <Filter>01. Object\04. Crop\00. Hoe</Filter>
     </ClCompile>
-    <ClCompile Include="Parsnip.cpp">
-      <Filter>01. Object\04. Crop\01. Parsnip</Filter>
-    </ClCompile>
     <ClCompile Include="Abigail.cpp">
       <Filter>01. Object\02. NPC\00. Abigail</Filter>
     </ClCompile>
@@ -417,9 +414,6 @@
     <ClInclude Include="Hoe.h">
       <Filter>01. Object\04. Crop\00. Hoe</Filter>
     </ClInclude>
-    <ClInclude Include="Parsnip.h">
-      <Filter>01. Object\04. Crop\01. Parsnip</Filter>
-    </ClInclude>
     <ClInclude Include="Abigail.h">
       <Filter>01. Object\02. NPC\00. Abigail</Filter>
     </ClInclude>
@@ -642,9 +636,6 @@
     </Filter>
     <Filter Include="04. System\00. GameTime">
       <UniqueIdentifier>{8127d6b7-2a4c-4f51-8814-25906dca24bf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01. Object\04. Crop\01. Parsnip">
-      <UniqueIdentifier>{f114a197-57c3-474d-a833-3d8d7b10a1b8}</UniqueIdentifier>
     </Filter>
     <Filter Include="01. Object\02. NPC\00. Abigail">
       <UniqueIdentifier>{7921346e-b8da-41b2-bd34-d7749f452f66}</UniqueIdentifier>

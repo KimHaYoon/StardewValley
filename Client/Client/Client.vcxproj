@@ -215,7 +215,6 @@
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="ObjectMgr.h" />
-    <ClInclude Include="Parsnip.h" />
     <ClInclude Include="PathMgr.h" />
     <ClInclude Include="Penny.h" />
     <ClInclude Include="Pickaxe.h" />
@@ -299,7 +298,6 @@
     <ClCompile Include="MyMap.cpp" />
     <ClCompile Include="NameTag.cpp" />
     <ClCompile Include="NPC.cpp" />
-    <ClCompile Include="Parsnip.cpp" />
     <ClCompile Include="PathMgr.cpp" />
     <ClCompile Include="Penny.cpp" />
     <ClCompile Include="Pickaxe.cpp" />
