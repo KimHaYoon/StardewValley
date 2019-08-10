@@ -25,7 +25,6 @@ void CMonsterMgr::LoadMonsterInfo()
 		auto begin = strData.begin();
 
 		string strTemp;
-		string strTag;
 		string strItemTag;
 		float fItemRate{};
 		MonsterInfo* tInfo = new MonsterInfo;
@@ -36,12 +35,12 @@ void CMonsterMgr::LoadMonsterInfo()
 			{
 				if ( iCount == 0 )
 				{
-					strTag = strTemp;
+					tInfo->strImgName = strTemp;
 				}
 
 				else if ( iCount == 1 )
 				{
-					tInfo->strImgName = strTemp;
+					tInfo->eMS = (MONSTER_STATE)atoi( strTemp.c_str() );
 				}
 
 				else if ( iCount == 2 )
@@ -78,7 +77,7 @@ void CMonsterMgr::LoadMonsterInfo()
 			++begin;
 		}
 
-		m_mapMonster.insert( make_pair( strTag, tInfo ) );
+		m_mapMonster.insert( make_pair( tInfo->strImgName, tInfo ) );
 	}
 	
 	in.close();

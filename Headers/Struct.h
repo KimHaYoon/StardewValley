@@ -79,6 +79,7 @@ typedef struct tagTextInfo
 typedef struct tagMonsterInfo
 {
 	string strImgName;
+	MONSTER_STATE eMS;
 	int		iHP;
 	int		iDamage;
 	map<string, float> mapDropItem;
