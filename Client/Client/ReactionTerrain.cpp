@@ -192,7 +192,10 @@ void CReactionTerrain::TileCollision()
 					}
 					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_BUSSTOP)
 					{
-
+						if (m_vecTile[iIndex]->iBackTileNum == 1)
+						{
+							CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_BACK, SCENE_ID_END, SCENE_ID_STAGE);
+						}
 					}
 				}
 				if (m_vecTile[iIndex]->byDrawID == 2103)		//forward
@@ -231,11 +234,8 @@ void CReactionTerrain::TileCollision()
 					{
 						if (m_vecTile[iIndex]->iFrontTileNum == 1)
 						{
-							// Vacant
-						}
-						if (m_vecTile[iIndex]->iFrontTileNum == 2)
-						{
 							// Town
+							CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_FRONT, SCENE_ID_TOWN, SCENE_ID_END);
 						}
 					}
 					else if (CSceneMgr::GetInstance()->GetCurScene() == SCENE_ID_TOWN)

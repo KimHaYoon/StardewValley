@@ -26,7 +26,7 @@ HRESULT CStage::Init()
 	{
 		if (CSceneMgr::GetInstance()->GetBackTileNum() == 1)
 		{
-			// 전에 있던 scene중에서 밟은 BackTileNum을 가져옴
+			CScrollMgr::SetScrolling(_vec3{ 56.f, -24.f,0.f });
 		}
 	}
 	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj(L"../Data//Tile/Vacant/Vacant_Tile_Back.dat");

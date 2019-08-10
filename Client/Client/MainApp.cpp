@@ -27,6 +27,18 @@ HRESULT CMainApp::Initialize()
 
 	CTimerMgr::GetInstance()->InitTime();
 
+	D3DXFONT_DESCW	tFontInfo;
+	tFontInfo.Height = 7;
+	tFontInfo.Width = 5;
+	tFontInfo.Weight = FW_THIN;
+	tFontInfo.CharSet = HANGEUL_CHARSET;
+	tFontInfo.Quality = DEFAULT_QUALITY;
+	tFontInfo.Italic = false;
+	lstrcpy(tFontInfo.FaceName, L"Arial");
+
+	CMyFont::GetInstance()->Ready_Font(L"Dong", tFontInfo);	// 이렇게 쓸폰트 정보를 입력
+	CMyFont::GetInstance()->Get_Font(L"Dong");	// 이 함수 호출로 사용할 폰트 가져옴
+
 	return S_OK;
 }
 
@@ -66,6 +78,7 @@ void CMainApp::Render()
 
 void CMainApp::Release()
 {
+	CMyFont::GetInstance()->DestroyInstance();
 	CFontMgr::GetInstance()->DestroyInstance();//
 	CObjectMgr::GetInstance()->DestroyInstance();//
 	CRenderMgr::GetInstance()->DestroyInstance();//

@@ -209,6 +209,7 @@
     <ClInclude Include="MonsterMgr.h" />
     <ClInclude Include="Morris.h" />
     <ClInclude Include="MultiTexture.h" />
+    <ClInclude Include="MyFont.h" />
     <ClInclude Include="MyMap.h" />
     <ClInclude Include="NameTag.h" />
     <ClInclude Include="NPC.h" />
@@ -241,6 +242,7 @@
     <ClInclude Include="TextureMgr.h" />
     <ClInclude Include="TimerMgr.h" />
     <ClInclude Include="Title.h" />
+    <ClInclude Include="Town.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="Vincent.h" />
   </ItemGroup>
@@ -293,6 +295,7 @@
     <ClCompile Include="MonsterMgr.cpp" />
     <ClCompile Include="Morris.cpp" />
     <ClCompile Include="MultiTexture.cpp" />
+    <ClCompile Include="MyFont.cpp" />
     <ClCompile Include="MyMap.cpp" />
     <ClCompile Include="NameTag.cpp" />
     <ClCompile Include="NPC.cpp" />
@@ -330,6 +333,7 @@
     <ClCompile Include="TextureMgr.cpp" />
     <ClCompile Include="TimerMgr.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Town.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Vincent.cpp" />
   </ItemGroup>

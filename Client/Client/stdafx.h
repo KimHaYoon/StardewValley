@@ -72,6 +72,7 @@ using namespace std;
 #include "CollisionMgr.h"
 #include "ScrollMgr.h"
 #include "MonsterMgr.h"
+#include "MyFont.h"
 
 
 

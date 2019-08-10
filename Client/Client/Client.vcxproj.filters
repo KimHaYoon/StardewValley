@@ -247,6 +247,12 @@
     <ClCompile Include="BusStop.cpp">
       <Filter>02. Scene\03. BusStop</Filter>
     </ClCompile>
+    <ClCompile Include="MyFont.cpp">
+      <Filter>04. System\01. Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Town.cpp">
+      <Filter>02. Scene\04. Town</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NPC.h">
@@ -506,6 +512,12 @@
     </ClInclude>
     <ClInclude Include="BusStop.h">
       <Filter>02. Scene\03. BusStop</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFont.h">
+      <Filter>04. System\01. Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Town.h">
+      <Filter>02. Scene\04. Town</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -771,6 +783,9 @@
     </Filter>
     <Filter Include="98. Managers\13. Scroll_Manager">
       <UniqueIdentifier>{4958f3de-783d-444f-9d9b-7a62599ce300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. System\01. Font">
+      <UniqueIdentifier>{64c43864-42c4-4bd7-88ef-cf463930d1f7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

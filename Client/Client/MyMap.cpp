@@ -58,6 +58,11 @@ HRESULT CMyMap::Init(OBJECT_ID eID, _int iNum)
 		m_tInfo.vPos = { 400.f,300.f,0.f };
 		m_tInfo.vSize = { 1.f,1.f,0.f };
 	}
+	if (iNum == 2)
+	{
+		m_tInfo.vPos = { 0.f,0.f,0.f };
+		m_tInfo.vSize = { 1.f,1.f,0.f };
+	}
 	else if (iNum == 6)
 	{
 		m_tInfo.vPos = { 283.f,237.f,0.f };

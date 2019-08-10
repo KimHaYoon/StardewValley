@@ -7,6 +7,7 @@
 #include "HaYoonTestScene.h"
 #include "Room.h"
 #include "BusStop.h"
+#include "Town.h"
 _IMPLEMENT_SINGLETON(CSceneMgr)
 CSceneMgr::CSceneMgr()
 {
@@ -37,6 +38,9 @@ HRESULT CSceneMgr::SceneChange(SCENE_ID eCurScene)
 			break;
 		case SCENE_ID_BUSSTOP:
 			m_pScene = new CBusStop;
+			break;
+		case SCENE_ID_TOWN:
+			m_pScene = new CTown;
 			break;
 		case SCENE_ID_DONGKU:
 			m_pScene = new CDongKuTestScene;

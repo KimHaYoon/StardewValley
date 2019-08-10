@@ -64,16 +64,16 @@ void CBusStop::LateUpdate(const _float & fTimeDelta)
 {
 	CObjectMgr::GetInstance()->LateUpdate(fTimeDelta);
 
-// 	if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_FRONT)
-// 	{
-// 		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetNextScene());
-// 		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
-// 	}
-// 	else if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_BACK)
-// 	{
-// 		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetPreScene());
-// 		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
-// 	}
+	if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_FRONT)
+	{
+		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetNextScene());
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
+	}
+	else if (CSceneMgr::GetInstance()->GetPass_ID() == PASS_ID_BACK)
+	{
+		CSceneMgr::GetInstance()->SceneChange(CSceneMgr::GetInstance()->GetPreScene());
+		CSceneMgr::GetInstance()->SetPass_ID(PASS_ID_END, SCENE_ID_END, SCENE_ID_END);
+	}
 
 }
 
