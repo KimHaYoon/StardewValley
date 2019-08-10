@@ -1,7 +1,7 @@
 Parsnip/4/35/4/
-Potato/7/80/6/
+Potato/6/80/6/
 Kale/0/110/6/
-Cauliflower/0/175/12/O/
+Cauliflower/12/175/12/O/
 Strawberry/0/120/8/X/4/
 GreenBean/8/40/10/X/3/
 Gralic/0/60/4/

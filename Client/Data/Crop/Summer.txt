@@ -1,10 +1,10 @@
 Radish/0/90/6/
-Melon/0/250/12/O/
-HotPepper/0/40/5/X/3/
+Melon/12/250/12/O/
+HotPepper/5/40/5/X/3/
 Hops/0/25/11/X/1/
 Tomato/0/60/11/X/4/
 Blueberry/0/50/13/X/4/
-Corn/0/55/14/X/4/
-Wheat/0/25/4/
+Corn/14/55/14/X/4/
+Wheat/4/25/4/
 RedCabbage/0/260/9/
 Starfruit/0/750/13/
