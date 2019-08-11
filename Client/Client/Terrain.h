@@ -13,11 +13,10 @@ public:
 	virtual void	Release();
 public:
 	virtual HRESULT	Init(const _tchar* pFilePath, OBJECT_ID eID = OBJECT_ID_TERRAIN);
-public:
 	HRESULT LoadData(const _tchar* pFilePath);
+
 private:
 	_int			m_iIdx = 2100;
-private:
 	vector<TILE*>	m_vecTile;
 	TILE*			m_pTile = nullptr;
 public:

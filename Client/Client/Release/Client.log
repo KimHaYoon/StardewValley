@@ -1,8 +1,95 @@
-﻿  SceneMgr.cpp
+﻿  stdafx.cpp
+  Abigail.cpp
+  Alex.cpp
+  Axe.cpp
+  BackTerrain.cpp
+  Bat.cpp
+  BusStop.cpp
+  Caroline.cpp
+  CropManager.cpp
+  ClickBox.cpp
+  Client.cpp
+  Clock.cpp
+  ClockHand.cpp
+  CollisionMgr.cpp
+  Crop.cpp
+  Demetrius.cpp
+  DongKuTestScene.cpp
+  Elliott.cpp
+  Emily.cpp
+  Energy.cpp
+  EnergyGauge.cpp
+  컴파일하고 있습니다...
+  Equipment.cpp
+  Evelyn.cpp
+  FontMgr.cpp
+  GameTime.cpp
+  George.cpp
+  Haley.cpp
+  Harvey.cpp
+  HaYoonTestScene.cpp
+  Hoe.cpp
+  Inventory.cpp
+  Item.cpp
+  Jas.cpp
+  Jodi.cpp
+  Kent.cpp
+  KeyMgr.cpp
+  Leah.cpp
+  Lewis.cpp
+  Linus.cpp
+  Logo.cpp
+  MainApp.cpp
+  컴파일하고 있습니다...
+  Marcello.cpp
+  Marlon.cpp
+  Marnie.cpp
+  Maru.cpp
+  Monster.cpp
+  MonsterMgr.cpp
+  Morris.cpp
+  Mountain.cpp
+  MultiTexture.cpp
+  MyFont.cpp
+  MyMap.cpp
+  NameTag.cpp
+  NPC.cpp
+  PathMgr.cpp
+  Penny.cpp
+  Pickaxe.cpp
+  Pierre.cpp
+  Player.cpp
+  ReactionTerrain.cpp
+  RenderMgr.cpp
+  컴파일하고 있습니다...
+  Robin.cpp
+  Room.cpp
+  Sam.cpp
+  Sandy.cpp
+  Scene.cpp
+  Obj.cpp
+  ObjectMgr.cpp
+  SceneMgr.cpp
+  ScrollMgr.cpp
+  Sebastian.cpp
+  SingleTexture.cpp
+  Stage.cpp
+  Device.cpp
+  FrameMgr.cpp
+  Terrain.cpp
+  TextBox.cpp
+  Texture.cpp
+  TextureMgr.cpp
+  TimerMgr.cpp
+  Title.cpp
+  컴파일하고 있습니다...
+  Town.cpp
+  UI.cpp
+  Vincent.cpp
   코드를 생성하고 있습니다.
-  7 of 2795 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  13 of 2795 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    8 functions were new in current compilation
+    161 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.exe
   Client.vcxproj -> C:\Users\MSI\Desktop\TeamStardew\StardewValley\Client\Release\Client.pdb (Full PDB)

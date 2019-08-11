@@ -250,6 +250,9 @@
     <ClCompile Include="Town.cpp">
       <Filter>02. Scene\04. Town</Filter>
     </ClCompile>
+    <ClCompile Include="Mountain.cpp">
+      <Filter>02. Scene\05. Mountain</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NPC.h">
@@ -512,6 +515,9 @@
     </ClInclude>
     <ClInclude Include="Town.h">
       <Filter>02. Scene\04. Town</Filter>
+    </ClInclude>
+    <ClInclude Include="Mountain.h">
+      <Filter>02. Scene\05. Mountain</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -777,6 +783,9 @@
     </Filter>
     <Filter Include="04. System\01. Font">
       <UniqueIdentifier>{64c43864-42c4-4bd7-88ef-cf463930d1f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene\05. Mountain">
+      <UniqueIdentifier>{4b736ca6-ae83-4c2f-af8e-559edaf810ec}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

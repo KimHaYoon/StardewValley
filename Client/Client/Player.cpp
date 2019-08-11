@@ -256,7 +256,7 @@ void CPlayer::Click()
 
 	dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
 
-	if (m_pInven && m_bPause)
+	if (m_pInven && !m_bPause)
 		ActiveItem((float)pt.x, (float)pt.y);
 }
 

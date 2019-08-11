@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Hoe.h"
+#include "Terrain.h"
+#include "BackTerrain.h"
 
 CHoe::CHoe()
 {
@@ -66,8 +68,27 @@ void CHoe::Active(const _float& x, const _float& y)
 	vPos -= D3DXVECTOR3(x, y, 0.f);
 
 	_float length = D3DXVec3Length(&vPos);
-	if (length < 40.f) // ¶¥ °³°£
+	if (length < 60.f) // ¶¥ °³°£
 	{
+		for (auto& iter : CObjectMgr::GetInstance()->GetTerrain())
+		{
+			if ((iter)->GetFront() == 100)
+			{
+				vector<TILE*> vTile = dynamic_cast<CTerrain*>(iter)->GetTile();
+				for (auto& tile : vTile)
+				{
+					D3DXVECTOR3 ScrollPos = CScrollMgr::GetScroll();
 
+					if (tile->vPos.x - 8.f - ScrollPos.x < x && tile->vPos.x + 8.f - ScrollPos.x > x
+						&& tile->vPos.y - 8.f - ScrollPos.y < y && tile->vPos.y + 8.f - ScrollPos.y > y)
+					{
+						//cout << "°³°£! : " << tile->byDrawID << endl;
+						tile->byDrawID = 2104;
+						break;
+					}
+				}
+			}
+		}
 	}
+
 }

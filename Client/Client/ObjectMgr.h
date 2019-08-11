@@ -20,6 +20,7 @@ public:
 	list<CObj*>		&GetMonsterList() { return m_listObject[OBJECT_ID_MONSTER]; }
 	CObj*			&GetPlayer() { return m_listObject[OBJECT_ID_PLAYER].front(); }
 	CObj*			GetNPC(const _tchar* pName);
+	list<CObj*>		&GetTerrain() { return m_listObject[OBJECT_ID_TERRAIN]; }
 private:
 	list<CObj*>		m_listObject[OBJECT_ID_END];
 };

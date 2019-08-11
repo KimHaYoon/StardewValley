@@ -208,6 +208,7 @@
     <ClInclude Include="Monster.h" />
     <ClInclude Include="MonsterMgr.h" />
     <ClInclude Include="Morris.h" />
+    <ClInclude Include="Mountain.h" />
     <ClInclude Include="MultiTexture.h" />
     <ClInclude Include="MyFont.h" />
     <ClInclude Include="MyMap.h" />
@@ -293,6 +294,7 @@
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="MonsterMgr.cpp" />
     <ClCompile Include="Morris.cpp" />
+    <ClCompile Include="Mountain.cpp" />
     <ClCompile Include="MultiTexture.cpp" />
     <ClCompile Include="MyFont.cpp" />
     <ClCompile Include="MyMap.cpp" />
