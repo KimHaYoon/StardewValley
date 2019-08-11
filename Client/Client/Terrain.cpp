@@ -27,34 +27,34 @@ HRESULT CTerrain::Init(const _tchar * pFilePath, OBJECT_ID eID)
 		return E_FAIL;
 	m_fSpeed = 10.f;
 	for (auto& iter : m_vecTile)
-		wcscpy_s(iter->ObjKey, L"Fall");
+		wcscpy_s(iter->ObjKey, L"Summer");
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_1);
-	
+	m_iCheckFront = 100;
 	return S_OK;
 }
 
 _int CTerrain::Update(const _float& fTimeDelta)
 {
-// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_LEFT))
-// 	{
-// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed*-fTimeDelta, 0.f, 0.f });
-// 		m_tInfo.vPos.x -= fTimeDelta;
-// 	}
-// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_RIGHT))
-// 	{
-// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed * fTimeDelta, 0.f, 0.f });
-// 		m_tInfo.vPos.x += fTimeDelta;
-// 	}
-// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_UP))
-// 	{
-// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  -3 * m_fSpeed * fTimeDelta , 0.f });
-// 		m_tInfo.vPos.y -= fTimeDelta;
-// 	}
-// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_DOWN))
-// 	{
-// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  3 * m_fSpeed * fTimeDelta , 0.f });
-// 		m_tInfo.vPos.y += fTimeDelta;
-// 	}
+	// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_LEFT))
+	// 	{
+	// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed*-fTimeDelta, 0.f, 0.f });
+	// 		m_tInfo.vPos.x -= fTimeDelta;
+	// 	}
+	// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_RIGHT))
+	// 	{
+	// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 3 * m_fSpeed * fTimeDelta, 0.f, 0.f });
+	// 		m_tInfo.vPos.x += fTimeDelta;
+	// 	}
+	// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_UP))
+	// 	{
+	// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  -3 * m_fSpeed * fTimeDelta , 0.f });
+	// 		m_tInfo.vPos.y -= fTimeDelta;
+	// 	}
+	// 	if (CKeyMgr::GetInstance()->KeyPressing(KEY_DOWN))
+	// 	{
+	// 		CScrollMgr::SetScroll(D3DXVECTOR3{ 0.f,  3 * m_fSpeed * fTimeDelta , 0.f });
+	// 		m_tInfo.vPos.y += fTimeDelta;
+	// 	}
 
 	return NO_ERROR;
 }
@@ -68,11 +68,11 @@ void CTerrain::Render()
 	D3DXVECTOR3 vScroll = CScrollMgr::GetScroll();
 
 
-	int iCullX = (int)vScroll.x / TILECX ;
-	int iCullY = (int)vScroll.y / TILECY ;
+	int iCullX = (int)vScroll.x / TILECX;
+	int iCullY = (int)vScroll.y / TILECY;
 
-	int iCullEndX = iCullX + WINCX / TILECX+1;
-	int iCullEndY = iCullY + WINCY / TILECY+1;
+	int iCullEndX = iCullX + WINCX / TILECX + 1;
+	int iCullEndY = iCullY + WINCY / TILECY + 1;
 
 	for (int i = iCullY; i < iCullEndY; ++i)
 	{
@@ -85,16 +85,16 @@ void CTerrain::Render()
 
 			D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, m_tInfo.vSize.z);
 			D3DXMatrixTranslation(
-				&matTrans, 
-				m_vecTile[iIndex]->vPos.x- vScroll.x,
-				m_vecTile[iIndex]->vPos.y- vScroll.y,
+				&matTrans,
+				m_vecTile[iIndex]->vPos.x - vScroll.x,
+				m_vecTile[iIndex]->vPos.y - vScroll.y,
 				0.f);
 
 			m_tInfo.matWorld = matScale * matTrans;
 
 			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
 				m_vecTile[iIndex]->ObjKey,
-				m_vecTile[iIndex]->StateKey, 
+				m_vecTile[iIndex]->StateKey,
 				m_vecTile[iIndex]->byDrawID);
 			NULL_CHECK_VOID(pTexInfo);
 
@@ -122,7 +122,7 @@ HRESULT CTerrain::LoadData(const _tchar* pFilePath)
 
 	HANDLE fFile = nullptr;
 	fFile = CreateFile(pFilePath, GENERIC_READ, 0, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
-	
+
 	DWORD dwByte = 0;
 	TILE* pTile = nullptr;
 	TILE t = {};

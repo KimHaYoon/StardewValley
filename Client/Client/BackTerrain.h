@@ -23,5 +23,6 @@ private:
 	TILE*			m_pTile = nullptr;
 public:
 	vector<TILE*>&  GetTile() { return m_vecTile; }
+
 };
 

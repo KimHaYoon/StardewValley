@@ -12,7 +12,7 @@ public:
 	virtual void Render()PURE;
 	virtual void Release()PURE;
 public:
-	virtual	HRESULT Init(const _tchar* pFilePath, OBJECT_ID eID=OBJECT_ID_TERRAIN);
+	virtual	HRESULT Init(const _tchar* pFilePath, OBJECT_ID eID = OBJECT_ID_TERRAIN);
 	virtual HRESULT Init(OBJECT_ID eID);
 	virtual HRESULT Init(OBJECT_ID eID, _int iNum);
 	virtual HRESULT Init(LAYER_ID eID);
@@ -32,7 +32,7 @@ public:
 protected:
 	_int			m_iCheckNum = 100;
 	UNITIFNO		m_tInfo;
-	_float			m_fSpeed=0.f;
+	_float			m_fSpeed = 0.f;
 	FRAME			m_tFrame;
 	TCHAR*			m_strObjectKey = L"";
 	TCHAR*			m_strStateKey = L"";
@@ -50,5 +50,9 @@ protected:
 	void			MoveFrame();
 	void			MoveFrame(float num);
 	void			MoveFrameStop();
+
+public:
+	_int			GetFront() { return m_iCheckFront; }
+	_int			m_iCheckFront = 0;
 };
 

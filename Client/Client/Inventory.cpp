@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Inventory.h"
 #include "Define.h"
-
+#include "Player.h"
 #include "ItemList.h"
 
 CInventory::CInventory()
@@ -38,6 +38,13 @@ HRESULT CInventory::Init()
 HRESULT CInventory::Init(OBJECT_ID eID)
 {
 	m_nSelect = -1;
+	m_nItemIndex = -1;
+	m_nItemIndexLine = -1;
+	m_nMoney = 0;
+	m_nTotalMoney = m_nMoney;
+	m_pPlayerName = L"MyPlayer";
+	m_pFarmName = L"MyFarm";
+
 	_float fSize = (float)WINCX / 1920.f;
 
 	m_tInfo.vPos = { WINCX / 2.f,WINCY / 2.f,0.f };
@@ -102,6 +109,8 @@ HRESULT CInventory::Init(OBJECT_ID eID)
 	CObjectMgr::GetInstance()->AddObject(m_pItem[0][10], OBJECT_ID_UI);
 	dynamic_cast<CItem*>(m_pItem[0][10])->SetIndex(0, 10);
 
+	CMyFont::GetInstance()->Ready_Font(L"InventoryInfo", (_int)(60.f * fSize), (_int)(36.f * fSize), L"Impact");
+	CMyFont::GetInstance()->Get_Font(L"InventoryInfo");	// 이 함수 호출로 사용할 폰트 가져옴
 
 	return S_OK;
 }
@@ -115,6 +124,7 @@ _int CInventory::Update(const _float & fTimeDelta)
 		else
 			m_nSelect = -1;
 		m_bInput = true;
+		IncreaseMoney(100);
 	}
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_TWO))
 	{
@@ -260,6 +270,9 @@ void CInventory::Render()
 			CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
 			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
 				&D3DXVECTOR3(fCenterX, fCenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+
+
+			RenderFont();
 		}
 
 		for (int i = 0; i < 6; ++i) // TAB
@@ -402,6 +415,9 @@ void CInventory::Drag(const _float& x, const _float& y)
 
 void CInventory::Click(const _float& x, const _float& y)
 {
+#ifdef _DEBUG
+	return;
+#endif
 	_float fSize = (float)WINCX / 1920.f;
 	if (m_bActive) // 인벤창이 켜져있을 때
 	{
@@ -456,7 +472,7 @@ void CInventory::Click(const _float& x, const _float& y)
 
 void CInventory::EndClick(const _float& x, const _float& y)
 {
-	if (m_pItem[m_nItemIndexLine][m_nItemIndex])
+	if (m_nItemIndexLine != -1 && m_nItemIndex != -1 && m_pItem[m_nItemIndexLine][m_nItemIndex])
 	{
 		if (m_bActive) // 인벤창이 켜져있을 때
 		{
@@ -526,6 +542,76 @@ void CInventory::EndClick(const _float& x, const _float& y)
 
 void CInventory::ActiveItem(const _float& x, const _float& y)
 {
-	if (m_pItem[0][m_nSelect])
+	if (m_pItem[0][m_nSelect] && !dynamic_cast<CPlayer*>(CObjectMgr::GetInstance()->GetPlayer())->GetInventoryState())
 		dynamic_cast<CItem*>(m_pItem[0][m_nSelect])->Active(x, y);
+}
+
+void CInventory::RenderFont()
+{
+	UNITIFNO tInfo = m_tInfo;
+	_float fSize = (float)WINCX / 1920.f;
+
+	{ // 플레이어 이름
+		tInfo.vPos = { (float)WINCX / 2.f, (float)WINCY / 2.f, 0.f };
+		tInfo.vPos.x -= 480.f * fSize;
+		tInfo.vPos.y += 340.f * fSize;
+
+		_matrix matTrans, matScale;
+		D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+		D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+		tInfo.matWorld = matScale * matTrans;
+
+		CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+		CMyFont::GetInstance()->Get_Font(L"InventoryInfo")->DrawTextW(CDevice::GetInstance()->GetSprite(),
+			m_pPlayerName, lstrlen(m_pPlayerName), nullptr, 0, D3DCOLOR_ARGB(255, 0, 0, 0));
+	}
+
+	{ // 농장 이름
+		tInfo.vPos = { (float)WINCX / 2.f, (float)WINCY / 2.f, 0.f };
+		tInfo.vPos.x -= 100.f * fSize;
+		tInfo.vPos.y += 90.f * fSize;
+
+		_matrix matTrans, matScale;
+		D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+		D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+		tInfo.matWorld = matScale * matTrans;
+
+		CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+		CMyFont::GetInstance()->Get_Font(L"InventoryInfo")->DrawTextW(CDevice::GetInstance()->GetSprite(),
+			m_pFarmName, lstrlen(m_pFarmName), nullptr, 0, D3DCOLOR_ARGB(255, 0, 0, 0));
+	}
+
+	{ // 소지금
+		tInfo.vPos = { (float)WINCX / 2.f, (float)WINCY / 2.f, 0.f };
+		tInfo.vPos.x -= 100.f * fSize;
+		tInfo.vPos.y += 160.f * fSize;
+
+		_matrix matTrans, matScale;
+		D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+		D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+		tInfo.matWorld = matScale * matTrans;
+
+		TCHAR tChar[20] = { '\0', };
+		wsprintf(tChar, L"소지금 : %dg", m_nMoney);
+		CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+		CMyFont::GetInstance()->Get_Font(L"InventoryInfo")->DrawTextW(CDevice::GetInstance()->GetSprite(),
+			tChar, lstrlen(tChar), nullptr, 0, D3DCOLOR_ARGB(255, 0, 0, 0));
+	}
+
+	{ // 총 소지금
+		tInfo.vPos = { (float)WINCX / 2.f, (float)WINCY / 2.f, 0.f };
+		tInfo.vPos.x -= 100.f * fSize;
+		tInfo.vPos.y += 230.f * fSize;
+
+		_matrix matTrans, matScale;
+		D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+		D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+		tInfo.matWorld = matScale * matTrans;
+
+		TCHAR tChar[20] = { '\0', };
+		wsprintf(tChar, L"종합 소득 : %dg", m_nTotalMoney);
+		CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+		CMyFont::GetInstance()->Get_Font(L"InventoryInfo")->DrawTextW(CDevice::GetInstance()->GetSprite(),
+			tChar, lstrlen(tChar), nullptr, 0, D3DCOLOR_ARGB(255, 0, 0, 0));
+	}
 }
