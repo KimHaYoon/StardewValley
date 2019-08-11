@@ -74,8 +74,6 @@ void CMainFrame::Dump(CDumpContext& dc) const
 #endif 
 BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
 {
-
-
 	// 창 4개 분할
 	m_MainSplt.CreateStatic(this, 1, 3);
 

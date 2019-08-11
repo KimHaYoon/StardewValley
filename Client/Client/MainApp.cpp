@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "MainApp.h"
+#include "Terrain.h"
 
 
 CMainApp::CMainApp()
@@ -30,6 +31,15 @@ HRESULT CMainApp::Initialize()
 	CMyFont::GetInstance()->Ready_Font(L"Dong", 7, 5, L"Arial");
 	CMyFont::GetInstance()->Get_Font(L"Dong");	// 이 함수 호출로 사용할 폰트 가져옴
 
+
+
+	for (auto& iter : CObjectMgr::GetInstance()->GetTerrain())
+	{
+		if (dynamic_cast<CTerrain*>(iter)->GetFront() == 100)
+		{
+
+		}
+	}
 	return S_OK;
 }
 
