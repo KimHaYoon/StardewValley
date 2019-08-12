@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "ClockHand.h"
 #include "Define.h"
+#include "GameTime.h"
 
 CClockHand::CClockHand()
 {
@@ -40,9 +41,10 @@ HRESULT CClockHand::Init(OBJECT_ID eID)
 
 _int CClockHand::Update(const _float & fTimeDelta)
 {
-	m_fAngle += 0.1f;
-	if (m_fAngle > 180.f)
-		m_fAngle = 0.f;
+	_int iHour = CGameTime::GetInstance()->GetCurrentHour();
+	_int iMin = CGameTime::GetInstance()->GetCurrentMin();
+	m_fAngle = 180.f / 24.f * (float)iHour;
+	m_fAngle += 180.f / 24.f / 6.f * (float)iMin;
 	return NO_EVENT;
 }
 

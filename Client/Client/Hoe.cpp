@@ -82,8 +82,11 @@ void CHoe::Active(const _float& x, const _float& y)
 					if (tile->vPos.x - 8.f - ScrollPos.x < x && tile->vPos.x + 8.f - ScrollPos.x > x
 						&& tile->vPos.y - 8.f - ScrollPos.y < y && tile->vPos.y + 8.f - ScrollPos.y > y)
 					{
-						//cout << "°³°£! : " << tile->byDrawID << endl;
-						tile->byDrawID = 2104;
+						//cout << tile->byDrawID << endl;
+						if (tile->byDrawID >= 668 && tile->byDrawID <= 820)
+						{
+							tile->byDrawID = 2104;
+						}
 						break;
 					}
 				}

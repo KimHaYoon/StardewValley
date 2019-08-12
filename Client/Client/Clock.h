@@ -15,5 +15,6 @@ public:
 	virtual void Release() override;
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
+	void RenderFont();
 };
 

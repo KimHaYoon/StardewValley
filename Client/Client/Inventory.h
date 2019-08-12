@@ -1,5 +1,6 @@
 #pragma once
 #include "UI.h"
+#define		STARTMONEY		1000
 
 class CInventory : public CUI
 {
@@ -8,12 +9,14 @@ class CInventory : public CUI
 	_bool			m_bActive = false;
 	_bool			m_bInput = false;
 	_bool			m_bSelect = false;
+	_bool			m_bChangeMoney = false;
 
 	_int			m_nItemIndex;
 	_int			m_nItemIndexLine;
 
 	_int			m_nSelect;
 	_int			m_nMoney;
+	_int			m_nGoalMoney;
 	_int			m_nTotalMoney;
 
 	CObj			*m_pItem[3][12];
@@ -45,9 +48,12 @@ public:
 	void SetMoney(const _int& money) { m_nMoney = money; }
 	_int GetMoney() { return m_nMoney; }
 	void IncreaseMoney(const _int& money) {
-		m_nMoney += money;
+		m_nGoalMoney += money;
+		m_bChangeMoney = true;
 		if (money > 0)
 			m_nTotalMoney += money;
+		else if (m_nGoalMoney < 0)
+			m_nGoalMoney = 0;
 	}
 
 	void RenderFont();

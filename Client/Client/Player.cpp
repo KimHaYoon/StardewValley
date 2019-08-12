@@ -273,3 +273,8 @@ void CPlayer::ActiveItem(const _float& x, const _float& y)
 {
 	dynamic_cast<CInventory*>(m_pInven)->ActiveItem(x, y);
 }
+
+_int CPlayer::GetMoney() const
+{
+	return dynamic_cast<CInventory*>(m_pInven)->GetMoney();
+}

@@ -37,6 +37,7 @@ public:
 	bool GetInventoryState();
 
 	CObj* &GetInven() { return m_pInven; }
+	_int GetMoney() const;
 
 	void Drag();
 	void Click();

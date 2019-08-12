@@ -40,7 +40,8 @@ HRESULT CInventory::Init(OBJECT_ID eID)
 	m_nSelect = -1;
 	m_nItemIndex = -1;
 	m_nItemIndexLine = -1;
-	m_nMoney = 0;
+	m_nMoney = STARTMONEY;
+	m_nGoalMoney = m_nMoney;
 	m_nTotalMoney = m_nMoney;
 	m_pPlayerName = L"MyPlayer";
 	m_pFarmName = L"MyFarm";
@@ -133,6 +134,7 @@ _int CInventory::Update(const _float & fTimeDelta)
 		else
 			m_nSelect = -1;
 		m_bInput = true;
+		IncreaseMoney(-100);
 	}
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_THREE))
 	{
@@ -224,6 +226,20 @@ _int CInventory::Update(const _float & fTimeDelta)
 		D3DXMatrixTranslation(&matTrans, m_tSelectSlot.vPos.x, m_tSelectSlot.vPos.y, 0.f);
 		m_tSelectSlot.matWorld = matScale * matTrans;
 		m_bInput = false;
+	}
+
+	if (m_bChangeMoney && !m_bActive)
+	{
+		if (m_nMoney < m_nGoalMoney)
+		{
+			m_nMoney++;
+		}
+		if (m_nMoney > m_nGoalMoney)
+		{
+			m_nMoney--;
+		}
+		if (m_nMoney == m_nGoalMoney)
+			m_bChangeMoney = false;
 	}
 
 	return NO_EVENT;
@@ -592,7 +608,7 @@ void CInventory::RenderFont()
 		tInfo.matWorld = matScale * matTrans;
 
 		TCHAR tChar[20] = { '\0', };
-		wsprintf(tChar, L"소지금 : %dg", m_nMoney);
+		wsprintf(tChar, L"소지금 : %dg", m_nGoalMoney);
 		CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
 		CMyFont::GetInstance()->Get_Font(L"InventoryInfo")->DrawTextW(CDevice::GetInstance()->GetSprite(),
 			tChar, lstrlen(tChar), nullptr, 0, D3DCOLOR_ARGB(255, 0, 0, 0));
