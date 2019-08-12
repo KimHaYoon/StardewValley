@@ -202,12 +202,7 @@ void CToolView::OnInitialUpdate()
 		AfxMessageBox(L"Winter Image Insert Failed");
 		return;
 	}
-	if (FAILED(CTextureMgr::GetInstance()->InsertTexture(CTextureMgr::TEX_MULTI,
-		L"../Texture/Season/Path/Path%d.png", L"Season", L"Path", 3)))
-	{
-		AfxMessageBox(L"Winter Image Insert Failed");
-		return;
-	}
+
 
 
 	{

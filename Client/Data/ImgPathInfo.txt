@@ -428,7 +428,7 @@ WildernessGolem|WildernessGolem_Left|4|..\Texture\Monster\WildernessGolem\Wilder
 WildernessGolem|WildernessGolem_Right|4|..\Texture\Monster\WildernessGolem\WildernessGolem_Right\WildernessGolem_Right%d.png
 WildernessGolem|WildernessGolem_Spawn|8|..\Texture\Monster\WildernessGolem\WildernessGolem_Spawn\WildernessGolem_Spawn%d.png
 WildernessGolem|WildrnessGolem_Back|4|..\Texture\Monster\WildernessGolem\WildrnessGolem_Back\WildernessGolem_Back%d.png
-UI|ETC|18|..\Texture\UI\ETC\ETC%d.png
+UI|ETC|21|..\Texture\UI\ETC\ETC%d.png
 UI|TextBox|2|..\Texture\UI\TextBox\TextBox%d.png
 ReationTile|tile|3|..\Texture\ReationTile\tile\tile%d.png
 Menu|ClickedMenu|5|..\Texture\Menu\ClickedMenu\Menu%d.png
@@ -445,5 +445,26 @@ Crop|Pumpkin|7|..\Texture\Crop\Pumpkin\Pumpkin%d.png
 Crop|Rhubarb|7|..\Texture\Crop\Rhubarb\Rhubarb%d.png
 Crop|Tomato|8|..\Texture\Crop\Tomato\Tomato%d.png
 Crop|Wheat|4|..\Texture\Crop\Wheat\Wheat%d.png
+Texture|Tools0|13|..\Texture\Tools0\Tool%d.png
+Axe|Bronze_Axe|6|..\Texture\Tools1\Axe\Bronze_Axe\Axe%d.png
+Axe|Gold_Axe|6|..\Texture\Tools1\Axe\Gold_Axe\Axe%d.png
+Axe|Iron_Axe|6|..\Texture\Tools1\Axe\Iron_Axe\Axe%d.png
+Axe|Purple_Axe|6|..\Texture\Tools1\Axe\Purple_Axe\Axe%d.png
+Axe|Stone_Axe|6|..\Texture\Tools1\Axe\Stone_Axe\Axe%d.png
+Hoe|Bronze_Hoe|6|..\Texture\Tools1\Hoe\Bronze_Hoe\Hoe%d.png
+Hoe|Gold_Hoe|6|..\Texture\Tools1\Hoe\Gold_Hoe\Hoe%d.png
+Hoe|Iron_Hoe|6|..\Texture\Tools1\Hoe\Iron_Hoe\Hoe%d.png
+Hoe|Purple_Hoe|6|..\Texture\Tools1\Hoe\Purple_Hoe\Hoe%d.png
+Hoe|Stone_Hoe|6|..\Texture\Tools1\Hoe\Stone_Hoe\Hoe%d.png
+Pickaxe|Bronze_Pickaxe|6|..\Texture\Tools1\Pickaxe\Bronze_Pickaxe\Pickaxe%d.png
+Pickaxe|Gold_Pickaxe|6|..\Texture\Tools1\Pickaxe\Gold_Pickaxe\Pickaxe%d.png
+Pickaxe|Iron_Pickaxe|6|..\Texture\Tools1\Pickaxe\Iron_Pickaxe\Pickaxe%d.png
+Pickaxe|Purple_Pickaxe|6|..\Texture\Tools1\Pickaxe\Purple_Pickaxe\Pickaxe%d.png
+Pickaxe|Stone_Pickaxe|6|..\Texture\Tools1\Pickaxe\Stone_Pickaxe\Pickaxe%d.png
+WateringCan|Bronze_WateringCan|5|..\Texture\Tools1\WateringCan\Bronze_WateringCan\WateringCan%d.png
+WateringCan|Gold_WateringCan|5|..\Texture\Tools1\WateringCan\Gold_WateringCan\WateringCan%d.png
+WateringCan|Iron_WateringCan|5|..\Texture\Tools1\WateringCan\Iron_WateringCan\WateringCan%d.png
+WateringCan|Purple_WateringCan|5|..\Texture\Tools1\WateringCan\Purple_WateringCan\WateringCan%d.png
+WateringCan|Stone_WateringCan|5|..\Texture\Tools1\WateringCan\Stone_WateringCan\WateringCan%d.png
 
 
