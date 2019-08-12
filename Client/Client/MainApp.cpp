@@ -33,13 +33,13 @@ HRESULT CMainApp::Initialize()
 
 
 
-	for (auto& iter : CObjectMgr::GetInstance()->GetTerrain())
+	/*for (auto& iter : CObjectMgr::GetInstance()->GetTerrain())
 	{
 		if (dynamic_cast<CTerrain*>(iter)->GetFront() == 100)
 		{
 
 		}
-	}
+	}*/
 	return S_OK;
 }
 
