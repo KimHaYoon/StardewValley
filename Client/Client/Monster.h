@@ -6,6 +6,7 @@ class CMonster :
 public:
 	CMonster();
 	virtual ~CMonster();
+
 public:
 	virtual HRESULT Init()PURE;
 	virtual _int Update( const _float & fTimeDelta )PURE;
@@ -14,5 +15,9 @@ public:
 	virtual void Release() PURE;
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
+
+private:
+	MonsterInfo*		m_tMonsterInfo;
+
 };
 

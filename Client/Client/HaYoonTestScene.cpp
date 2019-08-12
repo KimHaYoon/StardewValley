@@ -17,6 +17,7 @@ CHaYoonTestScene::~CHaYoonTestScene()
 {
 	CGameTime::GetInstance()->DestroyInstance();
 	CCropManager::GetInstance()->DestroyInstance();
+	CMonsterMgr::GetInstance()->DestroyInstance();
 }
 
 HRESULT CHaYoonTestScene::Init()
@@ -26,6 +27,9 @@ HRESULT CHaYoonTestScene::Init()
 		ERR_MSG( L"Image Load Failed" );
 		return E_FAIL;
 	}
+	CCropManager::GetInstance()->LoadCropInfo();
+	CMonsterMgr::GetInstance()->LoadMonsterInfo();
+
 	CObj* pObj = CAbstractFactory<CBackTerrain>::CreateObj( L"../Data//Tile/Vacant/Vacant_Tile_Back.dat" );
 	if ( nullptr == pObj )
 		return E_FAIL;
@@ -46,8 +50,6 @@ HRESULT CHaYoonTestScene::Init()
 	//if ( nullptr == pObj )
 	//	return E_FAIL;
 	//CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_UI );
-
-	CCropManager::GetInstance()->LoadCropInfo();
 
 	pObj = CAbstractFactory<CCrop>::CreateObj( OBJECT_ID_CROP );
 	if ( nullptr == pObj )
