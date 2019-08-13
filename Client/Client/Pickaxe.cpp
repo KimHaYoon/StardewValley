@@ -109,7 +109,7 @@ void CPickaxe::Render()
 		D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 		D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
 		if (m_eState == ITEM_LEFT)
-			D3DXMatrixRotationY(&matRotate, 180.f);
+			D3DXMatrixRotationY(&matRotate, 180.f / 180.f * 3.141592f);
 		else
 			D3DXMatrixRotationY(&matRotate, 0.f);
 		m_tInfo.matWorld = matScale * matRotate * matTrans;
