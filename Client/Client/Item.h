@@ -1,5 +1,6 @@
 #pragma once
 #include "Obj.h"
+#include "Player.h"
 
 enum ITEM_TYPE {
 	ITEM_NONE,
@@ -8,13 +9,34 @@ enum ITEM_TYPE {
 	ITEM_END
 };
 
+
+enum ITEM_GRADE {
+	NOGRADE,
+	STONE,
+	BRONZE,
+	IRON,
+	GOLD,
+	PURPLE
+};
+
+enum ITEM_STATE {
+	ITEM_IDLE = 0,
+	ITEM_LEFT = 0,
+	ITEM_RIGHT,
+	ITEM_FORWARD,
+	ITEM_BACKWARD,
+	ITEM_ICON = 5
+};
+
 class CItem :
 	public CObj
 {
 protected:
-	_tchar* m_pName = nullptr;
+	_tchar*			m_pName = nullptr;
 
 	ITEM_TYPE		m_eType;
+	ITEM_GRADE		m_eGrade;
+	ITEM_STATE		m_eState;
 	UNITIFNO		m_tInfo2;
 
 	_int			m_nCount;
@@ -23,6 +45,7 @@ protected:
 	_int			m_nIndexLine;
 
 	_bool			m_bSelect = false;
+	_bool			m_bActive = false;
 public:
 	CItem();
 	virtual ~CItem();

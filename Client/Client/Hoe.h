@@ -16,5 +16,7 @@ public:
 	virtual HRESULT Init(OBJECT_ID eID);
 
 	virtual void Active(const _float& x, const _float& y) override;
+
+	void SetState(ITEM_GRADE eGrade);
 };
 

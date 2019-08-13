@@ -387,6 +387,35 @@ void CInventory::Render()
 			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
 				&D3DXVECTOR3(CenterX, CenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
 		}
+
+		// Character
+		{
+			TCHAR* strObjectKey = dynamic_cast<CPlayer*>(CObjectMgr::GetInstance()->GetPlayer())->GetObjectKey();
+			TCHAR* strStateKey = dynamic_cast<CPlayer*>(CObjectMgr::GetInstance()->GetPlayer())->GetStateKey();
+
+			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
+				strObjectKey, strStateKey, 0);
+			NULL_CHECK_VOID(pTexInfo);
+
+			UNITIFNO tInfo = m_tInfo;
+
+			float fSize = (float)WINCX / 1920.f;
+			tInfo.vPos.x -= 380.f * fSize;
+			tInfo.vPos.y += 170.f * fSize;
+			tInfo.vSize = { 7.f * fSize, 7.f * fSize, 0.f };
+
+			_matrix matTrans, matScale;
+			D3DXMatrixScaling(&matScale, tInfo.vSize.x, tInfo.vSize.y, 0.f);
+			D3DXMatrixTranslation(&matTrans, tInfo.vPos.x, tInfo.vPos.y, 0.f);
+			tInfo.matWorld = matScale * matTrans;
+
+			float CenterX = pTexInfo->tImgInfo.Width * 0.5f;
+			float CenterY = pTexInfo->tImgInfo.Height * 0.5f;
+
+			CDevice::GetInstance()->GetSprite()->SetTransform(&tInfo.matWorld);
+			CDevice::GetInstance()->GetSprite()->Draw(pTexInfo->pTexture, nullptr,
+				&D3DXVECTOR3(CenterX, CenterY, 0.f), nullptr, D3DCOLOR_ARGB(255, 255, 255, 255));
+		}
 	}
 	else
 	{
@@ -558,6 +587,8 @@ void CInventory::EndClick(const _float& x, const _float& y)
 
 void CInventory::ActiveItem(const _float& x, const _float& y)
 {
+	if (m_nSelect == -1)
+		return;
 	if (m_pItem[0][m_nSelect] && !dynamic_cast<CPlayer*>(CObjectMgr::GetInstance()->GetPlayer())->GetInventoryState())
 		dynamic_cast<CItem*>(m_pItem[0][m_nSelect])->Active(x, y);
 }

@@ -5,6 +5,7 @@
 #include "Inventory.h"
 #include "Clock.h"
 #include "EnergyGauge.h"
+#include "Cursor.h"
 CPlayer::CPlayer()
 {
 }
@@ -56,6 +57,7 @@ HRESULT CPlayer::Init(OBJECT_ID eID)
 	m_tInfo.vPos = { WINCX / 2.f, WINCY / 2.f,0.f };
 	m_tInfo.vSize = { 1.f, 1.f,0.f };
 	m_strStateKey = L"Abigail_Forward";
+	m_strObjectKey = L"Abigail";
 	m_tFrame = { 0.f, 1.f };
 	m_fSpeed = WALKSPEED;
 	m_fMoveFrame = m_fSpeed / 100.f;
@@ -86,23 +88,42 @@ HRESULT CPlayer::Init(OBJECT_ID eID)
 		return E_FAIL;
 	CObjectMgr::GetInstance()->AddObject(m_pInven, OBJECT_ID_UI);
 
+	m_pCursor = CAbstractFactory<CCursor>::CreateObj(OBJECT_ID_UI);
+	if (m_pCursor == nullptr)
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject(m_pCursor, OBJECT_ID_UI);
+
 	return S_OK;
 }
 
 _int CPlayer::Update(const _float& fTimeDelta)
 {
+	POINT pt = {};
+	GetCursorPos(&pt);
+	ScreenToClient(g_hWnd, &pt);
+	m_vCursorPos = { (float)pt.x, (float)pt.y, 0.f };
+
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_LBUTTON))
 	{
-		m_bDrag = true;
-		Click();
+		if (pt.x > 0 || pt.x < (float)WINCX)
+		{
+			if (pt.y > 0 || pt.y < (float)WINCY)
+			{
+				m_bDrag = true;
+				Click(pt);
+			}
+		}
 	}
 	if (CKeyMgr::GetInstance()->KeyUp(KEY_LBUTTON))
 	{
-		m_bDrag = false;
-		EndClick();
+		if (m_bDrag)
+		{
+			m_bDrag = false;
+			EndClick(pt);
+		}
 	}
 	if (m_bDrag)
-		Drag();
+		Drag(pt);
 
 
 	if (CKeyMgr::GetInstance()->KeyDown(KEY_I))
@@ -217,7 +238,7 @@ void CPlayer::Render()
 
 	CDevice::GetInstance()->GetSprite()->SetTransform(&m_tInfo.matWorld);
 	const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
-		L"Abigail", m_strStateKey, (_int)m_tFrame.fFrame);
+		m_strObjectKey, m_strStateKey, (_int)m_tFrame.fFrame);
 	NULL_CHECK_VOID(pTexInfo);
 
 	float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
@@ -239,33 +260,21 @@ bool CPlayer::GetInventoryState()
 }
 
 
-void CPlayer::Drag()
+void CPlayer::Drag(const POINT& pt)
 {
-	POINT pt = {};
-	GetCursorPos(&pt);
-	ScreenToClient(g_hWnd, &pt);
-
 	dynamic_cast<CInventory*>(m_pInven)->Drag((float)pt.x, (float)pt.y);
 }
 
-void CPlayer::Click()
+void CPlayer::Click(const POINT& pt)
 {
-	POINT pt = {};
-	GetCursorPos(&pt);
-	ScreenToClient(g_hWnd, &pt);
-
 	dynamic_cast<CInventory*>(m_pInven)->Click((float)pt.x, (float)pt.y);
 
 	if (m_pInven && !m_bPause)
 		ActiveItem((float)pt.x, (float)pt.y);
 }
 
-void CPlayer::EndClick()
+void CPlayer::EndClick(const POINT& pt)
 {
-	POINT pt = {};
-	GetCursorPos(&pt);
-	ScreenToClient(g_hWnd, &pt);
-
 	dynamic_cast<CInventory*>(m_pInven)->EndClick((float)pt.x, (float)pt.y);
 }
 
@@ -277,4 +286,26 @@ void CPlayer::ActiveItem(const _float& x, const _float& y)
 _int CPlayer::GetMoney() const
 {
 	return dynamic_cast<CInventory*>(m_pInven)->GetMoney();
+}
+
+void CPlayer::SetDir(const _int& eDir)
+{
+	m_bIDLE = false;
+	m_tFrame.fMax = 4.f;
+	if (eDir == 0) // 왼쪽
+	{
+		m_strStateKey = L"Abigail_Left";
+	}
+	else if (eDir == 1) // 오른쪽
+	{
+		m_strStateKey = L"Abigail_Right";
+	}
+	else if (eDir == 2) // 위
+	{
+		m_strStateKey = L"Abigail_Back";
+	}
+	else if (eDir == 3) // 아래
+	{
+		m_strStateKey = L"Abigail_Forward";
+	}
 }

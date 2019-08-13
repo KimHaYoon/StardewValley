@@ -54,7 +54,7 @@ void CItem::Render()
 		m_tInfo.matWorld = matScale * matTrans;
 
 		const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
-			m_strObjectKey, m_strStateKey, 0);
+			m_strObjectKey, m_strStateKey, ITEM_ICON);
 		NULL_CHECK_VOID(pTexInfo);
 
 		float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
@@ -80,7 +80,7 @@ void CItem::Render()
 			m_tInfo.matWorld = matScale * matTrans;
 
 			const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
-				m_strObjectKey, m_strStateKey, 0);
+				m_strObjectKey, m_strStateKey, ITEM_ICON);
 			NULL_CHECK_VOID(pTexInfo);
 
 			float fCenterX = pTexInfo->tImgInfo.Width * 0.5f;
