@@ -8,13 +8,14 @@ public:
 	virtual ~CMonster();
 
 public:
-	virtual HRESULT Init()PURE;
-	virtual _int Update( const _float & fTimeDelta )PURE;
-	virtual void LateUpdate( const _float & fTimeDelta )PURE;
-	virtual void Render() PURE;
-	virtual void Release() PURE;
+	virtual HRESULT Init();
+	virtual _int Update( const _float & fTimeDelta );
+	virtual void LateUpdate( const _float & fTimeDelta );
+	virtual void Render() ;
+	virtual void Release() ;
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
+	virtual HRESULT Init( OBJECT_ID eID, TCHAR *  strName );
 
 private:
 	MonsterInfo*		m_tMonsterInfo;

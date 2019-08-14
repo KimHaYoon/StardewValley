@@ -1,7 +1,7 @@
 #pragma once
-#include "Monster.h"
+#include "Obj.h"
 class CBat :
-	public CMonster
+	public CObj
 {
 public:
 	CBat();
@@ -14,5 +14,8 @@ public:
 	virtual void Release() override;
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
+
+private:
+	MonsterInfo* m_tMonsterInfo;
 };
 

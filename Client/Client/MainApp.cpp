@@ -19,7 +19,7 @@ HRESULT CMainApp::Initialize()
 	if (FAILED(CDevice::GetInstance()->InitDevice()))
 		return E_FAIL;
 
-	if (FAILED(CSceneMgr::GetInstance()->SceneChange(SCENE_ID_DONGKU)))
+	if (FAILED(CSceneMgr::GetInstance()->SceneChange(SCENE_ID_HAYOON)))
 	{
 		ERR_MSG(L"Scene change Failed!!");
 		return E_FAIL;

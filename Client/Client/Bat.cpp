@@ -35,7 +35,7 @@ _int CBat::Update( const _float & fTimeDelta )
 
 	m_tInfo.matWorld = matScale * matTrans;
 
-
+	CObjectMgr::GetInstance()->GetPlayer()->GetInfo().vPos;
 	return NO_EVENT;
 }
 
@@ -75,6 +75,7 @@ HRESULT CBat::Init(OBJECT_ID eID)
 	m_eObjID = eID;
 
 	CRenderMgr::GetInstance()->AddRenderObect(this, LAYER_ID_2);
+	m_tMonsterInfo = CMonsterMgr::GetInstance()->FindMonsterInfo( "Bat" );
 
 	return S_OK;
 }

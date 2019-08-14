@@ -41,10 +41,10 @@ HRESULT CHaYoonTestScene::Init()
 	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_TERRAIN );
 
 
-	//pObj = CAbstractFactory<CBat>::CreateObj( OBJECT_ID_MONSTER );
-	//if ( nullptr == pObj )
-	//	return E_FAIL;
-	//CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_MONSTER );
+	pObj = CAbstractFactory<CBat>::CreateObj( OBJECT_ID_MONSTER );
+	if ( nullptr == pObj )
+		return E_FAIL;
+	CObjectMgr::GetInstance()->AddObject( pObj, OBJECT_ID_MONSTER );
 
 	//pObj = CAbstractFactory<CClock>::CreateObj( OBJECT_ID_UI );
 	//if ( nullptr == pObj )
