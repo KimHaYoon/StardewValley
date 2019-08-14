@@ -43,8 +43,8 @@ _int CClockHand::Update(const _float & fTimeDelta)
 {
 	_int iHour = CGameTime::GetInstance()->GetCurrentHour();
 	_int iMin = CGameTime::GetInstance()->GetCurrentMin();
-	m_fAngle = 180.f / 24.f * (float)iHour;
-	m_fAngle += 180.f / 24.f / 6.f * (float)iMin;
+	m_fAngle = 180.f / 18.f * ((float)iHour - 6.f);
+	m_fAngle += 180.f / 18.f / 6.f * (float)iMin;
 	return NO_EVENT;
 }
 

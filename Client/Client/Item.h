@@ -44,6 +44,8 @@ protected:
 	_int			m_nIndex;
 	_int			m_nIndexLine;
 
+	_float			m_fAngle;
+
 	_bool			m_bSelect = false;
 	_bool			m_bActive = false;
 public:

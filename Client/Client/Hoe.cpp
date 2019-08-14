@@ -23,7 +23,7 @@ HRESULT CHoe::Init(OBJECT_ID eID)
 {
 	m_pName = L"Hoe";
 
-	_float fSize = (float)WINCX / 1920.f * 4.f;
+	_float fSize = (float)WINCX / 1920.f * 5.f;
 	m_tInfo.vPos = { (float)(WINCX) / 19.f, (float)(WINCY)-(30.f * fSize), 0.f };
 	m_tInfo.vSize = { fSize, fSize, 0.f };
 
@@ -37,6 +37,7 @@ HRESULT CHoe::Init(OBJECT_ID eID)
 	m_eType = ITEM_TOOL;
 	m_eState = ITEM_IDLE;
 	m_nCount = 1;
+	m_fAngle = 0.f;
 
 	m_nIndex = 3;
 	m_nIndexLine = 0;
@@ -86,34 +87,42 @@ void CHoe::LateUpdate(const _float & fTimeDelta)
 			CObj::MoveFrame(2.f / 5.f * 1.5f);
 		else if (m_eState == ITEM_FORWARD)
 			CObj::MoveFrame(1.5f);
-		else
+		else {
+			m_fAngle += 2.f;
 			CObj::MoveFrame(2.f / 3.f * 1.5f);
+		}
 
 		if (m_tFrame.fFrame == 0.f)
 		{
 			m_bActive = false;
+			m_fAngle = 0.f;
 		}
 	}
 }
 
 void CHoe::Render()
 {
-	_float fSize = (float)WINCX / 1920.f * 4.f;
+	_float fSize = (float)WINCX / 1920.f * 5.f;
 	m_tInfo.vSize = { fSize, fSize, 0.f };
 	CItem::Render();
 
 	if (m_bActive)
 	{
 		m_tInfo.vPos = CObjectMgr::GetInstance()->GetPlayer()->GetInfo().vPos;
-		m_tInfo.vSize = { 1.f, 1.f, 0.f };
+		m_tInfo.vSize = { 1.25f, 1.25f, 0.f };
 
 		_matrix matTrans, matScale, matRotate;
+		if (m_eState == ITEM_RIGHT)
+			m_tInfo.vPos.x += 8.f;
+		else if (m_eState == ITEM_LEFT)
+			m_tInfo.vPos.x -= 8.f;
+		else if (m_eState == ITEM_BACKWARD)
+			m_tInfo.vPos.y -= 8.f;
 		D3DXMatrixScaling(&matScale, m_tInfo.vSize.x, m_tInfo.vSize.y, 0.f);
 		D3DXMatrixTranslation(&matTrans, m_tInfo.vPos.x, m_tInfo.vPos.y, 0.f);
+		D3DXMatrixRotationZ(&matRotate, m_fAngle / 180.f * 3.141592f);
 		if (m_eState == ITEM_LEFT)
 			D3DXMatrixRotationY(&matRotate, 180.f / 180.f * 3.141592f);
-		else
-			D3DXMatrixRotationY(&matRotate, 0.f);
 		m_tInfo.matWorld = matScale * matRotate * matTrans;
 
 		const TEXINFO* pTexInfo = CTextureMgr::GetInstance()->GetTexInfo(
@@ -137,7 +146,7 @@ void CHoe::Active(const _float& x, const _float& y)
 {
 	D3DXVECTOR3 vPos = CObjectMgr::GetInstance()->GetPlayer()->GetInfo().vPos;
 	vPos -= D3DXVECTOR3(x, y, 0.f);
-
+	m_fAngle = 0.f;
 	if (fabsf(vPos.x) < fabsf(vPos.y))
 	{
 		if (vPos.y < 0) // ¾Æ·¡
