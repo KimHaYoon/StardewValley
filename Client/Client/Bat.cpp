@@ -35,7 +35,10 @@ _int CBat::Update( const _float & fTimeDelta )
 
 	m_tInfo.matWorld = matScale * matTrans;
 
-	CObjectMgr::GetInstance()->GetPlayer()->GetInfo().vPos;
+	D3DXVECTOR3 vPos = CObjectMgr::GetInstance()->GetPlayer()->GetInfo().vPos;
+	
+	MoveToPlayer( vPos );
+	
 	return NO_EVENT;
 }
 
@@ -78,4 +81,8 @@ HRESULT CBat::Init(OBJECT_ID eID)
 	m_tMonsterInfo = CMonsterMgr::GetInstance()->FindMonsterInfo( "Bat" );
 
 	return S_OK;
+}
+
+void CBat::MoveToPlayer( const D3DXVECTOR3 & vPos )
+{
 }

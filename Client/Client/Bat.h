@@ -3,6 +3,8 @@
 class CBat :
 	public CObj
 {
+	MonsterInfo* m_tMonsterInfo;
+
 public:
 	CBat();
 	virtual ~CBat();
@@ -14,8 +16,8 @@ public:
 	virtual void Release() override;
 public:
 	virtual HRESULT Init(OBJECT_ID eID);
-
+	
 private:
-	MonsterInfo* m_tMonsterInfo;
+	void MoveToPlayer( const D3DXVECTOR3& vPos );
 };
 
